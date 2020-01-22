@@ -33,39 +33,39 @@ long long jinbi,HP,maxHP,EXP,maxEXP;
 
 int ch4;
 int rate;
-string Tm[5]={"2^31-1=?","101-102=1  ÒÆ¶¯Ò»¸öÊý×Ö£¬Ê¹µÃµÈÊ½³ÉÁ¢£¬ÒÆ¶¯µÄÊý×ÖÊÇ___","´ó¾ËÈ¥¶þ¾ËÔÚÈý¾ËµÄÍÁµØ×âµÄËÄ¾ËµÄ·¿×Ó¸æËßÎå¾ËËµÁù¾ËÈ¥Æß¾Ë¼ÒÍµÁË°Ë¾Ë·ÅÔÚ¾Å¾ËµÄ±£ÏÕ¹ñÀïµÄÊ®¾ËµÄÇ®¡£   Ë­ÊÇÐ¡Íµ£¿ÍÁµØÊÇË­µÄ£¿£¨ÓÃn±íÊ¾n¾Ë£¬ÖÐ¼ä²»ÓÃ¿ÕÐÐ£©","10ÔÂ24ÈÕÊÇÊÇË­µÄ½ÚÈÕ£¿    1,Ò½Éú  2,½¨ÖþÊ¦  3,³ÌÐòÔ³  4,ÊýÑ§¼Ò","ÖøÃûÊýÑ§¼Ò¶ª·¬Í¼µÄÄ¹Ö¾Ãú¡ª¡ª·ØÖÐ°²Ôá×Å¶ª·¬Í¼£¬¶àÃ´ÁîÈË¾ªÑÈ£¬ÕâÀïÖÒÊµµØ¼ÇÂ¼ÁËËû¾­ÀúµÄµÀÂ·£¬ÉÏµÛ¸øÓèµÄÍ¯ÄêÕ¼Áù·ÖÖ®Ò»£¬ÓÖ¹ýÊ®¶þ·ÖÖ®Ò»£¬Á½÷Þ³¤ºú£¬ÔÙ¹ýÆß·ÖÖ®Ò»£¬È¼Æð»éÑÌµÄÀ¯Öò£¬ÎåÄêÖ®ºóÌì´Í¹ó×Ó£¬¿ÉÁ¯³Ùµ½µÄÄþÜ°¶ù£¬ÏíÄê½ö¼°Æä¸¸Ö®°ë£¬±ã½øÈë±ùÀäµÄÄ¹£¬±¯ÉËÖ»ÓÐÓÃÊýÂÛµÄÑÐ¾¿È¥ÃÖ²¹£¬ÓÖ¹ýËÄÄê£¬ËûÒ²×ßÍêÁËÈËÉúµÄÂÃÍ¾       ÇëÎÊ¶ª·¬Í¼Ò»¹²»îÁË¶àÉÙËê"};
+string Tm[5]={"2^31-1=?","101-102=1  ç§»åŠ¨ä¸€ä¸ªæ•°å­—ï¼Œä½¿å¾—ç­‰å¼æˆç«‹ï¼Œç§»åŠ¨çš„æ•°å­—æ˜¯___","å¤§èˆ…åŽ»äºŒèˆ…åœ¨ä¸‰èˆ…çš„åœŸåœ°ç§Ÿçš„å››èˆ…çš„æˆ¿å­å‘Šè¯‰äº”èˆ…è¯´å…­èˆ…åŽ»ä¸ƒèˆ…å®¶å·äº†å…«èˆ…æ”¾åœ¨ä¹èˆ…çš„ä¿é™©æŸœé‡Œçš„åèˆ…çš„é’±ã€‚   è°æ˜¯å°å·ï¼ŸåœŸåœ°æ˜¯è°çš„ï¼Ÿï¼ˆç”¨nè¡¨ç¤ºnèˆ…ï¼Œä¸­é—´ä¸ç”¨ç©ºè¡Œï¼‰","10æœˆ24æ—¥æ˜¯æ˜¯è°çš„èŠ‚æ—¥ï¼Ÿ    1,åŒ»ç”Ÿ  2,å»ºç­‘å¸ˆ  3,ç¨‹åºçŒ¿  4,æ•°å­¦å®¶","è‘—åæ•°å­¦å®¶ä¸¢ç•ªå›¾çš„å¢“å¿—é“­â€”â€”åŸä¸­å®‰è‘¬ç€ä¸¢ç•ªå›¾ï¼Œå¤šä¹ˆä»¤äººæƒŠè®¶ï¼Œè¿™é‡Œå¿ å®žåœ°è®°å½•äº†ä»–ç»åŽ†çš„é“è·¯ï¼Œä¸Šå¸ç»™äºˆçš„ç«¥å¹´å å…­åˆ†ä¹‹ä¸€ï¼Œåˆè¿‡åäºŒåˆ†ä¹‹ä¸€ï¼Œä¸¤é¬“é•¿èƒ¡ï¼Œå†è¿‡ä¸ƒåˆ†ä¹‹ä¸€ï¼Œç‡ƒèµ·å©šçƒŸçš„èœ¡çƒ›ï¼Œäº”å¹´ä¹‹åŽå¤©èµè´µå­ï¼Œå¯æ€œè¿Ÿåˆ°çš„å®é¦¨å„¿ï¼Œäº«å¹´ä»…åŠå…¶çˆ¶ä¹‹åŠï¼Œä¾¿è¿›å…¥å†°å†·çš„å¢“ï¼Œæ‚²ä¼¤åªæœ‰ç”¨æ•°è®ºçš„ç ”ç©¶åŽ»å¼¥è¡¥ï¼Œåˆè¿‡å››å¹´ï¼Œä»–ä¹Ÿèµ°å®Œäº†äººç”Ÿçš„æ—…é€”       è¯·é—®ä¸¢ç•ªå›¾ä¸€å…±æ´»äº†å¤šå°‘å²"};
 int answer[5]={2147483647,2,63,3,84};
 
 int bag=0,bag1=0,bag2=0;
 int choujin[10]={1000,2000,3000,4000,5500,6500,7500,9000,100,10000};
 int chouG[10]={45,105,195,265,385,525,695,845,1055,1855};
 
-string monster[22]={"SB","2B","»¨Ô°¾«Áé","»¨Ô°¶ñÄ§","Íä½ÇÁú","ÁÒÑæÍä½ÇÁú","2B","SB","¸ç²¼ÁÖÉ±ÊÖ","¸ç²¼ÁÖÊ¥ÆïÊ¿","ÀÇÈË","ÑªÉ«ÀÇÈË","ÈËÂíÕ½Ê¿","ÈËÂí¿ñÕ½Ê¿","ÕÓÔóÓÎ»ê","ÕÓÔó¶ÏÍ·¹í","Ô©»ê","÷¼÷ÃÍõ","º£Ñý","º£ÑýÅ®Íõ","Ê¯ÖÓÈé¹Ö","¾ÞÑÒÄ§Íõ"};
+string monster[22]={"SB","2B","èŠ±å›­ç²¾çµ","èŠ±å›­æ¶é­”","å¼¯è§’é¾™","çƒˆç„°å¼¯è§’é¾™","2B","SB","å“¥å¸ƒæž—æ€æ‰‹","å“¥å¸ƒæž—åœ£éª‘å£«","ç‹¼äºº","è¡€è‰²ç‹¼äºº","äººé©¬æˆ˜å£«","äººé©¬ç‹‚æˆ˜å£«","æ²¼æ³½æ¸¸é­‚","æ²¼æ³½æ–­å¤´é¬¼","å†¤é­‚","éª·é«…çŽ‹","æµ·å¦–","æµ·å¦–å¥³çŽ‹","çŸ³é’Ÿä¹³æ€ª","å·¨å²©é­”çŽ‹"};
 int monsterjinbi[22]={0,0,156,222,117,158,0,0,157,209,175,239,206,282,221,308,263,347,293,379,500,99999};
 int monsterHP[22]={0,0,1050,1450,1550,2050,0,0,2000,2650,2750,3250,3550,3850,4050,4450,5050,5950,6550,7550,7850,72950};
 int monsterATK[22]={0,0,345,405,455,505,0,0,555,625,705,755,815,875,945,1005,1185,1335,1565,1915,2535,4955};
 int monsterEXP[22]={0,0,20,45,35,65,60,0,0,90,90,120,125,180,240,380,450,485,515,585,645,0x3f3f3f3f};
-string destin[12]={"SB","ÐÂÊÖ´å","¶¯ÈË»¨Ô°","Ñô¹âº£Ì²","Ëª·ç²¿Âä","ËÀÍöÉ­ÁÖ","¼«±ùÖ®µØ","ËÀ¼ÅÉ³Ä®","ÍöÃüÕÓÔó","¾øÃüµØÀÎ","³ÁÃ»µÄ´óÂ½","Ê¯ÖÓÈé¶´"};
+string destin[12]={"SB","æ–°æ‰‹æ‘","åŠ¨äººèŠ±å›­","é˜³å…‰æµ·æ»©","éœœé£Žéƒ¨è½","æ­»äº¡æ£®æž—","æžå†°ä¹‹åœ°","æ­»å¯‚æ²™æ¼ ","äº¡å‘½æ²¼æ³½","ç»å‘½åœ°ç‰¢","æ²‰æ²¡çš„å¤§é™†","çŸ³é’Ÿä¹³æ´ž"};
 int diffLV[12]={0,0,1,2,0,3,5,5,7,8,10,0x7f};
 
-string rand_arms[3]={"¸ñÀ¼·Ò¶àÖ®½£","»Æ½ð±­","Ä§·¨Ê¯"};
+string rand_arms[3]={"æ ¼å…°èŠ¬å¤šä¹‹å‰‘","é»„é‡‘æ¯","é­”æ³•çŸ³"};
 int rand_armsxing[3]={1500,780,888};
-string legend_arms[4]={"¾øÔÆ","·Ù¼Å","åçÊ´","»ÍÃð"};
+string legend_arms[4]={"ç»äº‘","ç„šå¯‚","å½—èš€","ç…Œç­"};
 int la_ATK[4]={2800,2650,3200,3700};
 
-string ke[5]= {"½ð±Ò*1000","½ð±Ò*2000","½ð±Ò*3000","½ð±Ò*4000","½ð±Ò*5000"};
-string qie[5]= {"¾ÞÁéÒ©Ë®","ÔªÆø»Ö¸´Ò©Ë®","ÌØ´óÉúÃüÒ©Ë®","ÌØ´óÄ§·¨Ò©Ë®","Ð¡Æ¿ÉúÃüÒ©Ë®"};
-string ka[5]= {"ºÚÌúµ¶","Ä§Êõ°ô","ÇàÓñ½£","ÂÞÂí¶Ì½£","»ªÎªP30"};
+string ke[5]= {"é‡‘å¸*1000","é‡‘å¸*2000","é‡‘å¸*3000","é‡‘å¸*4000","é‡‘å¸*5000"};
+string qie[5]= {"å·¨çµè¯æ°´","å…ƒæ°”æ¢å¤è¯æ°´","ç‰¹å¤§ç”Ÿå‘½è¯æ°´","ç‰¹å¤§é­”æ³•è¯æ°´","å°ç“¶ç”Ÿå‘½è¯æ°´"};
+string ka[5]= {"é»‘é“åˆ€","é­”æœ¯æ£’","é’çŽ‰å‰‘","ç½—é©¬çŸ­å‰‘","åŽä¸ºP30"};
 int kaatk[5]= {380,450,270,400,1000};
-string de[5]= {"¾«Áéîø¼×","ÊÈÑªÕß","¹Å°£¼°ÐØ¼×","ÌúÆ¤¼×","ÓÄÁé°å¼×"};
+string de[5]= {"ç²¾çµé“ ç”²","å—œè¡€è€…","å¤åŸƒåŠèƒ¸ç”²","é“çš®ç”²","å¹½çµæ¿ç”²"};
 int defang[5]= {250,350,550,450,900};
-string ge[5]= {"ÂÌ±¦Ê¯","ÁúÖ®¾íÖá","¸ÖÌú*20","ÖÁÊ¥µÄË®¾§","À¶±¦Ê¯"};
-string sai[5]= {"¹úÍõ±Ò*100","¹úÍõ±Ò*200","¹úÍõ±Ò*300","¹úÍõ±Ò*400","¹úÍõ±Ò*1000"};
-string xiguan[5]= {"ÍÚ±ÇÊº","ÍÚ¶úÊº","¿Ù½ÅÖº","×ÔÑÔ×ÔÓï","Ò§ÊÖÖ¸"};
+string ge[5]= {"ç»¿å®çŸ³","é¾™ä¹‹å·è½´","é’¢é“*20","è‡³åœ£çš„æ°´æ™¶","è“å®çŸ³"};
+string sai[5]= {"å›½çŽ‹å¸*100","å›½çŽ‹å¸*200","å›½çŽ‹å¸*300","å›½çŽ‹å¸*400","å›½çŽ‹å¸*1000"};
+string xiguan[5]= {"æŒ–é¼»å±Ž","æŒ–è€³å±Ž","æŠ è„šè¶¾","è‡ªè¨€è‡ªè¯­","å’¬æ‰‹æŒ‡"};
 
 string juese;
 
-string diaoluo1[4]= {"²ØÒøµ¶","ºìÓ§Ç¹","¾Þ½£","¶ñÁé·¨ÕÈ"};
+string diaoluo1[4]= {"è—é“¶åˆ€","çº¢ç¼¨æžª","å·¨å‰‘","æ¶çµæ³•æ–"};
 int diaoluo1ATK[4]= {129,167,225,285};
 string yaoshui[10]= {"00","00","00","00","00","00","00","00","00","00"},wuqi[10]= {"00","00","00","00","00","00","00","00","00","00"};
 string daoju[10]= {"00","00","00","00","00","00","00","00","00","00"};
@@ -76,12 +76,12 @@ bool Is_pct[10];
 bool pct;
 bool a_f[10];
 
-string mission[10]={"Ç°Íù¡®½ÓÊÜÈÎÎñ&²é¿´Ö÷Ïß½ø¶È¡¯²é¿´µÚÒ»¸öÖ÷ÏßÈÎÎñ","Ç°ÍùËª·ç²¿ÂäÓë³¤ÀÏ½»Ì¸","»÷°Ü¾ÞÑÒÄ§Íõ£¬Õü¾ÈÊÀ½ç"};
+string mission[10]={"å‰å¾€â€˜æŽ¥å—ä»»åŠ¡&æŸ¥çœ‹ä¸»çº¿è¿›åº¦â€™æŸ¥çœ‹ç¬¬ä¸€ä¸ªä¸»çº¿ä»»åŠ¡","å‰å¾€éœœé£Žéƒ¨è½ä¸Žé•¿è€äº¤è°ˆ","å‡»è´¥å·¨å²©é­”çŽ‹ï¼Œæ‹¯æ•‘ä¸–ç•Œ"};
 int reward[3]={100,200,0x3f3f3f};
-string skill[4][4]={"¿ñÂÒÍ»Ï®","»ÙÃðÒ»»÷","¶Ï¿ÕËºÁÑÕ¶","Õ½Éñ¸½Ìå",
-					 "Ê¥¹âÕ¶","È¬ÓúÖ®¹â","ÌìÖ®ÉóÅÐ","ÓÂÕßÐÞÁ¶",
-					 "Éí²Ø²»Â¶","°µÓ°Ò»»÷","¶¾Ö®ÉîÔ¨","ÓÎÈÐÓÐÓà",
-					 "ÁÒÑæ»ðÇò","Ê¯Ä§ÕÙ»½","¾ÅÌìÐþÀ×","Ä§Ö®°ÂÃØ",
+string skill[4][4]={"ç‹‚ä¹±çªè¢­","æ¯ç­ä¸€å‡»","æ–­ç©ºæ’•è£‚æ–©","æˆ˜ç¥žé™„ä½“",
+					 "åœ£å…‰æ–©","ç—Šæ„ˆä¹‹å…‰","å¤©ä¹‹å®¡åˆ¤","å‹‡è€…ä¿®ç‚¼",
+					 "èº«è—ä¸éœ²","æš—å½±ä¸€å‡»","æ¯’ä¹‹æ·±æ¸Š","æ¸¸åˆƒæœ‰ä½™",
+					 "çƒˆç„°ç«çƒ","çŸ³é­”å¬å”¤","ä¹å¤©çŽ„é›·","é­”ä¹‹å¥¥ç§˜",
 					 };
 int skillxn[4][4]={275,322,372,35,
 					227,375,300,35,
@@ -278,9 +278,9 @@ void guangbiao(int x,int y) {
 }
 void tiaose(int mn) {
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),mn);
-	//  1£¬ÉîÀ¶É«    2£¬ÂÌÉ«    3£¬Ç³À¶É«    4£¬°µºìÉ«    5£¬°µ·ÛÉ«    6£¬×ØÉ«
-	//  7 £¬µ­°×É«     8£¬»ÒÉ«    9£¬À¶É«     10£¬ÂÌÉ«     11£¬ÁÁÀ¶É«      12£¬Éîºì
-	//  13£¬Éî·ÛÉ«     14£¬»ÆÉ«     15£¬°×É«
+	//  1ï¼Œæ·±è“è‰²    2ï¼Œç»¿è‰²    3ï¼Œæµ…è“è‰²    4ï¼Œæš—çº¢è‰²    5ï¼Œæš—ç²‰è‰²    6ï¼Œæ£•è‰²
+	//  7 ï¼Œæ·¡ç™½è‰²     8ï¼Œç°è‰²    9ï¼Œè“è‰²     10ï¼Œç»¿è‰²     11ï¼Œäº®è“è‰²      12ï¼Œæ·±çº¢
+	//  13ï¼Œæ·±ç²‰è‰²     14ï¼Œé»„è‰²     15ï¼Œç™½è‰²
 }
 bool check() {
 	for(int i=0; i<=bag2; i++) {
@@ -334,9 +334,9 @@ void ShakeWindow(int move){
     RECT rect; 
     HWND hwnd=GetForegroundWindow();
     GetWindowRect(hwnd,&rect);
-    MoveWindow(hwnd,rect.left+SHAKE,rect.top,rect.right-rect.left,rect.bottom-rect.top,TRUE);//ÏòÓÒ 
+    MoveWindow(hwnd,rect.left+SHAKE,rect.top,rect.right-rect.left,rect.bottom-rect.top,TRUE);//å‘å³ 
     Sleep(25);
-    MoveWindow(hwnd,rect.left+SHAKE,rect.top-SHAKE,rect.right-rect.left,rect.bottom-rect.top,TRUE);//ÏòÉÏ 
+    MoveWindow(hwnd,rect.left+SHAKE,rect.top-SHAKE,rect.right-rect.left,rect.bottom-rect.top,TRUE);//å‘ä¸Š 
     Sleep(25);
     MoveWindow(hwnd,rect.left,rect.top-SHAKE,rect.right-rect.left,rect.bottom-rect.top,TRUE); 
     Sleep(25);
@@ -345,9 +345,9 @@ void ShakeWindow(int move){
 void Read()
 {
 	system("cls");
-	Slowsay("ÇëÔÚÎÄ¼þ¼ÐÖÐÕÒµ½¡®Inotia 5.txt¡¯²¢´ò¿ªËü\n");
+	Slowsay("è¯·åœ¨æ–‡ä»¶å¤¹ä¸­æ‰¾åˆ°â€˜Inotia 5.txtâ€™å¹¶æ‰“å¼€å®ƒ\n");
 	Sleep(1000);
-	Slowsay("¸´ÖÆÀïÃæËùÓÐµÄÊý¾Ýºó£¬½«ËüÃÇÈ«²¿ÊäÈë½øÀ´(ÇÐÎðÊäÈë¶àÓàµÄ¶«¶«)\n");
+	Slowsay("å¤åˆ¶é‡Œé¢æ‰€æœ‰çš„æ•°æ®åŽï¼Œå°†å®ƒä»¬å…¨éƒ¨è¾“å…¥è¿›æ¥(åˆ‡å‹¿è¾“å…¥å¤šä½™çš„ä¸œä¸œ)\n");
 	getline(cin,name);
 	cin>>juese;
 	cin>>HP>>maxHP;
@@ -421,7 +421,7 @@ void Read()
 	cin>>chou;
 	Sleep(1500);
 	system("cls");
-	Slowsay("¶ÁÈ¡´æµµ³É¹¦£¡\n");
+	Slowsay("è¯»å–å­˜æ¡£æˆåŠŸï¼\n");
 	Sleep(1000);
 }
 void POF()
@@ -533,8 +533,8 @@ void draw(string map[30],int k,int c) {
 	cout<<"||                          ||\n";
 	cout<<"==============================\n\n\n";
 	tiaose(15);
-	cout<<"ËùÔÚµØ£º"<<destin[k]<<endl;
-	cout<<"ÄÑ¶ÈµÈ¼¶£º";
+	cout<<"æ‰€åœ¨åœ°ï¼š"<<destin[k]<<endl;
+	cout<<"éš¾åº¦ç­‰çº§ï¼š";
 	if(diffLV[k]>=1&&diffLV[k]<=3)
 	{
 		tiaose(10);
@@ -588,12 +588,12 @@ void jindu(int sum) {
 	for(int i=0;i<22;i++)
 	{
 		Sleep(sum-5);
-		cout<<"¨€";
+		cout<<"â–ˆ";
 	}
 	tiaose(14);
 	cout<<endl;
 	cout<<endl;
-	cout<<"°¬ÅµµÏÑÇ5£º¾ÞÑÒÄ§ÍõµÄ¾õÐÑ       "<<dt;
+	cout<<"è‰¾è¯ºè¿ªäºš5ï¼šå·¨å²©é­”çŽ‹çš„è§‰é†’       "<<dt;
 	cout<<endl;
 	cout<<endl;
 	HideCursor(1);
@@ -608,42 +608,42 @@ void The_end(int ch15) {
 	if(ch15==1) {
 		getline(cin,s);
 		system("cls");
-		Slowsay("¡­¡­¡­¡­¡­¡­\n");
-		Slowsay("¡­¡­¡­¡­¡­¡­\n");
-		Slowsay("¡­¡­¡­¡­¡­¡­\n");
+		Slowsay("â€¦â€¦â€¦â€¦â€¦â€¦\n");
+		Slowsay("â€¦â€¦â€¦â€¦â€¦â€¦\n");
+		Slowsay("â€¦â€¦â€¦â€¦â€¦â€¦\n");
 		Sleep(3000);
 		system("cls");
-		Slowsay("Èý¸öÔÂºó\n");
+		Slowsay("ä¸‰ä¸ªæœˆåŽ\n");
 		getline(cin,s);
 		system("cls");
-		Slowsay("Ô­Ëª·ç²¿Âä£¬ÁÒÊ¿¹«Ä¹Ç°¡­¡­\n");
+		Slowsay("åŽŸéœœé£Žéƒ¨è½ï¼Œçƒˆå£«å…¬å¢“å‰â€¦â€¦\n");
 		getline(cin,s);
-		Slowsay("À¥µÏ½«Ò»ÊøÃµ¹å·ÅÔÚÁË×îÖÐ¼äÒ»¿éÄ¹±®ÉÏ£¬×ßµ½ÁËÒ»ÅÔ");
+		Slowsay("æ˜†è¿ªå°†ä¸€æŸçŽ«ç‘°æ”¾åœ¨äº†æœ€ä¸­é—´ä¸€å—å¢“ç¢‘ä¸Šï¼Œèµ°åˆ°äº†ä¸€æ—");
 		getline(cin,s);
-		Slowsay("Õâ¿éÄ¹±®ÉÏÐ´×Å£º¡°ÕâÀï°²Ï¢×Å£¬ÎÒÃÇ×îÓÂ¸Ò¡¢¿É¾´µÄÓ¢ÐÛ¡ª¡ª");
+		Slowsay("è¿™å—å¢“ç¢‘ä¸Šå†™ç€ï¼šâ€œè¿™é‡Œå®‰æ¯ç€ï¼Œæˆ‘ä»¬æœ€å‹‡æ•¢ã€å¯æ•¬çš„è‹±é›„â€”â€”");
 		Slowsay(name);
-		Slowsay("£¬¹«ÔªÇ°4997992¡ª¡ª¹«ÔªÇ°4998014£¬ÏíÄê22Ëê¡±\n");
+		Slowsay("ï¼Œå…¬å…ƒå‰4997992â€”â€”å…¬å…ƒå‰4998014ï¼Œäº«å¹´22å²â€\n");
 		getline(cin,s);
 		system("cls");
-		Slowsay("¡°");
+		Slowsay("â€œ");
 		Slowsay(name);
-		Slowsay("£¬ÎÒÃÇ»ØÀ´¿´ÄãÁË¡±");
+		Slowsay("ï¼Œæˆ‘ä»¬å›žæ¥çœ‹ä½ äº†â€");
 		Sleep(1000);
 		getline(cin,s);
 		system("cls");
-		Slowsay("¡°ºÜ±§Ç¸£¬ÎÒÃÇÃ»ÄÜµÚÒ»Ê±¼äÖÆ×÷³ö½âÒ©£¬µ«ÒòÎªÄã£¬ÈËÀàÃ»ÓÐÊ§È¥×îºóµÄÏ£Íû\n");
+		Slowsay("â€œå¾ˆæŠ±æ­‰ï¼Œæˆ‘ä»¬æ²¡èƒ½ç¬¬ä¸€æ—¶é—´åˆ¶ä½œå‡ºè§£è¯ï¼Œä½†å› ä¸ºä½ ï¼Œäººç±»æ²¡æœ‰å¤±åŽ»æœ€åŽçš„å¸Œæœ›\n");
 		Sleep(1500);
-		Slowsay("¡°Ëª·ç²¿ÂäµÄÊÞÈËÃÇÔÚÄãËÀºóµÄ°ë¸öÔÂÖÆ×÷³öÁËÒ»ÖÖ»º½âÒ©Ë®£¬ËüÓÐ×Å¾Þ´óµÄÄÜÁ¿£¬¼´Ê¹°ë¸öÉí×Ó±»½©»¯ÁË£¬Ò²ÄÜÒÀ¿¿×ÔÉíÁ¦Á¿ÖØÉú£¡¡±");
+		Slowsay("â€œéœœé£Žéƒ¨è½çš„å…½äººä»¬åœ¨ä½ æ­»åŽçš„åŠä¸ªæœˆåˆ¶ä½œå‡ºäº†ä¸€ç§ç¼“è§£è¯æ°´ï¼Œå®ƒæœ‰ç€å·¨å¤§çš„èƒ½é‡ï¼Œå³ä½¿åŠä¸ªèº«å­è¢«åƒµåŒ–äº†ï¼Œä¹Ÿèƒ½ä¾é è‡ªèº«åŠ›é‡é‡ç”Ÿï¼â€");
 		getline(cin,s);
 		system("cls");
-		Slowsay("¡°É±ËÀÊ£ÓàµÄ¹ÖÊÞ¸ü²»ÓÃËµÁË£¬ÈËÀàÔÚÁ½¸öÔÂÄÚ¾ÍÊÕ¸´ÁË±»ÇÖÂÔµÄÍÁµØ\n");
+		Slowsay("â€œæ€æ­»å‰©ä½™çš„æ€ªå…½æ›´ä¸ç”¨è¯´äº†ï¼Œäººç±»åœ¨ä¸¤ä¸ªæœˆå†…å°±æ”¶å¤äº†è¢«ä¾µç•¥çš„åœŸåœ°\n");
 		getline(cin,s);
 		system("cls");
-		Slowsay("ÄÅ£¬ÕâÊÇÕþ¸®¸øÄãµÄÑ«ÕÂ£¬ÓÂ¸ÒµÄÓ¢ÐÛ£¬ÈËÀàµÄ¾ÈÐÇ£¬ÊÀ½ç¼¶µÄ´ýÓö¡­¡­ÎÒ¾Í·ÅÕâ¶ùÁË\n");
+		Slowsay("å‘ï¼Œè¿™æ˜¯æ”¿åºœç»™ä½ çš„å‹‹ç« ï¼Œå‹‡æ•¢çš„è‹±é›„ï¼Œäººç±»çš„æ•‘æ˜Ÿï¼Œä¸–ç•Œçº§çš„å¾…é‡â€¦â€¦æˆ‘å°±æ”¾è¿™å„¿äº†\n");
 		getline(cin,s);
-		Slowsay("¡­¡­¡­¡­\n");
+		Slowsay("â€¦â€¦â€¦â€¦\n");
 		Sleep(1000);
-		Slowsay("ÎÒÏëËµµÄ¾ÍÕâÃ´¶àÁË£¬ÒÔºóÓÐ¿ÕÔÙÀ´¿´Äã£¬ÔÙ¼û\n");
+		Slowsay("æˆ‘æƒ³è¯´çš„å°±è¿™ä¹ˆå¤šäº†ï¼Œä»¥åŽæœ‰ç©ºå†æ¥çœ‹ä½ ï¼Œå†è§\n");
 		Sleep(1000);
 		getline(cin,s);
 		Sleep(1000);
@@ -654,78 +654,78 @@ void The_end(int ch15) {
 		Sleep(1500);
 		system("cls");
 		Sleep(3500);
-		Slowsay("ÀúÊ·ÒÑ¾­¹ýÈ¥£¬Ó¢ÐÛ²»¸´´æÔÚ\n");
+		Slowsay("åŽ†å²å·²ç»è¿‡åŽ»ï¼Œè‹±é›„ä¸å¤å­˜åœ¨\n");
 		Sleep(2000);
 		system("cls");
-		Slowsay("µ±");
+		Slowsay("å½“");
 		Slowsay(name);
-		Slowsay("ºÍÀ¥µÏ¡¢SuperHunterÒ»ÆðÐÑÀ´Ê±£¬ÊÀ½çÒÑ¾­»Ö¸´ÁËºÍÆ½\n");
+		Slowsay("å’Œæ˜†è¿ªã€SuperHunterä¸€èµ·é†’æ¥æ—¶ï¼Œä¸–ç•Œå·²ç»æ¢å¤äº†å’Œå¹³\n");
 		Sleep(1000);
-		Slowsay("µ«ÊÇ£¬¼¸ºõÃ»ÓÐÈËÖªµÀËûÃÇ¸ÉÁËÐ©Ê²Ã´\n");
+		Slowsay("ä½†æ˜¯ï¼Œå‡ ä¹Žæ²¡æœ‰äººçŸ¥é“ä»–ä»¬å¹²äº†äº›ä»€ä¹ˆ\n");
 		Sleep(2000);
 		system("cls");
-		Slowsay("Ëª·ç²¿ÂäÀï£¬ÄÇÐ©ÍÑÏÕµÄÊÞÈËÃÇÒ»Æð»¶ºô×Å£¬Çì×£×ÅÕâÀ´Ö®²»Ò×µÄÊ¤Àû£¬");
+		Slowsay("éœœé£Žéƒ¨è½é‡Œï¼Œé‚£äº›è„±é™©çš„å…½äººä»¬ä¸€èµ·æ¬¢å‘¼ç€ï¼Œåº†ç¥ç€è¿™æ¥ä¹‹ä¸æ˜“çš„èƒœåˆ©ï¼Œ");
 		Sleep(1000);
-		Slowsay("È»¶øËûÃÇÉõÖÁ²¢²»ÖªµÀÊÇÔõÃ´ÍÑÏÕµÄ\n");
+		Slowsay("ç„¶è€Œä»–ä»¬ç”šè‡³å¹¶ä¸çŸ¥é“æ˜¯æ€Žä¹ˆè„±é™©çš„\n");
 		Sleep(3000);
 		system("cls");
-		Slowsay("ÐÂÊÖ´åÄÚ£¬ÏìÆðÁË¾ÃÎ¥µÄ»¶Ð¦Éù¡£\n");
+		Slowsay("æ–°æ‰‹æ‘å†…ï¼Œå“èµ·äº†ä¹…è¿çš„æ¬¢ç¬‘å£°ã€‚\n");
 		Sleep(2000);
 		system("cls");
-		Slowsay("¹ú½ç±»ÍÆ·­£¬µ¶Ç¹±»Ïú»Ù¡£ÔÙÒ²Ã»ÓÐËùÎ½µÄ¹ú¼ÒÖ®·Ö£¬Õû¸öµØÇò³ÉÁËÒ»¸öÐ¡´å×¯£¬´ó¼ÒÆëÐÄÐ­Á¦£¬½«µØÇò»Ö¸´ÁËÎå°ÙÍòÄêÇ°µÄÆ½¾²\n");
+		Slowsay("å›½ç•Œè¢«æŽ¨ç¿»ï¼Œåˆ€æžªè¢«é”€æ¯ã€‚å†ä¹Ÿæ²¡æœ‰æ‰€è°“çš„å›½å®¶ä¹‹åˆ†ï¼Œæ•´ä¸ªåœ°çƒæˆäº†ä¸€ä¸ªå°æ‘åº„ï¼Œå¤§å®¶é½å¿ƒååŠ›ï¼Œå°†åœ°çƒæ¢å¤äº†äº”ç™¾ä¸‡å¹´å‰çš„å¹³é™\n");
 		Sleep(2000);
 		system("cls");
 		Sleep(2000);
-		Slowsay("µ«ÊÇ£¬ÔÚÄ³Ð©ÈËÐÄÁéÉî´¦,ÁôÏÂµÄÄÇÒ»Ë¿µ­µ­µÄÓÇÉË£¬½«»áÓÀÔ¶°éËæ×ÅËûÃÇ¡­¡­\n");
+		Slowsay("ä½†æ˜¯ï¼Œåœ¨æŸäº›äººå¿ƒçµæ·±å¤„,ç•™ä¸‹çš„é‚£ä¸€ä¸æ·¡æ·¡çš„å¿§ä¼¤ï¼Œå°†ä¼šæ°¸è¿œä¼´éšç€ä»–ä»¬â€¦â€¦\n");
 		Sleep(3000);
 	}
 	if(ch15==3) {
 		tiaose(15);
 		Sleep(2000);
 		stop_time=55;
-		Slowsay("¡­¡­¡­¡­\n");
-		Slowsay("¡­¡­¡­¡­\n");
+		Slowsay("â€¦â€¦â€¦â€¦\n");
+		Slowsay("â€¦â€¦â€¦â€¦\n");
 		Sleep(2000);
 		system("cls");
-		Slowsay("¡°ÎÒ¿´¼ûÄãËùËµµÄÄÇ¸öÍæ¼ÒÁË¡­¡­¡±\n");
+		Slowsay("â€œæˆ‘çœ‹è§ä½ æ‰€è¯´çš„é‚£ä¸ªçŽ©å®¶äº†â€¦â€¦â€\n");
 		Sleep(2000);
 		system("cls");
-		Slowsay("¡°");
+		Slowsay("â€œ");
 		Slowsay(name);
-		Slowsay("£¿¡±\n");
+		Slowsay("ï¼Ÿâ€\n");
 		Sleep(2000);
 		system("cls");
-		Slowsay("¡°ÊÇµÄ£¬Ð¡ÐÄ£¬ËûÏÖÔÚÒÑ¾­´ïµ½ÁË¸ü¸ßµÄ¾³½ç£¬ËûÄÜ¶Á¶®ÎÒÃÇµÄÐÄË¼ÁË¡±\n\n");
+		Slowsay("â€œæ˜¯çš„ï¼Œå°å¿ƒï¼Œä»–çŽ°åœ¨å·²ç»è¾¾åˆ°äº†æ›´é«˜çš„å¢ƒç•Œï¼Œä»–èƒ½è¯»æ‡‚æˆ‘ä»¬çš„å¿ƒæ€äº†â€\n\n");
 		Sleep(1500);
-		Slowsay("¡°ÎÞÉË´óÑÅ£¬ËûÈÏÎªÎÒÃÇÖ»ÊÇÓÎÏ·ÖÐµÄÒ»²¿·Ö¡±\n");
+		Slowsay("â€œæ— ä¼¤å¤§é›…ï¼Œä»–è®¤ä¸ºæˆ‘ä»¬åªæ˜¯æ¸¸æˆä¸­çš„ä¸€éƒ¨åˆ†â€\n");
 		Sleep(2000);
 		system("cls");
-		Slowsay("¡°ÎÒÏ²»¶Õâ¸öÍæ¼Ò£¬ËûÍæµÃºÜºÃ£¬Ã»ÓÐ·ÅÆú¹ý¡±\n\n");
+		Slowsay("â€œæˆ‘å–œæ¬¢è¿™ä¸ªçŽ©å®¶ï¼Œä»–çŽ©å¾—å¾ˆå¥½ï¼Œæ²¡æœ‰æ”¾å¼ƒè¿‡â€\n\n");
 		Sleep(1500);
 		system("cls");
-		Slowsay("¡°ËûÒÔÆÁÄ»ÉÏ³öÏÖµÄÎÄ×ÖµÄÐÎÊ½ÔÄ¶Á×ÅÎÒÃÇµÄË¼Ïë¡£¡±\n");
+		Slowsay("â€œä»–ä»¥å±å¹•ä¸Šå‡ºçŽ°çš„æ–‡å­—çš„å½¢å¼é˜…è¯»ç€æˆ‘ä»¬çš„æ€æƒ³ã€‚â€\n");
 		Sleep(2000);
 		system("cls");
-		Slowsay("¡°ÔÚËûÉîÏÝÓÎÏ·µÄÃÎ¾³Ê±£¬Ëû×ÜÒÔÕâÖÖ·½Ê½ÏëÏó³ö¸÷ÖÖ¸÷ÑùµÄÊÂÎï¡£¡±\n");
+		Slowsay("â€œåœ¨ä»–æ·±é™·æ¸¸æˆçš„æ¢¦å¢ƒæ—¶ï¼Œä»–æ€»ä»¥è¿™ç§æ–¹å¼æƒ³è±¡å‡ºå„ç§å„æ ·çš„äº‹ç‰©ã€‚â€\n");
 		Sleep(1500);
-		Slowsay("¡°¹þ£¬ÄÇ¸öÔ­Ê¼µÄ½çÃæ¡£¾­Àú°ÙÍòÄêµÄËêÔÂ£¬ËüÒÀÈ»ÔÚ¹¤×÷¡£µ«Õâ¸öÍæ¼ÒÔÚÆÁÄ»ºó£¬µ½µ×´´ÔìÁËÊ²Ã´ÕæÊµµÄ¹¹Ôì£¿¡±\n\n");
+		Slowsay("â€œå“ˆï¼Œé‚£ä¸ªåŽŸå§‹çš„ç•Œé¢ã€‚ç»åŽ†ç™¾ä¸‡å¹´çš„å²æœˆï¼Œå®ƒä¾ç„¶åœ¨å·¥ä½œã€‚ä½†è¿™ä¸ªçŽ©å®¶åœ¨å±å¹•åŽï¼Œåˆ°åº•åˆ›é€ äº†ä»€ä¹ˆçœŸå®žçš„æž„é€ ï¼Ÿâ€\n\n");
 		Sleep(2000);
-		Slowsay("¡°ËûÓë±ðµÄÍæ¼ÒÒ»Ñù£¬ÔÚÏÖÊµÀïÐÁÇÚÀÍ×÷£¬È´ÔÚÓÎÏ·Àïµñ¿Ì³öÒ»¸öÕæÊµµÄÊÀ½ç¡±\n");
+		Slowsay("â€œä»–ä¸Žåˆ«çš„çŽ©å®¶ä¸€æ ·ï¼Œåœ¨çŽ°å®žé‡Œè¾›å‹¤åŠ³ä½œï¼Œå´åœ¨æ¸¸æˆé‡Œé›•åˆ»å‡ºä¸€ä¸ªçœŸå®žçš„ä¸–ç•Œâ€\n");
 		Sleep(2000);
 		system("cls");
-		Slowsay("¡°²»¹ý£¬Ëû»¹Ã»ÓÐ´ïµ½×î¸ß¾³½ç£¬ÎªÁË´ïµ½×î¸ß¾³½ç£¬ËûµÃÍê³ÉÉúÃüµÄ³¤ÃÎ£¬¶ø·ÇÓÎÏ·ÄÇ¶ÌÔÝµÄ¸¡ÃÎ¡±\n");
+		Slowsay("â€œä¸è¿‡ï¼Œä»–è¿˜æ²¡æœ‰è¾¾åˆ°æœ€é«˜å¢ƒç•Œï¼Œä¸ºäº†è¾¾åˆ°æœ€é«˜å¢ƒç•Œï¼Œä»–å¾—å®Œæˆç”Ÿå‘½çš„é•¿æ¢¦ï¼Œè€Œéžæ¸¸æˆé‚£çŸ­æš‚çš„æµ®æ¢¦â€\n");
 		Sleep(2500);
 		system("cls");
-		Slowsay("¡°ÊÇµÄ£¬ËûÒª×Ô¼ºÍê³É£¬ÎÒÃÇ²»ÄÜ¸ÉÉæ¡±\n\n");
+		Slowsay("â€œæ˜¯çš„ï¼Œä»–è¦è‡ªå·±å®Œæˆï¼Œæˆ‘ä»¬ä¸èƒ½å¹²æ¶‰â€\n\n");
 		Sleep(1500);
-		Slowsay("¡°ÄÇ¾ÍÈÃËûÈ¥°É£¬ÎÒÃÇ¾ÍÔÚÕâ¶ù¿´×ÅËû¡±\n");
+		Slowsay("â€œé‚£å°±è®©ä»–åŽ»å§ï¼Œæˆ‘ä»¬å°±åœ¨è¿™å„¿çœ‹ç€ä»–â€\n");
 		Sleep(2000);
 		system("cls");
-		Slowsay("¡°Äã¾ÍÊÇÄÇ¸öÍæ¼Ò£¬");
+		Slowsay("â€œä½ å°±æ˜¯é‚£ä¸ªçŽ©å®¶ï¼Œ");
 		Slowsay(name);
-		Slowsay("¡±\n\n\n");
+		Slowsay("â€\n\n\n");
 		Sleep(2000);
-		Slowsay("¡°ÐÑÀ´°É¡±\n");
+		Slowsay("â€œé†’æ¥å§â€\n");
 		Sleep(2000);
 		system("cls");
 	}
@@ -733,14 +733,14 @@ void The_end(int ch15) {
 		Sleep(1000);
 		stop_time=50;
 		system("cls");
-		Slowsay("¡­¡­¡­¡­\n");
-		Slowsay("¡­¡­¡­¡­\n");
+		Slowsay("â€¦â€¦â€¦â€¦\n");
+		Slowsay("â€¦â€¦â€¦â€¦\n");
 		Sleep(2000);
 		system("cls");
-		Slowsay("Á½¸öÔÂºó£¬ÐÂÊÖ´åÄÚ\n");
+		Slowsay("ä¸¤ä¸ªæœˆåŽï¼Œæ–°æ‰‹æ‘å†…\n");
 		Sleep(1500);
 		system("cls");
-		Slowsay("Ò»ÈºÒÂ¹Ú²»Õû¡¢Ãæ³Ê²ËÉ«µÄÈËÕ¾ÔÚÒ»¿éÆÆÆÆÀÃÀÃµÄÄ¹±®Ç°\n");
+		Slowsay("ä¸€ç¾¤è¡£å† ä¸æ•´ã€é¢å‘ˆèœè‰²çš„äººç«™åœ¨ä¸€å—ç ´ç ´çƒ‚çƒ‚çš„å¢“ç¢‘å‰\n");
 		Sleep(2000);
 		system("cls");
 		Sleep(1000);
@@ -751,25 +751,25 @@ void The_end(int ch15) {
 		Slowsay("Because of him, our world is full of warmth");
 		Sleep(2000);
 		system("cls");
-		Slowsay("À¥µÏ´ÓÈËÈºÖÐ×ßÁËÉÏÀ´£¬¶Ô×ÅÕâ¿éÄ¹±®ËµµÀ:");
+		Slowsay("æ˜†è¿ªä»Žäººç¾¤ä¸­èµ°äº†ä¸Šæ¥ï¼Œå¯¹ç€è¿™å—å¢“ç¢‘è¯´é“:");
 		Sleep(1000);
 		system("cls");
-		cout<<"¡°";
+		cout<<"â€œ";
 		Slowsay(name);
-		Slowsay("£¬°¦£¬Ã»ÓÐ°ì·¨£¬ÎÒÃÇ»¹ÊÇÃ»ÄÜ»÷°Ü¾ÞÑÒÄ§Íõ£¬²»¹ý£¬ÄãÒÑ¾­¾¡Á¦ÁË¡£·ÅÐÄ£¬×ÜÓÐÒ»Ìì£¬Ò»¶¨»¹ÓÐÒ»Î»ÎäÁ¦¸ßÇ¿µÄÓ¢ÐÛ»áÕü¾ÈÊÀ½çµÄ¡±\n");
+		Slowsay("ï¼Œå”‰ï¼Œæ²¡æœ‰åŠžæ³•ï¼Œæˆ‘ä»¬è¿˜æ˜¯æ²¡èƒ½å‡»è´¥å·¨å²©é­”çŽ‹ï¼Œä¸è¿‡ï¼Œä½ å·²ç»å°½åŠ›äº†ã€‚æ”¾å¿ƒï¼Œæ€»æœ‰ä¸€å¤©ï¼Œä¸€å®šè¿˜æœ‰ä¸€ä½æ­¦åŠ›é«˜å¼ºçš„è‹±é›„ä¼šæ‹¯æ•‘ä¸–ç•Œçš„â€\n");
 		Sleep(1000);
-		Slowsay("¡°ÏÖÔÚ£¬¾ÞÑÒÄ§ÍõÒÑ¾­½«ÄÏ·½Õ¼ÁìÁË£¬ºÜ¿ì¾ÍÒª´òµ½ÎÒÃÇÕâ¶ùÀ´ÁË¡±\n");
-		Sleep(1000);
-		system("cls");
-		Slowsay("¡°ßí£¬¼ÈÈ»ÕâÀïÊÇÄãµÄ¼ÒÏç£¬ÄÇÃ´£¬¾ÍÈÃÄã°²Ï¢ÔÚÕâÀï°É£¬ÄãµÄÁé»êÄÜÊØ»¤ÕâÀïµÄ¡±\n");
+		Slowsay("â€œçŽ°åœ¨ï¼Œå·¨å²©é­”çŽ‹å·²ç»å°†å—æ–¹å é¢†äº†ï¼Œå¾ˆå¿«å°±è¦æ‰“åˆ°æˆ‘ä»¬è¿™å„¿æ¥äº†â€\n");
 		Sleep(1000);
 		system("cls");
-		Slowsay("¡°ÎÒÏëËµµÄ¾ÍÕâÃ´¶àÁË£¬ÎÒÏÈ×ßÁË£¬ÔÙ¼û£¡¡±\n");
+		Slowsay("â€œå””ï¼Œæ—¢ç„¶è¿™é‡Œæ˜¯ä½ çš„å®¶ä¹¡ï¼Œé‚£ä¹ˆï¼Œå°±è®©ä½ å®‰æ¯åœ¨è¿™é‡Œå§ï¼Œä½ çš„çµé­‚èƒ½å®ˆæŠ¤è¿™é‡Œçš„â€\n");
 		Sleep(1000);
 		system("cls");
-		Slowsay("À¥µÏËûÃÇ×ßÁË£¬ÔÚÕâ×ù»ÄÁ¹µÄ´å×ÓÀï£¬Î¨¶ÀÒ»¿éÆÆ¾ÉµÄÄ¹±®¸ñÍâÏÔÑÛ\n");
+		Slowsay("â€œæˆ‘æƒ³è¯´çš„å°±è¿™ä¹ˆå¤šäº†ï¼Œæˆ‘å…ˆèµ°äº†ï¼Œå†è§ï¼â€\n");
 		Sleep(1000);
-		Slowsay("ÄÇ¿éÄ¹±®¸ß´óµØËÊÁ¢×Å£¬Ô¶Ô¶ÍûÈ¥£¬ÏñÒ»×ðÊØ»¤ÉñµÄµñËÜ......\n");
+		system("cls");
+		Slowsay("æ˜†è¿ªä»–ä»¬èµ°äº†ï¼Œåœ¨è¿™åº§è’å‡‰çš„æ‘å­é‡Œï¼Œå”¯ç‹¬ä¸€å—ç ´æ—§çš„å¢“ç¢‘æ ¼å¤–æ˜¾çœ¼\n");
+		Sleep(1000);
+		Slowsay("é‚£å—å¢“ç¢‘é«˜å¤§åœ°è€¸ç«‹ç€ï¼Œè¿œè¿œæœ›åŽ»ï¼Œåƒä¸€å°Šå®ˆæŠ¤ç¥žçš„é›•å¡‘......\n");
 		Sleep(3000);
 	}
 	system("cls");
@@ -787,7 +787,7 @@ void xuetiao() {
 	tiaose(2);
 	for(int i=0; i<17; i++) {
 		Sleep(20);
-		cout<<"¨€";
+		cout<<"â–ˆ";
 	}
 	tiaose(15);
 	guangbiao(83,0);
@@ -802,7 +802,7 @@ void xuetiao() {
 	tiaose(4);
 	for(int i=1; i<=17; i++) {
 		Sleep(20);
-		cout<<"¨€";
+		cout<<"â–ˆ";
 	}
 	tiaose(14);
 	guangbiao(1,3);
@@ -810,102 +810,102 @@ void xuetiao() {
 bool mengjing() {
 	system("cls");
 	Sleep(2000);
-	Slowsay("ÄãÍ»È»·¢ÏÖÄã×ßÔÚÒ»ÌõËÆÔøÏàÊ¶µÄÐ¡Â·ÉÏ\n\n");
+	Slowsay("ä½ çªç„¶å‘çŽ°ä½ èµ°åœ¨ä¸€æ¡ä¼¼æ›¾ç›¸è¯†çš„å°è·¯ä¸Š\n\n");
 	Sleep(1500);
-	Slowsay("ÄãÅÔ±ßµÄ¾°Îï¾¹ÊÇÈç´ËÊìÏ¤£¬µ«ÊµÔÚÊÇ¼Ç²»ÆðÀ´ÔÚÄÄ¶ù¼û¹ýÁË\n");
+	Slowsay("ä½ æ—è¾¹çš„æ™¯ç‰©ç«Ÿæ˜¯å¦‚æ­¤ç†Ÿæ‚‰ï¼Œä½†å®žåœ¨æ˜¯è®°ä¸èµ·æ¥åœ¨å“ªå„¿è§è¿‡äº†\n");
 	Sleep(1500);
 	system("cls");
 	Sleep(1000);
-	Slowsay("¡°ßí¹þ¹þ¹þ¹þ¹þ¹þ¹þ¹þ!¡±\n");
+	Slowsay("â€œå””å“ˆå“ˆå“ˆå“ˆå“ˆå“ˆå“ˆå“ˆ!â€\n");
 	Sleep(1000);
 	system("cls");
-	Slowsay("ÕâÊ±£¬Ò»Éù´Ì¶úµÄ¼éÐ¦Éù´«À´\n\n");
+	Slowsay("è¿™æ—¶ï¼Œä¸€å£°åˆºè€³çš„å¥¸ç¬‘å£°ä¼ æ¥\n\n");
 	Sleep(1000);
-	Slowsay("Ò»¸öÉíÅû¶·Åñ£¬ÉíÌåÍ¸Ã÷µÄ¡°ÈË¡±·ÉÁË¹ýÀ´\n");
+	Slowsay("ä¸€ä¸ªèº«æŠ«æ–—ç¯·ï¼Œèº«ä½“é€æ˜Žçš„â€œäººâ€é£žäº†è¿‡æ¥\n");
 	Sleep(1000);
 	system("cls");
-	Slowsay("ÄãÐÄÀïÒ»¾ª£¬ÎÊ£º¡°ÄãÊÇË­£¿¡±\n");
+	Slowsay("ä½ å¿ƒé‡Œä¸€æƒŠï¼Œé—®ï¼šâ€œä½ æ˜¯è°ï¼Ÿâ€\n");
 	Sleep(2000);
-	Slowsay("¡°ÎÒÊÇË­£¿Äã²Â£¡¹þ¹þ~ O(¡É_¡É)O¡±\n");
+	Slowsay("â€œæˆ‘æ˜¯è°ï¼Ÿä½ çŒœï¼å“ˆå“ˆ~ O(âˆ©_âˆ©)Oâ€\n");
 	Sleep(1000);
 	system("cls");
-	Slowsay("¡°ÄãÏÖÔÚËùÔÚµÄµØ·½¾ÍÊÇÄã¹ýÈ¥ÔÚÃÎÖÐËùÔø¾­Àú¹ýµÄµØ·½¡±\n");
+	Slowsay("â€œä½ çŽ°åœ¨æ‰€åœ¨çš„åœ°æ–¹å°±æ˜¯ä½ è¿‡åŽ»åœ¨æ¢¦ä¸­æ‰€æ›¾ç»åŽ†è¿‡çš„åœ°æ–¹â€\n");
 	Sleep(1000);
-	Slowsay("¡°²»¹ý£¬Ïë»î×Å»ØÈ¥¿É²»ÊÇÄÇÃ´ÈÝÒ×µÄÊÇÅ¶£¬¹þ¹þ¹þ¹þ¹þ¡±\n");
+	Slowsay("â€œä¸è¿‡ï¼Œæƒ³æ´»ç€å›žåŽ»å¯ä¸æ˜¯é‚£ä¹ˆå®¹æ˜“çš„æ˜¯å“¦ï¼Œå“ˆå“ˆå“ˆå“ˆå“ˆâ€\n");
 	Sleep(2000);
 	system("cls");
-	Slowsay("ÄãÐÄÏë£º¡°ÕâÈËÊÇ²»ÊÇÄÔ²Ð°¡£¬ÀÏÊÇÐ¦¸öÃ»ÍêÃ»ÁË¡±,²»¹ýÄã»¹ÊÇ×°Ä£×öÑùµØÎÊ£º¡°ÎªÊ²Ã´£¿¡±\n");
+	Slowsay("ä½ å¿ƒæƒ³ï¼šâ€œè¿™äººæ˜¯ä¸æ˜¯è„‘æ®‹å•Šï¼Œè€æ˜¯ç¬‘ä¸ªæ²¡å®Œæ²¡äº†â€,ä¸è¿‡ä½ è¿˜æ˜¯è£…æ¨¡åšæ ·åœ°é—®ï¼šâ€œä¸ºä»€ä¹ˆï¼Ÿâ€\n");
 	Sleep(1000);
 	system("cls");
-	Slowsay("¡°ÒòÎªÂï¡­¡­¡­¡­¡­¡­¡­¡­Äã²Â~¡±\n\n");
+	Slowsay("â€œå› ä¸ºå˜›â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦ä½ çŒœ~â€\n\n");
 	Sleep(1000);
-	Slowsay("¡°½ñÌì£¬±¾ÈËÐÄÇéºÃ~Ö»ÒªÄãÄÜ´ð³öÏÂÃæÕâÌâ£¬ÎÒ¾Í·ÅÄã»ØÈ¥¡±\n");
+	Slowsay("â€œä»Šå¤©ï¼Œæœ¬äººå¿ƒæƒ…å¥½~åªè¦ä½ èƒ½ç­”å‡ºä¸‹é¢è¿™é¢˜ï¼Œæˆ‘å°±æ”¾ä½ å›žåŽ»â€\n");
 	Sleep(1000);
 	system("cls");
-	Slowsay("ÏÈÓÐ¼¦»¹ÊÇÏÈÓÐµ°£¿  »Ø´ð£º1,¼¦  2,µ°\n");
+	Slowsay("å…ˆæœ‰é¸¡è¿˜æ˜¯å…ˆæœ‰è›‹ï¼Ÿ  å›žç­”ï¼š1,é¸¡  2,è›‹\n");
 	int a;
 	cin>>a;
 	bool q;
 	if(a!=1&&a!=2) {
-		Slowsay("°¥Ñ½Ñ½£¬Äã¸Ò²»°´ÌâÄ¿ÒªÇó×÷´ð£¿\n");
+		Slowsay("å“Žå‘€å‘€ï¼Œä½ æ•¢ä¸æŒ‰é¢˜ç›®è¦æ±‚ä½œç­”ï¼Ÿ\n");
 		Sleep(1000);
 		system("cls");
 	}
 	if(a==1) {
 		Sleep(1000);
-		Slowsay("¨q(¨s^¨t)¨r£¬ËãÄã»Ø´ðÕýÈ·£¬»ØÈ¥°É~\n");
+		Slowsay("â•­(â•¯^â•°)â•®ï¼Œç®—ä½ å›žç­”æ­£ç¡®ï¼Œå›žåŽ»å§~\n");
 		Sleep(1000);
-		Slowsay("Ò»µÀ½ðÉ«µÄ¹âÃ¢ÁýÕÖÁË´óµØ£¬µ±¹âÃ¢ÏûÊ§ºó£¬ÄãÒÑ¾­»Øµ½ÁË¸Õ¸ÕµÄµØ·½¡­¡­¡­¡­\n");
+		Slowsay("ä¸€é“é‡‘è‰²çš„å…‰èŠ’ç¬¼ç½©äº†å¤§åœ°ï¼Œå½“å…‰èŠ’æ¶ˆå¤±åŽï¼Œä½ å·²ç»å›žåˆ°äº†åˆšåˆšçš„åœ°æ–¹â€¦â€¦â€¦â€¦\n");
 		return true;
 	}
 	if(a==2) {
 		Sleep(1000);
-		Slowsay("¹þ¹þ£¬»Ø´ð´íÎó£¡£¡£¡£¡\n");
+		Slowsay("å“ˆå“ˆï¼Œå›žç­”é”™è¯¯ï¼ï¼ï¼ï¼\n");
 	}
-	Slowsay("ÎÒÒª°ÑÄãÉãÈëËÀÉñ¿½ÎÊÊÒ£¬°ÑÄã»î»îÕûËÀ£¬ºßºß~\n");
+	Slowsay("æˆ‘è¦æŠŠä½ æ‘„å…¥æ­»ç¥žæ‹·é—®å®¤ï¼ŒæŠŠä½ æ´»æ´»æ•´æ­»ï¼Œå“¼å“¼~\n");
 	Sleep(2000);
 	system("cls");
-	Slowsay("ÄãÄ¾ÓÐÌýÇå£¬±ãÎÊ£º¡°ÊÇÊ²¿¾»ðÊÒÊÇÉñÂí£¿¡±\n");
+	Slowsay("ä½ æœ¨æœ‰å¬æ¸…ï¼Œä¾¿é—®ï¼šâ€œæ˜¯ä»€çƒ¤ç«å®¤æ˜¯ç¥žé©¬ï¼Ÿâ€\n");
 	Sleep(1000);
-	Slowsay("¡°NQS£¡ÎÒÒª°ÑÄãºÃºÃÕûÕû¡ª¡ªkshdoadhdbncjksamkxha!¡±\n");
+	Slowsay("â€œNQSï¼æˆ‘è¦æŠŠä½ å¥½å¥½æ•´æ•´â€”â€”kshdoadhdbncjksamkxha!â€\n");
 	Sleep(1000);
 	system("cls");
-	Slowsay("ÕâÊ±£¬ËüµÄÉíÌå±¬·¢³öÒ»µÀµÀ×ÏÉ«µÄ¹âÃ¢£¬ÍÌÊÉÁËÕû¸ö¿Õ¼ä¡­¡­¡­¡­\n");
+	Slowsay("è¿™æ—¶ï¼Œå®ƒçš„èº«ä½“çˆ†å‘å‡ºä¸€é“é“ç´«è‰²çš„å…‰èŠ’ï¼Œåžå™¬äº†æ•´ä¸ªç©ºé—´â€¦â€¦â€¦â€¦\n");
 	Sleep(1000);
-	Slowsay("½Ó×Å£¬Äã¸Ð¾õ±»Ò»¹ÉÎÞÐÎµÄÁ¦Á¿À­ÈëÁË¸üÉîµÄÒ»²ã¡­¡­¡­¡­¡­¡­¡­¡­\n");
+	Slowsay("æŽ¥ç€ï¼Œä½ æ„Ÿè§‰è¢«ä¸€è‚¡æ— å½¢çš„åŠ›é‡æ‹‰å…¥äº†æ›´æ·±çš„ä¸€å±‚â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦\n");
 	Sleep(3500);
 	system("cls");
-	Slowsay("µ±ÄãÔÙ¶ÈÕö¿ªÑÛ¾¦Ê±£¬Äã·¢ÏÖÄãÔÚÒ»¸ù¾Þ´óµÄÔ²ÐÍÖù×ÓÅÔ£¬½ÅÉÏ¿Û×Å¼ÏËø£¬ÊÖÉÏ´÷×ÅÊÖîí\n");
+	Slowsay("å½“ä½ å†åº¦çå¼€çœ¼ç›æ—¶ï¼Œä½ å‘çŽ°ä½ åœ¨ä¸€æ ¹å·¨å¤§çš„åœ†åž‹æŸ±å­æ—ï¼Œè„šä¸Šæ‰£ç€æž·é”ï¼Œæ‰‹ä¸Šæˆ´ç€æ‰‹é“\n");
 	Sleep(1000);
-	Slowsay("Äã»¹¸Ðµ½Ò»¹ÉÎÞÐÎµÄÁ¦Á¿Õý°ÑÄãÍùÖù×ÓÉÏÞô£¬»¹°ÑÄãÍùÇ°ÍÆ\n");
+	Slowsay("ä½ è¿˜æ„Ÿåˆ°ä¸€è‚¡æ— å½¢çš„åŠ›é‡æ­£æŠŠä½ å¾€æŸ±å­ä¸Šæ‘ï¼Œè¿˜æŠŠä½ å¾€å‰æŽ¨\n");
 	Sleep(1000);
-	Slowsay("ÄãÕýÔÚÄÉÃÆ£¬Í»È»ºóÃæ´«À´Ò»Õó¿Õ¶´µÄÉùÒô¡ª¡ª");
+	Slowsay("ä½ æ­£åœ¨çº³é—·ï¼Œçªç„¶åŽé¢ä¼ æ¥ä¸€é˜µç©ºæ´žçš„å£°éŸ³â€”â€”");
 	Sleep(1000);
-	Slowsay("¡°Ó´£¬ÓÖÀ´ÁËÒ»¸öÐÂÈËÁËÑ½¡±\n");
+	Slowsay("â€œå“Ÿï¼Œåˆæ¥äº†ä¸€ä¸ªæ–°äººäº†å‘€â€\n");
 	Sleep(1000);
 	system("cls");
-	Slowsay("ÄãÃÍµØÒ»×ªÍ·£¬²Å·¢ÏÖºóÃæÓÐÐí¶àºÍ×Ô¼ºÒ»Ñù±»ÞôÔÚÇ½ÉÏµÄÈË£¬Ö»²»¹ýËûÃÇ´©µÄÒÂ·þ¶¼ÆÆÆÆÀÃÀÃµÄ£¬°¹ÔàµÄÏñ¸öÄ§¹íËÆµÄ\n");
+	Slowsay("ä½ çŒ›åœ°ä¸€è½¬å¤´ï¼Œæ‰å‘çŽ°åŽé¢æœ‰è®¸å¤šå’Œè‡ªå·±ä¸€æ ·è¢«æ‘åœ¨å¢™ä¸Šçš„äººï¼Œåªä¸è¿‡ä»–ä»¬ç©¿çš„è¡£æœéƒ½ç ´ç ´çƒ‚çƒ‚çš„ï¼Œè‚®è„çš„åƒä¸ªé­”é¬¼ä¼¼çš„\n");
 	Sleep(1000);
-	Slowsay("¡°ÄãÒ²ÊÇ±»Ëü×¥¹ýÀ´µÄÂð£¿¡±\n");
+	Slowsay("â€œä½ ä¹Ÿæ˜¯è¢«å®ƒæŠ“è¿‡æ¥çš„å—ï¼Ÿâ€\n");
 	Sleep(1000);
-	Slowsay("ÄãËµ£º¡°ÊÇµÄ£¬²»¹ýËüÊÇË­£¿¡±\n");
+	Slowsay("ä½ è¯´ï¼šâ€œæ˜¯çš„ï¼Œä¸è¿‡å®ƒæ˜¯è°ï¼Ÿâ€\n");
 	Sleep(1500);
-	Slowsay("¡°´«ËµÖÐµÄ¹âÓ°µÁÃÎÕß£¬ÔÚÄãÊìË¯»òÊÇ×¢ÒâÁ¦·ÖÉ¢Ê±»á½«Äã´øÈëÒ»¸öÄãÔøÔÚÃÎÀïÈ¥¹ýµÄµØ·½¡£Èç¹ûÐÒÔË£¬Äã½«»áÆ½°²»Ø¹éÏÖÊµ£¬Èç¹û²»ÐÒÔË£¬Äã¾Í»á±»´øµ½Õâ¶ùÀ´¡±\n");
+	Slowsay("â€œä¼ è¯´ä¸­çš„å…‰å½±ç›—æ¢¦è€…ï¼Œåœ¨ä½ ç†Ÿç¡æˆ–æ˜¯æ³¨æ„åŠ›åˆ†æ•£æ—¶ä¼šå°†ä½ å¸¦å…¥ä¸€ä¸ªä½ æ›¾åœ¨æ¢¦é‡ŒåŽ»è¿‡çš„åœ°æ–¹ã€‚å¦‚æžœå¹¸è¿ï¼Œä½ å°†ä¼šå¹³å®‰å›žå½’çŽ°å®žï¼Œå¦‚æžœä¸å¹¸è¿ï¼Œä½ å°±ä¼šè¢«å¸¦åˆ°è¿™å„¿æ¥â€\n");
 	Sleep(1000);
-	Slowsay("¡°ÄãÃÇÊÇÊ²Ã´Ê±ºò½øÀ´µÄ£¿\n¡±");
+	Slowsay("â€œä½ ä»¬æ˜¯ä»€ä¹ˆæ—¶å€™è¿›æ¥çš„ï¼Ÿ\nâ€");
 	Sleep(1500);
 	system("cls");
-	Slowsay("´ó¸Å2000¶àÄêÇ°°É£¬ºÜÆæ¹Ö£¬ÔÚÕâ¶ù²»ÓÃ³Ô²»ÓÃºÈÄã¶¼ÄÜ»îµÄºÃºÃµÄ£¬²»¹ýÃ¿Ìì¶¼Ö»ÄÜÒ»Ö±×ß£¬Ò»Ö±×ß£¬Ò»Ö±×ß¡­¡­×ßµ½ÄãÐÄÁ¦½»´áÒ²Í£²»ÏÂÀ´\n");
+	Slowsay("å¤§æ¦‚2000å¤šå¹´å‰å§ï¼Œå¾ˆå¥‡æ€ªï¼Œåœ¨è¿™å„¿ä¸ç”¨åƒä¸ç”¨å–ä½ éƒ½èƒ½æ´»çš„å¥½å¥½çš„ï¼Œä¸è¿‡æ¯å¤©éƒ½åªèƒ½ä¸€ç›´èµ°ï¼Œä¸€ç›´èµ°ï¼Œä¸€ç›´èµ°â€¦â€¦èµ°åˆ°ä½ å¿ƒåŠ›äº¤ç˜ä¹Ÿåœä¸ä¸‹æ¥\n");
 	Sleep(1000);
-	Slowsay("¡°ÄÑµÀ£¬ÄãÒ»Ö±×ßÁËÁ½Ç§¶àÄêÀ²£¿£¡¡±\n");
+	Slowsay("â€œéš¾é“ï¼Œä½ ä¸€ç›´èµ°äº†ä¸¤åƒå¤šå¹´å•¦ï¼Ÿï¼â€\n");
 	Sleep(1000);
-	Slowsay("¡°ÊÇµÄ¡±\n");
+	Slowsay("â€œæ˜¯çš„â€\n");
 	Sleep(2000);
-	Slowsay("¡°¨r(¨s¨Œ¨t)¨q£¬ÈËÊÀ¼ä±¯²ÒµÄÊÂÇéÌ«¶àÁË~~~¡±\n");
+	Slowsay("â€œâ•®(â•¯â–½â•°)â•­ï¼Œäººä¸–é—´æ‚²æƒ¨çš„äº‹æƒ…å¤ªå¤šäº†~~~â€\n");
 	Sleep(1000);
-	Slowsay("²»¹ý£¬Ö»Òª»Ø´ð³öÇ½ÉÏµÄÄÇµÀÌâ£¬ÎÒÃÇ¾Í¿ÉÒÔ½â·ÅÁË£¬µ«ÊÇÇë¼Ç×¡£¬ÓÐÇÒÖ»ÓÐÒ»´Î»ú»á¡ª¡ªÖªµÀ´ð°¸ºó´óÉùº°³ö¾ÍÐÐÁË\n");
+	Slowsay("ä¸è¿‡ï¼Œåªè¦å›žç­”å‡ºå¢™ä¸Šçš„é‚£é“é¢˜ï¼Œæˆ‘ä»¬å°±å¯ä»¥è§£æ”¾äº†ï¼Œä½†æ˜¯è¯·è®°ä½ï¼Œæœ‰ä¸”åªæœ‰ä¸€æ¬¡æœºä¼šâ€”â€”çŸ¥é“ç­”æ¡ˆåŽå¤§å£°å–Šå‡ºå°±è¡Œäº†\n");
 	Sleep(1000);
-	Slowsay("Äã¿´ÁË¿´Ç½ÉÏ£¬ÉÏÃæÐ´×Å¡ª¡ª");
+	Slowsay("ä½ çœ‹äº†çœ‹å¢™ä¸Šï¼Œä¸Šé¢å†™ç€â€”â€”");
 	int app=rand()%5;
 	Slowsay(Tm[app]);
 	cout<<endl;
@@ -914,89 +914,89 @@ bool mengjing() {
 	cin>>ans;
 	int sum=answer[app];
 	Sleep(1000);
-	Slowsay("Äã´óÉùº°³öÁË");
+	Slowsay("ä½ å¤§å£°å–Šå‡ºäº†");
 	cout<<ans;
 	Sleep(500);
 	system("cls");
 	Sleep(1000);
-	Slowsay("Í»È»£¬µØ¶¯É½Ò¡\n");
+	Slowsay("çªç„¶ï¼Œåœ°åŠ¨å±±æ‘‡\n");
 	Sleep(1000);
 	if(ans!=sum) {
-		Slowsay("Ò»Éù´Ì¶ú¶øÒ£Ô¶µÄÉùÒô´«À´£º");
+		Slowsay("ä¸€å£°åˆºè€³è€Œé¥è¿œçš„å£°éŸ³ä¼ æ¥ï¼š");
 		Sleep(1000);
-		Slowsay("»Ø´ð´íÎó£¡£¡£¡£¡£¡\n");
+		Slowsay("å›žç­”é”™è¯¯ï¼ï¼ï¼ï¼ï¼\n");
 		Sleep(1000);
 		system("cls");
 		return false;
 	}
 	system("cls");
 	Sleep(1000);
-	Slowsay("»©À²¡ª¡ªµØÃæ¿ªÁÑ£¬ËùÓÐÈË¶¼µôÁËÏÂÈ¥¡­¡­\n");
+	Slowsay("å“—å•¦â€”â€”åœ°é¢å¼€è£‚ï¼Œæ‰€æœ‰äººéƒ½æŽ‰äº†ä¸‹åŽ»â€¦â€¦\n");
 	Sleep(2000);
 	system("cls");
-	Slowsay("µ±ÄãÔÎÔÎºõºõµØÕ¾ÆðÀ´Ê±£¬·¢ÏÖËÄÖÜÒ»Æ¬ÆáºÚ\n");
+	Slowsay("å½“ä½ æ™•æ™•ä¹Žä¹Žåœ°ç«™èµ·æ¥æ—¶ï¼Œå‘çŽ°å››å‘¨ä¸€ç‰‡æ¼†é»‘\n");
 	Sleep(2000);
-	Slowsay("µ±Äã¿´¼ûÆäËûÈËÒ²Õ¾ÆðÀ´Ê±£¬Í»È»ÎÅµ½Ò»¹É¸¯ÀÃµÄ³ôÆø¡­¡­¡­¡­\n");
+	Slowsay("å½“ä½ çœ‹è§å…¶ä»–äººä¹Ÿç«™èµ·æ¥æ—¶ï¼Œçªç„¶é—»åˆ°ä¸€è‚¡è…çƒ‚çš„è‡­æ°”â€¦â€¦â€¦â€¦\n");
 	Sleep(3000);
 	char k;
 	ganma:
 	system("cls");
-	Slowsay("ÄãÒª¸ÉÂï£¿   1£¬ÇÄÇÄÀë¿ª    2£¬Ô­µØ²»¶¯\n");
+	Slowsay("ä½ è¦å¹²å˜›ï¼Ÿ   1ï¼Œæ‚„æ‚„ç¦»å¼€    2ï¼ŒåŽŸåœ°ä¸åŠ¨\n");
 	cin>>k;
 	if(k!='1'&&k!='2') {
 		goto ganma;
 	}
 	if(k=='1') {
 		Sleep(1000);
-		Slowsay("ÄãÇÄÇÄµØÀë¿ªÁË¡­¡­\n");
+		Slowsay("ä½ æ‚„æ‚„åœ°ç¦»å¼€äº†â€¦â€¦\n");
 		Sleep(2000);
 		system("cls");
 		int klkl=rand()%2;
 		if(klkl==0) {
-			Slowsay("Í»È»£¬Äã½ÅÏÂÒ»¿Õ£¬ÂäÈëÁËÎÞ±ßºÚ°µ¡­¡­\n");
+			Slowsay("çªç„¶ï¼Œä½ è„šä¸‹ä¸€ç©ºï¼Œè½å…¥äº†æ— è¾¹é»‘æš—â€¦â€¦\n");
 			Sleep(1000);
 			system("cls");
 			return false;
 		}
 		if(klkl==1) {
-			Slowsay("ÄãÇÄÇÄµØÍùÇ°×ß£¬ÕâÊ±£¬´ÓºóÃæÍ»È»´«À´Ò»Õóº°Éù£º¡°ÉÙÁËÒ»¸öÈË£¡¡±\n");
+			Slowsay("ä½ æ‚„æ‚„åœ°å¾€å‰èµ°ï¼Œè¿™æ—¶ï¼Œä»ŽåŽé¢çªç„¶ä¼ æ¥ä¸€é˜µå–Šå£°ï¼šâ€œå°‘äº†ä¸€ä¸ªäººï¼â€\n");
 			Sleep(2000);
-			Slowsay("½ô½Ó×Å£¬Äã¸Ðµ½Ò»¹ÉÀ­Á¦£¬°ÑÄãÊ¹¾¢À­ÁË»ØÈ¥¡­¡­");
+			Slowsay("ç´§æŽ¥ç€ï¼Œä½ æ„Ÿåˆ°ä¸€è‚¡æ‹‰åŠ›ï¼ŒæŠŠä½ ä½¿åŠ²æ‹‰äº†å›žåŽ»â€¦â€¦");
 			Sleep(1000);
-			Slowsay("°¡°¡°¡°¡°¡°¡°¡°¡°¡°¡°¡°¡¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª\n");
+			Slowsay("å•Šå•Šå•Šå•Šå•Šå•Šå•Šå•Šå•Šå•Šå•Šå•Šâ€”â€”â€”â€”â€”â€”â€”â€”â€”â€”\n");
 			Sleep(2000);
 			system("cls");
-			Slowsay("Í»È»£¬Äã·¢ÏÖÁËÒ»¸ö¡°ÈË¡±Õ¾ÔÚÄãÃæÇ°¡­¡­\n");
+			Slowsay("çªç„¶ï¼Œä½ å‘çŽ°äº†ä¸€ä¸ªâ€œäººâ€ç«™åœ¨ä½ é¢å‰â€¦â€¦\n");
 		}
 	} else {
 		Sleep(1000);
-		Slowsay("ÄãÕýÔÚÄÉÃÆ¶ù£¬Ò»¸öÉíÓ°±ãÆ®ÁË¹ýÀ´~\n");
+		Slowsay("ä½ æ­£åœ¨çº³é—·å„¿ï¼Œä¸€ä¸ªèº«å½±ä¾¿é£˜äº†è¿‡æ¥~\n");
 		Sleep(1000);
 		system("cls");
 		Sleep(1000);
 	}
 	Sleep(1000);
-	Slowsay("ËüÉíÅûºÚÉ«¶·Åñ£¬ºÚÉ«µÄÃ±×ÓÕÚ×¡ÁËËüµÄÁ³£¬È´ÒþÔ¼ÓÐÒ»µÀÀû½£Ò»°ãµÄ¹â´ÓÀïÃæÉä³öÀ´\n");
+	Slowsay("å®ƒèº«æŠ«é»‘è‰²æ–—ç¯·ï¼Œé»‘è‰²çš„å¸½å­é®ä½äº†å®ƒçš„è„¸ï¼Œå´éšçº¦æœ‰ä¸€é“åˆ©å‰‘ä¸€èˆ¬çš„å…‰ä»Žé‡Œé¢å°„å‡ºæ¥\n");
 	Sleep(1000);
-	Slowsay("ËüÊÖÎÕÁ­µ¶£¬¶øÂ¶³öÀ´µÄÊÖÕÆ£¬È´Ã»ÓÐÑªÈâ£¬Ö»ÊÇ°×É­É­µÄ¹ÇÍ·¡­¡­\n");
+	Slowsay("å®ƒæ‰‹æ¡é•°åˆ€ï¼Œè€Œéœ²å‡ºæ¥çš„æ‰‹æŽŒï¼Œå´æ²¡æœ‰è¡€è‚‰ï¼Œåªæ˜¯ç™½æ£®æ£®çš„éª¨å¤´â€¦â€¦\n");
 	Sleep(1000);
 	system("cls");
-	Slowsay("ÕâÐÎÏó£¬Ê¹ÄãÁªÏëµ½¡ª¡ªËÀÉñ£¡£¡\n");
+	Slowsay("è¿™å½¢è±¡ï¼Œä½¿ä½ è”æƒ³åˆ°â€”â€”æ­»ç¥žï¼ï¼\n");
 	Sleep(2000);
 	system("cls");
-	Slowsay("¡°Ó´£¬ÖÕÓÚ½â·ÅÁË£¬ÎÒÕâ¾Í´øÄãÃÇÈ¥µØÓü°É£¡¡±\n");
+	Slowsay("â€œå“Ÿï¼Œç»ˆäºŽè§£æ”¾äº†ï¼Œæˆ‘è¿™å°±å¸¦ä½ ä»¬åŽ»åœ°ç‹±å§ï¼â€\n");
 	Sleep(1000);
-	Slowsay("Äã¸Ðµ½Ò»¹Éº®Òâ£¬¶ø±ðÈËÈ´Ëµ£º¡°¶ÔÑ½£¬ÎÒÃÇÊÇ¼¸Ç§ÄêÇ°¾Íµ½ÕâÀïÁË£¬ÏÖÔÚÔç¾ÍËÀÁË¡£×ß£¬ÔÛÃÇ²»ÓÃÔÙ½ÓÊÜ¿áÐÌÁË£¬È¥µØÓü°É£¡\n¡±");
+	Slowsay("ä½ æ„Ÿåˆ°ä¸€è‚¡å¯’æ„ï¼Œè€Œåˆ«äººå´è¯´ï¼šâ€œå¯¹å‘€ï¼Œæˆ‘ä»¬æ˜¯å‡ åƒå¹´å‰å°±åˆ°è¿™é‡Œäº†ï¼ŒçŽ°åœ¨æ—©å°±æ­»äº†ã€‚èµ°ï¼Œå’±ä»¬ä¸ç”¨å†æŽ¥å—é…·åˆ‘äº†ï¼ŒåŽ»åœ°ç‹±å§ï¼\nâ€");
 	Sleep(1000);
-	Slowsay("ÓÚÊÇ£¬Äã´óº°£º¡°Î¹£¬ÎÒ»¹ÊÇ»îÈËÄØ£¬ÎÒ²Å¸Õ½øÀ´£¡¡±\n");
+	Slowsay("äºŽæ˜¯ï¼Œä½ å¤§å–Šï¼šâ€œå–‚ï¼Œæˆ‘è¿˜æ˜¯æ´»äººå‘¢ï¼Œæˆ‘æ‰åˆšè¿›æ¥ï¼â€\n");
 	Sleep(1000);
-	Slowsay("¡°°¥Ñ½Ñ½£¬±ð†ªàÂÁË£¬×ß£¬³ö·¢°É£¡¡±\n");
+	Slowsay("â€œå“Žå‘€å‘€ï¼Œåˆ«å•°å—¦äº†ï¼Œèµ°ï¼Œå‡ºå‘å§ï¼â€\n");
 	Sleep(500);
-	Slowsay("¡°²»£¬²»Òª¡ª¡ª¡ª¡ª¡±\n");
+	Slowsay("â€œä¸ï¼Œä¸è¦â€”â€”â€”â€”â€\n");
 	Sleep(2000);
 	system("cls");
 	Sleep(5000);
-	Slowsay("ÃÍµØÕö¿ªÑÛ¾¦£¬ºô~Ô­À´ÊÇÒ»³¡ÃÎ°¡\n");
+	Slowsay("çŒ›åœ°çå¼€çœ¼ç›ï¼Œå‘¼~åŽŸæ¥æ˜¯ä¸€åœºæ¢¦å•Š\n");
 	Sleep(1000);
 	return true;
 }
@@ -1006,7 +1006,7 @@ void Bag()
 		system("cls");
 		int flag=1;
 		jindu(50);
-		Slowsay("ÎäÆ÷£º\n");
+		Slowsay("æ­¦å™¨ï¼š\n");
 		for(int i=0; i<=bag; i++) {
 			if(wuqi[i]=="00") {
 				break;
@@ -1018,16 +1018,16 @@ void Bag()
 				cout<<flag<<": ";
 				flag++;
 				Slowsay(wuqi[i]);
-				Slowsay("   µÈ¼¶£º");
+				Slowsay("   ç­‰çº§ï¼š");
 				cout<<wuqiLV[i];
-				Slowsay("   ¹¥»÷Á¦£º");
+				Slowsay("   æ”»å‡»åŠ›ï¼š");
 				cout<<xinneng[i];
 				cout<<endl;
 			}
 		}
 		cout<<endl;
 		flag=1;
-		Slowsay("·À¾ß£º\n");
+		Slowsay("é˜²å…·ï¼š\n");
 		for(int i=0; i<=bag; i++) {
 			if(wuqi[i]=="00") {
 				cout<<endl;
@@ -1040,15 +1040,15 @@ void Bag()
 				cout<<flag<<": ";
 				flag++;
 				Slowsay(wuqi[i]);
-				Slowsay("   µÈ¼¶£º");
+				Slowsay("   ç­‰çº§ï¼š");
 				cout<<wuqiLV[i];
-				Slowsay("   ·ÀÓùÁ¦£º");
+				Slowsay("   é˜²å¾¡åŠ›ï¼š");
 				cout<<xinneng[i];
 				cout<<endl;
 			}
 		}
 		cout<<endl;
-		Slowsay("Ò©Ë®£º\n");
+		Slowsay("è¯æ°´ï¼š\n");
 		for(int i=0;i<=bag1;i++) {
 			if(yaoshui[i]=="00") {
 				break;
@@ -1056,42 +1056,42 @@ void Bag()
 			cout<<i+1<<": ";
 			switch(yaoshuixiao[i]) {
 				case 1:
-					say("Ð¡Æ¿ÉúÃüÒ©Ë®  Ë²¼ä»Ø¸´400~500µÎÑª\n");
+					say("å°ç“¶ç”Ÿå‘½è¯æ°´  çž¬é—´å›žå¤400~500æ»´è¡€\n");
 					break;
 				case 2:
-					say("ÖÐÆ¿ÉúÃüÒ©Ë®  Ë²¼ä»Ø¸´800~1000µÎÑªn");
+					say("ä¸­ç“¶ç”Ÿå‘½è¯æ°´  çž¬é—´å›žå¤800~1000æ»´è¡€n");
 					break;
 				case 3:
-					say("´óÆ¿ÉúÃüÒ©Ë®  Ë²¼ä»Ø¸´1400~1800µÎÑª\n");
+					say("å¤§ç“¶ç”Ÿå‘½è¯æ°´  çž¬é—´å›žå¤1400~1800æ»´è¡€\n");
 					break;
 				case 4:
-					say("ÌØ´óÉúÃüÒ©Ë®  Ë²¼ä»Ø¸´2200~3000µÎÑª\n");
+					say("ç‰¹å¤§ç”Ÿå‘½è¯æ°´  çž¬é—´å›žå¤2200~3000æ»´è¡€\n");
 					break;
 				case 5:
-					say("Ð¡Æ¿Ä§·¨Ò©Ë®  Ë²¼ä»Ø¸´150~250Ä§·¨Öµ\n");
+					say("å°ç“¶é­”æ³•è¯æ°´  çž¬é—´å›žå¤150~250é­”æ³•å€¼\n");
 					break;
 				case 6:
-					say("ÖÐÆ¿Ä§·¨Ò©Ë®  Ë²¼ä»Ø¸´450~650Ä§·¨Öµ\n");
+					say("ä¸­ç“¶é­”æ³•è¯æ°´  çž¬é—´å›žå¤450~650é­”æ³•å€¼\n");
 					break;
 				case 7:
-					say("´óÆ¿Ä§·¨Ò©Ë®  Ë²¼ä»Ø¸´950~1250Ä§·¨Öµ\n");
+					say("å¤§ç“¶é­”æ³•è¯æ°´  çž¬é—´å›žå¤950~1250é­”æ³•å€¼\n");
 					break;
 				case 8:
-					say("ÌØ´óÄ§·¨Ò©Ë®  Ë²¼ä»Ø¸´1650~2150Ä§·¨Öµ\n");
+					say("ç‰¹å¤§é­”æ³•è¯æ°´  çž¬é—´å›žå¤1650~2150é­”æ³•å€¼\n");
 					break;
 				case 9:
-					say("ÔªÆø»Ö¸´Ò©Ë®  Ë²¼ä»Ø¸´4000~5000µÎÑªÓëÄ§·¨Öµ\n");
+					say("å…ƒæ°”æ¢å¤è¯æ°´  çž¬é—´å›žå¤4000~5000æ»´è¡€ä¸Žé­”æ³•å€¼\n");
 					break;
 				case 10:
-					say("¾ÞÁéÒ©Ë®     Ë²¼ä»Ø¸´ÂúËùÓÐÑªÓëÄ§·¨Öµ\n");
+					say("å·¨çµè¯æ°´     çž¬é—´å›žå¤æ»¡æ‰€æœ‰è¡€ä¸Žé­”æ³•å€¼\n");
 					break;
 			}
 		}
 		cout<<endl;
-		Slowsay("µÀ¾ß£º\n\n");
-		Slowsay("Ä¾Í·£º");cout<<mu<<endl;
-		Slowsay("ÉúÌú£º");cout<<sheng<<endl;
-		Slowsay("¸ÖÌú£º");cout<<gang<<endl<<endl;
+		Slowsay("é“å…·ï¼š\n\n");
+		Slowsay("æœ¨å¤´ï¼š");cout<<mu<<endl;
+		Slowsay("ç”Ÿé“ï¼š");cout<<sheng<<endl;
+		Slowsay("é’¢é“ï¼š");cout<<gang<<endl<<endl;
 		for(int i=0; i<=bag2; i++) {
 			if(daoju[i]=="00") {
 				break;
@@ -1101,59 +1101,59 @@ void Bag()
 		}
 		cout<<endl;
 		cout<<endl<<endl<<endl;
-		Slowsay("Íæ¼ÒÃû£º");
+		Slowsay("çŽ©å®¶åï¼š");
 		cout<<name<<endl;
-		Slowsay("½ÇÉ«£º");
+		Slowsay("è§’è‰²ï¼š");
 		cout<<juese<<endl;
-		Slowsay("ÑªÁ¿:");
+		Slowsay("è¡€é‡:");
 		cout<<HP<<endl;
-		Slowsay("Ä§·¨Öµ£º");
+		Slowsay("é­”æ³•å€¼ï¼š");
 		cout<<MP<<endl;
-		Slowsay("¹¥»÷Á¦£º");
+		Slowsay("æ”»å‡»åŠ›ï¼š");
 		cout<<ATK<<endl;
-		Slowsay("µÈ¼¶£º");
+		Slowsay("ç­‰çº§ï¼š");
 		cout<<LV<<endl; 
-		Slowsay("·ÀÓùÁ¦£º");
+		Slowsay("é˜²å¾¡åŠ›ï¼š");
 		cout<<fang<<endl;
-		Slowsay("¾­ÑéÖµ£º");
+		Slowsay("ç»éªŒå€¼ï¼š");
 		cout<<EXP<<endl;
-		Slowsay("¾àÀëÉý¼¶»¹ÓÐ£º");
+		Slowsay("è·ç¦»å‡çº§è¿˜æœ‰ï¼š");
 		cout<<maxEXP;
-		Slowsay("¾­ÑéÖµ");
+		Slowsay("ç»éªŒå€¼");
 		cout<<endl<<endl;
-		Slowsay("½ð±Ò£º");
+		Slowsay("é‡‘å¸ï¼š");
 		cout<<jinbi<<endl;
-		Slowsay("¹úÍõ±Ò£º");
+		Slowsay("å›½çŽ‹å¸ï¼š");
 		cout<<G<<endl;
 		cout<<"\n\n\n\n\n\n";
-		Slowsay("ÒÑ×°±¸ÎäÆ÷£º");
+		Slowsay("å·²è£…å¤‡æ­¦å™¨ï¼š");
 		Slowsay(zhuangbeiwuqi);
-		Slowsay("   ¹¥»÷Á¦£º");
+		Slowsay("   æ”»å‡»åŠ›ï¼š");
 		cout<<zhuangbeia<<endl<<endl;
-		Slowsay("ÒÑ×°±¸·À¾ß£º");
+		Slowsay("å·²è£…å¤‡é˜²å…·ï¼š");
 		Slowsay(zhuangbeifangju);
-		Slowsay("   ·ÀÓùÁ¦£º");
+		Slowsay("   é˜²å¾¡åŠ›ï¼š");
 		cout<<zhuangbeif<<endl<<endl;
 		Slowsay("\n\n\n\n");
-		Slowsay("1,×°±¸ÎäÆ÷/·À¾ß\n");
-		Slowsay("2,Âô×°±¸\n");
-		Slowsay("3,·µ»Ø\n");
+		Slowsay("1,è£…å¤‡æ­¦å™¨/é˜²å…·\n");
+		Slowsay("2,å–è£…å¤‡\n");
+		Slowsay("3,è¿”å›ž\n");
 		Sleep(1000);
-		Slowsay("ÇëÑ¡Ôñ£º");
+		Slowsay("è¯·é€‰æ‹©ï¼š");
 		char pop;
 		cin>>pop;
 		if(pop=='1') {
 beginning:
 			cout<<endl<<endl;
-			Slowsay("ÇëÊäÈëÄúÒª×°±¸µÄÎäÆ÷»ò·À¾ßµÄÐòºÅ£¬-1·µ»Ø\n");
+			Slowsay("è¯·è¾“å…¥æ‚¨è¦è£…å¤‡çš„æ­¦å™¨æˆ–é˜²å…·çš„åºå·ï¼Œ-1è¿”å›ž\n");
 			for(int i=0; i<=bag-1; i++) {
-				cout<<i+1<<"£º";
+				cout<<i+1<<"ï¼š";
 				cout<<wuqi[i]<<"  ";
 				if(a_f[i]) {
-					Slowsay("¹¥»÷Á¦£º");
+					Slowsay("æ”»å‡»åŠ›ï¼š");
 					cout<<xinneng[i]<<endl;
 				} else {
-					Slowsay("·ÀÓùÁ¦£º");
+					Slowsay("é˜²å¾¡åŠ›ï¼š");
 					cout<<xinneng[i]<<endl;
 				}
 			}
@@ -1164,7 +1164,7 @@ beginning:
 				goto define;
 			}
 			if(tyd>bag||tyd<=0) {
-				Slowsay("µ±Ç°ÐòºÅ²»¿ÉÓÃ£¬ÇëÖØÊÔ£¡");
+				Slowsay("å½“å‰åºå·ä¸å¯ç”¨ï¼Œè¯·é‡è¯•ï¼");
 				Sleep(1000);
 				system("cls");
 				goto beginning;
@@ -1177,12 +1177,12 @@ beginning:
 				zhuangbeif=xinneng[tyd-1];
 			}
 			pct=Is_pct[tyd-1];
-			Slowsay("Ìæ»»³É¹¦£¡");
+			Slowsay("æ›¿æ¢æˆåŠŸï¼");
 			Sleep(1000);
 			return ;
 		}
 		if(pop=='2') {
-			Slowsay("¶Ô²»Æð£¬´Ë¹¦ÄÜÎ´¿ªÆð£¬×÷ÕßÕýÔÚ½øÒ»²½¿ª·¢ÖÐ¡­¡­\n");
+			Slowsay("å¯¹ä¸èµ·ï¼Œæ­¤åŠŸèƒ½æœªå¼€èµ·ï¼Œä½œè€…æ­£åœ¨è¿›ä¸€æ­¥å¼€å‘ä¸­â€¦â€¦\n");
 			Sleep(1000);
 			return ;
 		}
@@ -1190,7 +1190,7 @@ beginning:
 			return ;
 		}
 		if(pop!='1'||pop!='2'||pop!='3') {
-			Slowsay("ÇëÊäÈë1¡ª¡ª3ÄÚµÄÕûÊý£¡£¡");
+			Slowsay("è¯·è¾“å…¥1â€”â€”3å†…çš„æ•´æ•°ï¼ï¼");
 			Sleep(1000);
 			goto define;
 		}
@@ -1204,105 +1204,105 @@ bool choose()
 	int lxl=rand()%50;
 	if(lxl>=20)
 	{
-		Slowsay("ÕâÀïÊ²Ã´Ò²Ã»ÓÐ......\n");
+		Slowsay("è¿™é‡Œä»€ä¹ˆä¹Ÿæ²¡æœ‰......\n");
 		Sleep(1500);
 		system("cls");
 		return true;
 	}
 	if(lxl>=4&&lxl<10)
 	{
-		Slowsay("ÄãÔâµ½Ìì´òÀ×Åü£¬ÑªÁ¿ÉÏÏÞ-50£¡");
+		Slowsay("ä½ é­åˆ°å¤©æ‰“é›·åŠˆï¼Œè¡€é‡ä¸Šé™-50ï¼");
 		maxHP-=50;
 		HP-=50;
 		if(maxHP<=0)
 		{
 			Sleep(2000);
-			Slowsay("ÄúµÄRPÌ«µÍÈÇ£¬Äú±»ÌìÀ×Õ¨ËÀÈÇ¡£¡£¡£\n\n");
+			Slowsay("æ‚¨çš„RPå¤ªä½Žæƒ¹ï¼Œæ‚¨è¢«å¤©é›·ç‚¸æ­»æƒ¹ã€‚ã€‚ã€‚\n\n");
 			Sleep(1500);
 			return false;
 		}
 	}
 	if(lxl>=10&&lxl<15)
 	{
-		Slowsay("ÄãÕÒµ½ÁËÒ»Ð©½ð±Ò£¡£¡\n");
+		Slowsay("ä½ æ‰¾åˆ°äº†ä¸€äº›é‡‘å¸ï¼ï¼\n");
 		Sleep(1000);
 		system("cls");
 		int add=rand()%4501;
 		jinbi+=add;
-		Slowsay("»ñµÃ½ð±Ò¡Á");
+		Slowsay("èŽ·å¾—é‡‘å¸Ã—");
 		cout<<add;
 	}
 	if(lxl>=15&&lxl<20)
 	{
-		Slowsay("ÄãÕÒµ½ÁËÑªÆ¿£¡£¡ÑªÁ¿ÉÏÏÞ+100£¡");
+		Slowsay("ä½ æ‰¾åˆ°äº†è¡€ç“¶ï¼ï¼è¡€é‡ä¸Šé™+100ï¼");
 		maxHP+=100;
 		HP+=100;
 	}
 	if(lxl==1&&Wpass>=5)
 	{
-		Slowsay("ÕâÀïÊ²Ã´Ò²Ã»ÓÐ......\n");
+		Slowsay("è¿™é‡Œä»€ä¹ˆä¹Ÿæ²¡æœ‰......\n");
 		Sleep(1000);
 		return true;
 	}
 	switch(lxl)
 	{
 		case 0:{
-			Slowsay("²åÔÚµØÉÏµÄ´«ÆæÎäÆ÷\n\n");
-			Slowsay("Ö»ÓÐÓÐÔµ·ÖµÄÈË£¬²ÅÄÜ°Î³öÀ´\n");
+			Slowsay("æ’åœ¨åœ°ä¸Šçš„ä¼ å¥‡æ­¦å™¨\n\n");
+			Slowsay("åªæœ‰æœ‰ç¼˜åˆ†çš„äººï¼Œæ‰èƒ½æ‹”å‡ºæ¥\n");
 			Sleep(500);
-			Slowsay("Enter¼üÊÔ×Å°Î³ö...");
+			Slowsay("Enteré”®è¯•ç€æ‹”å‡º...");
 			getline(cin,s);
 			int bc=rand()%5;
 			if(bc==0)
 			{
-				Slowsay("ºÜÒÅº¶£¬ÄúÎ´ÄÜ°Î³ö´ËÎäÆ÷¡­¡­\n");
+				Slowsay("å¾ˆé—æ†¾ï¼Œæ‚¨æœªèƒ½æ‹”å‡ºæ­¤æ­¦å™¨â€¦â€¦\n");
 				Sleep(1000);
 				break;
 			}
 			if(bag>9)
 			{
-				Slowsay("ºÜÒÅº¶£¬ÓÉÓÚÄúµÄ±³°ü¿Õ¼ä²»×ã£¬ÎÞ·¨½ÓÊÜ´ËÎäÆ÷¡­¡­\n");
+				Slowsay("å¾ˆé—æ†¾ï¼Œç”±äºŽæ‚¨çš„èƒŒåŒ…ç©ºé—´ä¸è¶³ï¼Œæ— æ³•æŽ¥å—æ­¤æ­¦å™¨â€¦â€¦\n");
 				Sleep(2000);
 				break;
 			}
 			int what_arms;
-			Slowsay("¹§Ï²Äú£¬»ñµÃÁË´«ÆæÎäÆ÷£º");
-			if(juese=="¿ñÕ½Ê¿")
+			Slowsay("æ­å–œæ‚¨ï¼ŒèŽ·å¾—äº†ä¼ å¥‡æ­¦å™¨ï¼š");
+			if(juese=="ç‹‚æˆ˜å£«")
 			{
 				Slowsay(legend_arms[1]);
 				what_arms=1;
 			}
-			if(juese=="Ê¥ÆïÊ¿")
+			if(juese=="åœ£éª‘å£«")
 			{
 				Slowsay(legend_arms[0]);
 				what_arms=0;
 			}
-			if(juese=="´Ì¿Í")
+			if(juese=="åˆºå®¢")
 			{
 				Slowsay(legend_arms[2]);
 				what_arms=2;
 			}
-			if(juese=="·¨Ê¦")
+			if(juese=="æ³•å¸ˆ")
 			{
 				Slowsay(legend_arms[3]);
 				what_arms=3;
 			}
 			Sleep(1000);
 			system("cls");
-			Slowsay("µ±Ç°ÎäÆ÷ÓëÒÑ×°±¸ÎäÆ÷±È½Ï£º");
+			Slowsay("å½“å‰æ­¦å™¨ä¸Žå·²è£…å¤‡æ­¦å™¨æ¯”è¾ƒï¼š");
 			cout<<endl<<endl;
-			Slowsay("µ±Ç°ÎäÆ÷£º");
+			Slowsay("å½“å‰æ­¦å™¨ï¼š");
 			Slowsay(legend_arms[what_arms]);
 			cout<<endl;
-			Slowsay("¹¥»÷Á¦£º");
+			Slowsay("æ”»å‡»åŠ›ï¼š");
 			cout<<la_ATK[what_arms]<<endl<<endl;
-			Slowsay("ÒÑ×°±¸ÎäÆ÷£º");
+			Slowsay("å·²è£…å¤‡æ­¦å™¨ï¼š");
 			Slowsay(zhuangbeiwuqi);
 			cout<<endl;
-			Slowsay("¹¥»÷Á¦£º");
+			Slowsay("æ”»å‡»åŠ›ï¼š");
 			cout<<zhuangbeia<<endl<<endl;
-			Slowsay("ÊÇ·ñ¸ü»»ÎäÆ÷£¿\n");
-			Slowsay("1,ÊÇ   2,·ñ\n");
+			Slowsay("æ˜¯å¦æ›´æ¢æ­¦å™¨ï¼Ÿ\n");
+			Slowsay("1,æ˜¯   2,å¦\n");
 			int ch13;
 			cin>>ch13;
 			if(ch13==1)
@@ -1314,33 +1314,33 @@ bool choose()
 			break;
 		}
 		case 1:{
-			Slowsay("¹§Ï²ÕÒµ½²¿·Ö³äÖµÃÜÂë\n\n");
-			Slowsay("³äÖµÃÜÂëµÄµÚ");
+			Slowsay("æ­å–œæ‰¾åˆ°éƒ¨åˆ†å……å€¼å¯†ç \n\n");
+			Slowsay("å……å€¼å¯†ç çš„ç¬¬");
 			cout<<Wpass;
-			Slowsay("Î»Îª");
+			Slowsay("ä½ä¸º");
 			cout<<password[Wpass];
 			Sleep(1500);
 			cout<<endl<<endl;
 			if(Wpass==5)
 			{
-				Slowsay("¹§Ï²Äã£¬ÕÒÈ«³äÖµÃÜÂëÁË£¡\n");
+				Slowsay("æ­å–œä½ ï¼Œæ‰¾å…¨å……å€¼å¯†ç äº†ï¼\n");
 			}
 			Wpass++;
 			Sleep(1500);
 			break;
 		}
 		case 2:{
-			Slowsay("¹§Ï²ÕÒµ½¹úÍõ±Ò±¦Ïä\n\n");
+			Slowsay("æ­å–œæ‰¾åˆ°å›½çŽ‹å¸å®ç®±\n\n");
 			int g=rand()%1501;
 			if(g==0){g++;}
-			Slowsay("»ñµÃ¹úÍõ±Ò¡Á");
+			Slowsay("èŽ·å¾—å›½çŽ‹å¸Ã—");
 			cout<<g<<endl;
 			G+=g;
 			Sleep(1000);
 			break;
 		}
 		case 3:{
-			Slowsay("°¡°¡°¡°¡°¡°¡¡ª¡ª\n");
+			Slowsay("å•Šå•Šå•Šå•Šå•Šå•Šâ€”â€”\n");
 			Sleep(100);
 			system("cls");
 			return mengjing();
@@ -1357,11 +1357,11 @@ void Train_skill()
 	jindu(50);
 	for(int i=0;i<=3;i++)
 	{
-		cout<<i+1<<":"<<skill[choosejn][i]<<setw(16-skill[choosejn][i].size())<<"Ðè"<<needJB[choosejn][i]<<"½ð±Ò"<<endl;
+		cout<<i+1<<":"<<skill[choosejn][i]<<setw(16-skill[choosejn][i].size())<<"éœ€"<<needJB[choosejn][i]<<"é‡‘å¸"<<endl;
 	}
 	cout<<endl;
-	Slowsay("PS:ÆäÖÐ£¬1,2ÎªÆÕÍ¨Ö÷¶¯¼¼ÄÜ£»3Îª±ØÉ±Ö÷¶¯¼¼ÄÜ£»4Îª±»¶¯¼¼ÄÜ\n\n");
-	Slowsay("ÇëÊäÈëÄúÏëÐÞÁ¶µÄ¼¼ÄÜ£¬-1¼ü·µ»Ø           Çë×¢Òâ£ºÄú»¹ÓÐ");cout<<jinbi;Slowsay("½ð±Ò\n");
+	Slowsay("PS:å…¶ä¸­ï¼Œ1,2ä¸ºæ™®é€šä¸»åŠ¨æŠ€èƒ½ï¼›3ä¸ºå¿…æ€ä¸»åŠ¨æŠ€èƒ½ï¼›4ä¸ºè¢«åŠ¨æŠ€èƒ½\n\n");
+	Slowsay("è¯·è¾“å…¥æ‚¨æƒ³ä¿®ç‚¼çš„æŠ€èƒ½ï¼Œ-1é”®è¿”å›ž           è¯·æ³¨æ„ï¼šæ‚¨è¿˜æœ‰");cout<<jinbi;Slowsay("é‡‘å¸\n");
 	string chb;
 	cin>>chb;
 	if(chb!="-1"&&chb!="1"&&chb!="2"&&chb!="3"&&chb!="4")
@@ -1375,12 +1375,12 @@ void Train_skill()
 	int ch3=chb[0]-'0';
 	if(jinbi<needJB[choosejn][ch3-1])
 	{
-		Slowsay("¶Ô²»Æð£¬½ð±Ò²»×ã£¬ÎÞ·¨ÐÞÁ¶\n");
+		Slowsay("å¯¹ä¸èµ·ï¼Œé‡‘å¸ä¸è¶³ï¼Œæ— æ³•ä¿®ç‚¼\n");
 		return ;
 	}
 	if(Is_xl[ch3-1])
 	{
-		Slowsay("emmm,Õâ¸ö¼¼ÄÜÒÑ¾­ÐÞÁ¶¹ýÈÇ...\n");
+		Slowsay("emmm,è¿™ä¸ªæŠ€èƒ½å·²ç»ä¿®ç‚¼è¿‡æƒ¹...\n");
 		Sleep(1000);
 		return ;
 	}
@@ -1388,7 +1388,7 @@ void Train_skill()
 	jinbi-=needJB[choosejn][ch3-1];
 	system("cls");
 	Sleep(500);
-	Slowsay("ÐÞÁ¶³É¹¦£¡\n"); 
+	Slowsay("ä¿®ç‚¼æˆåŠŸï¼\n"); 
 	Sleep(1000);
 	system("cls");
 }
@@ -1402,28 +1402,28 @@ void upgrade() {
 		int upMP=0;
 		int upATK=0;
 		int upfang=0;
-		if(juese=="¿ñÕ½Ê¿")
+		if(juese=="ç‹‚æˆ˜å£«")
 		{
 			upHP+=int(uplevel*0.5);
 			upMP+=int(uplevel*0.3);
 			upATK+=int(uplevel*0.1);
 			upfang+=int(uplevel*0.08);
 		}
-		if(juese=="Ê¥ÆïÊ¿")
+		if(juese=="åœ£éª‘å£«")
 		{
 			upHP+=int(uplevel*0.35);
 			upMP+=int(uplevel*0.45);
 			upATK+=int(uplevel*0.12);
 			upfang+=int(uplevel*0.15);
 		}
-		if(juese=="´Ì¿Í")
+		if(juese=="åˆºå®¢")
 		{
 			upHP+=int(uplevel*0.25);
 			upMP+=int(uplevel*0.35);
 			upATK+=int(uplevel*0.25);
 			upfang+=int(uplevel*0.06);
 		}
-		if(juese=="·¨Ê¦")
+		if(juese=="æ³•å¸ˆ")
 		{
 			upHP+=int(uplevel*0.15);
 			upMP+=int(uplevel*0.6);
@@ -1446,9 +1446,9 @@ void upgrade() {
 	}
 	if(LV-lv!=0) {
 		Is_up=true;
-		Slowsay("\n\n¹§Ï²Äã£¬³É¹¦ÉýÁË");
+		Slowsay("\n\næ­å–œä½ ï¼ŒæˆåŠŸå‡äº†");
 		cout<<LV-lv;
-		Slowsay("¼¶\n");
+		Slowsay("çº§\n");
 	}
 }
 bool zhandou(string guai,int p) {
@@ -1463,12 +1463,12 @@ bool zhandou(string guai,int p) {
 	bool Is_fj=true;
 	if(p<0)
 	{	
-		if(p==-10){guai="Ô¶¹ÅÊØÎÀÕß";mHP=30000;mATK=1000;}
-		if(p==-20){guai="»ìãç¾«ÁéÍõ";mHP=60000;mATK=2000;}
-		if(p==-30){guai="°µÓ°á÷ÁÔÕß";mHP=90000;mATK=3000;}
-		if(p==-40){guai="ÃÎ÷Ê";mHP=105000;mATK=4200;}
-		if(p==-50){guai="°¢ÐÞÂÞ";mHP=165000;mATK=5500;}
-		if(p==-5){guai="¿ËÀ­¶û";mHP=2500;mATK=325;}
+		if(p==-10){guai="è¿œå¤å®ˆå«è€…";mHP=30000;mATK=1000;}
+		if(p==-20){guai="æ··æ²Œç²¾çµçŽ‹";mHP=60000;mATK=2000;}
+		if(p==-30){guai="æš—å½±ç‹©çŒŽè€…";mHP=90000;mATK=3000;}
+		if(p==-40){guai="æ¢¦é­‡";mHP=105000;mATK=4200;}
+		if(p==-50){guai="é˜¿ä¿®ç½—";mHP=165000;mATK=5500;}
+		if(p==-5){guai="å…‹æ‹‰å°”";mHP=2500;mATK=325;}
 		if(p==-2){guai="???",mHP=24000,mATK=1500;}
 	}else{
 		mHP=monsterHP[p];
@@ -1523,8 +1523,8 @@ bool zhandou(string guai,int p) {
 		cout<<HP<<setw(112-size_HP);
 		cout<<"HP:";
 		cout<<mHP<<endl<<endl<<endl;
-		qsay("ÇëÊäÈëÄãÒªÖ´ÐÐµÄ²Ù×÷£º\n");
-		qsay("1,¹¥»÷          2,Ê¹ÓÃÒ©Ë®&Õ½¶·µÀ¾ß          3,Ê¹ÓÃ¼¼ÄÜ\n");
+		qsay("è¯·è¾“å…¥ä½ è¦æ‰§è¡Œçš„æ“ä½œï¼š\n");
+		qsay("1,æ”»å‡»          2,ä½¿ç”¨è¯æ°´&æˆ˜æ–—é“å…·          3,ä½¿ç”¨æŠ€èƒ½\n");
 		char sh;
 		cin>>sh;
 		if(sh=='1')
@@ -1553,24 +1553,24 @@ bool zhandou(string guai,int p) {
 					reduce=(atk-now2)/(tmpHP/17)+1;
 					now2=(tmpHP/17)-(atk-now2)%(tmpHP/17);
 				}
-				qsay("Äã¶Ô");
+				qsay("ä½ å¯¹");
 				qsay(guai);
-				qsay("Ôì³ÉÁË");
+				qsay("é€ æˆäº†");
 				cout<<atk;
-				qsay("µãÉËº¦£¡\n");
+				qsay("ç‚¹ä¼¤å®³ï¼\n");
 			}
 			else
 			{
 				atk*=baoji;
 				atk=int(atk);
 				mHP-=atk;
-				qsay("±©»÷£¡\n");
+				qsay("æš´å‡»ï¼\n");
 				Sleep(350);
-				qsay("Äã¶Ô");
+				qsay("ä½ å¯¹");
 				qsay(guai);
-				qsay("Ôì³ÉÁË");
+				qsay("é€ æˆäº†");
 				cout<<atk;
-				qsay("µãÉËº¦£¡\n");
+				qsay("ç‚¹ä¼¤å®³ï¼\n");
 				if(now2-atk>0)
 				{
 					now2-=atk;
@@ -1585,14 +1585,14 @@ bool zhandou(string guai,int p) {
 				system("cls");
 				Sleep(250);
 				stop_time+=10;
-				Slowsay("you win£¡\n");
+				Slowsay("you winï¼\n");
 				stop_time-=10;
 				Sleep(1000);
 				if(p>=0&&p<=18)
 				{
 					jinbi+=monsterjinbi[p]+HP/5;
 				}
-				say("¹§Ï²»ñµÃ½ð±Ò¡Á");
+				say("æ­å–œèŽ·å¾—é‡‘å¸Ã—");
 				cout<<monsterjinbi[p]+HP/5<<endl;
 				Sleep(1000);
 				Is_win=true;
@@ -1627,14 +1627,14 @@ bool zhandou(string guai,int p) {
 		{
 			if(bag1==0)
 			{
-				qsay("Äã»¹Ã»ÓÐÒ©Ë®&Õ½¶·µÀ¾ß£¡\n");
+				qsay("ä½ è¿˜æ²¡æœ‰è¯æ°´&æˆ˜æ–—é“å…·ï¼\n");
 				Sleep(150);
 				goto hehe;
 			}
 			haha:
 			Clear();
 			guangbiao(1,10);
-			qsay("ÇëÊäÈëÄãÏëÊ¹ÓÃµÄÒ©Ë®&Õ½¶·µÀ¾ßµÄÐòºÅ£º\n");
+			qsay("è¯·è¾“å…¥ä½ æƒ³ä½¿ç”¨çš„è¯æ°´&æˆ˜æ–—é“å…·çš„åºå·ï¼š\n");
 			for(int i=0;i<=bag1-1;i++)
 			{
 				cout<<i+1<<":"<<yaoshui[i]<<endl;
@@ -1656,7 +1656,7 @@ bool zhandou(string guai,int p) {
 				yaoshui[i-1]=yaoshui[i];
 				yaoshuixiao[i-1]=yaoshuixiao[i];
 			}
-			if(yaoshui[sh1]=="ÁúÖ®¾íÖá")
+			if(yaoshui[sh1]=="é¾™ä¹‹å·è½´")
 			{
 				Clear();
 				guangbiao(1,10);
@@ -1683,19 +1683,19 @@ bool zhandou(string guai,int p) {
 						reduce=(atk-now2)/(tmpHP/17)+1;
 						now2=(tmpHP/17)-(atk-now2)%(tmpHP/17);
 					}
-					qsay("ºäÂ¡£¡\n");
+					qsay("è½°éš†ï¼\n");
 					if(mHP<=0)
 					{
 						system("cls");
 						Sleep(250);
 						stop_time+=10;
-						Slowsay("you win£¡\n");
+						Slowsay("you winï¼\n");
 						stop_time-=10;
 						Sleep(1000);
 						if(p>=0&&p<=18)
 						{
 							jinbi+=monsterjinbi[p]+HP/(TMPHP/100);
-							Slowsay("¹§Ï²»ñµÃ½ð±Ò¡Á");
+							Slowsay("æ­å–œèŽ·å¾—é‡‘å¸Ã—");
 							cout<<monsterjinbi[p]+HP/10<<endl;
 							Sleep(1000);
 							win=true;
@@ -1732,7 +1732,7 @@ bool zhandou(string guai,int p) {
 								}
 							}
 							jinbi+=add+HP/5;
-							Slowsay("¹§Ï²»ñµÃ½ð±Ò¡Á");
+							Slowsay("æ­å–œèŽ·å¾—é‡‘å¸Ã—");
 							cout<<add+HP/5<<endl;
 							Sleep(1000);
 							win=true;
@@ -1756,17 +1756,17 @@ bool zhandou(string guai,int p) {
 				}
 				if(win){Is_win=true;break;}
 			}
-			if(yaoshui[sh1]=="¾ÞÁéÒ©Ë®")
+			if(yaoshui[sh1]=="å·¨çµè¯æ°´")
 			{
 				MP=TMPMP;
-				qsay("³É¹¦»Ö¸´ÂúÑªÁ¿ÓëÄ§·¨Öµ\n");
+				qsay("æˆåŠŸæ¢å¤æ»¡è¡€é‡ä¸Žé­”æ³•å€¼\n");
 				Sleep(100);
 				if(HP!=TMPHP)
 				{
 					guangbiao(mywz,1);
 					while(sum1<18)
 					{
-						cout<<"¨€";
+						cout<<"â–ˆ";
 						sum1++;
 					}
 					mywz=34;
@@ -1784,9 +1784,9 @@ bool zhandou(string guai,int p) {
 					int k=MP;
 					MP+t+add>TMPMP ? MP=TMPMP : MP+=t+add;
 					Sleep(150);
-					qsay("³É¹¦»Ö¸´");
+					qsay("æˆåŠŸæ¢å¤");
 					cout<<MP-k;
-					qsay("Ä§·¨Öµ\n");
+					qsay("é­”æ³•å€¼\n");
 					Clear();
 					guangbiao(1,5);
 					size_HP=0;tmp=HP;while(tmp!=0){tmp/=10;size_HP++;}
@@ -1809,19 +1809,19 @@ bool zhandou(string guai,int p) {
 						int Tmp=MP;
 						MP+4000+add>TMPMP ? MP=TMPMP : MP+=4000+add;
 						HP+4000+add>TMPHP ? HP=TMPHP : HP+=4000+add;
-						qsay("³É¹¦»Ö¸´");
+						qsay("æˆåŠŸæ¢å¤");
 						cout<<HP-Tmp;
-						qsay("µÎÑªÓë");
+						qsay("æ»´è¡€ä¸Ž");
 						cout<<tmp;
-						qsay("Ä§·¨Öµ\n");
+						qsay("é­”æ³•å€¼\n");
 						Sleep(150);
 					}
 					else
 					{
 						HP+t+add>TMPHP ? HP=TMPHP : HP+=t+add;
-						qsay("³É¹¦»Ö¸´");
+						qsay("æˆåŠŸæ¢å¤");
 						cout<<HP-Tmp;
-						qsay("µÎÑª\n");
+						qsay("æ»´è¡€\n");
 						Sleep(150);
 					}
 					tiaose(2);
@@ -1838,7 +1838,7 @@ bool zhandou(string guai,int p) {
 						now1=(HP-Tmp-((TMPHP/17)-now1))%(TMPHP/17);
 						for(int i=1;i<=reduce;i++)
 						{
-							cout<<"¨€";
+							cout<<"â–ˆ";
 							mywz+=2;
 							sum1++;
 							if(sum1==17)
@@ -1885,19 +1885,19 @@ bool zhandou(string guai,int p) {
 			guangbiao(1,10);
 			if(!Is_xl[0]&&!Is_xl[1]&&!Is_xl[2])
 			{
-				qsay("Äã»¹Ã»ÓÐÐÞÁ¶ÈÎºÎ¼¼ÄÜ£¡\n");
+				qsay("ä½ è¿˜æ²¡æœ‰ä¿®ç‚¼ä»»ä½•æŠ€èƒ½ï¼\n");
 				Sleep(100);
 				continue;
 			}
-			qsay("ÇëÊäÈëÄãÏëÊ¹ÓÃµÄ¼¼ÄÜ£¬r¼ü·µ»Ø\n");
+			qsay("è¯·è¾“å…¥ä½ æƒ³ä½¿ç”¨çš„æŠ€èƒ½ï¼Œré”®è¿”å›ž\n");
 			for(int i=0;i<=2;i++)
 			{
 				cout<<i+1<<":"<<skill[choosejn][i]<<setw(25-skill[choosejn][i].size());
 				if(Is_xl[i])
 				{
-					cout<<"ÒÑÐÞÁ¶   ÐèºÄ"<<int(needMP[choosejn][i]*TMPMP*0.01)<<"µãÄ§·¨Öµ"<<endl;
+					cout<<"å·²ä¿®ç‚¼   éœ€è€—"<<int(needMP[choosejn][i]*TMPMP*0.01)<<"ç‚¹é­”æ³•å€¼"<<endl;
 				}else{
-					cout<<"Î´ÐÞÁ¶"<<endl;
+					cout<<"æœªä¿®ç‚¼"<<endl;
 				}
 			}
 			char ck;
@@ -1918,41 +1918,41 @@ bool zhandou(string guai,int p) {
 			}
 			if(MP<int(needMP[choosejn][ck]*TMPMP*0.01))
 			{
-				qsay("Ä§·¨Öµ²»×ã£¬ÎÞ·¨Ê¹ÓÃ´Ë¼¼ÄÜ£¡\n");
+				qsay("é­”æ³•å€¼ä¸è¶³ï¼Œæ— æ³•ä½¿ç”¨æ­¤æŠ€èƒ½ï¼\n");
 				Sleep(150);
 				goto hehe;
 			}
 			bool LXL=true;
 			MP-=int(needMP[choosejn][ck]*TMPMP*0.01);
-			if(skill[choosejn][ck]=="Éí²Ø²»Â¶")
+			if(skill[choosejn][ck]=="èº«è—ä¸éœ²")
 			{
-				qsay("³É¹¦ÒþÉí\n");
+				qsay("æˆåŠŸéšèº«\n");
 				Is_fj=false;
 				LXL=false;
 				kkksc=1;
 				continue;
 			}
-			if(skill[choosejn][ck]=="¶¾Ö®ÉîÔ¨")
+			if(skill[choosejn][ck]=="æ¯’ä¹‹æ·±æ¸Š")
 			{
 				Is_poison=true;
 				ToT=5;
 			}
-			if(skill[choosejn][ck]=="Ê¯Ä§ÕÙ»½")
+			if(skill[choosejn][ck]=="çŸ³é­”å¬å”¤")
 			{
-				qsay("\n³É¹¦ÕÙ»½Ê¯Ä§\n");
+				qsay("\næˆåŠŸå¬å”¤çŸ³é­”\n");
 				Sleep(100);
 				smapp=true;
 				LXL=false;
 			}
-			if(skill[choosejn][ck]=="È¬ÓúÖ®¹â")
+			if(skill[choosejn][ck]=="ç—Šæ„ˆä¹‹å…‰")
 			{
 				LXL=false;
 				int reduce;
 				int Tmp=HP;
 				int(HP+ATK*3.25) > TMPHP ? HP=TMPHP : HP+=int(ATK*3.25);
-				qsay("³É¹¦»Ö¸´");
+				qsay("æˆåŠŸæ¢å¤");
 				cout<<HP-Tmp;
-				qsay("µÎÑª\n");
+				qsay("æ»´è¡€\n");
 				Sleep(100);
 				tiaose(2);
 				guangbiao(mywz,1);
@@ -1969,7 +1969,7 @@ bool zhandou(string guai,int p) {
 						now1=(HP-Tmp-((TMPHP/17)-now1))%(TMPHP/17);
 						for(int i=1;i<=reduce;i++)
 						{
-							cout<<"¨€";
+							cout<<"â–ˆ";
 							mywz+=2;
 							sum1++;
 							if(sum1==16)
@@ -1984,7 +1984,7 @@ bool zhandou(string guai,int p) {
 				{
 					while(sum1<17)
 					{
-						cout<<"¨€";
+						cout<<"â–ˆ";
 						sum1++;
 					}
 					mywz=34;
@@ -2007,11 +2007,11 @@ bool zhandou(string guai,int p) {
 				int tmp=(int)ATK*skillxn[choosejn][ck]*0.01;
 				tmp+=rand()%(ATK/10);
 				tmp=max(0,tmp);
-				qsay("Äã¶Ô");
+				qsay("ä½ å¯¹");
 				qsay(guai);
-				qsay("Ôì³ÉÁË");
+				qsay("é€ æˆäº†");
 				cout<<tmp;
-				qsay("µãÉËº¦£¡");
+				qsay("ç‚¹ä¼¤å®³ï¼");
 				mHP-=tmp;
 				if(now2-tmp>=0)
 				{
@@ -2027,14 +2027,14 @@ bool zhandou(string guai,int p) {
 					system("cls");
 					Sleep(250);
 					stop_time+=10;
-					Slowsay("you win£¡\n");
+					Slowsay("you winï¼\n");
 					stop_time-=10;
 					Sleep(1000);
 					if(p>=0&&p<=18)
 					{
 						jinbi+=monsterjinbi[p]+HP/5;
 					}
-					say("¹§Ï²»ñµÃ½ð±Ò¡Á");
+					say("æ­å–œèŽ·å¾—é‡‘å¸Ã—");
 					cout<<monsterjinbi[p]+HP/5<<endl;
 					Sleep(1000);
 					Is_win=true;
@@ -2070,25 +2070,25 @@ bool zhandou(string guai,int p) {
 			int atk=SMATK+rand()%(SMATK/10);
 			atk=max(0,atk);
 			cout<<endl<<endl;
-			qsay("Ê¯Ä§¶Ô");
+			qsay("çŸ³é­”å¯¹");
 			qsay(guai);
-			qsay("Ôì³ÉÁË");
+			qsay("é€ æˆäº†");
 			cout<<atk;
-			qsay("µãÉËº¦£¡\n");
+			qsay("ç‚¹ä¼¤å®³ï¼\n");
 			mHP-=atk;
 			if(mHP<=0)
 			{
 				system("cls");
 				Sleep(250);
 				stop_time+=10;
-				Slowsay("you win£¡\n");
+				Slowsay("you winï¼\n");
 				stop_time-=10;
 				Sleep(1000);
 				if(p>=0&&p<=18)
 				{
 					jinbi+=monsterjinbi[p]+HP/10;
 				}
-				say("¹§Ï²»ñµÃ½ð±Ò¡Á");
+				say("æ­å–œèŽ·å¾—é‡‘å¸Ã—");
 				cout<<monsterjinbi[p]+HP/10<<endl;
 				Sleep(1000);
 				Is_win=true;
@@ -2133,9 +2133,9 @@ bool zhandou(string guai,int p) {
 			int atk=int(ATK*0.35);
 			cout<<endl; 
 			qsay(guai);
-			qsay("ÔâÊÜ");
+			qsay("é­å—");
 			cout<<atk;
-			qsay("µã¶¾ËØÉËº¦£¡\n");
+			qsay("ç‚¹æ¯’ç´ ä¼¤å®³ï¼\n");
 			Sleep(100); 
 			ToT--;
 			mHP-=atk;
@@ -2144,14 +2144,14 @@ bool zhandou(string guai,int p) {
 				system("cls");
 				Sleep(250);
 				stop_time+=10;
-				Slowsay("you win£¡\n");
+				Slowsay("you winï¼\n");
 				stop_time-=10;
 				Sleep(1000);
 				if(p>=0&&p<=18)
 				{
 					jinbi+=monsterjinbi[p]+HP/10;
 				}
-				say("¹§Ï²»ñµÃ½ð±Ò¡Á");
+				say("æ­å–œèŽ·å¾—é‡‘å¸Ã—");
 				cout<<monsterjinbi[p]+HP/10<<endl;
 				Sleep(1000);
 				Is_win=true;
@@ -2183,14 +2183,14 @@ bool zhandou(string guai,int p) {
 		{
 			if(kkksc==1)
 			{
-				qsay("ß×£¿ÈËÄØ£¿\n\n");
+				qsay("å’¦ï¼Ÿäººå‘¢ï¼Ÿ\n\n");
 			}
 			else
 			{
-				qsay("¡­¡­¡­¡­\n\n");  
+				qsay("â€¦â€¦â€¦â€¦\n\n");  
 			}
 			Sleep(100);
-			qsay("µÐ·½ÔÝÍ£Ò»´Î¹¥»÷\n");
+			qsay("æ•Œæ–¹æš‚åœä¸€æ¬¡æ”»å‡»\n");
 			Sleep(100);
 			Is_fj=true;
 			continue;
@@ -2201,13 +2201,13 @@ bool zhandou(string guai,int p) {
 			atk=max(0,atk);
 			cout<<endl<<endl;
 			qsay(guai);
-			qsay("¶ÔÊ¯Ä§Ôì³ÉÁË");
+			qsay("å¯¹çŸ³é­”é€ æˆäº†");
 			cout<<atk;
-			qsay("µãÉËº¦£¡\n");
+			qsay("ç‚¹ä¼¤å®³ï¼\n");
 			SMHP-=atk;
 			if(SMHP<=0)
 			{
-				qsay("\nÊ¯Ä§ÕóÍö\n");
+				qsay("\nçŸ³é­”é˜µäº¡\n");
 				smapp=false;
 				Sleep(100);
 			}
@@ -2223,31 +2223,31 @@ bool zhandou(string guai,int p) {
 			{
 				atk-=dyfang1;
 				qsay(guai);
-				qsay("¶ÔÀ¥µÏÔì³ÉÁË");
+				qsay("å¯¹æ˜†è¿ªé€ æˆäº†");
 				cout<<atk;
-				qsay("µãÉËº¦£¡\n");
+				qsay("ç‚¹ä¼¤å®³ï¼\n");
 				dyHP1-=atk;
 			}
 			if(who==2&&assTD[1])
 			{
 				atk-=dyfang2;
 				qsay(guai);
-				qsay("¶ÔSuperHunterÔì³ÉÁË");
+				qsay("å¯¹SuperHunteré€ æˆäº†");
 				cout<<atk;
-				qsay("µãÉËº¦£¡\n");
+				qsay("ç‚¹ä¼¤å®³ï¼\n");
 				Sleep(500);
 				dyHP2-=atk;
 			}
 			if(dyHP1<0&&aldie1)
 			{
-				qsay("À¥µÏÕóÍö£¡\n");
+				qsay("æ˜†è¿ªé˜µäº¡ï¼\n");
 				aldie1=false;
 				TD--;
 				assTD[1]=false;
 			}
 			if(dyHP2<0&&aldie2)
 			{
-				qsay("SuperHunterÕóÍö£¡\n");
+				qsay("SuperHunteré˜µäº¡ï¼\n");
 				aldie2=false;
 				TD--;
 				assTD[2]=false;
@@ -2268,10 +2268,10 @@ bool zhandou(string guai,int p) {
 		}
 		guangbiao(1,10);
 		qsay(guai);
-		qsay("¶ÔÄã");
-		qsay("Ôì³ÉÁË");
+		qsay("å¯¹ä½ ");
+		qsay("é€ æˆäº†");
 		cout<<atk;
-		qsay("µãÉËº¦£¡\n");
+		qsay("ç‚¹ä¼¤å®³ï¼\n");
 		int buff=rand()%5;
 		
 		if(HP<=0)
@@ -2279,10 +2279,10 @@ bool zhandou(string guai,int p) {
 			system("cls");
 			Sleep(200);
 			stop_time+=10;
-			Slowsay("you lose£¡\n");
+			Slowsay("you loseï¼\n");
 			Sleep(1000);
 			system("cls");
-			Slowsay("ÑÛÇ°µÄÊÀ½çÑÌÏûÔÆÉ¢...");
+			Slowsay("çœ¼å‰çš„ä¸–ç•ŒçƒŸæ¶ˆäº‘æ•£...");
 			Sleep(1500);
 			stop_time-=10;
 			Is_win=false;
@@ -2302,7 +2302,7 @@ bool zhandou(string guai,int p) {
 		if(buff==0&&!Is_buff&&Is_xl[3])
 		{
 			guangbiao(1,14);
-			qsay("³É¹¦¼¤»î¼¼ÄÜ£º");
+			qsay("æˆåŠŸæ¿€æ´»æŠ€èƒ½ï¼š");
 			Slowsay(skill[choosejn][3]);
 			Sleep(500);
 			Is_buff=true;
@@ -2316,7 +2316,7 @@ bool zhandou(string guai,int p) {
 	}
 	if(Is_win)
 	{
-		Slowsay("»ñµÃ¾­ÑéÖµ¡Á");
+		Slowsay("èŽ·å¾—ç»éªŒå€¼Ã—");
 		if(p>=0&&p<=18)
 		{
 			
@@ -2357,24 +2357,24 @@ bool zhandou(string guai,int p) {
 bool slt() {
 sl:
 	system("cls");
-	Slowsay("ÇëÊäÈëÄãÒªÈ¥µÄÂ¥²ã£¬r¼ü·µ»Ø\n\n");
+	Slowsay("è¯·è¾“å…¥ä½ è¦åŽ»çš„æ¥¼å±‚ï¼Œré”®è¿”å›ž\n\n");
 	Sleep(1000);
-	cout<<"   ¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y  \n"<<endl;
-	cout<<"   ¨‡                          ¨‡\n"<<endl;
-	cout<<"   ¨‡Îå²ã£º°¢ÐÞÂÞ      80¼¶¡ü  ¨‡\n"<<endl;
-	cout<<"   ¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y  \n"<<endl;
-	cout<<"   ¨‡                          ¨‡\n"<<endl;
-	cout<<"   ¨‡ËÄ²ã£ºÃÎ÷Ê        70¼¶¡ü  ¨‡\n"<<endl;
-	cout<<"   ¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y  \n"<<endl;
-	cout<<"   ¨‡                          ¨‡\n"<<endl;
-	cout<<"   ¨‡Èý²ã£º°µÓ°á÷ÁÔÕß  60¼¶¡ü  ¨‡\n"<<endl;
-	cout<<"   ¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y  \n"<<endl;
-	cout<<"   ¨‡                          ¨‡\n"<<endl;
-	cout<<"   ¨‡¶þ²ã£º»ìãç¾«ÁéÍõ  50¼¶¡ü  ¨‡\n"<<endl;
-	cout<<"   ¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y  \n"<<endl;
-	cout<<"   ¨‡                          ¨‡\n"<<endl;
-	cout<<"   ¨‡Ò»²ã£ºÔ¶¹ÅÊØÎÀÕß  40¼¶¡ü  ¨‡\n"<<endl;
-	cout<<"¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y¨y\n"<<endl;
+	cout<<"   â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚  \n"<<endl;
+	cout<<"   â–                          â–\n"<<endl;
+	cout<<"   â–äº”å±‚ï¼šé˜¿ä¿®ç½—      80çº§â†‘  â–\n"<<endl;
+	cout<<"   â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚  \n"<<endl;
+	cout<<"   â–                          â–\n"<<endl;
+	cout<<"   â–å››å±‚ï¼šæ¢¦é­‡        70çº§â†‘  â–\n"<<endl;
+	cout<<"   â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚  \n"<<endl;
+	cout<<"   â–                          â–\n"<<endl;
+	cout<<"   â–ä¸‰å±‚ï¼šæš—å½±ç‹©çŒŽè€…  60çº§â†‘  â–\n"<<endl;
+	cout<<"   â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚  \n"<<endl;
+	cout<<"   â–                          â–\n"<<endl;
+	cout<<"   â–äºŒå±‚ï¼šæ··æ²Œç²¾çµçŽ‹  50çº§â†‘  â–\n"<<endl;
+	cout<<"   â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚  \n"<<endl;
+	cout<<"   â–                          â–\n"<<endl;
+	cout<<"   â–ä¸€å±‚ï¼šè¿œå¤å®ˆå«è€…  40çº§â†‘  â–\n"<<endl;
+	cout<<"â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚â–‚\n"<<endl;
 	char ch20;
 	cin>>ch20;
 	if(ch20=='r')
@@ -2382,37 +2382,37 @@ sl:
 		return true;
 	}
 	if(ch20>'5'||ch20<'1') {
-		say("ÇëÊäÈë1¡ª¡ª5ÄÚµÄÕûÊý£¡£¡\n");
+		say("è¯·è¾“å…¥1â€”â€”5å†…çš„æ•´æ•°ï¼ï¼\n");
 		Sleep(1500);
 		goto sl;
 	}
 	ch20=int(ch20-'0');
 	if(LV<(ch20+3)*10) {
-		Slowsay("¶Ô²»Æð£¬ÓÉÓÚµ±Ç°²ãÄÚ¹ÖÎï¹ýÓÚÀ÷º¦£¬ÄãÎÞ·¨½øÈë£¬Çë´ïµ½");
+		Slowsay("å¯¹ä¸èµ·ï¼Œç”±äºŽå½“å‰å±‚å†…æ€ªç‰©è¿‡äºŽåŽ‰å®³ï¼Œä½ æ— æ³•è¿›å…¥ï¼Œè¯·è¾¾åˆ°");
 		cout<<(ch20+3)*10;
-		Slowsay("¼¶ÒÔºóÔÙÀ´\n");
+		Slowsay("çº§ä»¥åŽå†æ¥\n");
 		Sleep(2000);
 	} else {
 		bool jk;
 		switch(ch20) {
 			case 1 :{
-				jk=zhandou("Ô¶¹ÅÊØÎÀÕß",-10);
+				jk=zhandou("è¿œå¤å®ˆå«è€…",-10);
 				break;
 			}
 			case 2 : {
-				jk=zhandou("»ìãç¾«ÁéÍõ" ,-20);
+				jk=zhandou("æ··æ²Œç²¾çµçŽ‹" ,-20);
 				break;
 			}
 			case 3 : {
-				jk=zhandou("°µÓ°á÷ÁÔÕß",-30);
+				jk=zhandou("æš—å½±ç‹©çŒŽè€…",-30);
 				break;
 			}
 			case 4 : {
-				jk=zhandou("ÃÎ÷Ê",-40);
+				jk=zhandou("æ¢¦é­‡",-40);
 				break;
 			}
 			case 5 : {
-				jk=zhandou("°¢ÐÞÂÞ",-50);
+				jk=zhandou("é˜¿ä¿®ç½—",-50);
 				break;
 			}
 		}
@@ -2423,608 +2423,608 @@ void shop() {
 finish:
 	jindu(50);
 	cout<<endl;
-	Slowsay("1,ÎäÆ÷\n");
-	Slowsay("2,Ò©Æ·\n");
-	Slowsay("3,µÀ¾ß\n");
-	Slowsay("4,·À¾ß\n");
-	Slowsay("5,ÆäËû\n");
-	Slowsay("6,·µ»Ø\n");
+	Slowsay("1,æ­¦å™¨\n");
+	Slowsay("2,è¯å“\n");
+	Slowsay("3,é“å…·\n");
+	Slowsay("4,é˜²å…·\n");
+	Slowsay("5,å…¶ä»–\n");
+	Slowsay("6,è¿”å›ž\n");
 	Sleep(550);
-	Slowsay("ÇëÑ¡Ôñ£º");
+	Slowsay("è¯·é€‰æ‹©ï¼š");
 	char ch3;
 	cin>>ch3;
 	if(ch3=='1') {
 kaishi:
 		jindu(50);
 		cout<<endl;
-		say("1,Ìú½£   ¹¥»÷Á¦+40  Ö°Òµ£º¿ñÕ½Ê¿ or Ê¥ÆïÊ¿ £¤100\n");
-		say("2,¸ÖÌúµ¶ ¹¥»÷Á¦+75  Ö°Òµ£º¿ñÕ½Ê¿           £¤200\n");
-		say("3,¶Ì½£   ¹¥»÷Á¦+65  Ö°Òµ£º´Ì¿Í             £¤100\n");
-		say("4,Ä¾°ô   ¹¥»÷Á¦+65  Ö°Òµ£º·¨Ê¦             £¤100\n");
-		say("5,³¤½£   ¹¥»÷Á¦+60  Ö°Òµ£ºÊ¥ÆïÊ¿           £¤150\n");
-		say("6,ÁÔÈËµ¶ ¹¥»÷Á¦+105 Ö°Òµ£ºÈ«²¿£¨³ý·¨Ê¦Íâ£© £¤350\n");
-		say("7,Ä§°ô   ¹¥»÷Á¦+120 Ö°Òµ£º·¨Ê¦             £¤350\n");
-		say("8,·µ»Ø                  Çë×¢Òâ£ºÄã»¹ÓÐ");
+		say("1,é“å‰‘   æ”»å‡»åŠ›+40  èŒä¸šï¼šç‹‚æˆ˜å£« or åœ£éª‘å£« ï¿¥100\n");
+		say("2,é’¢é“åˆ€ æ”»å‡»åŠ›+75  èŒä¸šï¼šç‹‚æˆ˜å£«           ï¿¥200\n");
+		say("3,çŸ­å‰‘   æ”»å‡»åŠ›+65  èŒä¸šï¼šåˆºå®¢             ï¿¥100\n");
+		say("4,æœ¨æ£’   æ”»å‡»åŠ›+65  èŒä¸šï¼šæ³•å¸ˆ             ï¿¥100\n");
+		say("5,é•¿å‰‘   æ”»å‡»åŠ›+60  èŒä¸šï¼šåœ£éª‘å£«           ï¿¥150\n");
+		say("6,çŒŽäººåˆ€ æ”»å‡»åŠ›+105 èŒä¸šï¼šå…¨éƒ¨ï¼ˆé™¤æ³•å¸ˆå¤–ï¼‰ ï¿¥350\n");
+		say("7,é­”æ£’   æ”»å‡»åŠ›+120 èŒä¸šï¼šæ³•å¸ˆ             ï¿¥350\n");
+		say("8,è¿”å›ž                  è¯·æ³¨æ„ï¼šä½ è¿˜æœ‰");
 		cout<<jinbi;
-		Slowsay("½ð±Ò\n");
+		Slowsay("é‡‘å¸\n");
 		Sleep(1000);
-		Slowsay("ÇëÑ¡Ôñ£º");
+		Slowsay("è¯·é€‰æ‹©ï¼š");
 		char chn;
 		cin>>chn;
-		if(chn=='1'&&(juese=="¿ñÕ½Ê¿"||juese=="Ê¥ÆïÊ¿")&&jinbi>=100&&bag<9) {
+		if(chn=='1'&&(juese=="ç‹‚æˆ˜å£«"||juese=="åœ£éª‘å£«")&&jinbi>=100&&bag<9) {
 			jinbi-=100;
-			wuqi[bag]="Ìú½£";
+			wuqi[bag]="é“å‰‘";
 			xinneng[bag]=40;
 			wuqiLV[bag]=1;
 			a_f[bag]=true;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÌú½££¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°é“å‰‘ï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
-		if(chn=='2'&&juese=="¿ñÕ½Ê¿"&&jinbi>=200&&bag<9) {
+		if(chn=='2'&&juese=="ç‹‚æˆ˜å£«"&&jinbi>=200&&bag<9) {
 			jinbi-=200;
-			wuqi[bag]="¸ÖÌúµ¶";
+			wuqi[bag]="é’¢é“åˆ€";
 			xinneng[bag]=75;
 			wuqiLV[bag]=1;
 			a_f[bag]=true;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂò¸ÖÌúµ¶£¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°é’¢é“åˆ€ï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
-		if(chn=='3'&&juese=="´Ì¿Í"&&jinbi>=100&&bag<9) {
+		if(chn=='3'&&juese=="åˆºå®¢"&&jinbi>=100&&bag<9) {
 			jinbi-=100;
-			wuqi[bag]="¶Ì½£";
+			wuqi[bag]="çŸ­å‰‘";
 			xinneng[bag]=65;
 			wuqiLV[bag]=1;
 			a_f[bag]=true;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂò¶Ì½££¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°çŸ­å‰‘ï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
-		if(chn=='4'&&juese=="·¨Ê¦"&&jinbi>=100&&bag<9) {
+		if(chn=='4'&&juese=="æ³•å¸ˆ"&&jinbi>=100&&bag<9) {
 			jinbi-=100;
-			wuqi[bag]="Ä¾°ô";
+			wuqi[bag]="æœ¨æ£’";
 			xinneng[bag]=65;
 			wuqiLV[bag]=1;
 			a_f[bag]=true;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÄ¾°ô£¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°æœ¨æ£’ï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
-		if(chn=='5'&&juese=="Ê¥ÆïÊ¿"&&jinbi>=100&&bag<9) {
+		if(chn=='5'&&juese=="åœ£éª‘å£«"&&jinbi>=100&&bag<9) {
 			jinbi-=150;
-			wuqi[bag]="³¤½£";
+			wuqi[bag]="é•¿å‰‘";
 			xinneng[bag]=60;
 			wuqiLV[bag]=1;
 			a_f[bag]=true;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂò³¤½££¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°é•¿å‰‘ï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
-		if(chn=='6'&&juese!="·¨Ê¦"&&jinbi>=350&&bag<9) {
+		if(chn=='6'&&juese!="æ³•å¸ˆ"&&jinbi>=350&&bag<9) {
 			jinbi-=350;
-			wuqi[bag]="ÁÔÈËµ¶";
+			wuqi[bag]="çŒŽäººåˆ€";
 			xinneng[bag]=105;
 			wuqiLV[bag]=1;
 			a_f[bag]=true;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÁÔÈËµ¶£¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°çŒŽäººåˆ€ï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
-		if(chn=='7'&&juese=="·¨Ê¦"&&jinbi>=200&&bag<9) {
+		if(chn=='7'&&juese=="æ³•å¸ˆ"&&jinbi>=200&&bag<9) {
 			jinbi-=200;
-			wuqi[bag]="Ä§°ô";
+			wuqi[bag]="é­”æ£’";
 			xinneng[bag]=120;
 			wuqiLV[bag]=1;
 			a_f[bag]=true;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÄ§°ô£¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°é­”æ£’ï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
 		if(chn=='8') {
 			goto finish;
 		}
-		Slowsay("¶Ô²»Æð£¬ÎÞ·¨Ö´ÐÐ´Ë²Ù×÷£¬¿ÉÄÜÒòÎªÖ°Òµ²»¶Ô¡¢½ð±Ò²»×ã¡¢±³°ü¿Õ¼ä²»¹»»òÃ»ÓÐÊäÈëÕýÈ·µÄÊý×Ö£¬ÇëÖØÊÔ\n");
+		Slowsay("å¯¹ä¸èµ·ï¼Œæ— æ³•æ‰§è¡Œæ­¤æ“ä½œï¼Œå¯èƒ½å› ä¸ºèŒä¸šä¸å¯¹ã€é‡‘å¸ä¸è¶³ã€èƒŒåŒ…ç©ºé—´ä¸å¤Ÿæˆ–æ²¡æœ‰è¾“å…¥æ­£ç¡®çš„æ•°å­—ï¼Œè¯·é‡è¯•\n");
 		Sleep(3000);
 		goto kaishi;
 	}
 	if(ch3=='2') {
 youxi:
 		jindu(50);
-		qsay("1,Ð¡Æ¿ÉúÃüÒ©Ë®  Ë²¼ä»Ø¸´400~500µÎÑª            £¤150\n");
-		qsay("2,ÖÐÆ¿ÉúÃüÒ©Ë®  Ë²¼ä»Ø¸´800~1000µÎÑª           £¤200\n");
-		qsay("3,´óÆ¿ÉúÃüÒ©Ë®  Ë²¼ä»Ø¸´1400~1800µÎÑª          £¤250\n");
-		qsay("4,ÌØ´óÉúÃüÒ©Ë®  Ë²¼ä»Ø¸´2200~3000µÎÑª          £¤350(µê³¤ÍÆ¼ö)\n");
-		qsay("5,Ð¡Æ¿Ä§·¨Ò©Ë®  Ë²¼ä»Ø¸´150~250Ä§·¨Öµ          £¤100\n");
-		qsay("6,ÖÐÆ¿Ä§·¨Ò©Ë®  Ë²¼ä»Ø¸´450~650Ä§·¨Öµ          £¤150\n");
-		qsay("7,´óÆ¿Ä§·¨Ò©Ë®  Ë²¼ä»Ø¸´950~1250Ä§·¨Öµ         £¤200(µê³¤ÍÆ¼ö)\n");
-		qsay("8,ÌØ´óÄ§·¨Ò©Ë®  Ë²¼ä»Ø¸´1650~2150Ä§·¨Öµ        £¤300\n");
-		qsay("9,ÔªÆø»Ö¸´Ò©Ë®  Ë²¼ä»Ø¸´4000~5000µÎÑªÓëÄ§·¨Öµ  £¤650(µê³¤ÍÆ¼ö)\n");
-		qsay("10,¾ÞÁéÒ©Ë®     Ë²¼ä»Ø¸´ÂúËùÓÐÑªÓëÄ§·¨Öµ       £¤1000(µê³¤ÍÆ¼ö)\n");
-		qsay("11,·µ»Ø                   Çë×¢Òâ£ºÄãÏÖÔÚ»¹ÓÐ");
+		qsay("1,å°ç“¶ç”Ÿå‘½è¯æ°´  çž¬é—´å›žå¤400~500æ»´è¡€            ï¿¥150\n");
+		qsay("2,ä¸­ç“¶ç”Ÿå‘½è¯æ°´  çž¬é—´å›žå¤800~1000æ»´è¡€           ï¿¥200\n");
+		qsay("3,å¤§ç“¶ç”Ÿå‘½è¯æ°´  çž¬é—´å›žå¤1400~1800æ»´è¡€          ï¿¥250\n");
+		qsay("4,ç‰¹å¤§ç”Ÿå‘½è¯æ°´  çž¬é—´å›žå¤2200~3000æ»´è¡€          ï¿¥350(åº—é•¿æŽ¨è)\n");
+		qsay("5,å°ç“¶é­”æ³•è¯æ°´  çž¬é—´å›žå¤150~250é­”æ³•å€¼          ï¿¥100\n");
+		qsay("6,ä¸­ç“¶é­”æ³•è¯æ°´  çž¬é—´å›žå¤450~650é­”æ³•å€¼          ï¿¥150\n");
+		qsay("7,å¤§ç“¶é­”æ³•è¯æ°´  çž¬é—´å›žå¤950~1250é­”æ³•å€¼         ï¿¥200(åº—é•¿æŽ¨è)\n");
+		qsay("8,ç‰¹å¤§é­”æ³•è¯æ°´  çž¬é—´å›žå¤1650~2150é­”æ³•å€¼        ï¿¥300\n");
+		qsay("9,å…ƒæ°”æ¢å¤è¯æ°´  çž¬é—´å›žå¤4000~5000æ»´è¡€ä¸Žé­”æ³•å€¼  ï¿¥650(åº—é•¿æŽ¨è)\n");
+		qsay("10,å·¨çµè¯æ°´     çž¬é—´å›žå¤æ»¡æ‰€æœ‰è¡€ä¸Žé­”æ³•å€¼       ï¿¥1000(åº—é•¿æŽ¨è)\n");
+		qsay("11,è¿”å›ž                   è¯·æ³¨æ„ï¼šä½ çŽ°åœ¨è¿˜æœ‰");
 		cout<<jinbi;
-		Slowsay("½ð±Ò\n");
+		Slowsay("é‡‘å¸\n");
 		Sleep(1000);
-		say("ÇëÑ¡Ôñ£º");
+		say("è¯·é€‰æ‹©ï¼š");
 		string ch4;
 		cin>>ch4;
 		if(ch4=="1"&&jinbi>=150&&bag1<9) {
 			yaoshuixiao[bag1]=1;
 			jinbi-=150;
-			yaoshui[bag1]="Ð¡Æ¿ÉúÃüÒ©Ë®";
+			yaoshui[bag1]="å°ç“¶ç”Ÿå‘½è¯æ°´";
 			bag1++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÐ¡Æ¿ÉúÃüÒ©Ë®\n");
+			Slowsay("å·²æˆåŠŸè´­ä¹°å°ç“¶ç”Ÿå‘½è¯æ°´\n");
 			Sleep(1000);
 			goto youxi;
 		}
 		if(ch4=="2"&&jinbi>=200&&bag1<9) {
 			yaoshuixiao[bag1]=2;
 			jinbi-=200;
-			yaoshui[bag1]="ÖÐÆ¿ÉúÃüÒ©Ë®";
+			yaoshui[bag1]="ä¸­ç“¶ç”Ÿå‘½è¯æ°´";
 			bag1++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÖÐÆ¿ÉúÃüÒ©Ë®\n");
+			Slowsay("å·²æˆåŠŸè´­ä¹°ä¸­ç“¶ç”Ÿå‘½è¯æ°´\n");
 			Sleep(1000);
 			goto youxi;
 		}
 		if(ch4=="3"&&jinbi>=250&&bag1<9) {
 			yaoshuixiao[bag1]=3;
 			jinbi-=250;
-			yaoshui[bag1]="´óÆ¿ÉúÃüÒ©Ë®";
+			yaoshui[bag1]="å¤§ç“¶ç”Ÿå‘½è¯æ°´";
 			bag1++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂò´óÆ¿ÉúÃüÒ©Ë®\n");
+			Slowsay("å·²æˆåŠŸè´­ä¹°å¤§ç“¶ç”Ÿå‘½è¯æ°´\n");
 			Sleep(1000);
 			goto youxi;
 		}
 		if(ch4=="4"&&jinbi>=350&&bag1<9) {
 			yaoshuixiao[bag1]=4;
 			jinbi-=350;
-			yaoshui[bag1]="ÌØ´óÉúÃüÒ©Ë®";
+			yaoshui[bag1]="ç‰¹å¤§ç”Ÿå‘½è¯æ°´";
 			bag1++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÌØ´óÉúÃüÒ©Ë®\n");
+			Slowsay("å·²æˆåŠŸè´­ä¹°ç‰¹å¤§ç”Ÿå‘½è¯æ°´\n");
 			Sleep(1000);
 			goto youxi;
 		}
 		if(ch4=="5"&&jinbi>=100&&bag1<9) {
 			yaoshuixiao[bag1]=5;
 			jinbi-=100;
-			yaoshui[bag1]="Ð¡Æ¿Ä§·¨Ò©Ë®";
+			yaoshui[bag1]="å°ç“¶é­”æ³•è¯æ°´";
 			bag1++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÐ¡Æ¿Ä§·¨Ò©Ë®\n");
+			Slowsay("å·²æˆåŠŸè´­ä¹°å°ç“¶é­”æ³•è¯æ°´\n");
 			Sleep(1000);
 			goto youxi;
 		}
 		if(ch4=="6"&&jinbi>=150&&bag1<9) {
 			yaoshuixiao[bag1]=6;
 			jinbi-=150;
-			yaoshui[bag1]="ÖÐÆ¿Ä§·¨Ò©Ë®";
+			yaoshui[bag1]="ä¸­ç“¶é­”æ³•è¯æ°´";
 			bag1++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÖÐÆ¿Ä§·¨Ò©Ë®\n");
+			Slowsay("å·²æˆåŠŸè´­ä¹°ä¸­ç“¶é­”æ³•è¯æ°´\n");
 			Sleep(1000);
 			goto youxi;
 		}
 		if(ch4=="7"&&jinbi>=200&&bag1<9) {
 			yaoshuixiao[bag1]=7;
 			jinbi-=200;
-			yaoshui[bag1]="´óÆ¿Ä§·¨Ò©Ë®";
+			yaoshui[bag1]="å¤§ç“¶é­”æ³•è¯æ°´";
 			bag1++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂò´óÆ¿Ä§·¨Ò©Ë®\n");
+			Slowsay("å·²æˆåŠŸè´­ä¹°å¤§ç“¶é­”æ³•è¯æ°´\n");
 			goto youxi;
 		}
 		if(ch4=="8"&&jinbi>=300&&bag1<9) {
 			yaoshuixiao[bag1]=8;
 			jinbi-=300;
-			yaoshui[bag1]="ÌØ´óÄ§·¨Ò©Ë®";
+			yaoshui[bag1]="ç‰¹å¤§é­”æ³•è¯æ°´";
 			bag1++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÌØ´óÄ§·¨Ò©Ë®\n");
+			Slowsay("å·²æˆåŠŸè´­ä¹°ç‰¹å¤§é­”æ³•è¯æ°´\n");
 			Sleep(1000);
 			goto youxi;
 		}
 		if(ch4=="9"&&jinbi>=650&&bag1<9) {
 			yaoshuixiao[bag1]=9;
 			jinbi-=650;
-			yaoshui[bag1]="ÔªÆø»Ö¸´Ò©Ë®";
+			yaoshui[bag1]="å…ƒæ°”æ¢å¤è¯æ°´";
 			bag1++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÔªÆø»Ö¸´Ò©Ë®\n");
+			Slowsay("å·²æˆåŠŸè´­ä¹°å…ƒæ°”æ¢å¤è¯æ°´\n");
 			Sleep(1000);
 			goto youxi;
 		}
 		if(ch4=="10"&&jinbi>=1000&&bag1<9) {
 			yaoshuixiao[bag1]=10;
 			jinbi-=1000;
-			yaoshui[bag1]="¾ÞÁéÒ©Ë®";
+			yaoshui[bag1]="å·¨çµè¯æ°´";
 			bag1++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂò¾ÞÁéÒ©Ë®\n");
+			Slowsay("å·²æˆåŠŸè´­ä¹°å·¨çµè¯æ°´\n");
 			Sleep(1000);
 			goto youxi;
 		}
 		if(ch4=="11") {
 			goto finish;
 		}
-		Slowsay("¶Ô²»Æð£¬ÎÞ·¨Ö´ÐÐ´Ë²Ù×÷£¬¿ÉÄÜÒòÎª½ð±Ò²»×ã¡¢±³°ü¿Õ¼ä²»¹»»òÃ»ÓÐÊäÈëÕýÈ·µÄÊý×Ö£¬ÇëÖØÊÔ\n");
+		Slowsay("å¯¹ä¸èµ·ï¼Œæ— æ³•æ‰§è¡Œæ­¤æ“ä½œï¼Œå¯èƒ½å› ä¸ºé‡‘å¸ä¸è¶³ã€èƒŒåŒ…ç©ºé—´ä¸å¤Ÿæˆ–æ²¡æœ‰è¾“å…¥æ­£ç¡®çš„æ•°å­—ï¼Œè¯·é‡è¯•\n");
 		goto youxi;
 	}
 	if(ch3=='3') {
 fox:
 		jindu(50);
 		cout<<endl;
-		say("1,Ä¾²Ä*50£º×î³£ÓÃµÄ²ÄÁÏ£¬¿ÉÒÔÓÃÓÚÇ¿»¯×°±¸¡¢Éý¼¶£¬ºÏ³ÉÆÕÍ¨×°±¸µÈµÈ£¬    £¤1500\n");
-		say("2,ÉúÌú*20£º½Ï³£¼ûµÄ²ÄÁÏ£¬¿ÉÒÔÓÃÓÚÇ¿»¯×°±¸¡¢Éý¼¶£¬ºÏ³ÉÆÕÍ¨×°±¸µÈµÈ      £¤1200\n");
-		say("3,¸ÖÌú*10£º²»³£¼ûµÄ²ÄÁÏ£¬¿ÉÒÔÓÃÓÚÇ¿»¯×°±¸¡¢Éý¼¶£¬ºÏ³ÉÆÕÍ¨×°±¸µÈµÈ      £¤1850\n");
-		say("4,ÂÌ±¦Ê¯*1£ººÜ²»³£¼ûµÄ²ÄÁÏ£¬¿ÉÓÃÓÚ¿ÉÒÔÓÃÓÚ¸ßÄÜÇ¿»¯×°±¸¡¢´«ÆæÉý¼¶µÈµÈ   £¤11500\n");
-		say("5,À¶±¦Ê¯*1£ºÌØ±ð²»³£¼ûµÄ²ÄÁÏ£¬¿ÉÓÃÓÚ¿ÉÒÔÓÃÓÚ¸ßÄÜÇ¿»¯×°±¸¡¢´«ÆæÉý¼¶µÈµÈ £¤22500\n");
-		say("6,ÖÁÊ¥µÄË®¾§*1£º×î²»³£¼ûµÄ²ÄÁÏ£¬¿ÉÓÃÓÚºÏ³ÉÖÕ¼«±¦²Ø                     £¤1000000\n");
-		say("7,ÁúÖ®¾íÖá*1£º¶ÔµÐÈËÔì³É8´Î200%µÄÉËº¦£¬²¢Ê¹µÐÈËÔÚÏÂÒ»»ØºÏÎÞ·¨½ø¹¥      £¤12500\n");
-		say("8,·µ»Ø                    Çë×¢Òâ£ºÄãÏÖÔÚ»¹ÓÐ");
+		say("1,æœ¨æ*50ï¼šæœ€å¸¸ç”¨çš„ææ–™ï¼Œå¯ä»¥ç”¨äºŽå¼ºåŒ–è£…å¤‡ã€å‡çº§ï¼Œåˆæˆæ™®é€šè£…å¤‡ç­‰ç­‰ï¼Œ    ï¿¥1500\n");
+		say("2,ç”Ÿé“*20ï¼šè¾ƒå¸¸è§çš„ææ–™ï¼Œå¯ä»¥ç”¨äºŽå¼ºåŒ–è£…å¤‡ã€å‡çº§ï¼Œåˆæˆæ™®é€šè£…å¤‡ç­‰ç­‰      ï¿¥1200\n");
+		say("3,é’¢é“*10ï¼šä¸å¸¸è§çš„ææ–™ï¼Œå¯ä»¥ç”¨äºŽå¼ºåŒ–è£…å¤‡ã€å‡çº§ï¼Œåˆæˆæ™®é€šè£…å¤‡ç­‰ç­‰      ï¿¥1850\n");
+		say("4,ç»¿å®çŸ³*1ï¼šå¾ˆä¸å¸¸è§çš„ææ–™ï¼Œå¯ç”¨äºŽå¯ä»¥ç”¨äºŽé«˜èƒ½å¼ºåŒ–è£…å¤‡ã€ä¼ å¥‡å‡çº§ç­‰ç­‰   ï¿¥11500\n");
+		say("5,è“å®çŸ³*1ï¼šç‰¹åˆ«ä¸å¸¸è§çš„ææ–™ï¼Œå¯ç”¨äºŽå¯ä»¥ç”¨äºŽé«˜èƒ½å¼ºåŒ–è£…å¤‡ã€ä¼ å¥‡å‡çº§ç­‰ç­‰ ï¿¥22500\n");
+		say("6,è‡³åœ£çš„æ°´æ™¶*1ï¼šæœ€ä¸å¸¸è§çš„ææ–™ï¼Œå¯ç”¨äºŽåˆæˆç»ˆæžå®è—                     ï¿¥1000000\n");
+		say("7,é¾™ä¹‹å·è½´*1ï¼šå¯¹æ•Œäººé€ æˆ8æ¬¡200%çš„ä¼¤å®³ï¼Œå¹¶ä½¿æ•Œäººåœ¨ä¸‹ä¸€å›žåˆæ— æ³•è¿›æ”»      ï¿¥12500\n");
+		say("8,è¿”å›ž                    è¯·æ³¨æ„ï¼šä½ çŽ°åœ¨è¿˜æœ‰");
 		cout<<jinbi;
-		Slowsay("½ð±Ò\n");
+		Slowsay("é‡‘å¸\n");
 		Sleep(2000);
-		Slowsay("ÇëÑ¡Ôñ£º");
+		Slowsay("è¯·é€‰æ‹©ï¼š");
 		char ch5;
 		cin>>ch5;
 		if(ch5=='1'&&jinbi>=1500&&bag<9) {
 			jinbi-=1500;
-			daoju[bag2]="Ä¾²Ä*50";
+			daoju[bag2]="æœ¨æ*50";
 			mu+=50;
 			bag2++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÄ¾²Ä*50");
+			Slowsay("å·²æˆåŠŸè´­ä¹°æœ¨æ*50");
 			Sleep(1000);
 			goto fox;
 		}
 		if(ch5=='2'&&jinbi>=1250&&bag2<9) {
 			jinbi-=1250;
-			daoju[bag2]="ÉúÌú*20";
+			daoju[bag2]="ç”Ÿé“*20";
 			sheng+=20;
 			bag2++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÉúÌú*20");
+			Slowsay("å·²æˆåŠŸè´­ä¹°ç”Ÿé“*20");
 			Sleep(1000);
 			goto fox;
 		}
 		if(ch5=='3'&&jinbi>=1850&&bag2<9) {
 			jinbi-=1850;
-			daoju[bag2]="¸ÖÌú*10";
+			daoju[bag2]="é’¢é“*10";
 			gang+=10;
 			bag2++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂò¸ÖÌú*10");
+			Slowsay("å·²æˆåŠŸè´­ä¹°é’¢é“*10");
 			Sleep(1000);
 			goto fox;
 		}
 		if(ch5=='4'&&jinbi>=11500&&bag2<9) {
 			jinbi-=11500;
-			daoju[bag2]="ÂÌ±¦Ê¯";
+			daoju[bag2]="ç»¿å®çŸ³";
 			bag2++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÂÌ±¦Ê¯*1");
+			Slowsay("å·²æˆåŠŸè´­ä¹°ç»¿å®çŸ³*1");
 			Sleep(1000);
 			goto fox;
 		}
 		if(ch5=='5'&&jinbi>=22500&&bag2<9) {
 			jinbi-=22500;
-			daoju[bag2]="À¶±¦Ê¯";
+			daoju[bag2]="è“å®çŸ³";
 			bag2++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÀ¶±¦Ê¯*1");
+			Slowsay("å·²æˆåŠŸè´­ä¹°è“å®çŸ³*1");
 			Sleep(1000);
 			goto fox;
 		}
 		if(ch5=='6'&&jinbi>=1000000&&bag2<9) {
 			jinbi-=1000000;
-			daoju[bag2]="ÖÁÊ¥µÄË®¾§";
+			daoju[bag2]="è‡³åœ£çš„æ°´æ™¶";
 			bag2++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÖÁÊ¥µÄË®¾§*1");
+			Slowsay("å·²æˆåŠŸè´­ä¹°è‡³åœ£çš„æ°´æ™¶*1");
 			Sleep(1000);
 			goto fox;
 		}
 		if(ch5=='7'&&jinbi>=12500&&bag1<9) {
 			jinbi-=12500;
-			yaoshui[bag1]="ÁúÖ®¾íÖá";
+			yaoshui[bag1]="é¾™ä¹‹å·è½´";
 			bag1++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÁúÖ®¾íÖá*1");
+			Slowsay("å·²æˆåŠŸè´­ä¹°é¾™ä¹‹å·è½´*1");
 			Sleep(1000);
 			goto fox;
 		}
 		if(ch5=='8') {
 			goto finish;
 		}
-		Slowsay("¶Ô²»Æð£¬ÎÞ·¨Ö´ÐÐ´Ë²Ù×÷£¬¿ÉÄÜÒòÎª½ð±Ò²»×ã¡¢±³°ü¿Õ¼ä²»¹»»òÃ»ÓÐÊäÈëÕýÈ·µÄÊý×Ö£¬ÇëÖØÊÔ\n");
+		Slowsay("å¯¹ä¸èµ·ï¼Œæ— æ³•æ‰§è¡Œæ­¤æ“ä½œï¼Œå¯èƒ½å› ä¸ºé‡‘å¸ä¸è¶³ã€èƒŒåŒ…ç©ºé—´ä¸å¤Ÿæˆ–æ²¡æœ‰è¾“å…¥æ­£ç¡®çš„æ•°å­—ï¼Œè¯·é‡è¯•\n");
 		Sleep(2000);
 		goto fox;
 	}
 	if(ch3=='4') {
 hujia:
 		jindu(50);
-		qsay("1,Æ¤¸ï»¤¼×Ì××°   ·ÀÓùÁ¦+45   Ö°Òµ£ºÈÎÒâ             £¤200\n");
-		qsay("2,ÌúÖÆîø¼×Ì××°   ·ÀÓùÁ¦+135  Ö°Òµ£º¿ñÕ½Ê¿ or Ê¥ÆïÊ¿ £¤950\n");
-		qsay("3,½ðÖÆ»¤¼×Ì××°   ·ÀÓùÁ¦+125  Ö°Òµ£º·¨Ê¦ or ´Ì¿Í     £¤850\n");
-		qsay("4,ÇáÐÍîø¼×Ì××°   ·ÀÓùÁ¦+245  Ö°Òµ£º´Ì¿Í             £¤1800\n");
-		qsay("5,ÖØÐÍîø¼×Ì××°   ·ÀÓùÁ¦+325  Ö°Òµ£ºÊ¥ÆïÊ¿           £¤2800\n");
-		qsay("6,ËøÁ´»¤¼×Ì××°   ·ÀÓùÁ¦+225  Ö°Òµ£º·¨Ê¦             £¤2000\n");
-		qsay("7,×êÊ¯»¤¼×Ì××°   ·ÀÓùÁ¦+285  Ö°Òµ£º¿ñÕ½Ê¿           £¤2800\n");
-		qsay("8,öùÓãÆ¤¼×Ì××°   ·ÀÓùÁ¦+205  Ö°Òµ£º·¨Ê¦ or ´Ì¿Í     £¤1700\n");
-		qsay("9,ÊøÑü³ÄÉÀÌ××°   ·ÀÓùÁ¦+255  Ö°Òµ£º·¨Ê¦             £¤2400\n");
-		qsay("10,·µ»Ø                                  Çë×¢Òâ£¬Äã»¹ÓÐ");
+		qsay("1,çš®é©æŠ¤ç”²å¥—è£…   é˜²å¾¡åŠ›+45   èŒä¸šï¼šä»»æ„             ï¿¥200\n");
+		qsay("2,é“åˆ¶é“ ç”²å¥—è£…   é˜²å¾¡åŠ›+135  èŒä¸šï¼šç‹‚æˆ˜å£« or åœ£éª‘å£« ï¿¥950\n");
+		qsay("3,é‡‘åˆ¶æŠ¤ç”²å¥—è£…   é˜²å¾¡åŠ›+125  èŒä¸šï¼šæ³•å¸ˆ or åˆºå®¢     ï¿¥850\n");
+		qsay("4,è½»åž‹é“ ç”²å¥—è£…   é˜²å¾¡åŠ›+245  èŒä¸šï¼šåˆºå®¢             ï¿¥1800\n");
+		qsay("5,é‡åž‹é“ ç”²å¥—è£…   é˜²å¾¡åŠ›+325  èŒä¸šï¼šåœ£éª‘å£«           ï¿¥2800\n");
+		qsay("6,é”é“¾æŠ¤ç”²å¥—è£…   é˜²å¾¡åŠ›+225  èŒä¸šï¼šæ³•å¸ˆ             ï¿¥2000\n");
+		qsay("7,é’»çŸ³æŠ¤ç”²å¥—è£…   é˜²å¾¡åŠ›+285  èŒä¸šï¼šç‹‚æˆ˜å£«           ï¿¥2800\n");
+		qsay("8,é³„é±¼çš®ç”²å¥—è£…   é˜²å¾¡åŠ›+205  èŒä¸šï¼šæ³•å¸ˆ or åˆºå®¢     ï¿¥1700\n");
+		qsay("9,æŸè…°è¡¬è¡«å¥—è£…   é˜²å¾¡åŠ›+255  èŒä¸šï¼šæ³•å¸ˆ             ï¿¥2400\n");
+		qsay("10,è¿”å›ž                                  è¯·æ³¨æ„ï¼Œä½ è¿˜æœ‰");
 		cout<<jinbi;
-		say("½ð±Ò\n");
+		say("é‡‘å¸\n");
 		Sleep(2000);
-		Slowsay("ÇëÑ¡Ôñ£º");
+		Slowsay("è¯·é€‰æ‹©ï¼š");
 		string ch5;
 		cin>>ch5;
 		if(ch5=="1"&&jinbi>=200&&bag<9) {
 			jinbi-=200;
-			wuqi[bag]="Æ¤¸ï»¤¼×Ì××°";
+			wuqi[bag]="çš®é©æŠ¤ç”²å¥—è£…";
 			xinneng[bag]=45;
 			wuqiLV[bag]=1;
 			a_f[bag]=false;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÆ¤¸ï»¤¼×Ì××°£¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°çš®é©æŠ¤ç”²å¥—è£…ï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
-		if(ch5=="2"&&jinbi>=950&&(juese=="¿ñÕ½Ê¿"||juese=="Ê¥ÆïÊ¿")&&bag<9) {
+		if(ch5=="2"&&jinbi>=950&&(juese=="ç‹‚æˆ˜å£«"||juese=="åœ£éª‘å£«")&&bag<9) {
 			jinbi-=950;
-			wuqi[bag]="ÌúÖÆîø¼×Ì××°";
+			wuqi[bag]="é“åˆ¶é“ ç”²å¥—è£…";
 			xinneng[bag]=135;
 			wuqiLV[bag]=1;
 			a_f[bag]=false;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÌúÖÆîø¼×Ì××°£¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°é“åˆ¶é“ ç”²å¥—è£…ï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
-		if(ch5=="3"&&jinbi>=850&&(juese=="·¨Ê¦"||juese=="´Ì¿Í")&&bag<9) {
+		if(ch5=="3"&&jinbi>=850&&(juese=="æ³•å¸ˆ"||juese=="åˆºå®¢")&&bag<9) {
 			jinbi-=850;
-			wuqi[bag]="½ðÖÊ»¤¼×Ì××°";
+			wuqi[bag]="é‡‘è´¨æŠ¤ç”²å¥—è£…";
 			xinneng[bag]=125;
 			wuqiLV[bag]=1;
 			a_f[bag]=false;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂò½ðÖÊ»¤¼×Ì××°£¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°é‡‘è´¨æŠ¤ç”²å¥—è£…ï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
-		if(ch5=="4"&&jinbi>=1800&&juese=="´Ì¿Í"&&bag<9) {
+		if(ch5=="4"&&jinbi>=1800&&juese=="åˆºå®¢"&&bag<9) {
 			jinbi-=1800;
-			wuqi[bag]="ÇáÐÍîø¼×Ì××°";
+			wuqi[bag]="è½»åž‹é“ ç”²å¥—è£…";
 			xinneng[bag]=245;
 			wuqiLV[bag]=1;
 			a_f[bag]=false;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÇáÐÍîø¼×Ì××°£¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°è½»åž‹é“ ç”²å¥—è£…ï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
-		if(ch5=="5"&&jinbi>=2800&&juese=="Ê¥ÆïÊ¿"&&bag<9) {
+		if(ch5=="5"&&jinbi>=2800&&juese=="åœ£éª‘å£«"&&bag<9) {
 			jinbi-=2800;
-			wuqi[bag]="ÖØÐÍîø¼×Ì××°";
+			wuqi[bag]="é‡åž‹é“ ç”²å¥—è£…";
 			xinneng[bag]=325;
 			wuqiLV[bag]=1;
 			a_f[bag]=false;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÖØÐÍîø¼×Ì××°£¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°é‡åž‹é“ ç”²å¥—è£…ï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
-		if(ch5=="6"&&jinbi>=2000&&juese=="·¨Ê¦"&&bag<9) {
+		if(ch5=="6"&&jinbi>=2000&&juese=="æ³•å¸ˆ"&&bag<9) {
 			jinbi-=2000;
-			wuqi[bag]="ËøÁ´»¤¼×Ì××°";
+			wuqi[bag]="é”é“¾æŠ¤ç”²å¥—è£…";
 			xinneng[bag]=225;
 			wuqiLV[bag]=1;
 			a_f[bag]=false;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòËøÁ´»¤¼×Ì××°£¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°é”é“¾æŠ¤ç”²å¥—è£…ï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
-		if(ch5=="7"&&jinbi>=2800&&juese=="¿ñÕ½Ê¿"&&bag<9) {
+		if(ch5=="7"&&jinbi>=2800&&juese=="ç‹‚æˆ˜å£«"&&bag<9) {
 			jinbi-=2800;
-			wuqi[bag]="×êÊ¯»¤¼×Ì××°";
+			wuqi[bag]="é’»çŸ³æŠ¤ç”²å¥—è£…";
 			xinneng[bag]=285;
 			wuqiLV[bag]=1;
 			a_f[bag]=false;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂò×êÊ¯»¤¼×Ì××°£¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°é’»çŸ³æŠ¤ç”²å¥—è£…ï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
-		if(ch5=="8"&&jinbi>=1700&&(juese=="·¨Ê¦"||juese=="´Ì¿Í")&&bag<9) {
+		if(ch5=="8"&&jinbi>=1700&&(juese=="æ³•å¸ˆ"||juese=="åˆºå®¢")&&bag<9) {
 			jinbi-=1700;
-			wuqi[bag]="öùÓãÆ¤¼×Ì××°";
+			wuqi[bag]="é³„é±¼çš®ç”²å¥—è£…";
 			xinneng[bag]=205;
 			wuqiLV[bag]=1;
 			a_f[bag]=false;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòöùÓãÆ¤¼×Ì××°£¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°é³„é±¼çš®ç”²å¥—è£…ï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
-		if(ch5=="9"&&jinbi>=2400&&juese=="·¨Ê¦"&&bag<9) {
+		if(ch5=="9"&&jinbi>=2400&&juese=="æ³•å¸ˆ"&&bag<9) {
 			jinbi-=2400;
-			wuqi[bag]="ÊøÑü³ÄÉÀÌ××°";
+			wuqi[bag]="æŸè…°è¡¬è¡«å¥—è£…";
 			xinneng[bag]=255;
 			wuqiLV[bag]=1;
 			a_f[bag]=false;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÊøÑü³ÄÉÀÌ××°£¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°æŸè…°è¡¬è¡«å¥—è£…ï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
 		if(ch5=="10") {
 			goto finish;
 		}
-		Slowsay("¶Ô²»Æð£¬ÎÞ·¨Ö´ÐÐ´Ë²Ù×÷£¬¿ÉÄÜÒòÎªÖ°Òµ²»¶Ô¡¢½ð±Ò²»×ã¡¢±³°ü¿Õ¼ä²»¹»»òÃ»ÓÐÊäÈëÕýÈ·µÄÊý×Ö£¬ÇëÖØÊÔ\n");
+		Slowsay("å¯¹ä¸èµ·ï¼Œæ— æ³•æ‰§è¡Œæ­¤æ“ä½œï¼Œå¯èƒ½å› ä¸ºèŒä¸šä¸å¯¹ã€é‡‘å¸ä¸è¶³ã€èƒŒåŒ…ç©ºé—´ä¸å¤Ÿæˆ–æ²¡æœ‰è¾“å…¥æ­£ç¡®çš„æ•°å­—ï¼Œè¯·é‡è¯•\n");
 		Sleep(2000);
 		goto hujia;
 	}
 	if(ch3=='5') {
 		chuanqi:
 		jindu(50);
-		say("1,Ñ×ÁúÍõÖ®½£   ¹¥»÷Á¦+30%   Ö°Òµ£º¿ñÕ½Ê¿ or Ê¥ÆïÊ¿       $1000\n");
-		say("2,Ä§ÁúÍõÖ®½£   ¹¥»÷Á¦+35%   Ö°Òµ£º¿ñÕ½Ê¿ or Ê¥ÆïÊ¿       $1500\n");
-		say("3,½ð¸Õ±¦½£     ¹¥»÷Á¦+40%   Ö°Òµ£ºÊ¥ÆïÊ¿ or ´Ì¿Í         $2000\n");
-		say("4,µØÓüÖ®ÈÐ     ¹¥»÷Á¦+50%   Ö°Òµ£º´Ì¿Í                   $3000\n");
-		say("5,ÊÀ½çÊ÷ÉñÕÈ   ¹¥»÷Á¦+55%   Ö°Òµ£º·¨Ê¦                   $4000\n");
-		say("6,×Ï¾§Éñ·û     ¹¥»÷Á¦+65%   Ö°Òµ£ºÈÎÒâ                   $5500\n");
-		say("7,ìÅ²Ê°ÔÍõ½£   ¹¥»÷Á¦+100%  Ö°Òµ£º¿ñÕ½Ê¿ or Ê¥ÆïÊ¿       $10000\n");
-		say("8,Ìì¹úÖ®ÕÈ/½£  ¹¥»÷Á¦+130%  Ö°Òµ£º´Ì¿Í or ·¨Ê¦           $10000\n");
-		say("9,³äÖµ\n");
-		say("10,·µ»Ø               Çë×¢Òâ£ºÄã»¹ÓÐ");
+		say("1,ç‚Žé¾™çŽ‹ä¹‹å‰‘   æ”»å‡»åŠ›+30%   èŒä¸šï¼šç‹‚æˆ˜å£« or åœ£éª‘å£«       $1000\n");
+		say("2,é­”é¾™çŽ‹ä¹‹å‰‘   æ”»å‡»åŠ›+35%   èŒä¸šï¼šç‹‚æˆ˜å£« or åœ£éª‘å£«       $1500\n");
+		say("3,é‡‘åˆšå®å‰‘     æ”»å‡»åŠ›+40%   èŒä¸šï¼šåœ£éª‘å£« or åˆºå®¢         $2000\n");
+		say("4,åœ°ç‹±ä¹‹åˆƒ     æ”»å‡»åŠ›+50%   èŒä¸šï¼šåˆºå®¢                   $3000\n");
+		say("5,ä¸–ç•Œæ ‘ç¥žæ–   æ”»å‡»åŠ›+55%   èŒä¸šï¼šæ³•å¸ˆ                   $4000\n");
+		say("6,ç´«æ™¶ç¥žç¬¦     æ”»å‡»åŠ›+65%   èŒä¸šï¼šä»»æ„                   $5500\n");
+		say("7,ç‚«å½©éœ¸çŽ‹å‰‘   æ”»å‡»åŠ›+100%  èŒä¸šï¼šç‹‚æˆ˜å£« or åœ£éª‘å£«       $10000\n");
+		say("8,å¤©å›½ä¹‹æ–/å‰‘  æ”»å‡»åŠ›+130%  èŒä¸šï¼šåˆºå®¢ or æ³•å¸ˆ           $10000\n");
+		say("9,å……å€¼\n");
+		say("10,è¿”å›ž               è¯·æ³¨æ„ï¼šä½ è¿˜æœ‰");
 		cout<<G;
-		Slowsay("¹úÍõ±Ò\n");
+		Slowsay("å›½çŽ‹å¸\n");
 		Sleep(2000);
-		Slowsay("ÇëÑ¡Ôñ£º");
+		Slowsay("è¯·é€‰æ‹©ï¼š");
 		string ch6;
 		cin>>ch6;
-		if(ch6=="1"&&G>=1000&&(juese=="¿ñÕ½Ê¿"||juese=="Ê¥ÆïÊ¿")&&bag<9) {
+		if(ch6=="1"&&G>=1000&&(juese=="ç‹‚æˆ˜å£«"||juese=="åœ£éª‘å£«")&&bag<9) {
 			G-=1000;
-			wuqi[bag]="Ñ×ÁúÍõÖ®½£";
+			wuqi[bag]="ç‚Žé¾™çŽ‹ä¹‹å‰‘";
 			xinneng[bag]=30;
 			wuqiLV[bag]=1;
 			a_f[bag]=true;
 			Is_pct[bag]=true;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÑ×ÁúÍõÖ®½££¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°ç‚Žé¾™çŽ‹ä¹‹å‰‘ï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
-		if(ch6=="2"&&G>=1500&&(juese=="¿ñÕ½Ê¿"||juese=="Ê¥ÆïÊ¿")&&bag<9) {
+		if(ch6=="2"&&G>=1500&&(juese=="ç‹‚æˆ˜å£«"||juese=="åœ£éª‘å£«")&&bag<9) {
 			G-=1500;
-			wuqi[bag]="Ä§ÁúÍõÖ®½£";
+			wuqi[bag]="é­”é¾™çŽ‹ä¹‹å‰‘";
 			xinneng[bag]=35;
 			wuqiLV[bag]=1;
 			a_f[bag]=true;
 			Is_pct[bag]=true;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÄ§ÁúÍõÖ®½££¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°é­”é¾™çŽ‹ä¹‹å‰‘ï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
-		if(ch6=="3"&&G>=2000&&(juese=="Ê¥ÆïÊ¿"||juese=="´Ì¿Í")&&bag<9) {
+		if(ch6=="3"&&G>=2000&&(juese=="åœ£éª‘å£«"||juese=="åˆºå®¢")&&bag<9) {
 			G-=2000;
-			wuqi[bag]="½ð¸Õ±¦½£";
+			wuqi[bag]="é‡‘åˆšå®å‰‘";
 			xinneng[bag]=40;
 			wuqiLV[bag]=1;
 			a_f[bag]=true;
 			Is_pct[bag]=true;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂò½ð¸Õ±¦½££¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°é‡‘åˆšå®å‰‘ï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
-		if(ch6=="4"&&G>=3000&&juese=="´Ì¿Í"&&bag<9) {
+		if(ch6=="4"&&G>=3000&&juese=="åˆºå®¢"&&bag<9) {
 			G-=3000;
-			wuqi[bag]="µØÓüÖ®ÈÐ";
+			wuqi[bag]="åœ°ç‹±ä¹‹åˆƒ";
 			xinneng[bag]=50;
 			wuqiLV[bag]=1;
 			a_f[bag]=true;
 			Is_pct[bag]=true;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòµØÓüÖ®ÈÐ£¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°åœ°ç‹±ä¹‹åˆƒï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
-		if(ch6=="5"&&G>=4000&&juese=="·¨Ê¦"&&bag<9) {
+		if(ch6=="5"&&G>=4000&&juese=="æ³•å¸ˆ"&&bag<9) {
 			G-=4000;
-			wuqi[bag]="ÊÀ½çÊ÷ÉñÕÈ";
+			wuqi[bag]="ä¸–ç•Œæ ‘ç¥žæ–";
 			xinneng[bag]=55;
 			wuqiLV[bag]=1;
 			a_f[bag]=true;
 			Is_pct[bag]=true;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÊÀ½çÊ÷ÉñÕÈ£¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°ä¸–ç•Œæ ‘ç¥žæ–ï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
 		if(ch6=="6"&&G>=5500&&bag<9) {
 			G-=5500;
-			wuqi[bag]="×Ï¾§Éñ·û";
+			wuqi[bag]="ç´«æ™¶ç¥žç¬¦";
 			xinneng[bag]=65;
 			wuqiLV[bag]=1;
 			a_f[bag]=true;
 			Is_pct[bag]=true;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂò×Ï¾§Éñ·û£¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°ç´«æ™¶ç¥žç¬¦ï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
-		if(ch6=="7"&&G>=10000&&(juese=="¿ñÕ½Ê¿"||juese=="Ê¥ÆïÊ¿")&&bag<9) {
+		if(ch6=="7"&&G>=10000&&(juese=="ç‹‚æˆ˜å£«"||juese=="åœ£éª‘å£«")&&bag<9) {
 			G-=10000;
-			wuqi[bag]="ìÅ²Ê°ÔÍõ½£";
+			wuqi[bag]="ç‚«å½©éœ¸çŽ‹å‰‘";
 			xinneng[bag]=100;
 			wuqiLV[bag]=1;
 			a_f[bag]=true;
 			Is_pct[bag]=true;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòìÅ²Ê°ÔÍõ½££¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°ç‚«å½©éœ¸çŽ‹å‰‘ï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
-		if(ch6=="8"&&G>=10000&&juese=="·¨Ê¦"&&bag<9) {
+		if(ch6=="8"&&G>=10000&&juese=="æ³•å¸ˆ"&&bag<9) {
 			G-=10000;
-			wuqi[bag]="Ìì¹úÖ®ÕÈ";
+			wuqi[bag]="å¤©å›½ä¹‹æ–";
 			xinneng[bag]=100;
 			wuqiLV[bag]=1;
 			a_f[bag]=true;
 			Is_pct[bag]=true;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÌì¹úÖ®ÕÈ£¬Ç°Íù±³°ü¼´¿É×°±¸");
+			Slowsay("å·²æˆåŠŸè´­ä¹°å¤©å›½ä¹‹æ–ï¼Œå‰å¾€èƒŒåŒ…å³å¯è£…å¤‡");
 			Sleep(2000);
 			goto finish;
 		}
-		if(ch6=="8"&&G>=10000&&juese=="´Ì¿Í"&&bag<9) {
+		if(ch6=="8"&&G>=10000&&juese=="åˆºå®¢"&&bag<9) {
 			G-=10000;
-			wuqi[bag]="Ìì¹úÖ®½£";
+			wuqi[bag]="å¤©å›½ä¹‹å‰‘";
 			xinneng[bag]=130;
 			wuqiLV[bag]=1;
 			a_f[bag]=true;
 			Is_pct[bag]=true;
 			bag++;
 			cout<<endl;
-			Slowsay("ÒÑ³É¹¦¹ºÂòÌì¹úÖ®½£");
+			Slowsay("å·²æˆåŠŸè´­ä¹°å¤©å›½ä¹‹å‰‘");
 			Sleep(2000);
 			goto finish;
 		}
@@ -3034,10 +3034,10 @@ hujia:
 			jindu(50);
 			cout<<endl;
 			cout<<endl;
-			Slowsay("                  ÇëÑ¡Ôñ³äÖµ½ð¶î£º\n");
-			Slowsay("1,5Ôª   2,10Ôª   3,20Ôª   4,50Ôª   5,100Ôª   6,500Ôª   7,·µ»Ø\n");
+			Slowsay("                  è¯·é€‰æ‹©å……å€¼é‡‘é¢ï¼š\n");
+			Slowsay("1,5å…ƒ   2,10å…ƒ   3,20å…ƒ   4,50å…ƒ   5,100å…ƒ   6,500å…ƒ   7,è¿”å›ž\n");
 			Sleep(1000);
-			Slowsay("ÇëÑ¡Ôñ£º");
+			Slowsay("è¯·é€‰æ‹©ï¼š");
 			int jine;
 			char ch7;
 			cin>>ch7;
@@ -3069,22 +3069,22 @@ hujia:
 				goto chuanqi;
 			}
 			if(q) {
-				Slowsay("¶Ô²»Æð£¬ÎÞ·¨Ö´ÐÐ´Ë²Ù×÷,ÇëÖØÊÔ");
+				Slowsay("å¯¹ä¸èµ·ï¼Œæ— æ³•æ‰§è¡Œæ­¤æ“ä½œ,è¯·é‡è¯•");
 				goto chongzhi;
 			}
-			Slowsay("ÇëÊäÈëÄúµÄÃÜÂë£º");
+			Slowsay("è¯·è¾“å…¥æ‚¨çš„å¯†ç ï¼š");
 			string p="";
 			cin>>p;
-			Slowsay("ÕýÔÚ¼ì²â£¬ÇëÉÔºó\n\n");
+			Slowsay("æ­£åœ¨æ£€æµ‹ï¼Œè¯·ç¨åŽ\n\n");
 			Sleep(1500);
 			system("cls");
-			if(p!="ZTL¾ÞÑ§"&&p!="ztl¾ÞÑ§"&&p!="ztl´óÀÐ"
-			        &&p!="ZTL´óÀÐ"&&p!="ZTLTQL") {
-				Slowsay("¶Ô²»Æð£¬ÄúµÄÃÜÂë²»¶Ô£¬ÇëÖØÊÔ");
+			if(p!="ZTLå·¨å­¦"&&p!="ztlå·¨å­¦"&&p!="ztlå¤§ä½¬"
+			        &&p!="ZTLå¤§ä½¬"&&p!="ZTLTQL") {
+				Slowsay("å¯¹ä¸èµ·ï¼Œæ‚¨çš„å¯†ç ä¸å¯¹ï¼Œè¯·é‡è¯•");
 				goto chongzhi;
 			}
 			jindu(50);
-			Slowsay("³äÖµ³É¹¦");
+			Slowsay("å……å€¼æˆåŠŸ");
 			G+=jine*100;
 			Sleep(1000);
 			goto chuanqi;
@@ -3092,7 +3092,7 @@ hujia:
 		if(ch6=="10") {
 			goto finish;
 		}
-		Slowsay("¶Ô²»Æð£¬ÎÞ·¨Ö´ÐÐ´Ë²Ù×÷£¬¿ÉÄÜÒòÎªÖ°Òµ²»¶Ô¡¢½ð±Ò²»×ã¡¢±³°ü¿Õ¼ä²»¹»»òÃ»ÓÐÊäÈëÕýÈ·µÄÊý×Ö£¬ÇëÖØÊÔ\n");
+		Slowsay("å¯¹ä¸èµ·ï¼Œæ— æ³•æ‰§è¡Œæ­¤æ“ä½œï¼Œå¯èƒ½å› ä¸ºèŒä¸šä¸å¯¹ã€é‡‘å¸ä¸è¶³ã€èƒŒåŒ…ç©ºé—´ä¸å¤Ÿæˆ–æ²¡æœ‰è¾“å…¥æ­£ç¡®çš„æ•°å­—ï¼Œè¯·é‡è¯•\n");
 		Sleep(2000);
 		goto chuanqi;
 	}
@@ -3100,7 +3100,7 @@ hujia:
 		return;
 	}
 	if(ch3>'6'||ch3<'1') {
-		Slowsay("¶Ô²»Æð£¬ÎÞ·¨Ö´ÐÐ´Ë²Ù×÷£¬ÒòÎªÃ»ÓÐÊäÈëÕýÈ·µÄÊý×Ö£¬ÇëÖØÊÔ\n");
+		Slowsay("å¯¹ä¸èµ·ï¼Œæ— æ³•æ‰§è¡Œæ­¤æ“ä½œï¼Œå› ä¸ºæ²¡æœ‰è¾“å…¥æ­£ç¡®çš„æ•°å­—ï¼Œè¯·é‡è¯•\n");
 		goto chuanqi;
 	}
 	system("cls");
@@ -3108,29 +3108,29 @@ hujia:
 void Inotia() {
 	jindu(50);
 	tiaose(9);
-	cout<<"      ¡ö    ¡ö                              "<<endl;
-	cout<<"  ¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö                 ¡ö    ¡ö   "<<endl;
-	cout<<"      ¡ö    ¡ö               ¡ö   ¡ö¡ö¡ö¡ö¡ö  "<<endl;
-	cout<<"                           ¡ö¡ö¡ö  ¡ö    ¡ö   "<<endl;
-	cout<<"     ¡ö      ¡ö               ¡ö      ¡ö      "<<endl;
-	cout<<"¡¡¡¡¡¡ ¡ö¡¡¡ö¡¡¡¡           ¡ö¡ö    ¡ö¡ö¡ö¡ö¡ö "<<endl;
-	cout<<"         ¡ö                ¡ö ¡ö¡ö    ¡ö       "<<endl;
-	cout<<"       ¡ö  ¡ö             ¡ö  ¡ö    ¡ö¡ö¡ö¡ö  "<<endl;
-	cout<<"     ¡ö      ¡ö               ¡ö   ¡ö ¡ö  ¡ö  "<<endl;
-	cout<<"    ¡ö        ¡ö              ¡ö  ¡ö  ¡ö¡ö¡ö  "<<endl;
+	cout<<"      â–     â–                               "<<endl;
+	cout<<"  â– â– â– â– â– â– â– â–                  â–     â–    "<<endl;
+	cout<<"      â–     â–                â–    â– â– â– â– â–   "<<endl;
+	cout<<"                           â– â– â–   â–     â–    "<<endl;
+	cout<<"     â–       â–                â–       â–       "<<endl;
+	cout<<"ã€€ã€€ã€€ â– ã€€â– ã€€ã€€           â– â–     â– â– â– â– â–  "<<endl;
+	cout<<"         â–                 â–  â– â–     â–        "<<endl;
+	cout<<"       â–   â–              â–   â–     â– â– â– â–   "<<endl;
+	cout<<"     â–       â–                â–    â–  â–   â–   "<<endl;
+	cout<<"    â–         â–               â–   â–   â– â– â–   "<<endl;
 	cout<<endl<<endl<<endl;
-	cout<<"             ¡ö  	   ¡ö¡ö¡ö¡ö¡ö¡ö¡ö  "<<endl;
-	cout<<"  ¡ö     ¡ö¡ö¡ö¡ö¡ö	      ¡ö   ¡ö     "<<endl;
-	cout<<"¡ö¡ö¡ö   ¡ö  ¡ö  ¡ö   	 ¡ö   ¡ö   ¡ö   ¡ö"<<endl;
-	cout<<"   ¡ö    ¡ö¡ö¡ö¡ö¡ö   	  ¡ö  ¡ö   ¡ö  ¡ö "<<endl;
-	cout<<" ¡ö      ¡ö  ¡ö  ¡ö   	    ¡ö¡ö   ¡ö¡ö   "<<endl;
-	cout<<"   ¡ö    ¡ö¡ö¡ö¡ö¡ö   	      ¡ö   ¡ö     "<<endl;
-	cout<<" ¡ö                  	      ¡ö   ¡ö     "<<endl;
-	cout<<"¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö       ¡ö¡ö¡ö¡ö¡ö¡ö¡ö  "<<endl; 
+	cout<<"             â–   	   â– â– â– â– â– â– â–   "<<endl;
+	cout<<"  â–      â– â– â– â– â– 	      â–    â–      "<<endl;
+	cout<<"â– â– â–    â–   â–   â–    	 â–    â–    â–    â– "<<endl;
+	cout<<"   â–     â– â– â– â– â–    	  â–   â–    â–   â–  "<<endl;
+	cout<<" â–       â–   â–   â–    	    â– â–    â– â–    "<<endl;
+	cout<<"   â–     â– â– â– â– â–    	      â–    â–      "<<endl;
+	cout<<" â–                   	      â–    â–      "<<endl;
+	cout<<"â– â– â– â– â– â– â– â– â– â–        â– â– â– â– â– â– â–   "<<endl; 
 	Sleep(100);
 	cout<<endl;
 	tiaose(15);
-	Slowsay("»¶Ó­ÄúÔÙ´Î¹âÁÙ£¡");
+	Slowsay("æ¬¢è¿Žæ‚¨å†æ¬¡å…‰ä¸´ï¼");
 	tiaose(8);
 }
 bool chuangguan(int k,string Map[30]) {
@@ -3146,151 +3146,151 @@ bool chuangguan(int k,string Map[30]) {
 		Is_first[k]=false;
 		if(k==11) {
 			int sp=rand()%10;
-			Slowsay("Äã×ßÔÚ³äÂúÒõÆøµÄÊ¯ÖÓÈé¶´Àï£¬ËÄÖÜÈ«ÊÇ¸¯ÀÃµÄËÀÊ¬ºÍÒõÉ­É­µÄ°×¹Ç£¬ÉõÖÁ»¹ÓÐÐ©ÉúÐâµÄ¿ø¼×ºÍ¶ÏÁÑµÄµ¶£¬¿´Ñù×ÓÖ®Ç°ÓÐÐí¶àÀ´ÌÖ·¥¾ÞÑÒÄ§ÍõµÄÓÂÊ¿\n");
+			Slowsay("ä½ èµ°åœ¨å……æ»¡é˜´æ°”çš„çŸ³é’Ÿä¹³æ´žé‡Œï¼Œå››å‘¨å…¨æ˜¯è…çƒ‚çš„æ­»å°¸å’Œé˜´æ£®æ£®çš„ç™½éª¨ï¼Œç”šè‡³è¿˜æœ‰äº›ç”Ÿé”ˆçš„ç›”ç”²å’Œæ–­è£‚çš„åˆ€ï¼Œçœ‹æ ·å­ä¹‹å‰æœ‰è®¸å¤šæ¥è®¨ä¼å·¨å²©é­”çŽ‹çš„å‹‡å£«\n");
 			Sleep(2000);
-			Slowsay("µ«Ò»Ïëµ½¾ÞÑÒÄ§Íõ¿ÉÄÜ»á´ÓËÄÃæ°Ë·½ÆË¹ýÀ´£¬Äã¾ÍÈÌ²»×¡´òÁËÒ»¸ö¼¤Áé\n");
+			Slowsay("ä½†ä¸€æƒ³åˆ°å·¨å²©é­”çŽ‹å¯èƒ½ä¼šä»Žå››é¢å…«æ–¹æ‰‘è¿‡æ¥ï¼Œä½ å°±å¿ä¸ä½æ‰“äº†ä¸€ä¸ªæ¿€çµ\n");
 			Sleep(2000);
 			system("cls");
-			Slowsay("×ß×Å×ß×Å,Ç°Ãæ³öÏÖÁËÁ½ÌõÂ·£¬ÖÐ¼äÓÐÒ»¿éÆÆÆÆÀÃÀÃµÄÅÆ×Ó£¬ÉÏÃæÐ´×Å¡ª¡ª\n\n");
-			Slowsay("            ÓÂ¸ÒµÄÓ¢ÐÛ°¡£¬Çë×ñ´ÓÉñµÄÖ¸Òý°É\n");
-			say("©³©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©·\n");
-			say("©§¡û¡ûÎÒÅÔ±ßµÄÊÇ¶ñÄ§£¬      ©§¶ñÄ§ËµµÄ»°ÊÇ°ëÕæ°ë¼Ù£¬¡ú¡ú©§\n");
-			say("©§¡û¡ûËüÖ¸Òý×ÅËÀÍöÖ®Â·      ©§ÎÒÅÔ±ßµÄ²»ÊÇ³É¹¦Ö®Â·  ¡ú¡ú©§\n");
-			say("©»©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¿\n\n\n");
+			Slowsay("èµ°ç€èµ°ç€,å‰é¢å‡ºçŽ°äº†ä¸¤æ¡è·¯ï¼Œä¸­é—´æœ‰ä¸€å—ç ´ç ´çƒ‚çƒ‚çš„ç‰Œå­ï¼Œä¸Šé¢å†™ç€â€”â€”\n\n");
+			Slowsay("            å‹‡æ•¢çš„è‹±é›„å•Šï¼Œè¯·éµä»Žç¥žçš„æŒ‡å¼•å§\n");
+			say("â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”“\n");
+			say("â”ƒâ†â†æˆ‘æ—è¾¹çš„æ˜¯æ¶é­”ï¼Œ      â”ƒæ¶é­”è¯´çš„è¯æ˜¯åŠçœŸåŠå‡ï¼Œâ†’â†’â”ƒ\n");
+			say("â”ƒâ†â†å®ƒæŒ‡å¼•ç€æ­»äº¡ä¹‹è·¯      â”ƒæˆ‘æ—è¾¹çš„ä¸æ˜¯æˆåŠŸä¹‹è·¯  â†’â†’â”ƒ\n");
+			say("â”—â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”›\n\n\n");
 			Sleep(1000);
-			Slowsay("ÄãÒª×ßÄÇÌõÂ·£¿   L/R\n");
+			Slowsay("ä½ è¦èµ°é‚£æ¡è·¯ï¼Ÿ   L/R\n");
 			char f;
 			cin>>f;
 			if(f=='L') {
 				Sleep(1000);
 				system("cls");
 				Sleep(1500);
-				Slowsay("Äã¼á¶¨µØÏò×ÅÄãËùÐÅÈÎµÄ·½Ïò×ßÈ¥\n");
+				Slowsay("ä½ åšå®šåœ°å‘ç€ä½ æ‰€ä¿¡ä»»çš„æ–¹å‘èµ°åŽ»\n");
 				Sleep(1000);
-				Slowsay("ÕâÊ±£¬Äã·¢ÏÖÇ°ÃæÓÐÒ»¸ö¾Þ´óµÄÉíÓ°ÌÉÔÚµØÃæÉÏ\n");
+				Slowsay("è¿™æ—¶ï¼Œä½ å‘çŽ°å‰é¢æœ‰ä¸€ä¸ªå·¨å¤§çš„èº«å½±èººåœ¨åœ°é¢ä¸Š\n");
 				Sleep(2000);
-				Slowsay("ÄãÎÕ½ôÎäÆ÷£¬ÂýÂýÏòÄÇ¸öÉíÓ°¿¿¹ýÈ¥¡­¡­\n");
+				Slowsay("ä½ æ¡ç´§æ­¦å™¨ï¼Œæ…¢æ…¢å‘é‚£ä¸ªèº«å½±é è¿‡åŽ»â€¦â€¦\n");
 				Sleep(2000);
-				Slowsay("Äã·¢ÏÖ£¬ÄÇ¸öÉíÓ°¾¹ÊÇ¡­¡­¡­¡­¡­¡­¡­¡­¡­¡­Äã¿à¿àÑ°ÕÒÁË¶àÄêµÄ¾ÞÑÒÄ§Íõ£¡£¡\n");
+				Slowsay("ä½ å‘çŽ°ï¼Œé‚£ä¸ªèº«å½±ç«Ÿæ˜¯â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦ä½ è‹¦è‹¦å¯»æ‰¾äº†å¤šå¹´çš„å·¨å²©é­”çŽ‹ï¼ï¼\n");
 				Sleep(1000);
-				Slowsay("´Õ½ü£¬²Å¿´¼û£¬ËüÉíÉÏ±»Ä³ÖÖÉñÃØµÄ¶«Î÷ÉËº¦¹ý£¬Õâ²»Ïñ²ÁÉË£¬Ò²²»Ïñ´ÌÉË£¬¸ü²»ÏëÉÕÉË¡£¿´À´´ò°Ü¾ÞÑÒÄ§ÍõµÄÎäÆ÷ÊÇ¸öºÜÁË²»ÆðµÄ¶«Î÷ÁË\n");
+				Slowsay("å‡‘è¿‘ï¼Œæ‰çœ‹è§ï¼Œå®ƒèº«ä¸Šè¢«æŸç§ç¥žç§˜çš„ä¸œè¥¿ä¼¤å®³è¿‡ï¼Œè¿™ä¸åƒæ“¦ä¼¤ï¼Œä¹Ÿä¸åƒåˆºä¼¤ï¼Œæ›´ä¸æƒ³çƒ§ä¼¤ã€‚çœ‹æ¥æ‰“è´¥å·¨å²©é­”çŽ‹çš„æ­¦å™¨æ˜¯ä¸ªå¾ˆäº†ä¸èµ·çš„ä¸œè¥¿äº†\n");
 				Sleep(1000);
-				Slowsay("ËüÅÔ±ß»¹ÓÐÒ»¸ö»ªÀöµÄÏä×Ó£¬ÉÏÃæÏâÇ¶×ÅÂÌ±¦Ê¯£¬Ë®¾§£¬×êÊ¯£¬»Æ½ð¡£´ò¿ªÒ»¿´¡ª¡ª");
+				Slowsay("å®ƒæ—è¾¹è¿˜æœ‰ä¸€ä¸ªåŽä¸½çš„ç®±å­ï¼Œä¸Šé¢é•¶åµŒç€ç»¿å®çŸ³ï¼Œæ°´æ™¶ï¼Œé’»çŸ³ï¼Œé»„é‡‘ã€‚æ‰“å¼€ä¸€çœ‹â€”â€”");
 				Sleep(1500);
-				Slowsay("ÀïÃæ×°×ÅÒ»ÕÅÖ½Ìõ£¬ÉÏÃæÐ´×Å¡ª¡ª\n");
+				Slowsay("é‡Œé¢è£…ç€ä¸€å¼ çº¸æ¡ï¼Œä¸Šé¢å†™ç€â€”â€”\n");
 				Sleep(2000);
-				Slowsay("µÈ´ýÇ§ÄêµÄÓÂÊ¿°¡£¬¾ÞÑÒÄ§ÍõµÄ±¦²ØÒÑ¾­±»ÎÒÄÃ×ßÁË£¬ÏëÄÃ»ØÀ´µÄ»°£¬¾ÍÀ´Ë÷¼Ó´ïÉ½ÉÏÀ´ÕÒÎÒ°É¡ª¡ª¼Ç×¡£¬ÎÒÊÇÄãµÄÅóÓÑ£¬Ò²ÊÇÄãµÄµÐÈË\n");
+				Slowsay("ç­‰å¾…åƒå¹´çš„å‹‡å£«å•Šï¼Œå·¨å²©é­”çŽ‹çš„å®è—å·²ç»è¢«æˆ‘æ‹¿èµ°äº†ï¼Œæƒ³æ‹¿å›žæ¥çš„è¯ï¼Œå°±æ¥ç´¢åŠ è¾¾å±±ä¸Šæ¥æ‰¾æˆ‘å§â€”â€”è®°ä½ï¼Œæˆ‘æ˜¯ä½ çš„æœ‹å‹ï¼Œä¹Ÿæ˜¯ä½ çš„æ•Œäºº\n");
 				Sleep(3000);
-				Slowsay("¡°Ë÷¼Ó´ïÉ½Âö²»¾ÍÊÇ±¦²ØµÄ¹éËÞÂð£¬ÕâÈËÈÃÎÒÃÇÈ¥ÄÇÀï¸ÉÂï£¿¡±\n");
+				Slowsay("â€œç´¢åŠ è¾¾å±±è„‰ä¸å°±æ˜¯å®è—çš„å½’å®¿å—ï¼Œè¿™äººè®©æˆ‘ä»¬åŽ»é‚£é‡Œå¹²å˜›ï¼Ÿâ€\n");
 				Sleep(1500);
-				Slowsay("ºÜ¾ÃºÜ¾Ã£¬Ò»Õó³ÁÄ¬¡­¡­¡­¡­¡­¡­\n");
+				Slowsay("å¾ˆä¹…å¾ˆä¹…ï¼Œä¸€é˜µæ²‰é»˜â€¦â€¦â€¦â€¦â€¦â€¦\n");
 				Sleep(2000);
 				system("cls");
-				Slowsay("¡°ÄÇÃ´£¬ÔÛÃÇ¾ÍÈ¥°Éqwq¡±\n");
+				Slowsay("â€œé‚£ä¹ˆï¼Œå’±ä»¬å°±åŽ»å§qwqâ€\n");
 				Sleep(1000);
-				Slowsay("¡°Î¹Î¹Î¹£¬ÎÒ»¹Ã»ÏëºÃÄØ¡±\n");
+				Slowsay("â€œå–‚å–‚å–‚ï¼Œæˆ‘è¿˜æ²¡æƒ³å¥½å‘¢â€\n");
 				Sleep(1000);
-				Slowsay("¡°°¦£¬ÏëÉ¶Ïë£¬×ß×ß×ß~³ö·¢£¡¡±\n");
+				Slowsay("â€œå”‰ï¼Œæƒ³å•¥æƒ³ï¼Œèµ°èµ°èµ°~å‡ºå‘ï¼â€\n");
 				Sleep(1000);
 				system("cls");
 				Sleep(1000);
-				Slowsay("Ë÷¼Ó´ïÉ½ÂöµØÊÆ¸ß£¬É½ÊÆÏÕ£¬ÅÀÆðÀ´¿É²»ÊÇÄÇÃ´ÈÝÒ×\n");
+				Slowsay("ç´¢åŠ è¾¾å±±è„‰åœ°åŠ¿é«˜ï¼Œå±±åŠ¿é™©ï¼Œçˆ¬èµ·æ¥å¯ä¸æ˜¯é‚£ä¹ˆå®¹æ˜“\n");
 				Sleep(1000);
-				Slowsay("Äã´øÉÏÄãµÄ¶ÓÓÑ£¬È¥µ½ÁËË÷¼Ó´ïÉ½ÂöÏÂ\n");
+				Slowsay("ä½ å¸¦ä¸Šä½ çš„é˜Ÿå‹ï¼ŒåŽ»åˆ°äº†ç´¢åŠ è¾¾å±±è„‰ä¸‹\n");
 				Sleep(1200);
-				Slowsay("ÄãÃÇÒ»±ßºßßêºßßêµØÅÀ×Å£¬Ò»±ß¹Û²ìÉ½¶¥µÄÇé¿ö\n");
+				Slowsay("ä½ ä»¬ä¸€è¾¹å“¼å“§å“¼å“§åœ°çˆ¬ç€ï¼Œä¸€è¾¹è§‚å¯Ÿå±±é¡¶çš„æƒ…å†µ\n");
 				Sleep(1500);
 				system("cls");
 				Sleep(1000);
-				Slowsay("¡°ßí¹þ¹þ¹þ¹þ¹þ¹þ¹þ¹þ¹þ¹þ¹þ¹þ¹þ¹þ¹þ¹þ¹þ¹þ¹þ¹þ¹þ¹þ°¡¹þ¹þ°¡¹þ¹þ¹þ¹þ¹þ¹þ¹þ¡­¡­¿È¿È£¬¿È¿È£¬ÄãÖÕÓÚÀ´À²¡±");
+				Slowsay("â€œå””å“ˆå“ˆå“ˆå“ˆå“ˆå“ˆå“ˆå“ˆå“ˆå“ˆå“ˆå“ˆå“ˆå“ˆå“ˆå“ˆå“ˆå“ˆå“ˆå“ˆå“ˆå“ˆå•Šå“ˆå“ˆå•Šå“ˆå“ˆå“ˆå“ˆå“ˆå“ˆå“ˆâ€¦â€¦å’³å’³ï¼Œå’³å’³ï¼Œä½ ç»ˆäºŽæ¥å•¦â€");
 				Sleep(1000);
-				Slowsay("¡°ÊÇµÄ£¬ÎÒÃÇÀ´ÁË¡±\n");
+				Slowsay("â€œæ˜¯çš„ï¼Œæˆ‘ä»¬æ¥äº†â€\n");
 				Sleep(1000);
-				Slowsay("¡°Ó´£¬²»´íÂï£¬»¹´øÉÏÁË¼¸¸ö°ïÊÖ£¬Ö»ÊÇ£¬ºßºß~~¡±\n");
+				Slowsay("â€œå“Ÿï¼Œä¸é”™å˜›ï¼Œè¿˜å¸¦ä¸Šäº†å‡ ä¸ªå¸®æ‰‹ï¼Œåªæ˜¯ï¼Œå“¼å“¼~~â€\n");
 				Sleep(2000);
-				Slowsay("¡°¿ì°Ñ±¦²Ø½»³öÀ´£¡¡±\n");
+				Slowsay("â€œå¿«æŠŠå®è—äº¤å‡ºæ¥ï¼â€\n");
 				Sleep(1000);
-				Slowsay("¡°ÏëÒª±¦²Ø£¬ÏÈ¹ýÎÒÕâÒ»¹Ø£¬ºÈ°¡!¡±\n");
+				Slowsay("â€œæƒ³è¦å®è—ï¼Œå…ˆè¿‡æˆ‘è¿™ä¸€å…³ï¼Œå–å•Š!â€\n");
 				Sleep(1500);
-				Slowsay("ÄÇÈË³åÁËÉÏÀ´£¡¾ÍÔÚÄã»¹ã¶ÔÚÔ­µØµÄÊ±ºò£¬À¥µÏÒ»¸ö¶ö»¢ÆËÊ³£¬Ê¹ÓÃ½£µ²×¡ÁËÇ¿´óµÄ¹¥»÷£¬Ë«½£Ïà×²£¬±Å·¢³öÒ«ÑÛµÄ»ð»¨£¬½ô½Ó×ÅÅ£×ÐÌÍ³ö¹­¼ý£¬¡°à²à²¡±µØÉä³öÁ½Ö»¼ý£¬µ«µÐÈËÇáÇáÒ»»Ó½£½«¼ý´òµôÁË£¬ÎäÊ¿ÔÚÅÔ±ßÒ»¿é¾ÞÊ¯Ò»µ¶¿³µ¹£¬Ê¯¿é¡°ºäÂ¡¡±Ò»ÉùÔÒÔÚÁËÄÇÈËÍ·ÉÏ£¬¸¡ÆðÒ»²ã²ã»Ò³¾\n");
+				Slowsay("é‚£äººå†²äº†ä¸Šæ¥ï¼å°±åœ¨ä½ è¿˜æ„£åœ¨åŽŸåœ°çš„æ—¶å€™ï¼Œæ˜†è¿ªä¸€ä¸ªé¥¿è™Žæ‰‘é£Ÿï¼Œä½¿ç”¨å‰‘æŒ¡ä½äº†å¼ºå¤§çš„æ”»å‡»ï¼ŒåŒå‰‘ç›¸æ’žï¼Œè¿¸å‘å‡ºè€€çœ¼çš„ç«èŠ±ï¼Œç´§æŽ¥ç€ç‰›ä»”æŽå‡ºå¼“ç®­ï¼Œâ€œå—–å—–â€åœ°å°„å‡ºä¸¤åªç®­ï¼Œä½†æ•Œäººè½»è½»ä¸€æŒ¥å‰‘å°†ç®­æ‰“æŽ‰äº†ï¼Œæ­¦å£«åœ¨æ—è¾¹ä¸€å—å·¨çŸ³ä¸€åˆ€ç å€’ï¼ŒçŸ³å—â€œè½°éš†â€ä¸€å£°ç ¸åœ¨äº†é‚£äººå¤´ä¸Šï¼Œæµ®èµ·ä¸€å±‚å±‚ç°å°˜\n");
 				Sleep(2000);
-				Slowsay("ÈýÈËµÄ¶¯×÷Ò»ÆøºÇ³É£¬¿´µÃÄãÄ¿µÉ¿Ú´ô\n");
+				Slowsay("ä¸‰äººçš„åŠ¨ä½œä¸€æ°”å‘µæˆï¼Œçœ‹å¾—ä½ ç›®çžªå£å‘†\n");
 				Sleep(1000);
-				Slowsay("¡°ºÇºÇ£¬Ã»É¶µÄ£¬¾ÍÊÇ·´Ó¦¿ìµã¾ÍÐÐÁË£¬ºÃÁË£¬²»ËµÁË£¬¸Ï½ôÕÒ±¦²Ø°É¡±\n");
+				Slowsay("â€œå‘µå‘µï¼Œæ²¡å•¥çš„ï¼Œå°±æ˜¯ååº”å¿«ç‚¹å°±è¡Œäº†ï¼Œå¥½äº†ï¼Œä¸è¯´äº†ï¼Œèµ¶ç´§æ‰¾å®è—å§â€\n");
 				Sleep(2000);
 				system("cls");
-				Slowsay("¡°ºßºß£¬ÄãÃÇÒÔÎªÎÒÊÇÕâÃ´ÈÝÒ×±»´ò°ÜµÄÂð£¿Ì«ÌìÕæÁË£¡¡±\n");
+				Slowsay("â€œå“¼å“¼ï¼Œä½ ä»¬ä»¥ä¸ºæˆ‘æ˜¯è¿™ä¹ˆå®¹æ˜“è¢«æ‰“è´¥çš„å—ï¼Ÿå¤ªå¤©çœŸäº†ï¼â€\n");
 				Sleep(500);
-				Slowsay("ÕâÊ±£¬Ê¯Í·¡°Å¾¡±Ò»ÉùËéÁË£¬ÄÇÈË×ßÁË³öÀ´¡­¡­\n");
+				Slowsay("è¿™æ—¶ï¼ŒçŸ³å¤´â€œå•ªâ€ä¸€å£°ç¢Žäº†ï¼Œé‚£äººèµ°äº†å‡ºæ¥â€¦â€¦\n");
 				Sleep(2000);
 				if(zhandou("???",-2)) {
-					Slowsay("¡°²»¡­¡­²»¿ÉÄÜ£¡ÎÒÔõÃ´»áÇáÒ×±»ÄãÃÇÕâÐ©À¬»ø´ò°Ü£¿£¡¡±\n");
+					Slowsay("â€œä¸â€¦â€¦ä¸å¯èƒ½ï¼æˆ‘æ€Žä¹ˆä¼šè½»æ˜“è¢«ä½ ä»¬è¿™äº›åžƒåœ¾æ‰“è´¥ï¼Ÿï¼â€\n");
 					Sleep(1000);
-					Slowsay("¡°ºß£¬ÎÒÒÑ¾­¸æËßÄãÁË£¨ºÃÏñÃ»ÓÐ¡­¡­£©£¬ÍÅ½á²ÅÊÇÁ¦Á¿£¬ÏñÄãÕâÖÖ¹ÂÆ§µÄÈË£¬ÔÙÀ÷º¦£¬Ò²¶¥²»¹ýÒ»¸öÍÅ¶ÓµÄ¹¥»÷£¬Èý¸ö³ôÆ¤½³Èü¹ýÖî¸ðÁÁ¡£ºÇºÇ£¬²»ÌýÀÏÈËÑÔ£¬³Ô¿÷ÔÚÑÛÇ°£¡°Ý°Ý¡±\n");
+					Slowsay("â€œå“¼ï¼Œæˆ‘å·²ç»å‘Šè¯‰ä½ äº†ï¼ˆå¥½åƒæ²¡æœ‰â€¦â€¦ï¼‰ï¼Œå›¢ç»“æ‰æ˜¯åŠ›é‡ï¼Œåƒä½ è¿™ç§å­¤åƒ»çš„äººï¼Œå†åŽ‰å®³ï¼Œä¹Ÿé¡¶ä¸è¿‡ä¸€ä¸ªå›¢é˜Ÿçš„æ”»å‡»ï¼Œä¸‰ä¸ªè‡­çš®åŒ èµ›è¿‡è¯¸è‘›äº®ã€‚å‘µå‘µï¼Œä¸å¬è€äººè¨€ï¼Œåƒäºåœ¨çœ¼å‰ï¼æ‹œæ‹œâ€\n");
 					Sleep(500);
-					Slowsay("¡°²»£¬²»¡ª¡ª¡ª¡ª¡±\n");
+					Slowsay("â€œä¸ï¼Œä¸â€”â€”â€”â€”â€\n");
 					Sleep(1000);
-					Slowsay("¡°ºäÂ¡¡ª¡ª¡ª¡ª¡±\n");
+					Slowsay("â€œè½°éš†â€”â€”â€”â€”â€\n");
 					Sleep(4000);
 					system("cls");
-					Slowsay("¡°~\(¨R¨Œ¨Q)/~,ÎÒÃÇÓ®ÁË£¡µØÇòÓÐ¾ÈÁË£¡£¡¡±\n");
+					Slowsay("â€œ~\(â‰§â–½â‰¦)/~,æˆ‘ä»¬èµ¢äº†ï¼åœ°çƒæœ‰æ•‘äº†ï¼ï¼â€\n");
 					Sleep(3000);
 					system("cls");
-					Slowsay("¡°ÏÖÔÚ»¹²»ÊÇ»¶ºôµÄÊ±ºò£¬Òª¸Ï½ôÕÒµ½±¦²Ø²ÅÐÐ£¡¡±\n");
+					Slowsay("â€œçŽ°åœ¨è¿˜ä¸æ˜¯æ¬¢å‘¼çš„æ—¶å€™ï¼Œè¦èµ¶ç´§æ‰¾åˆ°å®è—æ‰è¡Œï¼â€\n");
 					Sleep(1000);
-					Slowsay("¡°ºÙ£¬ÄãÃÇ¿´£¬ÊÇ²»ÊÇÕâ¸ö!¡±\n\n\n");
+					Slowsay("â€œå˜¿ï¼Œä½ ä»¬çœ‹ï¼Œæ˜¯ä¸æ˜¯è¿™ä¸ª!â€\n\n\n");
 					Sleep(1000);
-					Slowsay("À¥µÏËµ×Å¾ÙÆðÁËÒ»°Ñ³¤½£\n");
+					Slowsay("æ˜†è¿ªè¯´ç€ä¸¾èµ·äº†ä¸€æŠŠé•¿å‰‘\n");
 					Sleep(2000);
 					Slowsay("\n\n");
-					Slowsay("¡°²»ÊÇ°É£¬ÊÇÕâ¸ö°É¡±\n");
+					Slowsay("â€œä¸æ˜¯å§ï¼Œæ˜¯è¿™ä¸ªå§â€\n");
 					Sleep(1000);
-					Slowsay("SuperHunter¾ÙÆðÁËÒ»°ÑÍäµ¶\n");
+					Slowsay("SuperHunterä¸¾èµ·äº†ä¸€æŠŠå¼¯åˆ€\n");
 					Sleep(2000);
 					Slowsay("\n\n");
-					Slowsay("¡°ºÙ£¬ÕâÀï»¹ÓÐÒ»°Ñ£¡¡±\n");
+					Slowsay("â€œå˜¿ï¼Œè¿™é‡Œè¿˜æœ‰ä¸€æŠŠï¼â€\n");
 					Sleep(1000);
-					Slowsay("µØÉÏÌÉ×ÅÒ»°Ñ·½Ììêª\n");
+					Slowsay("åœ°ä¸Šèººç€ä¸€æŠŠæ–¹å¤©æˆŸ\n");
 					Sleep(2000);
 					system("cls");
-					Slowsay("(¡Ñv¡Ñ)àÅ¡­¡­µ½µ×ÊÇÄÄ¸ö°¡£¿\n");
+					Slowsay("(âŠ™vâŠ™)å—¯â€¦â€¦åˆ°åº•æ˜¯å“ªä¸ªå•Šï¼Ÿ\n");
 					Sleep(1000);
 					system("cls");
-					Slowsay("¡°ºß£¬¿Ï¶¨ÊÇÄÄ¸ö²»ÒªÁ³µÄ¼Ò»ïÅª³öÀ´ÕûÎÒÃÇµÄ°ÑÏ·£¡¡±\n");
+					Slowsay("â€œå“¼ï¼Œè‚¯å®šæ˜¯å“ªä¸ªä¸è¦è„¸çš„å®¶ä¼™å¼„å‡ºæ¥æ•´æˆ‘ä»¬çš„æŠŠæˆï¼â€\n");
 					Sleep(1000);
-					Slowsay("¡°¾ÍÊÇ¾ÍÊÇ£¬Ëµ²»¶¨ÄÃ´íÁËÕû¸öµØÇò¾ÍºäÂ¡Ò»Éù»Ò·ÉÑÌÃð£¡¡±\n");
+					Slowsay("â€œå°±æ˜¯å°±æ˜¯ï¼Œè¯´ä¸å®šæ‹¿é”™äº†æ•´ä¸ªåœ°çƒå°±è½°éš†ä¸€å£°ç°é£žçƒŸç­ï¼â€\n");
 					Sleep(2000);
 					system("cls");
-					Slowsay("ÕâÊ±£¬ÖÚÈËµÄÄ¿¹â¶¼×ªÏòÁËÄã\n");
+					Slowsay("è¿™æ—¶ï¼Œä¼—äººçš„ç›®å…‰éƒ½è½¬å‘äº†ä½ \n");
 					Sleep(1000);
-					Slowsay("¡°¸É¡­¡­¸ÉÂï£¿±ðÕâÑù¿´×ÅÎÒ¡­¡­¡±\n");
+					Slowsay("â€œå¹²â€¦â€¦å¹²å˜›ï¼Ÿåˆ«è¿™æ ·çœ‹ç€æˆ‘â€¦â€¦â€\n");
 					Sleep(1000);
-					Slowsay("¡°");
+					Slowsay("â€œ");
 					Slowsay(name);
-					Slowsay("£¬Äã»¹¼ÇµÃ³¤ÀÏËµµÄ»°Âð£¿Äã²ÅÊÇÕâ¸öÊÀ½çµÄ¾ÈÊÀÖ÷£¬Ò»ÇÐ½ÔÓÉÄãÀ´¾ö¶¨£¬ÎÒÃÇµÄÈÎÎñÖ»ÊÇ±£»¤Äã¶øÒÑ¡±\n");
+					Slowsay("ï¼Œä½ è¿˜è®°å¾—é•¿è€è¯´çš„è¯å—ï¼Ÿä½ æ‰æ˜¯è¿™ä¸ªä¸–ç•Œçš„æ•‘ä¸–ä¸»ï¼Œä¸€åˆ‡çš†ç”±ä½ æ¥å†³å®šï¼Œæˆ‘ä»¬çš„ä»»åŠ¡åªæ˜¯ä¿æŠ¤ä½ è€Œå·²â€\n");
 					Sleep(2500);
-					Slowsay("¡°àÅ£¬ºÃ°É¡±\n");
+					Slowsay("â€œå—¯ï¼Œå¥½å§â€\n");
 					Sleep(1000);
 					system("cls");
-					Slowsay("Äã×ÐÏ¸¿´ÁË¿´Èý°ÑÎäÆ÷£º\n");
-					say("1£¬³¤½£    ³¤ÂúÌúÐâ£¬µ«½£ÈÐ»¹ÊÇÆÄÎª·æÀû£¬¶ø½£±úÉÏÒ²ÇåÎúµÄ¿Ì×Å¼¸ÌõÁú\n");
-					say("2£¬Íäµ¶    µ¶±úºÍµ¶ÈÐ¶¼ÊÇÃ»ÓÐÈÎºÎµÄ»¨ÎÆ×°ÊÎ£¬¶øÇÒÓÐÐ©µØ·½»¹ÓÐÄ¥Ëð\n");
-					say("3£¬·½Ììêª  ³¤´ïÁ½Ã××óÓÒ£¬ÊÖ±ú´¦ÓÐÒ»Ð©ÏóÐÎÎÄ×Ö£¬ÄÃÆðÀ´ºÜÖØ£¬É±ÉËÁ¦¿´ÆðÀ´Âù´óµÄ\n");
+					Slowsay("ä½ ä»”ç»†çœ‹äº†çœ‹ä¸‰æŠŠæ­¦å™¨ï¼š\n");
+					say("1ï¼Œé•¿å‰‘    é•¿æ»¡é“é”ˆï¼Œä½†å‰‘åˆƒè¿˜æ˜¯é¢‡ä¸ºé”‹åˆ©ï¼Œè€Œå‰‘æŸ„ä¸Šä¹Ÿæ¸…æ™°çš„åˆ»ç€å‡ æ¡é¾™\n");
+					say("2ï¼Œå¼¯åˆ€    åˆ€æŸ„å’Œåˆ€åˆƒéƒ½æ˜¯æ²¡æœ‰ä»»ä½•çš„èŠ±çº¹è£…é¥°ï¼Œè€Œä¸”æœ‰äº›åœ°æ–¹è¿˜æœ‰ç£¨æŸ\n");
+					say("3ï¼Œæ–¹å¤©æˆŸ  é•¿è¾¾ä¸¤ç±³å·¦å³ï¼Œæ‰‹æŸ„å¤„æœ‰ä¸€äº›è±¡å½¢æ–‡å­—ï¼Œæ‹¿èµ·æ¥å¾ˆé‡ï¼Œæ€ä¼¤åŠ›çœ‹èµ·æ¥è›®å¤§çš„\n");
 					Sleep(2000);
-					Slowsay("ÄãÒªÑ¡ÔñÄÄÒ»°ÑÎäÆ÷Í¶Èë¹Å¾®£¿\n");
+					Slowsay("ä½ è¦é€‰æ‹©å“ªä¸€æŠŠæ­¦å™¨æŠ•å…¥å¤äº•ï¼Ÿ\n");
 					char last;
 					cin>>last;
 					if(last=='1') {
 						Sleep(2000);
 						system("cls");
-						Slowsay("¡°°¡£¬È«Éí¶¼ºÃÍ´°¡£¬ÄÑµÀ¡­¡­ÎÒÒªËÀÁËÂð£¿¡±\n");
+						Slowsay("â€œå•Šï¼Œå…¨èº«éƒ½å¥½ç—›å•Šï¼Œéš¾é“â€¦â€¦æˆ‘è¦æ­»äº†å—ï¼Ÿâ€\n");
 						Sleep(2500);
 						system("cls");
 						The_end(3);
 					} else {
 						system("cls");
 						Sleep(1500);
-						Slowsay("Ö»Ìý¾®µ×´«À´Ò»Éù¡°ßÛµ±¡±£¬¼¸Ê®Ãëºó£¬Ò»¸öÓ°×Ó´Ó¾®µ×±Ä³ö£¬½Ó×Å£¬Äã±ãÊ²Ã´Ò²²»ÖªµÀÁË¡­¡­\n"); 
+						Slowsay("åªå¬äº•åº•ä¼ æ¥ä¸€å£°â€œå’£å½“â€ï¼Œå‡ åç§’åŽï¼Œä¸€ä¸ªå½±å­ä»Žäº•åº•è¹¦å‡ºï¼ŒæŽ¥ç€ï¼Œä½ ä¾¿ä»€ä¹ˆä¹Ÿä¸çŸ¥é“äº†â€¦â€¦\n"); 
 						Sleep(2000);
 						system("cls");
 						The_end(2);
@@ -3299,13 +3299,13 @@ bool chuangguan(int k,string Map[30]) {
 					Is_end=true;
 				} else {
 					system("cls");
-					Slowsay("¡°¹þ¹þ¹þ£¬¹ûÈ»²»³öÎÒËùÁÏ£¬Äã¾ÍÊÇÒ»¸ö²»ÖªÌì¸ßµØºñµÄ¼Ò»ï£¬¸æËßÄã£¬Ïëµ±Ó¢ÐÛÃ»ÄÇÃ´ÈÝÒ×£¬¹þ¹þ¹þ£¬ÔÙ¼ûÀ²£¡¡±\n");
+					Slowsay("â€œå“ˆå“ˆå“ˆï¼Œæžœç„¶ä¸å‡ºæˆ‘æ‰€æ–™ï¼Œä½ å°±æ˜¯ä¸€ä¸ªä¸çŸ¥å¤©é«˜åœ°åŽšçš„å®¶ä¼™ï¼Œå‘Šè¯‰ä½ ï¼Œæƒ³å½“è‹±é›„æ²¡é‚£ä¹ˆå®¹æ˜“ï¼Œå“ˆå“ˆå“ˆï¼Œå†è§å•¦ï¼â€\n");
 					Sleep(2500);
 					system("cls");
-					Slowsay("¡°ßÇ×È...¡±\n");
+					Slowsay("â€œå’”å…¹...â€\n");
 					Sleep(2000);
 					system("cls");
-					Slowsay("¡°ÎÒ¡­¡­ÎÒ¾ÍÕâÃ´ËÀÁËÂð£¿¡±\n");
+					Slowsay("â€œæˆ‘â€¦â€¦æˆ‘å°±è¿™ä¹ˆæ­»äº†å—ï¼Ÿâ€\n");
 					Sleep(2000);
 					Wend=false;
 					return false;
@@ -3314,115 +3314,115 @@ bool chuangguan(int k,string Map[30]) {
 				Sleep(2000);
 				system("cls");
 				Sleep(1500);
-				Slowsay("Äã¼á¶¨µØÏë×ÅÄãËùÐÅÈÎµÄ·½Ïò×ßÈ¥\n");
+				Slowsay("ä½ åšå®šåœ°æƒ³ç€ä½ æ‰€ä¿¡ä»»çš„æ–¹å‘èµ°åŽ»\n");
 				Sleep(1500);
 				system("cls");
-				Slowsay("ÕâÊ±£¬Äã¾Í¿´¼ûÁË¾ÞÑÒÄ§ÍõÕýÆøÊÆÐÚÐÚµÄÕ¾ÔÚÄãÃÇÃæÇ°\n");
+				Slowsay("è¿™æ—¶ï¼Œä½ å°±çœ‹è§äº†å·¨å²©é­”çŽ‹æ­£æ°”åŠ¿æ±¹æ±¹çš„ç«™åœ¨ä½ ä»¬é¢å‰\n");
 				Sleep(1000);
 				system("cls");
-				Slowsay("¡°Ë­¸ÒÈëÇÖÎÒµÄÉñÊ¥ÁìÓò£¿ÎÒ¾¯¸æÄãÃÇ£ºÔøÓÐÐí¶à´À»õÈëÇÖÕâÀï¡ª¡ªËûÃÇ¶¼ÒÑ¾­ËÀÀ²£¡\n");
+				Slowsay("â€œè°æ•¢å…¥ä¾µæˆ‘çš„ç¥žåœ£é¢†åŸŸï¼Ÿæˆ‘è­¦å‘Šä½ ä»¬ï¼šæ›¾æœ‰è®¸å¤šè ¢è´§å…¥ä¾µè¿™é‡Œâ€”â€”ä»–ä»¬éƒ½å·²ç»æ­»å•¦ï¼\n");
 				Sleep(1500);
-				Slowsay("¡°¿´À´£¬ÄãÒ²Ïë³ÉÎªÕâÐ©¼Ò»ïÖÐµÄÒ»Ô±£¬¹þ¹þ¹þ£¬ÄÇÄã¾ÍÊÔÊÔ°É¡±\n");
+				Slowsay("â€œçœ‹æ¥ï¼Œä½ ä¹Ÿæƒ³æˆä¸ºè¿™äº›å®¶ä¼™ä¸­çš„ä¸€å‘˜ï¼Œå“ˆå“ˆå“ˆï¼Œé‚£ä½ å°±è¯•è¯•å§â€\n");
 				Sleep(1000);
-				if(zhandou("¾ÞÑÒÄ§Íõ",17)) {
+				if(zhandou("å·¨å²©é­”çŽ‹",17)) {
 					Sleep(2500);
-					Slowsay("¡°ºß£¬ÄãÐ¡×Ó²»´íÂï£¬ÊÇÊ±ºò¼ûÖ¤ÎÒÕæÕýµÄÔÚ¶´Ñ¨ÖÐÐÞÁ¶Ç§ÄêµÄ½á¹ûÁË£¬Ñ½¹þ¡ª¡ª¡ª¡ª¡±\n");
+					Slowsay("â€œå“¼ï¼Œä½ å°å­ä¸é”™å˜›ï¼Œæ˜¯æ—¶å€™è§è¯æˆ‘çœŸæ­£çš„åœ¨æ´žç©´ä¸­ä¿®ç‚¼åƒå¹´çš„ç»“æžœäº†ï¼Œå‘€å“ˆâ€”â€”â€”â€”â€\n");
 					Sleep(1500);
-					Slowsay("ÕâÊ±£¬Æ½µØ±©ÆðÒ»Õóºì¹â¡ª¡ªÀ´×ÔµØÓüµÄÁ¦Á¿¡ª¡ªÈ«²¿Ö²Èëµ½¾ÞÑÒÄ§ÍõµÄÌåÄÚÁË£¡£¡£¡\n");
+					Slowsay("è¿™æ—¶ï¼Œå¹³åœ°æš´èµ·ä¸€é˜µçº¢å…‰â€”â€”æ¥è‡ªåœ°ç‹±çš„åŠ›é‡â€”â€”å…¨éƒ¨æ¤å…¥åˆ°å·¨å²©é­”çŽ‹çš„ä½“å†…äº†ï¼ï¼ï¼\n");
 					Sleep(2000);
-					Slowsay("¡°¸æËßÄã£¬µ±Ó¢ÐÛÃ»ÄÇÃ´ÈÝÒ×£¬±ð³ÑÇ¿ÁË£¬¹þ¹þ£¡£¡ÎÒ²»ÓÃÈÎºÎÎäÆ÷¾Í¿ÉÒÔ¶çÁËÄãÃÇ¡±\n");
+					Slowsay("â€œå‘Šè¯‰ä½ ï¼Œå½“è‹±é›„æ²¡é‚£ä¹ˆå®¹æ˜“ï¼Œåˆ«é€žå¼ºäº†ï¼Œå“ˆå“ˆï¼ï¼æˆ‘ä¸ç”¨ä»»ä½•æ­¦å™¨å°±å¯ä»¥å‰äº†ä½ ä»¬â€\n");
 					Sleep(2000);
 					system("cls");
-					Slowsay("ÕâÊ±£¬Äã·¢ÏÖÁËÒ»ÅÔÓÐÒ»¸ö»ªÀöµÄÏä×Ó¡­¡­\n");
+					Slowsay("è¿™æ—¶ï¼Œä½ å‘çŽ°äº†ä¸€æ—æœ‰ä¸€ä¸ªåŽä¸½çš„ç®±å­â€¦â€¦\n");
 					Sleep(1000);
 					system("cls");
-					Slowsay("¡°²»ÐÐ£¬²»ÄÜÕâÑù×øÒÔ´ý±Ð£¬ÎÒÃÇÊÇÕâ¸öÊÀ½ç×îºóµÄÏ£Íû£¬±ØÐëÏëÏë°ì·¨£¡£¡¡±\n");
+					Slowsay("â€œä¸è¡Œï¼Œä¸èƒ½è¿™æ ·åä»¥å¾…æ¯™ï¼Œæˆ‘ä»¬æ˜¯è¿™ä¸ªä¸–ç•Œæœ€åŽçš„å¸Œæœ›ï¼Œå¿…é¡»æƒ³æƒ³åŠžæ³•ï¼ï¼â€\n");
 					Sleep(1000);
-					Slowsay("¡°ÄÇÔõÃ´°ì£¬ÌÓÃüÂð£¬¶´¿ÚÒÑ¾­±»·âÉÏÁË£¡£¡¡±\n");
+					Slowsay("â€œé‚£æ€Žä¹ˆåŠžï¼Œé€ƒå‘½å—ï¼Œæ´žå£å·²ç»è¢«å°ä¸Šäº†ï¼ï¼â€\n");
 					Sleep(1000);
-					Slowsay("¡°²»£¬");
+					Slowsay("â€œä¸ï¼Œ");
 					Slowsay(name);
-					Slowsay("£¬Äã²ÅÊÇÕâ¸öÊÀ½çµÄÕæÕý¾ÈÐÇ£¬ÎÒÃÇÈ´²»ÊÇ£¬Äã²ÅÓµÓÐÕü¾ÈÊÀ½çµÄÁ¦Á¿£¬¶øÎÒÃÇÃ»ÓÐ£¬ËùÒÔ¡­¡­¡±\n");
+					Slowsay("ï¼Œä½ æ‰æ˜¯è¿™ä¸ªä¸–ç•Œçš„çœŸæ­£æ•‘æ˜Ÿï¼Œæˆ‘ä»¬å´ä¸æ˜¯ï¼Œä½ æ‰æ‹¥æœ‰æ‹¯æ•‘ä¸–ç•Œçš„åŠ›é‡ï¼Œè€Œæˆ‘ä»¬æ²¡æœ‰ï¼Œæ‰€ä»¥â€¦â€¦â€\n");
 					Sleep(1000);
 					system("cls");
-					Slowsay("¡°ËùÒÔÄãµÄÒâË¼ÊÇ£¬ÈÃÎÒÒ»¸öÈËÈ¥»÷É±¾ÞÑÒÄ§Íõ£¬ÄãÃÇÔÚÒ»ÅÔ×øÔÚ°åµÊÉÏ³Ô¹ÏÊÇÂð£¿£¡¡±\n");
+					Slowsay("â€œæ‰€ä»¥ä½ çš„æ„æ€æ˜¯ï¼Œè®©æˆ‘ä¸€ä¸ªäººåŽ»å‡»æ€å·¨å²©é­”çŽ‹ï¼Œä½ ä»¬åœ¨ä¸€æ—ååœ¨æ¿å‡³ä¸Šåƒç“œæ˜¯å—ï¼Ÿï¼â€\n");
 					Sleep(500);
-					Slowsay("¡°²»ÊÇ£¬ÄãÕýºÃËµ·´ÁË£¬ÎÒÃÇÈ¥µ±ÓÕ¶ü£¬Äã±£»¤ºÃ½©»¯½â³ý¼ÁµÄÅä·½£¬ÎÒÃÇÈ¥´ò£¬Äã¾ÍÕÒ¸ö»ú»áÊ¹ÓÃÄãµÄ±ØÉ±¼¼£¬Ò»»÷¾Í´ò°ÜËü¡±\n");
+					Slowsay("â€œä¸æ˜¯ï¼Œä½ æ­£å¥½è¯´åäº†ï¼Œæˆ‘ä»¬åŽ»å½“è¯±é¥µï¼Œä½ ä¿æŠ¤å¥½åƒµåŒ–è§£é™¤å‰‚çš„é…æ–¹ï¼Œæˆ‘ä»¬åŽ»æ‰“ï¼Œä½ å°±æ‰¾ä¸ªæœºä¼šä½¿ç”¨ä½ çš„å¿…æ€æŠ€ï¼Œä¸€å‡»å°±æ‰“è´¥å®ƒâ€\n");
 					Sleep(1500);
 					system("cls");
-					Slowsay("¡°ËùÒÔÄã¸Õ²ÅËµµÄÄÇ¾ä»°ÓÐÊ²Ã´ÓÃÄØ£¿¡±\n\n");
+					Slowsay("â€œæ‰€ä»¥ä½ åˆšæ‰è¯´çš„é‚£å¥è¯æœ‰ä»€ä¹ˆç”¨å‘¢ï¼Ÿâ€\n\n");
 					Sleep(1000);
-					Slowsay("¡°°¥Ñ½£¬±ðÔÚÒâÐ¡Ï¸½ÚÀ²¡±\n");
+					Slowsay("â€œå“Žå‘€ï¼Œåˆ«åœ¨æ„å°ç»†èŠ‚å•¦â€\n");
 					Sleep(1500);
 					system("cls");
-					Slowsay("ÕâÊ±£¬¾ÞÑÒÄ§ÍõÒÑ¾­Îü×ãÁËµØÓüµÄÁ¦Á¿£¬´óºðÒ»ÉùÏòÄãÃÇ³åÀ´\n");
+					Slowsay("è¿™æ—¶ï¼Œå·¨å²©é­”çŽ‹å·²ç»å¸è¶³äº†åœ°ç‹±çš„åŠ›é‡ï¼Œå¤§å¼ä¸€å£°å‘ä½ ä»¬å†²æ¥\n");
 					Sleep(500);
-					Slowsay("¡°Ö´ÐÐ¼Æ»®£¡¡±\n");
+					Slowsay("â€œæ‰§è¡Œè®¡åˆ’ï¼â€\n");
 					Sleep(500);
-					Slowsay("À¥µÏ¡¢SuperHunterÒ»Æð³åÁËÉÏÈ¥£¬¶øÄãÈ´ÔÚÒ»ÅÔ£¬ÎÕ½ôÁË½©»¯½â³ý¼ÁÖÆ×÷Åä·½£¬Ñ°ÕÒÍµÏ®µÄºÃÊ±»ú\n");
+					Slowsay("æ˜†è¿ªã€SuperHunterä¸€èµ·å†²äº†ä¸ŠåŽ»ï¼Œè€Œä½ å´åœ¨ä¸€æ—ï¼Œæ¡ç´§äº†åƒµåŒ–è§£é™¤å‰‚åˆ¶ä½œé…æ–¹ï¼Œå¯»æ‰¾å·è¢­çš„å¥½æ—¶æœº\n");
 					Sleep(1000);
-					Slowsay("ÕâÊ±£¬¾ÞÑÒÄ§ÍõÒ»»ÓË¶´óµÄÈ­Í·£¬ÅéÒ»Éù£¬´òÔÚÁËSuperHunterµÄ»¤¶ÜÉÏ£¬Ë²¼ä£¬»¤¶Ü±»»÷Ëé£¬ËûÒ²³Ê»¡Ïß×´µØÆð·ÉÁË£¬½Ó×Å±ãÖØÖØµØË¤ÔÚ10Ã×¿ªÍâµÄµØÉÏ\n");
+					Slowsay("è¿™æ—¶ï¼Œå·¨å²©é­”çŽ‹ä¸€æŒ¥ç¡•å¤§çš„æ‹³å¤´ï¼Œç °ä¸€å£°ï¼Œæ‰“åœ¨äº†SuperHunterçš„æŠ¤ç›¾ä¸Šï¼Œçž¬é—´ï¼ŒæŠ¤ç›¾è¢«å‡»ç¢Žï¼Œä»–ä¹Ÿå‘ˆå¼§çº¿çŠ¶åœ°èµ·é£žäº†ï¼ŒæŽ¥ç€ä¾¿é‡é‡åœ°æ‘”åœ¨10ç±³å¼€å¤–çš„åœ°ä¸Š\n");
 					Sleep(1000);
-					Slowsay("¡°²»£¡£¡£¡¡±ÄãÌøÆðÀ´£¬");
-					if(juese=="·¨Ê¦") {
-						Slowsay("·¢ÉäÁËÒ»¸ö¾Þ´óµÄ»ðÇò¡­¡­±À!!\n");
+					Slowsay("â€œä¸ï¼ï¼ï¼â€ä½ è·³èµ·æ¥ï¼Œ");
+					if(juese=="æ³•å¸ˆ") {
+						Slowsay("å‘å°„äº†ä¸€ä¸ªå·¨å¤§çš„ç«çƒâ€¦â€¦å´©!!\n");
 						Sleep(1000);
 					} else {
-						Slowsay("ºÝºÝµØ¸øÁË¾ÞÑÒÄ§ÍõÒ»¼ÇÖØ»÷¡­¡­Åé!!\n");
+						Slowsay("ç‹ ç‹ åœ°ç»™äº†å·¨å²©é­”çŽ‹ä¸€è®°é‡å‡»â€¦â€¦ç °!!\n");
 						Sleep(1000);
 					}
-					Slowsay("Ëü´òÁË¸öõÔõÄ£¬¿´À´ÕâÒ»»÷Ëü»¹³Ô²»Ì«Ïû\n");
+					Slowsay("å®ƒæ‰“äº†ä¸ªè¸‰è·„ï¼Œçœ‹æ¥è¿™ä¸€å‡»å®ƒè¿˜åƒä¸å¤ªæ¶ˆ\n");
 					Sleep(1000);
-					Slowsay("µ«ËüÈ´ÂýÂý×ª¹ýÍ·À´£¬Ò»ÊÖ×¥×¡ÁËÄã\n");
+					Slowsay("ä½†å®ƒå´æ…¢æ…¢è½¬è¿‡å¤´æ¥ï¼Œä¸€æ‰‹æŠ“ä½äº†ä½ \n");
 					Sleep(1000);
 					system("cls");
-					Slowsay("¡°àÛ°¡°¡¡­¡­¡±\n");
+					Slowsay("â€œå™—å•Šå•Šâ€¦â€¦â€\n");
 					Sleep(1000);
-					Slowsay("¡°ºßºß£¬ÄãÔ­±¾Ò²Ö»ÊÇ¸öÎÑÄÒ·Ï°¡£¬ÓÀ±ðÁË£¬¾ÈÊÀÖ÷£¬¹þ¹þ¹þ£¡¡±\n");
+					Slowsay("â€œå“¼å“¼ï¼Œä½ åŽŸæœ¬ä¹Ÿåªæ˜¯ä¸ªçªå›ŠåºŸå•Šï¼Œæ°¸åˆ«äº†ï¼Œæ•‘ä¸–ä¸»ï¼Œå“ˆå“ˆå“ˆï¼â€\n");
 					Sleep(2000);
 					system("cls");
-					Slowsay("ÕâÊ±£¬À¥µÏ²»ÖªÔõÃ´µÄÊÖÉÏ¶àÁËÒ»°ÑÉúÐâµÄÌú¹÷£¬¶øËû½Å±ßÕýÊÇÄÇ¸ö±¦Ïä\n");
+					Slowsay("è¿™æ—¶ï¼Œæ˜†è¿ªä¸çŸ¥æ€Žä¹ˆçš„æ‰‹ä¸Šå¤šäº†ä¸€æŠŠç”Ÿé”ˆçš„é“æ£ï¼Œè€Œä»–è„šè¾¹æ­£æ˜¯é‚£ä¸ªå®ç®±\n");
 					Sleep(1000);
 					system("cls");
-					Slowsay("¡°Õâ¡­¡­ÕâÔõÃ´¿ÉÄÜ£¿ÄÇ¸ö´«ËµÖÐµÄ±¦²Ø¡­¡­¡±\n");
+					Slowsay("â€œè¿™â€¦â€¦è¿™æ€Žä¹ˆå¯èƒ½ï¼Ÿé‚£ä¸ªä¼ è¯´ä¸­çš„å®è—â€¦â€¦â€\n");
 					Sleep(1000);
 					system("cls");
-					Slowsay("ÕâÊ±£¬¾ÞÑÒÄ§Íõ×ª¹ýÍ·À´£¬ÒõÏÕµØÐ¦ÁË£º¡°ºÙºÙ£¬ÎÒ»¹ÒÔÎªÊÇÊ²Ã´±¦±´ÄØ£¬¸ãµÃÎÒ¶¼²»¸ÒÅö£¬Ô­À´Ö»ÊÇÒ»¸ùÆÆÌú¹÷°¡£¬¹þ¹þ£¡£¡£¡¡±\n");
+					Slowsay("è¿™æ—¶ï¼Œå·¨å²©é­”çŽ‹è½¬è¿‡å¤´æ¥ï¼Œé˜´é™©åœ°ç¬‘äº†ï¼šâ€œå˜¿å˜¿ï¼Œæˆ‘è¿˜ä»¥ä¸ºæ˜¯ä»€ä¹ˆå®è´å‘¢ï¼Œæžå¾—æˆ‘éƒ½ä¸æ•¢ç¢°ï¼ŒåŽŸæ¥åªæ˜¯ä¸€æ ¹ç ´é“æ£å•Šï¼Œå“ˆå“ˆï¼ï¼ï¼â€\n");
 					Sleep(2500);
 					system("cls");
-					Slowsay("Ëµ×Å£¬¾Í¡°Åé¡±Ò»Éù°ÑÄãË¦ÔÚÇ½ÉÏ£¬È»ºó¡°àÛ¡±µØÅçÁËÒ»ÍÅÁòËá½©»¯Òº¡­¡­\n");
+					Slowsay("è¯´ç€ï¼Œå°±â€œç °â€ä¸€å£°æŠŠä½ ç”©åœ¨å¢™ä¸Šï¼Œç„¶åŽâ€œå™—â€åœ°å–·äº†ä¸€å›¢ç¡«é…¸åƒµåŒ–æ¶²â€¦â€¦\n");
 					Sleep(3000);
 					system("cls");
-					Slowsay("¾ÍÔÚÕâÊ±£¬À¥µÏÊÖÉÏµÄÌú¹÷Í»È»·ÅÉä³öÍòÕÉ¹âÃ¢£¬½Ó×ÅÄÇ¸ùÌú¹÷ÂýÂýÐÎ³ÉÁËÒ»°Ñ½£µÄÐÎ×´\n");
+					Slowsay("å°±åœ¨è¿™æ—¶ï¼Œæ˜†è¿ªæ‰‹ä¸Šçš„é“æ£çªç„¶æ”¾å°„å‡ºä¸‡ä¸ˆå…‰èŠ’ï¼ŒæŽ¥ç€é‚£æ ¹é“æ£æ…¢æ…¢å½¢æˆäº†ä¸€æŠŠå‰‘çš„å½¢çŠ¶\n");
 					Sleep(2000);
 					system("cls");
-					Slowsay("³¤¿Õ½££¡\n");
+					Slowsay("é•¿ç©ºå‰‘ï¼\n");
 					Sleep(2000);
 					system("cls");
-					Slowsay("À¥µÏÁ¢¿Ì¾ÙÆðÄÇ°Ñ½£ÈÐÈ¼ÉÕµÄ±¦½££¬Ãé×¼¾ÞÑÒÄ§ÍõµÄÄÔÃÅ£¬ºÝÃüÒ»Åü£¡\n");
+					Slowsay("æ˜†è¿ªç«‹åˆ»ä¸¾èµ·é‚£æŠŠå‰‘åˆƒç‡ƒçƒ§çš„å®å‰‘ï¼Œçž„å‡†å·¨å²©é­”çŽ‹çš„è„‘é—¨ï¼Œç‹ å‘½ä¸€åŠˆï¼\n");
 					Sleep(2000);
 					system("cls"); 
-					Slowsay("µ±~~~\n");
+					Slowsay("å½“~~~\n");
 					Sleep(1000);
 					system("cls");
-					Slowsay("¡°What the£¿¡±\n");
+					Slowsay("â€œWhat theï¼Ÿâ€\n");
 					Sleep(2000);
-					Slowsay("¾ÞÑÒÄ§Íõ³é´¤ÁËÒ»ÏÂ£¬±ãµ¹ÔÚµØÉÏ£¬");
+					Slowsay("å·¨å²©é­”çŽ‹æŠ½æäº†ä¸€ä¸‹ï¼Œä¾¿å€’åœ¨åœ°ä¸Šï¼Œ");
 					Sleep(1000);
-					Slowsay("ËÀÁË\n");
+					Slowsay("æ­»äº†\n");
 					Sleep(2000);
 					system("cls");
-					Slowsay("¡°²»ÒªÍÛ¡­¡­¡±ÕâÊ±£¬Äã±Ç×ÓÒÔÏÂµÄ²¿Î»ÒÑ¾­È«²¿±»½©»¯ÁË¡­¡­ÍêÁË£¬È«ÍêÁË£¬ËäÈ»ÓÐ½âÒ©Åä·½£¬µ«ÓÖ²ÄÁÏÓÖ²»Æë£¬ÇÒ¿öËûÃÇÓÖ²»ÖªµÀË÷¼Ó´ïÉ½ÂöÔÚÄÄ¡­¡­\n");
+					Slowsay("â€œä¸è¦å“‡â€¦â€¦â€è¿™æ—¶ï¼Œä½ é¼»å­ä»¥ä¸‹çš„éƒ¨ä½å·²ç»å…¨éƒ¨è¢«åƒµåŒ–äº†â€¦â€¦å®Œäº†ï¼Œå…¨å®Œäº†ï¼Œè™½ç„¶æœ‰è§£è¯é…æ–¹ï¼Œä½†åˆææ–™åˆä¸é½ï¼Œä¸”å†µä»–ä»¬åˆä¸çŸ¥é“ç´¢åŠ è¾¾å±±è„‰åœ¨å“ªâ€¦â€¦\n");
 					Sleep(2000);
 					system("cls");
-					Slowsay("»Ðã±¼ä£¬À¥µÏ×ßÁË¹ýÀ´£¬ÄÃ×ßÁËÄãµÄ½âÒ©Åä·½£¬Ëµ£º¡°¶Ô²»Æð£¬");
+					Slowsay("ææƒšé—´ï¼Œæ˜†è¿ªèµ°äº†è¿‡æ¥ï¼Œæ‹¿èµ°äº†ä½ çš„è§£è¯é…æ–¹ï¼Œè¯´ï¼šâ€œå¯¹ä¸èµ·ï¼Œ");
 					Slowsay(name);
-					Slowsay("£¬ÎÒÃÇÃ»ÄÜ½«Äã±£»¤µ½µ×£¬µ«Äã·ÅÐÄ£¬ÎÒÃÇ»áÖÆ×÷³ö½âÒ©µÄ£¬»¹ÓÐ£¬¼´Ê¹×ß±éÌìÑÄº£½Ç£¬ÎÒÃÇÒ²ÒªÕÒµ½Ë÷¼Ó´ïÉ½Âö£¬È»ºóÕü¾ÈµØÇò¡£ÓÀ±ðÁË£¬×£ÄãÔÚÌìÌÃ°²Ï¢¡­¡­¡±\n");
+					Slowsay("ï¼Œæˆ‘ä»¬æ²¡èƒ½å°†ä½ ä¿æŠ¤åˆ°åº•ï¼Œä½†ä½ æ”¾å¿ƒï¼Œæˆ‘ä»¬ä¼šåˆ¶ä½œå‡ºè§£è¯çš„ï¼Œè¿˜æœ‰ï¼Œå³ä½¿èµ°éå¤©æ¶¯æµ·è§’ï¼Œæˆ‘ä»¬ä¹Ÿè¦æ‰¾åˆ°ç´¢åŠ è¾¾å±±è„‰ï¼Œç„¶åŽæ‹¯æ•‘åœ°çƒã€‚æ°¸åˆ«äº†ï¼Œç¥ä½ åœ¨å¤©å ‚å®‰æ¯â€¦â€¦â€\n");
 					Sleep(2000);
-					Slowsay("½Ó×ÅÀ¥µÏ±ã¾ÙÆðÁË½£¡­¡­\n");
+					Slowsay("æŽ¥ç€æ˜†è¿ªä¾¿ä¸¾èµ·äº†å‰‘â€¦â€¦\n");
 					Sleep(2000);
 					system("cls");
-					Slowsay("¡°ßÇ²Á¡±\n");
+					Slowsay("â€œå’”æ“¦â€\n");
 					Sleep(2000);
 					system("cls");
 					The_end(1);
@@ -3431,12 +3431,12 @@ bool chuangguan(int k,string Map[30]) {
 				else
 				{
 					system("cls");
-					Slowsay("¡°¹þ¹þ¹þ£¬¹ûÈ»²»³öÎÒËùÁÏ£¬Äã¾ÍÊÇÒ»¸ö²»ÖªÌì¸ßµØºñµÄ¼Ò»ï£¬¸æËßÄã£¬Ïëµ±Ó¢ÐÛÃ»ÄÇÃ´ÈÝÒ×£¬¹þ¹þ¹þ£¬ÔÙ¼ûÀ²£¡¡±\n");
+					Slowsay("â€œå“ˆå“ˆå“ˆï¼Œæžœç„¶ä¸å‡ºæˆ‘æ‰€æ–™ï¼Œä½ å°±æ˜¯ä¸€ä¸ªä¸çŸ¥å¤©é«˜åœ°åŽšçš„å®¶ä¼™ï¼Œå‘Šè¯‰ä½ ï¼Œæƒ³å½“è‹±é›„æ²¡é‚£ä¹ˆå®¹æ˜“ï¼Œå“ˆå“ˆå“ˆï¼Œå†è§å•¦ï¼â€\n");
 					Sleep(2500);
 					system("cls");
 					Sleep(2000);
 					system("cls");
-					Slowsay("¡°ÎÒ¡­¡­ÎÒ¾ÍÕâÃ´ËÀÁËÂð£¿¡±\n");
+					Slowsay("â€œæˆ‘â€¦â€¦æˆ‘å°±è¿™ä¹ˆæ­»äº†å—ï¼Ÿâ€\n");
 					Sleep(2000);
 					Wend=true;
 					return false;
@@ -3466,9 +3466,9 @@ bool chuangguan(int k,string Map[30]) {
 		if(map[x+1][y]=='g'||map[x][y+1]=='g'||map[x-1][y]=='g'||map[x][y-1]=='g')
 		{
 			system("cls");
-			qsay("ÄãåâåËÁË");
+			qsay("ä½ é‚‚é€…äº†");
 			qsay(monster[(k-1)*2]);
-			qsay("£¡\n");
+			qsay("ï¼\n");
 			Sleep(500);
 			int mhp=monsterHP[(k-1)*2];
 			if(zhandou(monster[(k-1)*2],(k-1)*2))
@@ -3488,9 +3488,9 @@ bool chuangguan(int k,string Map[30]) {
 		if(map[x+1][y]=='B'||map[x][y+1]=='B'||map[x-1][y]=='B'||map[x][y-1]=='B')
 		{
 			system("cls");
-			qsay("ÄãåâåËÁË");
+			qsay("ä½ é‚‚é€…äº†");
 			qsay(monster[(k-1)*2+1]);
-			qsay("£¡\n");
+			qsay("ï¼\n");
 			Sleep(200);
 			int mhp=monsterHP[(k-1)*2+1];
 			if(zhandou(monster[(k-1)*2+1],(k-1)*2+1))
@@ -3540,7 +3540,7 @@ bool chuangguan(int k,string Map[30]) {
 		if(map[x+1][y]=='F'||map[x][y+1]=='F'||map[x-1][y]=='F'||map[x][y-1]=='F')
 		{
 			system("cls");
-			Slowsay("ÊÇ·ñÍË³öÓÎÏ·£¿  Y/N\n");
+			Slowsay("æ˜¯å¦é€€å‡ºæ¸¸æˆï¼Ÿ  Y/N\n");
 			char ch;
 			cin>>ch;
 			if(ch=='y'||ch=='Y')
@@ -3559,7 +3559,7 @@ bool chuangguan(int k,string Map[30]) {
 		if(map[x+1][y]=='N'||map[x][y+1]=='N'||map[x-1][y]=='N'||map[x][y-1]=='N')
 		{
 			system("cls");
-			Slowsay("¡°ÄêÇáÈË£¬ÄãÊÇÏëÇ°ÍùÊÔÁ·Ëþ´ò¹ÖÁ·¼¶Âð£¿¡±     Y/N\n");
+			Slowsay("â€œå¹´è½»äººï¼Œä½ æ˜¯æƒ³å‰å¾€è¯•ç»ƒå¡”æ‰“æ€ªç»ƒçº§å—ï¼Ÿâ€     Y/N\n");
 			char ch;
 			cin>>ch;
 			if(ch=='Y'||ch=='y')
@@ -3645,7 +3645,7 @@ void Task()
 	}
 	if(rate!=0)
 	{
-		Slowsay("ÈÎÎñÍê³É£¬¹§Ï²»ñµÃ¾­ÑéÖµ¡Á");
+		Slowsay("ä»»åŠ¡å®Œæˆï¼Œæ­å–œèŽ·å¾—ç»éªŒå€¼Ã—");
 		cout<<reward[rate-1]<<endl;
 		EXP+=reward[rate-1];
 		upgrade();
@@ -3658,45 +3658,45 @@ void Task()
 	switch(rate)
 	{
 		case 0:{
-			Slowsay("¡°°¡£¬ÓÂÕß£¬ÄãÀ´ÁË£¡¡±\n");
+			Slowsay("â€œå•Šï¼Œå‹‡è€…ï¼Œä½ æ¥äº†ï¼â€\n");
 			getline(cin,s);
-			Slowsay("¡°ÊÇµÄ£¬ÎÒÀ´ÁË£¡ÎÒÎªÊÀ½ç¶øÀ´ÁË£¡¡±\n");
+			Slowsay("â€œæ˜¯çš„ï¼Œæˆ‘æ¥äº†ï¼æˆ‘ä¸ºä¸–ç•Œè€Œæ¥äº†ï¼â€\n");
 			getline(cin,s);
-			Slowsay("¡°ºÜºÃ£¬ÓÐÖ¾Æø£¡ÄÇÃ´£¬ÄãÊÇÖªµÀ×Ô¼ºËù¼ç¸ºµÄÖØÈÎµÄ£¬¶Ô°É£¿¡±\n");
+			Slowsay("â€œå¾ˆå¥½ï¼Œæœ‰å¿—æ°”ï¼é‚£ä¹ˆï¼Œä½ æ˜¯çŸ¥é“è‡ªå·±æ‰€è‚©è´Ÿçš„é‡ä»»çš„ï¼Œå¯¹å§ï¼Ÿâ€\n");
 			getline(cin,s);
-			Slowsay("¡°ÊÇµÄ£¡¡±\n");
-			getline(cin,s);
-			system("cls");
-			Slowsay("¡°ÏÖÔÚÕýÖµÂÙÏÝËêÔÂ£¬ÄãÊÇÕâ¸öÊÀ½çµÄÎ¨Ò»Ï£ÍûÁË£¬ÎªÁËÈËÃñ£¬Äã±ØÐëÊ¤Àû£¬Ã÷°×Âð£¿¡±\n");
-			getline(cin,s);
-			Slowsay("¡°Ã÷°×£¡¡±\n");
-			getline(cin,s);
-			Slowsay("¡°ºÃ¡£ÎÒÕâÀïÓÐÒ»Ð©ÎÒµÄ×æÏÈËùÁôÏÂµÄ¹ØÓÚ¾ÞÑÒÄ§ÍõµÄ±Ê¼Ç¡£ÎÒ×æÏÈ¾ÍÊÇ¶ÔÕó¾ÞÑÒÄ§ÍõµÄµÚ9578´úÈË¡±\n");
+			Slowsay("â€œæ˜¯çš„ï¼â€\n");
 			getline(cin,s);
 			system("cls");
-			Slowsay("¡°ÉÏÃæËµ£¬ÔÚ¾àÀëÎÒÃÇÕâ¶ù²»Ô¶£¬ÓÐÒ»¸öÃû½ÐËª·ç²¿ÂäµÄµØ·½£¬ÄÇÀï¾Ó×¡µÄÊÇÐí¾ÃÒÔÇ°¾ÍºÍÈËÀà½áÏÂÉîºñÓÑÒêµÄÊÞÈË¡±\n");
+			Slowsay("â€œçŽ°åœ¨æ­£å€¼æ²¦é™·å²æœˆï¼Œä½ æ˜¯è¿™ä¸ªä¸–ç•Œçš„å”¯ä¸€å¸Œæœ›äº†ï¼Œä¸ºäº†äººæ°‘ï¼Œä½ å¿…é¡»èƒœåˆ©ï¼Œæ˜Žç™½å—ï¼Ÿâ€\n");
 			getline(cin,s);
-			Slowsay("¡°ÄãÈ¥ÕÒÕÒËûÃÇµÄ³¤ÀÏ£¬ÓëËûÉÌÁ¿ÉÌÁ¿½ÓÏÂÀ´µÄ¶Ô²ß¡±\n");
+			Slowsay("â€œæ˜Žç™½ï¼â€\n");
+			getline(cin,s);
+			Slowsay("â€œå¥½ã€‚æˆ‘è¿™é‡Œæœ‰ä¸€äº›æˆ‘çš„ç¥–å…ˆæ‰€ç•™ä¸‹çš„å…³äºŽå·¨å²©é­”çŽ‹çš„ç¬”è®°ã€‚æˆ‘ç¥–å…ˆå°±æ˜¯å¯¹é˜µå·¨å²©é­”çŽ‹çš„ç¬¬9578ä»£äººâ€\n");
+			getline(cin,s);
+			system("cls");
+			Slowsay("â€œä¸Šé¢è¯´ï¼Œåœ¨è·ç¦»æˆ‘ä»¬è¿™å„¿ä¸è¿œï¼Œæœ‰ä¸€ä¸ªåå«éœœé£Žéƒ¨è½çš„åœ°æ–¹ï¼Œé‚£é‡Œå±…ä½çš„æ˜¯è®¸ä¹…ä»¥å‰å°±å’Œäººç±»ç»“ä¸‹æ·±åŽšå‹è°Šçš„å…½äººâ€\n");
+			getline(cin,s);
+			Slowsay("â€œä½ åŽ»æ‰¾æ‰¾ä»–ä»¬çš„é•¿è€ï¼Œä¸Žä»–å•†é‡å•†é‡æŽ¥ä¸‹æ¥çš„å¯¹ç­–â€\n");
 			getline(cin,s);
 			system("cls"); 
-			Slowsay("¡°ÄÇÃ´£¬Õâ±¾±Ê¼Ç¾Í¸øÄãÁË£¬ÒÔ±ãÓÚºÍËûÃÇ½»Á÷¡±\n");
+			Slowsay("â€œé‚£ä¹ˆï¼Œè¿™æœ¬ç¬”è®°å°±ç»™ä½ äº†ï¼Œä»¥ä¾¿äºŽå’Œä»–ä»¬äº¤æµâ€\n");
 			getline(cin,s);
 			system("cls");
-			Slowsay("»ñµÃ£ºÔ¶¹Å±Ê¼Ç£¨ÓÑÒêµÄ¼ûÖ¤£©\n");
+			Slowsay("èŽ·å¾—ï¼šè¿œå¤ç¬”è®°ï¼ˆå‹è°Šçš„è§è¯ï¼‰\n");
 			getline(cin,s);
 			system("cls");
-			Slowsay("¡°¶ÔÁË£¬³ö·¢Ç°Äã¿ÉÒÔÈ¥´åÀï¹ä¹ä£¬Ë³±ã¸øÄãÐ©½ð±Ò£¬±ðÍüÁËÐÞÁ¶¼¼ÄÜÓëÂòµã×°±¸¹þ¡±\n");
+			Slowsay("â€œå¯¹äº†ï¼Œå‡ºå‘å‰ä½ å¯ä»¥åŽ»æ‘é‡Œé€›é€›ï¼Œé¡ºä¾¿ç»™ä½ äº›é‡‘å¸ï¼Œåˆ«å¿˜äº†ä¿®ç‚¼æŠ€èƒ½ä¸Žä¹°ç‚¹è£…å¤‡å“ˆâ€\n");
 			getline(cin,s);
 			system("cls");
-			Slowsay("»ñµÃ½ð±Ò¡Á2000\n");
+			Slowsay("èŽ·å¾—é‡‘å¸Ã—2000\n");
 			jinbi+=2000;
 			getline(cin,s);
 			system("cls");
-			Slowsay("¡°³ö·¢~~¹ö~~°É£¬ÓÂÊ¿£¬È¥Õü¾ÈÊÀ½ç£¡¡±\n");
+			Slowsay("â€œå‡ºå‘~~æ»š~~å§ï¼Œå‹‡å£«ï¼ŒåŽ»æ‹¯æ•‘ä¸–ç•Œï¼â€\n");
 			getline(cin,s);
 			system("cls");
 			tiaose(12);
-			Slowsay("½ÓÊÕµ½ÈÎÎñ£º");
+			Slowsay("æŽ¥æ”¶åˆ°ä»»åŠ¡ï¼š");
 			Slowsay(mission[rate+1]);
 			tiaose(14);
 			Sleep(1500); 
@@ -3708,76 +3708,76 @@ void Task()
 		}
 		case 1:{
 			Can_go[5]=true;
-			Slowsay("¡°ÔõÃ´Ñù£¿¡±\n");
+			Slowsay("â€œæ€Žä¹ˆæ ·ï¼Ÿâ€\n");
 			getline(cin,s);
-			Slowsay("¡°àÅ£¬³¤ÀÏËµÏÖÔÚ×îºÃ¾ÍÁ¢¼´³ö¶¯»÷É±¾ÞÑÒÄ§Íõ¡±\n");
+			Slowsay("â€œå—¯ï¼Œé•¿è€è¯´çŽ°åœ¨æœ€å¥½å°±ç«‹å³å‡ºåŠ¨å‡»æ€å·¨å²©é­”çŽ‹â€\n");
 			getline(cin,s);
-			Slowsay("¡°ßí£¬ÄÇÃ´£¬ÄãÓÐÊ²Ã´´òËãÂð£¿¡±\n");
+			Slowsay("â€œå””ï¼Œé‚£ä¹ˆï¼Œä½ æœ‰ä»€ä¹ˆæ‰“ç®—å—ï¼Ÿâ€\n");
 			getline(cin,s);
-			Slowsay("¡°¶î£¬³¤ÀÏËµ¾ÞÑÒÄ§ÍõÌ«ÎªÇ¿´ó£¬ÏÖÔÚÎÒÓëËüÁ¦Á¿Ïà²îÌ«ÐüÊâÁË¡±\n");
-			getline(cin,s);
-			system("cls");
-			Slowsay("¡°àÅ£¬¾ÞÑÒÄ§ÍõµÄÕ½¶·Á¦³¬Èº£¬·ÇÀËµÃÐéÃû£¬Ôø¾­ÓÐÐí¶àÌÖ·¥ËüµÄÈË£¬¶¼ËÀ¹â¹âÁËQAQ£¬Äã±ØÐëÒªµÈµ½Óë¾ÞÑÒÄ§ÍõÄÜÁ¦Ïàµ±µÄÊ±ºò²ÅÓÐ¿ÉÄÜ´ò°ÜËü£¬¶øÇÒÄãÓÐÇÒ½öÓÐÒ»´Î»ú»á¡±\n");
-			getline(cin,s);
-			Slowsay("¡°ÄÇÃ´$$É§$$µÄ£¿¡±\n");
-			getline(cin,s);
-			Slowsay("¡°ÊÇµÄ£¬ËùÒÔ£¬ÒªÓÐÄÍÐÄ£¬Ò»²½²½À´£¬ÄãµÃÏÈÈ¥´ò¹ÖÁ·Á·¼¶¡­¡­¡±\n");
+			Slowsay("â€œé¢ï¼Œé•¿è€è¯´å·¨å²©é­”çŽ‹å¤ªä¸ºå¼ºå¤§ï¼ŒçŽ°åœ¨æˆ‘ä¸Žå®ƒåŠ›é‡ç›¸å·®å¤ªæ‚¬æ®Šäº†â€\n");
 			getline(cin,s);
 			system("cls");
-			Slowsay("¡°ÄãÖªµÀSteveÂð£¿¡±\n\n");
+			Slowsay("â€œå—¯ï¼Œå·¨å²©é­”çŽ‹çš„æˆ˜æ–—åŠ›è¶…ç¾¤ï¼Œéžæµªå¾—è™šåï¼Œæ›¾ç»æœ‰è®¸å¤šè®¨ä¼å®ƒçš„äººï¼Œéƒ½æ­»å…‰å…‰äº†QAQï¼Œä½ å¿…é¡»è¦ç­‰åˆ°ä¸Žå·¨å²©é­”çŽ‹èƒ½åŠ›ç›¸å½“çš„æ—¶å€™æ‰æœ‰å¯èƒ½æ‰“è´¥å®ƒï¼Œè€Œä¸”ä½ æœ‰ä¸”ä»…æœ‰ä¸€æ¬¡æœºä¼šâ€\n");
 			getline(cin,s);
-			Slowsay("µ±È»£¬¾ÍÊÇÄÇ¸öÖøÃûµÄÌ½ÏÕ¼ÒÂï£¬¾ÝËµËûÔÚ¾ÞÑÒÄ§ÍõÈëÇÖÆÚ¼äÕÒµ½ÁËÒ»¸ö·¨±¦...\n");
+			Slowsay("â€œé‚£ä¹ˆ$$éªš$$çš„ï¼Ÿâ€\n");
 			getline(cin,s);
-			system("cls");
-			Slowsay("ËµµÄÃ»´í£¬´«ÑÔÄÇÊÇ¿ÉÒÔ½«¾ÞÑÒÄ§ÍõµÄÁé»ê´Ý»ÙµÄÎ¨Ò»·¨±¦¡ª¡ª³¤¿Õ½£\n\n");
-			getline(cin,s);
-			system("cls");
-			Slowsay("¡°ÔÚÎ£¼±Ê±¿Ì£¬Õâ°Ñ½£»áÊÍ·Å³öÇ¿´óµÄÄÜÁ¿£¬µ«½ö½ö³ÖÐøÊ®Ãë£¬³Ö½£ÈËÒªÔÚÄÇÊ®ÃëÄÚ½«½£ÅüÔÚµÐÈËÍ·ÉÏ£¬µÐÈËµÄÄÔ´ü¾Í»á¿ª»¨½á¹û¡±\n");
+			Slowsay("â€œæ˜¯çš„ï¼Œæ‰€ä»¥ï¼Œè¦æœ‰è€å¿ƒï¼Œä¸€æ­¥æ­¥æ¥ï¼Œä½ å¾—å…ˆåŽ»æ‰“æ€ªç»ƒç»ƒçº§â€¦â€¦â€\n");
 			getline(cin,s);
 			system("cls");
-			Slowsay("¡°Ö»ÊÇÕâ°Ñ½£ÔçÒÑÊ§´«ÁË£¬²»ÖªµÀÏÖÔÚÔÚË­µÄÊÖÀï¡­¡­¡±\n");
+			Slowsay("â€œä½ çŸ¥é“Steveå—ï¼Ÿâ€\n\n");
+			getline(cin,s);
+			Slowsay("å½“ç„¶ï¼Œå°±æ˜¯é‚£ä¸ªè‘—åçš„æŽ¢é™©å®¶å˜›ï¼Œæ®è¯´ä»–åœ¨å·¨å²©é­”çŽ‹å…¥ä¾µæœŸé—´æ‰¾åˆ°äº†ä¸€ä¸ªæ³•å®...\n");
 			getline(cin,s);
 			system("cls");
-			Slowsay("¡°Ò²¾ÍÊÇËµÎÒ±ØÐëÕÒµ½ÄÇ°Ñ½£²ÅÓÐ¿ÉÄÜ»÷°Ü¾ÞÑÒÄ§Íõ£¿¡±\n\n");
-			getline(cin,s);
-			Slowsay("¡°ÎÒ¾õµÃÄÇµ¹²»Ò»¶¨£¬Èç¹û¡­¡­¡±\n");
+			Slowsay("è¯´çš„æ²¡é”™ï¼Œä¼ è¨€é‚£æ˜¯å¯ä»¥å°†å·¨å²©é­”çŽ‹çš„çµé­‚æ‘§æ¯çš„å”¯ä¸€æ³•å®â€”â€”é•¿ç©ºå‰‘\n\n");
 			getline(cin,s);
 			system("cls");
-			Slowsay("¡°²»ºÃÁË£¡²»ºÃÁË£¡¡±\n");
+			Slowsay("â€œåœ¨å±æ€¥æ—¶åˆ»ï¼Œè¿™æŠŠå‰‘ä¼šé‡Šæ”¾å‡ºå¼ºå¤§çš„èƒ½é‡ï¼Œä½†ä»…ä»…æŒç»­åç§’ï¼ŒæŒå‰‘äººè¦åœ¨é‚£åç§’å†…å°†å‰‘åŠˆåœ¨æ•Œäººå¤´ä¸Šï¼Œæ•Œäººçš„è„‘è¢‹å°±ä¼šå¼€èŠ±ç»“æžœâ€\n");
 			getline(cin,s);
 			system("cls");
-			Slowsay("¡°·¢ÉúÊ²Ã´ÊÂÁË£¿¡±\n");
-			getline(cin,s);
-			Slowsay("¡°²»ºÃÁË£¡ÄÏ±ßµÄ·À»¤¸ßÇ½±»´òÆÆÁË£¬Ò»´ó¶Ñ¹ÖÓ¿½øÁËÄÏ±ßµÄÌïµØ£¬ºÜ¿ì¾ÍÒª´òµ½ÎÒÃÇµÄ´å×ÓÁË£¡¡±\n");
+			Slowsay("â€œåªæ˜¯è¿™æŠŠå‰‘æ—©å·²å¤±ä¼ äº†ï¼Œä¸çŸ¥é“çŽ°åœ¨åœ¨è°çš„æ‰‹é‡Œâ€¦â€¦â€\n");
 			getline(cin,s);
 			system("cls");
-			Slowsay("¡°ÕâÔõÃ´»á......¿ì£¬½Ð´åÀïÇ¿×³µÄÄÐÈË¶¼µ½Ìï±ßËÀÊØ£¬¾ö²»ÄÜÈÃËüÃÇ½øÀ´£¡¡±\n");
+			Slowsay("â€œä¹Ÿå°±æ˜¯è¯´æˆ‘å¿…é¡»æ‰¾åˆ°é‚£æŠŠå‰‘æ‰æœ‰å¯èƒ½å‡»è´¥å·¨å²©é­”çŽ‹ï¼Ÿâ€\n\n");
 			getline(cin,s);
-			Slowsay("¡°¿ÉÊÇ£¬¹ÖÎïÌ«¶àÁË£¬¸ù±¾ÊØ²»×¡¡±\n");
-			getline(cin,s);
-			Slowsay("¡°ÄÜÊØ¶à¾ÃÊØ¶à¾Ã£¬Í¨ÖªÆäËûËùÓÐÈËÇ°Íù±ÜÄÑËù£¡¡±\n");
-			getline(cin,s);
-			Slowsay("¡°ÊÇ£¡¡±\n");
+			Slowsay("â€œæˆ‘è§‰å¾—é‚£å€’ä¸ä¸€å®šï¼Œå¦‚æžœâ€¦â€¦â€\n");
 			getline(cin,s);
 			system("cls");
-			Slowsay("¡°Ê±¼ä²»¶àÁË£¬ÒªÊÇÄã±»¹ÖÎïµ±³ÉÒ¹Ïü£¬¾Í²ÒÁË¡£À´£¬¹ýÀ´¡±\n");
+			Slowsay("â€œä¸å¥½äº†ï¼ä¸å¥½äº†ï¼â€\n");
 			getline(cin,s);
-			Slowsay("¡°ÎÒ¸øÄãÕÒÀ´ÁËÒ»¸ö»ï°é¡ª¡ªSuperHunter¡£ÊÇÎÒÃÇ´åÀïÃæºÜÀ÷º¦µÄÒ»Î»ÁÔÈË£¬ÌÖ·¥¾ÞÑÒÄ§ÍõµÄÍ¾ÖÐËû»áÖúÄãÒ»±ÛÖ®Á¦µÄ£¡¡±\n");
+			system("cls");
+			Slowsay("â€œå‘ç”Ÿä»€ä¹ˆäº‹äº†ï¼Ÿâ€\n");
 			getline(cin,s);
-			Slowsay("¡°¹þà¶¡±\n");
+			Slowsay("â€œä¸å¥½äº†ï¼å—è¾¹çš„é˜²æŠ¤é«˜å¢™è¢«æ‰“ç ´äº†ï¼Œä¸€å¤§å †æ€ªæ¶Œè¿›äº†å—è¾¹çš„ç”°åœ°ï¼Œå¾ˆå¿«å°±è¦æ‰“åˆ°æˆ‘ä»¬çš„æ‘å­äº†ï¼â€\n");
+			getline(cin,s);
+			system("cls");
+			Slowsay("â€œè¿™æ€Žä¹ˆä¼š......å¿«ï¼Œå«æ‘é‡Œå¼ºå£®çš„ç”·äººéƒ½åˆ°ç”°è¾¹æ­»å®ˆï¼Œå†³ä¸èƒ½è®©å®ƒä»¬è¿›æ¥ï¼â€\n");
+			getline(cin,s);
+			Slowsay("â€œå¯æ˜¯ï¼Œæ€ªç‰©å¤ªå¤šäº†ï¼Œæ ¹æœ¬å®ˆä¸ä½â€\n");
+			getline(cin,s);
+			Slowsay("â€œèƒ½å®ˆå¤šä¹…å®ˆå¤šä¹…ï¼Œé€šçŸ¥å…¶ä»–æ‰€æœ‰äººå‰å¾€é¿éš¾æ‰€ï¼â€\n");
+			getline(cin,s);
+			Slowsay("â€œæ˜¯ï¼â€\n");
+			getline(cin,s);
+			system("cls");
+			Slowsay("â€œæ—¶é—´ä¸å¤šäº†ï¼Œè¦æ˜¯ä½ è¢«æ€ªç‰©å½“æˆå¤œå®µï¼Œå°±æƒ¨äº†ã€‚æ¥ï¼Œè¿‡æ¥â€\n");
+			getline(cin,s);
+			Slowsay("â€œæˆ‘ç»™ä½ æ‰¾æ¥äº†ä¸€ä¸ªä¼™ä¼´â€”â€”SuperHunterã€‚æ˜¯æˆ‘ä»¬æ‘é‡Œé¢å¾ˆåŽ‰å®³çš„ä¸€ä½çŒŽäººï¼Œè®¨ä¼å·¨å²©é­”çŽ‹çš„é€”ä¸­ä»–ä¼šåŠ©ä½ ä¸€è‡‚ä¹‹åŠ›çš„ï¼â€\n");
+			getline(cin,s);
+			Slowsay("â€œå“ˆå–½â€\n");
 			TD++;
 			getline(cin,s);
 			system("cls");
-			Slowsay("¡°ÎÒ×îºó¸úÄãËµÒ»¾ä»°£º¡±\n");
+			Slowsay("â€œæˆ‘æœ€åŽè·Ÿä½ è¯´ä¸€å¥è¯ï¼šâ€\n");
 			getline(cin,s);
 			system("cls");
-			Slowsay("¡°°®ÎÒÃÇµÄÈË²»»áÀë¿ªÎÒÃÇ£¬ËûÃÇÓÀÔ¶»îÔÚÎÒÃÇµÄÐÄÖÐ¡±\n");
+			Slowsay("â€œçˆ±æˆ‘ä»¬çš„äººä¸ä¼šç¦»å¼€æˆ‘ä»¬ï¼Œä»–ä»¬æ°¸è¿œæ´»åœ¨æˆ‘ä»¬çš„å¿ƒä¸­â€\n");
 			getline(cin,s);
 			system("cls");
-			Slowsay("¡°È¥°É£¬ÄãµÄ¸¸Ä¸ÕýÔÚ¿´×ÅÄãÄØ¡±\n");
+			Slowsay("â€œåŽ»å§ï¼Œä½ çš„çˆ¶æ¯æ­£åœ¨çœ‹ç€ä½ å‘¢â€\n");
 			getline(cin,s);
 			system("cls");
-			Slowsay("½ÓÊÜµ½ÈÎÎñ£º");
+			Slowsay("æŽ¥å—åˆ°ä»»åŠ¡ï¼š");
 			Slowsay(mission[rate+1]);
 			Sleep(1500);
 			Can_go[1]=false;
@@ -3794,105 +3794,105 @@ bool shuangfeng() {
 		Slowsay("***\n"); 
 		getline(cin,s);
 		system("cls");
-		Slowsay("Äã×ß×Å×ß×Å£¬µ½ÁËËª·ç²¿ÂäµÄÃÅ¿Ú£¬Í»È»¡ª¡ª");
+		Slowsay("ä½ èµ°ç€èµ°ç€ï¼Œåˆ°äº†éœœé£Žéƒ¨è½çš„é—¨å£ï¼Œçªç„¶â€”â€”");
 		getline(cin,s);
 		system("cls");
-		Slowsay("¡°Õ¾×¡£¡ÄãÊÇÊ²Ã´ÈË£¿¾¹¸ÒÈëÇÖÎÒÃÇ²¿×å£¡¡±\n");
+		Slowsay("â€œç«™ä½ï¼ä½ æ˜¯ä»€ä¹ˆäººï¼Ÿç«Ÿæ•¢å…¥ä¾µæˆ‘ä»¬éƒ¨æ—ï¼â€\n");
 		getline(cin,s);
-		Slowsay("¡°ÄãÓÖÊÇË­£¿¡±\n");
+		Slowsay("â€œä½ åˆæ˜¯è°ï¼Ÿâ€\n");
 		getline(cin,s);
-		Slowsay("¡°ÎÒÄËËª·ç²¿Âä¿´ÊØÈË¿ËÀ­¶û£¬ÄãÍµÍµÃþÃþµØÀ´Õâ¸ÉÊ²Ã´£¿£¡¡±");
+		Slowsay("â€œæˆ‘ä¹ƒéœœé£Žéƒ¨è½çœ‹å®ˆäººå…‹æ‹‰å°”ï¼Œä½ å·å·æ‘¸æ‘¸åœ°æ¥è¿™å¹²ä»€ä¹ˆï¼Ÿï¼â€");
 		getline(cin,s);
 		system("cls");
-		Slowsay("¡°Îó»áÁËÐÖµÜ£¬ÎÒÖ»ÊÇ¹ýÀ´ÓëÄãÃÇ³¤ÀÏÁÄÁÄ¹ØÓÚ¾ÞÑÒÄ§ÍõµÄÊÂ¡±\n");
+		Slowsay("â€œè¯¯ä¼šäº†å…„å¼Ÿï¼Œæˆ‘åªæ˜¯è¿‡æ¥ä¸Žä½ ä»¬é•¿è€èŠèŠå…³äºŽå·¨å²©é­”çŽ‹çš„äº‹â€\n");
 		getline(cin,s);
-		Slowsay("¡°Ê²Ã´£¿£¡ÄÑ²»³ÉÄãÊÇ¾ÞÑÒÄ§ÍõµÄ¼äµý£¬µ¨¸ÒÀ´Õâ·ÅËÁ£¡¡±\n");
+		Slowsay("â€œä»€ä¹ˆï¼Ÿï¼éš¾ä¸æˆä½ æ˜¯å·¨å²©é­”çŽ‹çš„é—´è°ï¼Œèƒ†æ•¢æ¥è¿™æ”¾è‚†ï¼â€\n");
 		getline(cin,s);
-		Slowsay("¡°²»ÊÇµÄ²»ÊÇµÄ£¬ÎÒÖ»ÊÇÒ»¸öÎÞ¹¼µÄº¢×Ó¶øÒÑ>_<£¬´ó¸ç·Å¹ýÎÒ°É~¡±\n");
+		Slowsay("â€œä¸æ˜¯çš„ä¸æ˜¯çš„ï¼Œæˆ‘åªæ˜¯ä¸€ä¸ªæ— è¾œçš„å­©å­è€Œå·²>_<ï¼Œå¤§å“¥æ”¾è¿‡æˆ‘å§~â€\n");
 		getline(cin,s);
-		Slowsay("¡°ÉÙËµ·Ï»°£¬¿´ÕÐ£¡¡±");
-		if(!zhandou("¿ËÀ­¶û",-5)) {
+		Slowsay("â€œå°‘è¯´åºŸè¯ï¼Œçœ‹æ‹›ï¼â€");
+		if(!zhandou("å…‹æ‹‰å°”",-5)) {
 			return false;
 		}
 		Is_first[4]=false;
 		getline(cin,s);
-		Slowsay("¡°¿´À´£¬Äã»¹ÓÐÁ½Ë¢×ÓÂï¡±\n");
+		Slowsay("â€œçœ‹æ¥ï¼Œä½ è¿˜æœ‰ä¸¤åˆ·å­å˜›â€\n");
 		getline(cin,s);
-		Slowsay("¡°ÎÒ¶¼ËµÁË£¬ÎÒÊÇÒªÀ´Õâ¶ù¼û³¤ÀÏµÄ¡±\n");
+		Slowsay("â€œæˆ‘éƒ½è¯´äº†ï¼Œæˆ‘æ˜¯è¦æ¥è¿™å„¿è§é•¿è€çš„â€\n");
 		getline(cin,s);
 		system("cls");
-		Slowsay("¡°ºÃ°É£¬ÎÒ´øÄã½øÈ¥¡±\n");
+		Slowsay("â€œå¥½å§ï¼Œæˆ‘å¸¦ä½ è¿›åŽ»â€\n");
 		Sleep(1000);
 		system("cls");
 		Sleep(1000);
-		Slowsay("[Ëª·ç²¿Âä£¬³¤ÀÏÖ®¼Ò]\n");
+		Slowsay("[éœœé£Žéƒ¨è½ï¼Œé•¿è€ä¹‹å®¶]\n");
 		Sleep(1000);
 		system("cls");
 		getline(cin,s);
-		Slowsay("¡°ÕâÃ´Ëµ£¬Õâ¸ö±Ê¼ÇÊÇ¡Á¡Á¡ÁµÄÂð£¿¡±\n");
+		Slowsay("â€œè¿™ä¹ˆè¯´ï¼Œè¿™ä¸ªç¬”è®°æ˜¯Ã—Ã—Ã—çš„å—ï¼Ÿâ€\n");
 		getline(cin,s);
-		Slowsay("¡°ÊÇµÄ£¬¶øÇÒËüÓë¾ÞÑÒÄ§ÍõÓÐ¹Ø¡±\n");
+		Slowsay("â€œæ˜¯çš„ï¼Œè€Œä¸”å®ƒä¸Žå·¨å²©é­”çŽ‹æœ‰å…³â€\n");
 		getline(cin,s);
-		Slowsay("¡°°¦£¬¶¼²»ÖªµÀ¾ÞÑÒÄ§Íõ»¹ÓÐÊ²Ã´´òËã£¬ÏÖÔÚÍâÃæÕæÊÇÌ«Î£ÏÕÁË£¬ÉÔ²»ÁôÉñ¾Í»á±»Ñý¹ÖÉ±µô¡±\n");
+		Slowsay("â€œå”‰ï¼Œéƒ½ä¸çŸ¥é“å·¨å²©é­”çŽ‹è¿˜æœ‰ä»€ä¹ˆæ‰“ç®—ï¼ŒçŽ°åœ¨å¤–é¢çœŸæ˜¯å¤ªå±é™©äº†ï¼Œç¨ä¸ç•™ç¥žå°±ä¼šè¢«å¦–æ€ªæ€æŽ‰â€\n");
 		getline(cin,s);
-		Slowsay("¡°ÊÇµÄ£¬¿ÉÊÇ£¬ÎÒÃÇ±ØÐëÍê³É»÷ÍË¾ÞÑÒÄ§ÍõµÄÊ¹Ãü¡£¡±\n");
+		Slowsay("â€œæ˜¯çš„ï¼Œå¯æ˜¯ï¼Œæˆ‘ä»¬å¿…é¡»å®Œæˆå‡»é€€å·¨å²©é­”çŽ‹çš„ä½¿å‘½ã€‚â€\n");
 		getline(cin,s);
-		Slowsay("¡°ÎÒÖªµÀ¡£µ«ÎÒ¾õµÃ£¬ÏÖÔÚ¾Í¸Ã¶Ô¾ÞÑÒÄ§Íõ·¢Æð½ø¹¥£¬ÒòÎªÏÖÔÚËüÕýÔÚ~~¸¯°Ü~~ÐÝÏ¢¡£¡±\n");
-		getline(cin,s);
-		system("cls");
-		Slowsay("¡°ÏÖÔÚ£¿Õâ...ÓÐµãÌ«ÔçÁË°É¡±\n");
-		getline(cin,s);
-		Slowsay("¡°»¹ÄÜµÈµ½É¶Ê±ºò£¿¹ýÁËÕâ¶ÎÊ±¼ä£¬¾ÞÑÒÄ§Íõ¾Í»á~~¸¯°Ü~~ÐÝÏ¢Íê±Ï¡±\n");
-		getline(cin,s);
-		Slowsay("¡°ºÃ¡£ÄÇÎÒÏÖÔÚÁ¢¿Ì¾ÍÈ¥¶ËÁË¾ÞÑÒÄ§ÍõµÄÀÏ³²£¡¡±\n");
+		Slowsay("â€œæˆ‘çŸ¥é“ã€‚ä½†æˆ‘è§‰å¾—ï¼ŒçŽ°åœ¨å°±è¯¥å¯¹å·¨å²©é­”çŽ‹å‘èµ·è¿›æ”»ï¼Œå› ä¸ºçŽ°åœ¨å®ƒæ­£åœ¨~~è…è´¥~~ä¼‘æ¯ã€‚â€\n");
 		getline(cin,s);
 		system("cls");
-		Slowsay("¡°Äã³Ô±¥ÁË³Å×ÅÊÇ°É£¬ÄãÖªµÀ¾ÞÑÒÄ§ÍõÎªÊ²Ã´ÄÜ³Æ°ÔµØÇòÎå°ÙÍòÄê¶ø²»¼Ý±ÀÂð£¿¾ÍÒòÎªËüÌ«Ì«Ì«Ì«Ì«Ç¿ÁË£¬Äã¶ÔËü¶øÑÔ¾ÍÊÇÊÖÎÞ´çÌú³àÉíÂãÌå¡£ÏÖÔÚ¹ýÈ¥Æñ²»ÊÇËÍËÀ£¿¡±\n");
+		Slowsay("â€œçŽ°åœ¨ï¼Ÿè¿™...æœ‰ç‚¹å¤ªæ—©äº†å§â€\n");
+		getline(cin,s);
+		Slowsay("â€œè¿˜èƒ½ç­‰åˆ°å•¥æ—¶å€™ï¼Ÿè¿‡äº†è¿™æ®µæ—¶é—´ï¼Œå·¨å²©é­”çŽ‹å°±ä¼š~~è…è´¥~~ä¼‘æ¯å®Œæ¯•â€\n");
+		getline(cin,s);
+		Slowsay("â€œå¥½ã€‚é‚£æˆ‘çŽ°åœ¨ç«‹åˆ»å°±åŽ»ç«¯äº†å·¨å²©é­”çŽ‹çš„è€å·¢ï¼â€\n");
 		getline(cin,s);
 		system("cls");
-		Slowsay("¡°ºÃ°É¡£¡£¡£¡±\n"); 
+		Slowsay("â€œä½ åƒé¥±äº†æ’‘ç€æ˜¯å§ï¼Œä½ çŸ¥é“å·¨å²©é­”çŽ‹ä¸ºä»€ä¹ˆèƒ½ç§°éœ¸åœ°çƒäº”ç™¾ä¸‡å¹´è€Œä¸é©¾å´©å—ï¼Ÿå°±å› ä¸ºå®ƒå¤ªå¤ªå¤ªå¤ªå¤ªå¼ºäº†ï¼Œä½ å¯¹å®ƒè€Œè¨€å°±æ˜¯æ‰‹æ— å¯¸é“èµ¤èº«è£¸ä½“ã€‚çŽ°åœ¨è¿‡åŽ»å²‚ä¸æ˜¯é€æ­»ï¼Ÿâ€\n");
 		getline(cin,s);
 		system("cls");
-		Slowsay("¡°ËùÒÔ£¬ÎÒÃÇÒªÓÐÄÍÐÄ£¬ÂýÂýÀ´¡±\n");
+		Slowsay("â€œå¥½å§ã€‚ã€‚ã€‚â€\n"); 
 		getline(cin,s);
 		system("cls");
-		Slowsay("¡°¶ÔÁË£¬Ö®Ç°ÕâÀïÓÐÒ»¸öºÜÀ÷º¦µÄÊÞÈË£¬È«´åÖ»ÓÐËûÔÚÑÐ¾¿ÖÆ×÷½©»¯½â³ý¼Á£¬Ò²Ö»ÓÐËû»á¡£¿ÉÏ§°¡£¬µ±Ëû´ø×Å½âÒ©ÖÆ×÷ÒÇÉÃ×ÔÍâ³öÑ°ÕÒ×îºóÒ»¸ö²ÄÁÏÊ±£¬¾ÍÔÙÒ²Ã»»ØÀ´ÁË¡­¡­¡±\n");
+		Slowsay("â€œæ‰€ä»¥ï¼Œæˆ‘ä»¬è¦æœ‰è€å¿ƒï¼Œæ…¢æ…¢æ¥â€\n");
 		getline(cin,s);
 		system("cls");
-		Slowsay("¡°½©»¯½â³ý¼ÁÊÇÊ²Ã´¹í£¿¡±\n");
+		Slowsay("â€œå¯¹äº†ï¼Œä¹‹å‰è¿™é‡Œæœ‰ä¸€ä¸ªå¾ˆåŽ‰å®³çš„å…½äººï¼Œå…¨æ‘åªæœ‰ä»–åœ¨ç ”ç©¶åˆ¶ä½œåƒµåŒ–è§£é™¤å‰‚ï¼Œä¹Ÿåªæœ‰ä»–ä¼šã€‚å¯æƒœå•Šï¼Œå½“ä»–å¸¦ç€è§£è¯åˆ¶ä½œä»ªæ“…è‡ªå¤–å‡ºå¯»æ‰¾æœ€åŽä¸€ä¸ªææ–™æ—¶ï¼Œå°±å†ä¹Ÿæ²¡å›žæ¥äº†â€¦â€¦â€\n");
 		getline(cin,s);
 		system("cls");
-		Slowsay("¡°ß×£¬ÕâÄã¶¼²»ÖªµÀÂð£¬ËüÊÇÒ»ÖÖ¿ÉÒÔÏû³ýµôÁòËá½©»¯ÒºÊ¯»¯Ð§¹ûµÄÒ©Ë®¡£ÏÖÔÚÈç¹û±»Ò»Ö»Ñý¹Ö×¥×¡£¬Èç¹ûËü¶öÁË£¬Äã¾Í»á³ÉÎªÈÙÐÒµØ³ÉÎªËüµÄÎç²Í¡£·ñÔòËü¾Í»áÅçÒ»¿ÚÁòËá½©»¯ÒºËÍ¸øÄã£¬ÕâÍæÒâ¶ù¿ÉÒÔÂýÂýµØ½«ÄãÊ¯»¯¡±\n");
+		Slowsay("â€œåƒµåŒ–è§£é™¤å‰‚æ˜¯ä»€ä¹ˆé¬¼ï¼Ÿâ€\n");
 		getline(cin,s);
 		system("cls");
-		Slowsay("¡°Õâ¸ö½©»¯½â³ý¼ÁµÄÖÆ×÷Åä·½£¬ÎÒ¾Í½»¸øÄãÁË¡£ÄãÒªÖªµÀ£¬ÎÒÃÇÊÞÈËÒÑ¾­¶éÂäÁË£¬²»ÔÙÏñ´ÓÇ°ÄÇÑùÍþÎäÁË£¬ËùÒÔÎÒÃÇ±ØÐëÁôÔÚ´åÀï¡±\n");
+		Slowsay("â€œå’¦ï¼Œè¿™ä½ éƒ½ä¸çŸ¥é“å—ï¼Œå®ƒæ˜¯ä¸€ç§å¯ä»¥æ¶ˆé™¤æŽ‰ç¡«é…¸åƒµåŒ–æ¶²çŸ³åŒ–æ•ˆæžœçš„è¯æ°´ã€‚çŽ°åœ¨å¦‚æžœè¢«ä¸€åªå¦–æ€ªæŠ“ä½ï¼Œå¦‚æžœå®ƒé¥¿äº†ï¼Œä½ å°±ä¼šæˆä¸ºè£å¹¸åœ°æˆä¸ºå®ƒçš„åˆé¤ã€‚å¦åˆ™å®ƒå°±ä¼šå–·ä¸€å£ç¡«é…¸åƒµåŒ–æ¶²é€ç»™ä½ ï¼Œè¿™çŽ©æ„å„¿å¯ä»¥æ…¢æ…¢åœ°å°†ä½ çŸ³åŒ–â€\n");
 		getline(cin,s);
 		system("cls");
-		Slowsay("»ñµÃ£º½©»¯½â³ý¼ÁÅä·½£¨È«´åµÄÏ£Íû£©\n");
+		Slowsay("â€œè¿™ä¸ªåƒµåŒ–è§£é™¤å‰‚çš„åˆ¶ä½œé…æ–¹ï¼Œæˆ‘å°±äº¤ç»™ä½ äº†ã€‚ä½ è¦çŸ¥é“ï¼Œæˆ‘ä»¬å…½äººå·²ç»å •è½äº†ï¼Œä¸å†åƒä»Žå‰é‚£æ ·å¨æ­¦äº†ï¼Œæ‰€ä»¥æˆ‘ä»¬å¿…é¡»ç•™åœ¨æ‘é‡Œâ€\n");
 		getline(cin,s);
 		system("cls");
-		Slowsay("¡°²»¹ý£¬ÎÒÏàÐÅ£¬ÄãÒ»¶¨¿ÉÒÔ³É¹¦µÄ£¡¡±\n");
+		Slowsay("èŽ·å¾—ï¼šåƒµåŒ–è§£é™¤å‰‚é…æ–¹ï¼ˆå…¨æ‘çš„å¸Œæœ›ï¼‰\n");
 		getline(cin,s);
 		system("cls");
-		Slowsay("¡°»¹ÓÐ£¬ÎªÁË°ïÄã³É¹¦´ò°Ü¾ÞÑÒÄ§Íõ£¬ÎÒÌØµØÕÒÀ´ÁËËª·ç²¿Âä×îÎªÇ¿´óµÄÕ½Ê¿À´Ð­ÖúÄã¡±\n");
-		getline(cin,s);
-		Slowsay("¡°¾ÍÊÇÕâÎ»¡ª¡ªÀ¥µÏ£¬ËûÎäÒÕ¸ßÇ¿£¬ÖÇÉÌ³¬Èº£¬¾ø¶ÔÊÇÄãµÄºÃ°ïÊÖ¡±\n");
-		getline(cin,s);
-		Slowsay("¡°¸ÐÐ»¸ÐÐ»¡±\n");
+		Slowsay("â€œä¸è¿‡ï¼Œæˆ‘ç›¸ä¿¡ï¼Œä½ ä¸€å®šå¯ä»¥æˆåŠŸçš„ï¼â€\n");
 		getline(cin,s);
 		system("cls");
-		Slowsay("¡°¼Ç×¡£¬Äã²ÅÊÇÕâ¸öÊÀ½çµÄ¾ÈÊÀÖ÷£¬Ò»ÇÐÊÂÇé½ÔÓÉÄãÀ´¾ö¶¨£¬ÆäËûÈË²»ÄÜ×öÖ÷¡±\n");
+		Slowsay("â€œè¿˜æœ‰ï¼Œä¸ºäº†å¸®ä½ æˆåŠŸæ‰“è´¥å·¨å²©é­”çŽ‹ï¼Œæˆ‘ç‰¹åœ°æ‰¾æ¥äº†éœœé£Žéƒ¨è½æœ€ä¸ºå¼ºå¤§çš„æˆ˜å£«æ¥ååŠ©ä½ â€\n");
 		getline(cin,s);
-		Slowsay("¡°ºÃÁË£¬Ê±¼ä²»¶àÁË£¬ÄãÏÖÔÚÏÈ»ØÐÂÊÖ´å°É¡±\n");
+		Slowsay("â€œå°±æ˜¯è¿™ä½â€”â€”æ˜†è¿ªï¼Œä»–æ­¦è‰ºé«˜å¼ºï¼Œæ™ºå•†è¶…ç¾¤ï¼Œç»å¯¹æ˜¯ä½ çš„å¥½å¸®æ‰‹â€\n");
+		getline(cin,s);
+		Slowsay("â€œæ„Ÿè°¢æ„Ÿè°¢â€\n");
 		getline(cin,s);
 		system("cls");
-		Slowsay("¡°Å¶£¬¶ÔÁË£¬ÎªÊ²Ã´¸Õ²ÅÊØÎÀ¶ÔÎÒÄÇÃ´Ð×ÄØ£¿¡±\n");
+		Slowsay("â€œè®°ä½ï¼Œä½ æ‰æ˜¯è¿™ä¸ªä¸–ç•Œçš„æ•‘ä¸–ä¸»ï¼Œä¸€åˆ‡äº‹æƒ…çš†ç”±ä½ æ¥å†³å®šï¼Œå…¶ä»–äººä¸èƒ½åšä¸»â€\n");
+		getline(cin,s);
+		Slowsay("â€œå¥½äº†ï¼Œæ—¶é—´ä¸å¤šäº†ï¼Œä½ çŽ°åœ¨å…ˆå›žæ–°æ‰‹æ‘å§â€\n");
+		getline(cin,s);
+		system("cls");
+		Slowsay("â€œå“¦ï¼Œå¯¹äº†ï¼Œä¸ºä»€ä¹ˆåˆšæ‰å®ˆå«å¯¹æˆ‘é‚£ä¹ˆå‡¶å‘¢ï¼Ÿâ€\n");
 		getline(cin,s); 
-		Slowsay("¡°°¦£¬×î½üÄãÃÇÈËÀà¾¹È»³öÏÖÁËÅÑÍ½£¬¹´½á¾ÞÑÒÄ§Íõ¡£ÉÏ´ÎÎÒÃÇµÄºÃ¶àµÜÐÖ¶¼ÒòÎªÐÅÈÎÅÑÍ½¶ø±»É±ÁË¡±\n");
+		Slowsay("â€œå”‰ï¼Œæœ€è¿‘ä½ ä»¬äººç±»ç«Ÿç„¶å‡ºçŽ°äº†å›å¾’ï¼Œå‹¾ç»“å·¨å²©é­”çŽ‹ã€‚ä¸Šæ¬¡æˆ‘ä»¬çš„å¥½å¤šå¼Ÿå…„éƒ½å› ä¸ºä¿¡ä»»å›å¾’è€Œè¢«æ€äº†â€\n");
 		getline(cin,s);
-		Slowsay("¡°Õâ......¡±\n");
+		Slowsay("â€œè¿™......â€\n");
 		getline(cin,s);
-		Slowsay("¡°°¦£¬»òÐí£¬ÈËÉú¾ÍÊÇÈç´Ë°É¡£¡£¡£¡±\n");
+		Slowsay("â€œå”‰ï¼Œæˆ–è®¸ï¼Œäººç”Ÿå°±æ˜¯å¦‚æ­¤å§ã€‚ã€‚ã€‚â€\n");
 		getline(cin,s);
 		system("cls");
 	}
@@ -3908,27 +3908,27 @@ void game() {
 		HideCursor(0);
 		cout<<endl;
 		cout<<endl;
-		Slowsay("                           ÇëÑ¡ÔñÒ»¸ö½ÇÉ«£º            ");
+		Slowsay("                           è¯·é€‰æ‹©ä¸€ä¸ªè§’è‰²ï¼š            ");
 		cout<<endl;
 		Sleep(500);
-		qsay("  1,¿ñÕ½Ê¿£º»¯·ßÅ­ÎªÁ¦Á¿£¬ÖÂÊ¹×ÔÉíÑªÁ¿´ó·ù¶ÈÌáÉý¡£¾ßÓÐÑªÁ¿¼«¸ß£¬·ÀÓùÁ¦½ÏÇ¿£¬¹¥»÷Á¦Ò»°ãµÄÌØµã(±£ÊØÀà)");
+		qsay("  1,ç‹‚æˆ˜å£«ï¼šåŒ–æ„¤æ€’ä¸ºåŠ›é‡ï¼Œè‡´ä½¿è‡ªèº«è¡€é‡å¤§å¹…åº¦æå‡ã€‚å…·æœ‰è¡€é‡æžé«˜ï¼Œé˜²å¾¡åŠ›è¾ƒå¼ºï¼Œæ”»å‡»åŠ›ä¸€èˆ¬çš„ç‰¹ç‚¹(ä¿å®ˆç±»)");
 		cout<<endl<<endl;
 		Sleep(1000);
-		qsay("  2,Ê¥ÆïÊ¿£º×÷Îª¶ÓÎéµÄºËÐÄ£¬¿ÉÒÔÖÎÓúÈÎºÎÒ»¸ö¶ÓÓÑ¡£¾ßÓÐÑªÁ¿¸ß£¬·ÀÓùÁ¦¼«Ç¿£¬¹¥»÷Á¦Ò»°ãµÄÌØµã(²âÊÔ½ÇÉ«£¬Çë½÷É÷Ê³ÓÃ)");
+		qsay("  2,åœ£éª‘å£«ï¼šä½œä¸ºé˜Ÿä¼çš„æ ¸å¿ƒï¼Œå¯ä»¥æ²»æ„ˆä»»ä½•ä¸€ä¸ªé˜Ÿå‹ã€‚å…·æœ‰è¡€é‡é«˜ï¼Œé˜²å¾¡åŠ›æžå¼ºï¼Œæ”»å‡»åŠ›ä¸€èˆ¬çš„ç‰¹ç‚¹(æµ‹è¯•è§’è‰²ï¼Œè¯·è°¨æ…Žé£Ÿç”¨)");
 		Sleep(1000);
 		cout<<endl<<endl;
-		qsay("  3,´Ì¿Í£ºÌìÉúµÄ°µÉ±Õß£¬ÐÐ¶¯Ñ¸ËÙ£¬¿ÉÒÔÀûÓÃ¾ç¶¾¹¥»÷µÐÈË£¬Ê¹¶Ô·½³ÖÐø¿ÛÑª¡£¾ßÓÐÑªÁ¿Ò»°ã£¬·ÀÓùÁ¦Ò»°ã£¬¹¥»÷Á¦¼«Ç¿µÄÌØµã(Ç¿¹¥Àà)");
+		qsay("  3,åˆºå®¢ï¼šå¤©ç”Ÿçš„æš—æ€è€…ï¼Œè¡ŒåŠ¨è¿…é€Ÿï¼Œå¯ä»¥åˆ©ç”¨å‰§æ¯’æ”»å‡»æ•Œäººï¼Œä½¿å¯¹æ–¹æŒç»­æ‰£è¡€ã€‚å…·æœ‰è¡€é‡ä¸€èˆ¬ï¼Œé˜²å¾¡åŠ›ä¸€èˆ¬ï¼Œæ”»å‡»åŠ›æžå¼ºçš„ç‰¹ç‚¹(å¼ºæ”»ç±»)");
 		Sleep(1000);
 		cout<<endl<<endl;
-		qsay("  4,·¨Ê¦£º¿ÉÒÔÀûÓÃ»ð£¬À×£¬µçÔªËØÀ´¹¥»÷µÐÈË£¬»¹¿ÉÕÙ»½Ê¯Ä§À´·ÖÉ¢µÐÈË×¢ÒâÁ¦£¬¾ßÓÐÑªÁ¿Èõ£¬¹¥»÷Á¦±¬±í£¬·ÀÓùÁ¦ÈõµÄÌØµã(Ç¿¹¥Àà)");
+		qsay("  4,æ³•å¸ˆï¼šå¯ä»¥åˆ©ç”¨ç«ï¼Œé›·ï¼Œç”µå…ƒç´ æ¥æ”»å‡»æ•Œäººï¼Œè¿˜å¯å¬å”¤çŸ³é­”æ¥åˆ†æ•£æ•Œäººæ³¨æ„åŠ›ï¼Œå…·æœ‰è¡€é‡å¼±ï¼Œæ”»å‡»åŠ›çˆ†è¡¨ï¼Œé˜²å¾¡åŠ›å¼±çš„ç‰¹ç‚¹(å¼ºæ”»ç±»)");
 		Sleep(1000);
 		cout<<endl<<endl;
-		Slowsay("ÇëÑ¡Ôñ£º");
+		Slowsay("è¯·é€‰æ‹©ï¼š");
 		HideCursor(1);
 		char ch1;
 		cin>>ch1;
 		if(ch1=='1') {
-			juese="¿ñÕ½Ê¿";
+			juese="ç‹‚æˆ˜å£«";
 			choosejn=0;
 			HP=1000;
 			MP=300;
@@ -3939,7 +3939,7 @@ void game() {
 			maxEXP=100;
 		}
 		if(ch1=='2') {
-			juese="Ê¥ÆïÊ¿";
+			juese="åœ£éª‘å£«";
 			choosejn=1;
 			HP=800;
 			MP=250;
@@ -3950,7 +3950,7 @@ void game() {
 			maxEXP=100;
 		}
 		if(ch1=='3') {
-			juese="´Ì¿Í";
+			juese="åˆºå®¢";
 			choosejn=2;
 			HP=600;
 			MP=300;
@@ -3961,7 +3961,7 @@ void game() {
 			maxEXP=100;
 		}
 		if(ch1=='4') {
-			juese="·¨Ê¦";
+			juese="æ³•å¸ˆ";
 			choosejn=3;
 			HP=450;
 			MP=400;
@@ -3972,118 +3972,118 @@ void game() {
 			maxEXP=100;
 		}
 		if(ch1!='1'&&ch1!='2'&&ch1!='3'&&ch1!='4') {
-			Slowsay("ÇëÊäÈë1¡ª¡ª4ÄÚµÄÕûÊý£¡£¡£¡");
+			Slowsay("è¯·è¾“å…¥1â€”â€”4å†…çš„æ•´æ•°ï¼ï¼ï¼");
 			Sleep(2000);
 			goto begin;
 		}
 		jindu(50);
 		Sleep(1000);
-		if(MessageBox(NULL,"ÊÇ·ñÌø¹ý¾çÇé?(ÐÂÊÖ½¨Òé²»Ìø¹ý)","°¬ÅµµÏÑÇ5:¾ÞÑÒÄ§ÍõµÄ¾õÐÑ",MB_YESNO)!=6) {
+		if(MessageBox(NULL,"æ˜¯å¦è·³è¿‡å‰§æƒ…?(æ–°æ‰‹å»ºè®®ä¸è·³è¿‡)","è‰¾è¯ºè¿ªäºš5:å·¨å²©é­”çŽ‹çš„è§‰é†’",MB_YESNO)!=6) {
 			stop_time+=15;
 			tiaose(3);
 			system("cls"); 
-			Slowsay("¡­¡­¡­¡­¡­¡­¡­¡­\n");
-			Slowsay("¡­¡­¡­¡­¡­¡­¡­¡­\n");
+			Slowsay("â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦\n");
+			Slowsay("â€¦â€¦â€¦â€¦â€¦â€¦â€¦â€¦\n");
 			Sleep(2000);
 			system("cls");
-			Slowsay("ÕâÊÇÒ»¶Î³¾·âµÄÀúÊ·\n");
+			Slowsay("è¿™æ˜¯ä¸€æ®µå°˜å°çš„åŽ†å²\n");
 			Sleep(2000);
 			system("cls");
-			Slowsay("ÒøºÓÀú1309Äê£¬Ò²¾ÍÊÇ´óÔ¼ËÄÇ§Á½°ÙÍòÄêÇ°£¬ÓîÖæ±¬·¢ÁËÒ»³¡ÐÇ¼ÊÕ½Õù\n");
+			Slowsay("é“¶æ²³åŽ†1309å¹´ï¼Œä¹Ÿå°±æ˜¯å¤§çº¦å››åƒä¸¤ç™¾ä¸‡å¹´å‰ï¼Œå®‡å®™çˆ†å‘äº†ä¸€åœºæ˜Ÿé™…æˆ˜äº‰\n");
 			Sleep(2000);
 			system("cls");
-			Slowsay("ÓÉºÚ°µÉñÂÊÁìµÄÃðÌì½¢¶ÓÓëÓÉ´´ÊÀÖ®ÉñÂÊÁìµÄ³¤¿Õ½¢¶ÓÔÚÒøºÓÏµÖÐ²¿¿ªÕ½\n");
+			Slowsay("ç”±é»‘æš—ç¥žçŽ‡é¢†çš„ç­å¤©èˆ°é˜Ÿä¸Žç”±åˆ›ä¸–ä¹‹ç¥žçŽ‡é¢†çš„é•¿ç©ºèˆ°é˜Ÿåœ¨é“¶æ²³ç³»ä¸­éƒ¨å¼€æˆ˜\n");
 			Sleep(2000);
 			system("cls");
-			Slowsay("Ë«·½¸÷³ö¶¯Õ½½¢ÊýÊ®ÍòËÒ£¬ÆäÕ½ÊÆ²Ò²»ÈÌ¶Ã\n");
+			Slowsay("åŒæ–¹å„å‡ºåŠ¨æˆ˜èˆ°æ•°åä¸‡è‰˜ï¼Œå…¶æˆ˜åŠ¿æƒ¨ä¸å¿ç¹\n");
 			Sleep(2000);
 			system("cls");
-			Slowsay("ÒøºÓÀú2019Äê£¬Õâ³¡³ÖÐøÁËÆß°ÙÒ»Ê®ÄêµÄÕ½ÕùÊ¹µÃË«·½Õ½½¢Ö»Ê£ÏÂÁãÁãÉ¢É¢¼¸Ê®ËÒ\n");
+			Slowsay("é“¶æ²³åŽ†2019å¹´ï¼Œè¿™åœºæŒç»­äº†ä¸ƒç™¾ä¸€åå¹´çš„æˆ˜äº‰ä½¿å¾—åŒæ–¹æˆ˜èˆ°åªå‰©ä¸‹é›¶é›¶æ•£æ•£å‡ åè‰˜\n");
 			Sleep(2000);
 			system("cls");
-			Slowsay("ºÚ°µÉñ×îÖÕ¾ö¶¨ÓñÊ¯¾ã·Ù£¬ÂÊÏÈ½«Ê£ÏÂµÄÈýÊ®ÈýËÒÕ½½¢×é³É±£»¤È¦£¬¶ø×Ô¼ºµÄÖ¸»Ó½¢£¬ÔòÔÚ±£»¤È¦ÖÐ¼ä¡£Õâ¸ö½¢¶ÓÂíÉÏ¶Ô´´ÊÀÖ®ÉñËùÔÚµÄÌ©Ì¹ÐÇ·¢ÆðÁË¡°¸ÒËÀ¶Ó¡±¼Æ»®\n");
+			Slowsay("é»‘æš—ç¥žæœ€ç»ˆå†³å®šçŽ‰çŸ³ä¿±ç„šï¼ŒçŽ‡å…ˆå°†å‰©ä¸‹çš„ä¸‰åä¸‰è‰˜æˆ˜èˆ°ç»„æˆä¿æŠ¤åœˆï¼Œè€Œè‡ªå·±çš„æŒ‡æŒ¥èˆ°ï¼Œåˆ™åœ¨ä¿æŠ¤åœˆä¸­é—´ã€‚è¿™ä¸ªèˆ°é˜Ÿé©¬ä¸Šå¯¹åˆ›ä¸–ä¹‹ç¥žæ‰€åœ¨çš„æ³°å¦æ˜Ÿå‘èµ·äº†â€œæ•¢æ­»é˜Ÿâ€è®¡åˆ’\n");
 			Sleep(2000);
 			system("cls");
-			Slowsay("È»¶øËûÍòÍòÃ»ÓÐÏëµ½£¬´´ÊÀÖ®ÉñÒÑ¾­ÕÆÎÕÁËÈº¹¥¼¼Êõ£¬Ó­½ÓËûÃÇµÄÊÇ×é³É°ËØÔÍ¼µÄºÚ¶´¶´µÄÅÚ¿Ú\n");
+			Slowsay("ç„¶è€Œä»–ä¸‡ä¸‡æ²¡æœ‰æƒ³åˆ°ï¼Œåˆ›ä¸–ä¹‹ç¥žå·²ç»æŽŒæ¡äº†ç¾¤æ”»æŠ€æœ¯ï¼Œè¿ŽæŽ¥ä»–ä»¬çš„æ˜¯ç»„æˆå…«å¦å›¾çš„é»‘æ´žæ´žçš„ç‚®å£\n");
 			Sleep(2000);
 			system("cls");
-			Slowsay("¾ÍÕâÑù£¬´´ÊÀÖ®ÉñÖ±½ÓÕ¨»ÙÁËºÚ°µÉñ³Ë×øµÄÖ¸»Ó½¢£¬¶øºÚ°µÉñµÄÈâÌåÒ²±»´Ý»Ù£¬Áé»êÔòÁ÷ÀËÔÚÌ«¿ÕÖÐ¡­¡­\n");
+			Slowsay("å°±è¿™æ ·ï¼Œåˆ›ä¸–ä¹‹ç¥žç›´æŽ¥ç‚¸æ¯äº†é»‘æš—ç¥žä¹˜åçš„æŒ‡æŒ¥èˆ°ï¼Œè€Œé»‘æš—ç¥žçš„è‚‰ä½“ä¹Ÿè¢«æ‘§æ¯ï¼Œçµé­‚åˆ™æµæµªåœ¨å¤ªç©ºä¸­â€¦â€¦\n");
 			Sleep(3000);
 			system("cls");
-			Slowsay("´´ÊÀÖ®ÉñÈ¡µÃÁËÕâ³¡ÐÇ¼ÊÕ½ÕùµÄÊ¤Àû\n");
+			Slowsay("åˆ›ä¸–ä¹‹ç¥žå–å¾—äº†è¿™åœºæ˜Ÿé™…æˆ˜äº‰çš„èƒœåˆ©\n");
 			Sleep(3000);
 			system("cls");
-			Slowsay("ÓÉÓÚÐÇ¼ÊÕ½ÕùÖÐËùÔì³ÉµÄÉËÍöÌ«ÖØ£¬ËùÒÔ´´ÊÀÖ®Éñ×å¿ªÆôÁË¡°ÉúÃüÑÓÐø¡±¼Æ»®\n");
+			Slowsay("ç”±äºŽæ˜Ÿé™…æˆ˜äº‰ä¸­æ‰€é€ æˆçš„ä¼¤äº¡å¤ªé‡ï¼Œæ‰€ä»¥åˆ›ä¸–ä¹‹ç¥žæ—å¼€å¯äº†â€œç”Ÿå‘½å»¶ç»­â€è®¡åˆ’\n");
 			Sleep(1000);
 			system("cls");
-			Slowsay("ËûÃÇÔÚÌ©Ì¹ÐÇ½¨ÔìÁËÒ»×ù¹¦ÄÜÇ¿´óµÄ»úÆ÷\n");
+			Slowsay("ä»–ä»¬åœ¨æ³°å¦æ˜Ÿå»ºé€ äº†ä¸€åº§åŠŸèƒ½å¼ºå¤§çš„æœºå™¨\n");
 			Sleep(1000);
 			system("cls");
-			Slowsay("Ëü¿ÉÒÔ½«ÉÏÒÚ¶ÖµÄÌ«¿ÕÀ¬»ø×ª»¯³ÉÒ»¿ÅÄÜ¸§ÓýÉúÃüµÄÐÇÇò\n");
+			Slowsay("å®ƒå¯ä»¥å°†ä¸Šäº¿å¨çš„å¤ªç©ºåžƒåœ¾è½¬åŒ–æˆä¸€é¢—èƒ½æŠšè‚²ç”Ÿå‘½çš„æ˜Ÿçƒ\n");
 			Sleep(1000);
 			system("cls");
-			Slowsay("µ«ÊÇ£¬ÓÉÓÚÕâ¸ö»úÆ÷ÐèÒªÅÅ³ýÌ«¿ÕÀ¬»øÖÐÏñ¦ÃÉäÏß¡¢ÍâÐÇ±ÃÕâÑù¾ßÓÐÎÛÈ¾ÐÔµÄ¶«Î÷\n");
+			Slowsay("ä½†æ˜¯ï¼Œç”±äºŽè¿™ä¸ªæœºå™¨éœ€è¦æŽ’é™¤å¤ªç©ºåžƒåœ¾ä¸­åƒÎ³å°„çº¿ã€å¤–æ˜Ÿæ³µè¿™æ ·å…·æœ‰æ±¡æŸ“æ€§çš„ä¸œè¥¿\n");
 			Sleep(1000);
 			system("cls");
-			Slowsay("´´ÊÀÖ®Éñ¾ö¶¨£¬½«Æä°ü¹üÔÚÌØÖÊ±£»¤Ì×ÄÚ£¬ÈÃ»·¾³ÎÛÈ¾½µµÍÎªÁã£¬²¢½«ËüÃÇ¾Û¼¯ÔÚÒ»¸öÐÇÇòÉÏ\n");
+			Slowsay("åˆ›ä¸–ä¹‹ç¥žå†³å®šï¼Œå°†å…¶åŒ…è£¹åœ¨ç‰¹è´¨ä¿æŠ¤å¥—å†…ï¼Œè®©çŽ¯å¢ƒæ±¡æŸ“é™ä½Žä¸ºé›¶ï¼Œå¹¶å°†å®ƒä»¬èšé›†åœ¨ä¸€ä¸ªæ˜Ÿçƒä¸Š\n");
 			Sleep(1000);
 			system("cls");
-			Slowsay("¾­¹ýÒ»·¬ÉîË¼ÊìÂÇ£¬ËûÃÇÑ¡ÖÐÁËÒ»¿Å¹âÍºÍºÖ»ÓÐÑÒÊ¯¶øÃ»ÓÐÈÎºÎÉúÃü¼£ÏóµÄÐÇÇò\n");
+			Slowsay("ç»è¿‡ä¸€ç•ªæ·±æ€ç†Ÿè™‘ï¼Œä»–ä»¬é€‰ä¸­äº†ä¸€é¢—å…‰ç§ƒç§ƒåªæœ‰å²©çŸ³è€Œæ²¡æœ‰ä»»ä½•ç”Ÿå‘½è¿¹è±¡çš„æ˜Ÿçƒ\n");
 			Sleep(1500);
 			system("cls");
-			Slowsay("µØÇò\n");
+			Slowsay("åœ°çƒ\n");
 			Sleep(1000);
 			system("cls");
-			Slowsay("µ«ËûÃÇÍòÍòÃ»ÓÐÏëµ½£¬ÕâÈÃÁ÷ÀËÔÚÈýÇ§Íò¹âÄêÍâµÄºÚ°µÉñµÄÁé»êÓÐ»ú¿É³Ë£¬ËûÒÔ×î¿ìµÄËÙ¶È¸Ïµ½Ì«ÑôÏµÊ±£¬ÒÑ¾­¹ýÈ¥ÁËÕûÕûËÄÇ§¶àÄêÁË\n\n");
+			Slowsay("ä½†ä»–ä»¬ä¸‡ä¸‡æ²¡æœ‰æƒ³åˆ°ï¼Œè¿™è®©æµæµªåœ¨ä¸‰åƒä¸‡å…‰å¹´å¤–çš„é»‘æš—ç¥žçš„çµé­‚æœ‰æœºå¯ä¹˜ï¼Œä»–ä»¥æœ€å¿«çš„é€Ÿåº¦èµ¶åˆ°å¤ªé˜³ç³»æ—¶ï¼Œå·²ç»è¿‡åŽ»äº†æ•´æ•´å››åƒå¤šå¹´äº†\n\n");
 			Sleep(1500);
 			system("cls");
-			Slowsay("Ëû²ÂµÃÃ»´í£¬µØÇòÉÏÒÑ¾­¶Ñ»ýÁËÐí¶à×°ÓÐÎÛÈ¾ÎïÌåµÄ±£»¤Ì×\n");
+			Slowsay("ä»–çŒœå¾—æ²¡é”™ï¼Œåœ°çƒä¸Šå·²ç»å †ç§¯äº†è®¸å¤šè£…æœ‰æ±¡æŸ“ç‰©ä½“çš„ä¿æŠ¤å¥—\n");
 			Sleep(1000);
 			system("cls");
-			Slowsay("ËüÄîÆðÁËÄÇ¹ÅÀÏµÄºÚÄ§·¨ÖäÓï£¬Ê¹ÕâÐ©Ì«¿ÕÀ¬»øÅäºÏºÚÄ§·¨ÉøÍ¸½øÄÇÐ©ÑÒÊ¯£¬¶ø×Ô¼º£¬Ôò½«Áé»êÇ±ÈëÄÇÐ©ÑÒÊ¯ÄÚ\n");
+			Slowsay("å®ƒå¿µèµ·äº†é‚£å¤è€çš„é»‘é­”æ³•å’’è¯­ï¼Œä½¿è¿™äº›å¤ªç©ºåžƒåœ¾é…åˆé»‘é­”æ³•æ¸—é€è¿›é‚£äº›å²©çŸ³ï¼Œè€Œè‡ªå·±ï¼Œåˆ™å°†çµé­‚æ½œå…¥é‚£äº›å²©çŸ³å†…\n");
 			Sleep(1000);
-			Slowsay("Í¬Ê±£¬Ëû»¹ÕÙ¼¯ÁËºÚÑ¹Ñ¹Ò»´óÅúÀ´×Ô¸÷¸öÐÇÏµµÄ¹ÖÎï£¬×¼±¸ÔÚµØÇòÉÏ°²¼Ò²¢¼Æ»®¹¥´ò´´ÊÀÖ®Éñ\n");
+			Slowsay("åŒæ—¶ï¼Œä»–è¿˜å¬é›†äº†é»‘åŽ‹åŽ‹ä¸€å¤§æ‰¹æ¥è‡ªå„ä¸ªæ˜Ÿç³»çš„æ€ªç‰©ï¼Œå‡†å¤‡åœ¨åœ°çƒä¸Šå®‰å®¶å¹¶è®¡åˆ’æ”»æ‰“åˆ›ä¸–ä¹‹ç¥ž\n");
 			Sleep(2000);
 			system("cls");
-			Slowsay("ÕâÊ±ºò£¬Ò»¼þÁîÉñ³Ô¾ªµÄÊÂÇé·¢ÉúÁË£¬Õâ¿Å¹âÍºÍºµÄÐÇÇò´ÓÓµÓÐ´óÆø²ã¿ªÊ¼£¬Ö±µ½´¦´¦¶¼ÓÐÉúÎï¡£\n");
+			Slowsay("è¿™æ—¶å€™ï¼Œä¸€ä»¶ä»¤ç¥žåƒæƒŠçš„äº‹æƒ…å‘ç”Ÿäº†ï¼Œè¿™é¢—å…‰ç§ƒç§ƒçš„æ˜Ÿçƒä»Žæ‹¥æœ‰å¤§æ°”å±‚å¼€å§‹ï¼Œç›´åˆ°å¤„å¤„éƒ½æœ‰ç”Ÿç‰©ã€‚\n");
 			Sleep(2000);
 			system("cls");
-			Slowsay("ºÚ°µÉñ±ãÓÐËù¹ËÂÇ£¬Ëüº¦ÅÂÕâÐ©Ñ¸ËÙÆð¼ÒµÄÉúÎï»µÁËËüµÄºÃÊÂ\n");
+			Slowsay("é»‘æš—ç¥žä¾¿æœ‰æ‰€é¡¾è™‘ï¼Œå®ƒå®³æ€•è¿™äº›è¿…é€Ÿèµ·å®¶çš„ç”Ÿç‰©åäº†å®ƒçš„å¥½äº‹\n");
 			Sleep(1500);
 			system("cls");
-			Slowsay("ÓÚÊÇ£¬ºÚ°µÉñ¾ö¶¨£ºÇå³ýµôµØÇòÉÏµÄËùÓÐÉúÎï£¬ÌØ±ðÊÇÄÇÐ©Á½×ãÐÐ×ßÖÇÉÌ³¬ÈºµÄ¶«Î÷\n");
+			Slowsay("äºŽæ˜¯ï¼Œé»‘æš—ç¥žå†³å®šï¼šæ¸…é™¤æŽ‰åœ°çƒä¸Šçš„æ‰€æœ‰ç”Ÿç‰©ï¼Œç‰¹åˆ«æ˜¯é‚£äº›ä¸¤è¶³è¡Œèµ°æ™ºå•†è¶…ç¾¤çš„ä¸œè¥¿\n");
 			Sleep(3500);
 			system("cls");
 			Sleep(2000);
 			stop_time+=10;
-			Slowsay("ÀúÊ·ÓÖ·­¹ýÁËÒ»Ò³\n");
+			Slowsay("åŽ†å²åˆç¿»è¿‡äº†ä¸€é¡µ\n");
 			stop_time-=10;
 			Sleep(2500);
 			system("cls");
-			Slowsay("Îå°ÙÍòÄêÇ°£¬Äãµ®ÉúÔÚÒ»¸öÕ½»ð·×·ÉµÄÐÇÇòÉÏ¡­¡­¡­¡­\n");
+			Slowsay("äº”ç™¾ä¸‡å¹´å‰ï¼Œä½ è¯žç”Ÿåœ¨ä¸€ä¸ªæˆ˜ç«çº·é£žçš„æ˜Ÿçƒä¸Šâ€¦â€¦â€¦â€¦\n");
 			Sleep(1000);
 			system("cls");
-			Slowsay("Õâ¸öÐÇÇò£¬¾ÍÊÇµØÇò¡­¡­\n");
+			Slowsay("è¿™ä¸ªæ˜Ÿçƒï¼Œå°±æ˜¯åœ°çƒâ€¦â€¦\n");
 			Sleep(1000);
-			Slowsay("µØÇòÈËÕýÔÚ¸úÀ´×ÔÍâÌ«¿ÕµÄÉñÃØ¹ÖÎïÆ´²«¡­¡­");
+			Slowsay("åœ°çƒäººæ­£åœ¨è·Ÿæ¥è‡ªå¤–å¤ªç©ºçš„ç¥žç§˜æ€ªç‰©æ‹¼æâ€¦â€¦");
 			Sleep(1000);
 			system("cls");
-			Slowsay("ÄãµÄ¸¸Ç×£¬ÔÚÒ»´ÎÍòÊ¬Î§³ÇµÄÔÖÄÑÖÐÆ´ËÀµÖ¿¹£¬È´²»ÐÒ²ÒËÀ\n");
+			Slowsay("ä½ çš„çˆ¶äº²ï¼Œåœ¨ä¸€æ¬¡ä¸‡å°¸å›´åŸŽçš„ç¾éš¾ä¸­æ‹¼æ­»æŠµæŠ—ï¼Œå´ä¸å¹¸æƒ¨æ­»\n");
 			Sleep(2000);
 			system("cls");
-			Slowsay("¶øÄãµÄÄ¸Ç×£¬ÎªÁË±£»¤ÄêÓ×µÄÄã£¬Ò²ÔáÉí¹Ö¸¹\n");
+			Slowsay("è€Œä½ çš„æ¯äº²ï¼Œä¸ºäº†ä¿æŠ¤å¹´å¹¼çš„ä½ ï¼Œä¹Ÿè‘¬èº«æ€ªè…¹\n");
 			Sleep(2000);
 			system("cls");
-			Slowsay("ÎªÁË¸øÄãµÄ¸¸Ä¸Ç×±¨³ð£¬Ò²ÎªÁËÕü¾ÈÊÀ½ç£¬Äã±ØÐëÕÒµ½¹ÖÎïµÄÖ÷ÈË¡ª¡ª¾ÞÑÒÄ§Íõ\n"); 
+			Slowsay("ä¸ºäº†ç»™ä½ çš„çˆ¶æ¯äº²æŠ¥ä»‡ï¼Œä¹Ÿä¸ºäº†æ‹¯æ•‘ä¸–ç•Œï¼Œä½ å¿…é¡»æ‰¾åˆ°æ€ªç‰©çš„ä¸»äººâ€”â€”å·¨å²©é­”çŽ‹\n"); 
 			Sleep(1000);
-			Slowsay("ËüÒþ²ØÔÚÒ»¸öÎÞÈËÖªÏþµÄÉñÃØÊ¯ÖÓÈé¶´¡­¡­\n");
+			Slowsay("å®ƒéšè—åœ¨ä¸€ä¸ªæ— äººçŸ¥æ™“çš„ç¥žç§˜çŸ³é’Ÿä¹³æ´žâ€¦â€¦\n");
 			Sleep(1000);
 			system("cls");
-			Slowsay("ÄãÐèÒªÕÒµ½Ëü²¢½«Æä´ò°Ü£¬È»ºóÕÒµ½¾ÞÑÒÄ§ÍõÒþ²Ø¶àÄêµÄ±¦²Ø¡£Ïà´«ËüµÄ±¦²ØÊÇÊýÇ§ÍòÄêÇ°Ò»Î»Öý½£Ê¦ËùÔì£¬ËüÓµÓÐµÄÁ¦Á¿½ö´ÎÓÚÎÞÏÞÊÖÌ×¡£ÄãÖ»Ðè½«ËüÈÓµ½Ë÷¼Ó´ïÉ½Âö¶¥·åµÄ¹Å¾®Àï£¬ÅäºÏ¹Å¾®Àï¾Þ´óµÄÁ¦Á¿£¬¾ÍÏñÃð°Ô´òÏìÖ¸Ò»Ñù£¬ËùÓÐ¹Ö¶¼»á»Ò·ÉÑÌÃð\n");
+			Slowsay("ä½ éœ€è¦æ‰¾åˆ°å®ƒå¹¶å°†å…¶æ‰“è´¥ï¼Œç„¶åŽæ‰¾åˆ°å·¨å²©é­”çŽ‹éšè—å¤šå¹´çš„å®è—ã€‚ç›¸ä¼ å®ƒçš„å®è—æ˜¯æ•°åƒä¸‡å¹´å‰ä¸€ä½é“¸å‰‘å¸ˆæ‰€é€ ï¼Œå®ƒæ‹¥æœ‰çš„åŠ›é‡ä»…æ¬¡äºŽæ— é™æ‰‹å¥—ã€‚ä½ åªéœ€å°†å®ƒæ‰”åˆ°ç´¢åŠ è¾¾å±±è„‰é¡¶å³°çš„å¤äº•é‡Œï¼Œé…åˆå¤äº•é‡Œå·¨å¤§çš„åŠ›é‡ï¼Œå°±åƒç­éœ¸æ‰“å“æŒ‡ä¸€æ ·ï¼Œæ‰€æœ‰æ€ªéƒ½ä¼šç°é£žçƒŸç­\n");
 			Sleep(3500);
 			system("cls");
 			Sleep(3000);
-			Slowsay("ÄÇÃ´£¬ÊÀ½çµÄ¾ÈÐÇ£¬×£ÄãºÃÔË£¡\n");
+			Slowsay("é‚£ä¹ˆï¼Œä¸–ç•Œçš„æ•‘æ˜Ÿï¼Œç¥ä½ å¥½è¿ï¼\n");
 			Sleep(2000);
 			tiaose(14);
 			stop_time-=15;
@@ -4093,28 +4093,28 @@ void game() {
 	}
 	system("cls");
 	xinshoucun:
-	AMP["Ð¡Æ¿ÉúÃüÒ©Ë®"]=100;SMP["Ð¡Æ¿ÉúÃüÒ©Ë®"]=400;
-	AMP["ÖÐÆ¿ÉúÃüÒ©Ë®"]=200;SMP["ÖÐÆ¿ÉúÃüÒ©Ë®"]=800;
-	AMP["´óÆ¿ÉúÃüÒ©Ë®"]=400;SMP["´óÆ¿ÉúÃüÒ©Ë®"]=1400;
-	AMP["ÌØ´óÉúÃüÒ©Ë®"]=800;SMP["ÌØ´óÉúÃüÒ©Ë®"]=2200;
-	AMP["Ð¡Æ¿Ä§·¨Ò©Ë®"]=100;SMP["Ð¡Æ¿Ä§·¨Ò©Ë®"]=150;
-	AMP["ÖÐÆ¿Ä§·¨Ò©Ë®"]=200;SMP["ÖÐÆ¿Ä§·¨Ò©Ë®"]=450;
-	AMP["´óÆ¿Ä§·¨Ò©Ë®"]=300;SMP["´óÆ¿Ä§·¨Ò©Ë®"]=950;
-	AMP["ÌØ´óÄ§·¨Ò©Ë®"]=500;SMP["ÌØ´óÄ§·¨Ò©Ë®"]=1650;
-	AMP["ÔªÆø»Ö¸´Ò©Ë®"]=1000;SMP["ÔªÆø»Ö¸´Ò©Ë®"]=4000;
+	AMP["å°ç“¶ç”Ÿå‘½è¯æ°´"]=100;SMP["å°ç“¶ç”Ÿå‘½è¯æ°´"]=400;
+	AMP["ä¸­ç“¶ç”Ÿå‘½è¯æ°´"]=200;SMP["ä¸­ç“¶ç”Ÿå‘½è¯æ°´"]=800;
+	AMP["å¤§ç“¶ç”Ÿå‘½è¯æ°´"]=400;SMP["å¤§ç“¶ç”Ÿå‘½è¯æ°´"]=1400;
+	AMP["ç‰¹å¤§ç”Ÿå‘½è¯æ°´"]=800;SMP["ç‰¹å¤§ç”Ÿå‘½è¯æ°´"]=2200;
+	AMP["å°ç“¶é­”æ³•è¯æ°´"]=100;SMP["å°ç“¶é­”æ³•è¯æ°´"]=150;
+	AMP["ä¸­ç“¶é­”æ³•è¯æ°´"]=200;SMP["ä¸­ç“¶é­”æ³•è¯æ°´"]=450;
+	AMP["å¤§ç“¶é­”æ³•è¯æ°´"]=300;SMP["å¤§ç“¶é­”æ³•è¯æ°´"]=950;
+	AMP["ç‰¹å¤§é­”æ³•è¯æ°´"]=500;SMP["ç‰¹å¤§é­”æ³•è¯æ°´"]=1650;
+	AMP["å…ƒæ°”æ¢å¤è¯æ°´"]=1000;SMP["å…ƒæ°”æ¢å¤è¯æ°´"]=4000;
 	if(Is_first[0]) {
-		Slowsay("»¶Ó­À´µ½ÐÂÊÖ´å£¬Äú¿ÉÒÔÔÚÕâÀïÂò¶«Î÷£¬Ç¿»¯×°±¸£¬½ÓÊÜÈÎÎñµÈµÈ");
+		Slowsay("æ¬¢è¿Žæ¥åˆ°æ–°æ‰‹æ‘ï¼Œæ‚¨å¯ä»¥åœ¨è¿™é‡Œä¹°ä¸œè¥¿ï¼Œå¼ºåŒ–è£…å¤‡ï¼ŒæŽ¥å—ä»»åŠ¡ç­‰ç­‰");
 		Sleep(2000);
 		cout<<endl;
-		Slowsay("Èç¹ûÄúÏë¸ãµãÊÂÇé£¬ÇëÊäÈë¶ÔÓ¦µÄÊý×Ö");
+		Slowsay("å¦‚æžœæ‚¨æƒ³æžç‚¹äº‹æƒ…ï¼Œè¯·è¾“å…¥å¯¹åº”çš„æ•°å­—");
 		Sleep(1000);
 		cout<<endl;
-		Slowsay("×£ÄúÓÎÏ·Óä¿ì£¡£¡");
+		Slowsay("ç¥æ‚¨æ¸¸æˆæ„‰å¿«ï¼ï¼");
 		Sleep(2000);
 		Is_first[0]=false;
 		system("cls");
 		tiaose(12);
-		Slowsay("Çë½øÈë¡®½ÓÊÜÈÎÎñ&²é¿´Ö÷Ïß½ø¶È¡¯´¦²é¿´µÚÒ»¸öÖ÷ÏßÈÎÎñ\n");
+		Slowsay("è¯·è¿›å…¥â€˜æŽ¥å—ä»»åŠ¡&æŸ¥çœ‹ä¸»çº¿è¿›åº¦â€™å¤„æŸ¥çœ‹ç¬¬ä¸€ä¸ªä¸»çº¿ä»»åŠ¡\n");
 		tiaose(14);
 		Sleep(3000);
 	}
@@ -4128,17 +4128,17 @@ void game() {
 		sky:
 		jindu(50);
 		cout<<endl;
-		Slowsay("1,½øÈëÉÌ³Ç\n");
-		Slowsay("2,½øÈëÌú½³ÆÌ\n");
-		Slowsay("3,³é½±\n");
-		Slowsay("4,²é¿´±³°üÓë×´Ì¬\n");
-		Slowsay("5,ÐÞÁ¶¼¼ÄÜ\n");
-		Slowsay("6,½ÓÊÜÈÎÎñ&²é¿´Ö÷Ïß½ø¶È\n");
-		Slowsay("7,Ç°ÍùÊÔÁ·Ëþ\n");
-		Slowsay("8,ÂþÂþ³¾Í¾\n");
-		Slowsay("9,ÍË³ö\n");
+		Slowsay("1,è¿›å…¥å•†åŸŽ\n");
+		Slowsay("2,è¿›å…¥é“åŒ é“º\n");
+		Slowsay("3,æŠ½å¥–\n");
+		Slowsay("4,æŸ¥çœ‹èƒŒåŒ…ä¸ŽçŠ¶æ€\n");
+		Slowsay("5,ä¿®ç‚¼æŠ€èƒ½\n");
+		Slowsay("6,æŽ¥å—ä»»åŠ¡&æŸ¥çœ‹ä¸»çº¿è¿›åº¦\n");
+		Slowsay("7,å‰å¾€è¯•ç»ƒå¡”\n");
+		Slowsay("8,æ¼«æ¼«å°˜é€”\n");
+		Slowsay("9,é€€å‡º\n");
 		Sleep(500);
-		Slowsay("ÇëÑ¡Ôñ£º");
+		Slowsay("è¯·é€‰æ‹©ï¼š");
 		cin>>ch2;
 	}
 	
@@ -4149,32 +4149,32 @@ void game() {
 	}
 	if(ch2=='2') {
 		jindu(50);
-		Slowsay("»¶Ó­À´µ½Ìú½³ÆÌ£¬ÕâÀïÓÐÐí¶à¹ØÓÚÇ¿½¡×°±¸µÄÏîÄ¿£¬À´¿´¿´°É");
+		Slowsay("æ¬¢è¿Žæ¥åˆ°é“åŒ é“ºï¼Œè¿™é‡Œæœ‰è®¸å¤šå…³äºŽå¼ºå¥è£…å¤‡çš„é¡¹ç›®ï¼Œæ¥çœ‹çœ‹å§");
 		Sleep(1000);
 		tiej:
 		jindu(50);
 		cout<<endl;
 		cout<<endl;
-		Slowsay("1,Ç¿»¯\n");
-		Slowsay("2,¸ßÄÜÇ¿»¯\n");
-		Slowsay("3,Éý¼¶\n");
-		Slowsay("4,´«ÆæÉý¼¶\n");
-		Slowsay("5,Ï´Á¶\n");
-		Slowsay("6,¼Ì³Ð\n"); 
-		Slowsay("7,ºÏ³É\n");
-		Slowsay("8,·µ»Ø\n");
+		Slowsay("1,å¼ºåŒ–\n");
+		Slowsay("2,é«˜èƒ½å¼ºåŒ–\n");
+		Slowsay("3,å‡çº§\n");
+		Slowsay("4,ä¼ å¥‡å‡çº§\n");
+		Slowsay("5,æ´—ç‚¼\n");
+		Slowsay("6,ç»§æ‰¿\n"); 
+		Slowsay("7,åˆæˆ\n");
+		Slowsay("8,è¿”å›ž\n");
 		Sleep(2000);
-		Slowsay("ÇëÑ¡Ôñ£º");
+		Slowsay("è¯·é€‰æ‹©ï¼š");
 		char chp;
 		cin>>chp;
 		if(chp=='1') {
 			jindu(50);
 			if(wuqi[0]=="00") {
-				Slowsay("¶Ô²»Æð£¬Äú»¹Ã»ÓÐÎäÆ÷»ò·À¾ß");
+				Slowsay("å¯¹ä¸èµ·ï¼Œæ‚¨è¿˜æ²¡æœ‰æ­¦å™¨æˆ–é˜²å…·");
 				Sleep(2000);
 				goto tiej;
 			}
-			Slowsay("ÇëÊäÈëÄúÒªÇ¿»¯µÄ×°±¸\n\n");
+			Slowsay("è¯·è¾“å…¥æ‚¨è¦å¼ºåŒ–çš„è£…å¤‡\n\n");
 			Sleep(1000);
 			int Ak=0;
 			for(int i=0; i<=9; i++) {
@@ -4186,15 +4186,15 @@ void game() {
 				Slowsay(wuqi[i]);
 				cout<<"  ";
 				if(a_f[i]==true) {
-					cout<<"¹¥»÷Á¦:";
+					cout<<"æ”»å‡»åŠ›:";
 				} else {
-					cout<<"·ÀÓùÁ¦:";
+					cout<<"é˜²å¾¡åŠ›:";
 				}
 				cout<<xinneng[i];
 				cout<<endl;
 			}
 			Sleep(450);
-			Slowsay("-1¼ü·µ»Ø...\n");
+			Slowsay("-1é”®è¿”å›ž...\n");
 			Sleep(1000);
 			string chr;
 			cin>>chr;
@@ -4211,46 +4211,46 @@ void game() {
 			int shengtie=wuqiLV[chs-1]*20;
 			int gangtie=wuqiLV[chs-1]*10;
 			cout<<"           ";
-			Slowsay("Çë×¢Òâ£¬´Ë´ÎÇ¿»¯ÐèÒª");
+			Slowsay("è¯·æ³¨æ„ï¼Œæ­¤æ¬¡å¼ºåŒ–éœ€è¦");
 			cout<<mucai;
-			Slowsay("Ä¾²Ä,");
+			Slowsay("æœ¨æ,");
 			cout<<shengtie;
-			Slowsay("ÉúÌú,");
+			Slowsay("ç”Ÿé“,");
 			cout<<gangtie;
-			Slowsay("¸ÖÌú\n");
+			Slowsay("é’¢é“\n");
 			Sleep(1000);
 			strong:
-			Slowsay("È·ÈÏÒªÇ¿»¯£¿     1,È·ÈÏ   2,·µ»Ø");
+			Slowsay("ç¡®è®¤è¦å¼ºåŒ–ï¼Ÿ     1,ç¡®è®¤   2,è¿”å›ž");
 			char cho;
 			cin>>cho;
 			if(cho=='2') {
 				goto tiej;
 			}
 			jindu(50);
-			Slowsay("Ç¿»¯ÖÐ¡­¡­");
+			Slowsay("å¼ºåŒ–ä¸­â€¦â€¦");
 			Sleep(1000);
 			
 			if(gang<gangtie||sheng<shengtie||mu<mucai) {
-				Slowsay("¶Ô²»Æð£¬Ç¿»¯Ê§°Ü£¬ÒòÎª²ÄÁÏ²»×ã\n");
+				Slowsay("å¯¹ä¸èµ·ï¼Œå¼ºåŒ–å¤±è´¥ï¼Œå› ä¸ºææ–™ä¸è¶³\n");
 				Sleep(1000); 
 				goto tiej;
 			}
 			
-			Slowsay("Ç¿»¯³É¹¦£¡");
+			Slowsay("å¼ºåŒ–æˆåŠŸï¼");
 			int cnt1=mucai/50;
 			int cnt2=shengtie/20;
 			int cnt3=gangtie/10;
 			for(int i=0; i<=9; i++) {
 				
-				if(daoju[i]=="Ä¾²Ä"&&cnt1!=0) {
+				if(daoju[i]=="æœ¨æ"&&cnt1!=0) {
 					daoju[i]="00";
 					cnt1--;
 				}
-				if(daoju[i]=="ÉúÌú"&&cnt2!=0) {
+				if(daoju[i]=="ç”Ÿé“"&&cnt2!=0) {
 					daoju[i]="00";
 					cnt2--;
 				}
-				if(daoju[i]=="¸ÖÌú"&&cnt3!=0) {
+				if(daoju[i]=="é’¢é“"&&cnt3!=0) {
 					daoju[i]="00";
 					cnt3--;
 				}
@@ -4263,11 +4263,11 @@ void game() {
 		if(chp=='2') {
 			jindu(50);
 			if(wuqi[0]=="00") {
-				Slowsay("¶Ô²»Æð£¬Äú»¹Ã»ÓÐÎäÆ÷»ò·À¾ß");
+				Slowsay("å¯¹ä¸èµ·ï¼Œæ‚¨è¿˜æ²¡æœ‰æ­¦å™¨æˆ–é˜²å…·");
 				Sleep(2000);
 				goto tiej;
 			}
-			Slowsay("ÇëÊäÈëÄúÒª¸ßÄÜÇ¿»¯µÄ×°±¸");
+			Slowsay("è¯·è¾“å…¥æ‚¨è¦é«˜èƒ½å¼ºåŒ–çš„è£…å¤‡");
 			Sleep(1000);
 			for(int i=0; i<=9; i++) {
 				if(wuqi[i]=="00") {
@@ -4277,9 +4277,9 @@ void game() {
 				Slowsay(wuqi[i]);
 				cout<<"  ";
 				if(a_f[i]==true) {
-					cout<<"¹¥»÷Á¦:";
+					cout<<"æ”»å‡»åŠ›:";
 				} else {
-					cout<<"·ÀÓùÁ¦:";
+					cout<<"é˜²å¾¡åŠ›:";
 				}
 				cout<<xinneng[i];
 				cout<<endl;
@@ -4291,44 +4291,44 @@ void game() {
 			int shengtie=wuqiLV[ch9-1]*60;
 			int gangtie=wuqiLV[ch9-1]*30;
 			cout<<"           ";
-			Slowsay("Çë×¢Òâ£¬´Ë´Î¸ßÄÜÇ¿»¯ÐèÒª");
+			Slowsay("è¯·æ³¨æ„ï¼Œæ­¤æ¬¡é«˜èƒ½å¼ºåŒ–éœ€è¦");
 			cout<<mucai;
-			Slowsay("Ä¾²Ä,");
+			Slowsay("æœ¨æ,");
 			cout<<shengtie;
-			Slowsay("ÉúÌú,");
+			Slowsay("ç”Ÿé“,");
 			cout<<gangtie;
-			Slowsay("¸ÖÌú\n");
+			Slowsay("é’¢é“\n");
 			Sleep(1000);
-			Slowsay("È·ÈÏÒª¸ßÄÜÇ¿»¯£¿     1,È·ÈÏ   2,·µ»Ø");
+			Slowsay("ç¡®è®¤è¦é«˜èƒ½å¼ºåŒ–ï¼Ÿ     1,ç¡®è®¤   2,è¿”å›ž");
 			char ch10;
 			cin>>ch10;
 			if(ch10=='2') {
 				goto tiej;
 			}
 			jindu(50);
-			Slowsay("¸ßÄÜÇ¿»¯ÖÐ¡­¡­");
+			Slowsay("é«˜èƒ½å¼ºåŒ–ä¸­â€¦â€¦");
 			Sleep(1000);
 			int ch7=0;
 			
 			if(gang<gangtie||sheng<shengtie||mu<mucai) {
-				Slowsay("¶Ô²»Æð£¬¸ßÄÜÇ¿»¯Ê§°Ü£¬ÒòÎª²ÄÁÏ²»×ã\n");
+				Slowsay("å¯¹ä¸èµ·ï¼Œé«˜èƒ½å¼ºåŒ–å¤±è´¥ï¼Œå› ä¸ºææ–™ä¸è¶³\n");
 				Sleep(500);
 				goto tiej;
 			}
-			Slowsay("¸ßÄÜÇ¿»¯³É¹¦£¡");
+			Slowsay("é«˜èƒ½å¼ºåŒ–æˆåŠŸï¼");
 			int cnt1=mucai/50;
 			int cnt2=shengtie/20;
 			int cnt3=gangtie/10;
 			for(int i=0; i<=9; i++) {
-				if(daoju[i]=="Ä¾²Ä"&&cnt1!=0) {
+				if(daoju[i]=="æœ¨æ"&&cnt1!=0) {
 					daoju[i]="00";
 					cnt1--;
 				}
-				if(daoju[i]=="ÉúÌú"&&cnt2!=0) {
+				if(daoju[i]=="ç”Ÿé“"&&cnt2!=0) {
 					daoju[i]="00";
 					cnt2--;
 				}
-				if(daoju[i]=="¸ÖÌú"&&cnt3!=0) {
+				if(daoju[i]=="é’¢é“"&&cnt3!=0) {
 					daoju[i]="00";
 					cnt3--;
 				}
@@ -4345,35 +4345,35 @@ void game() {
 		}
 		if(chp=='3') {
 			jindu(50);
-			Slowsay("ÇëÊäÈëÄúÒªÉýµÄ¼¶Êý£º");
+			Slowsay("è¯·è¾“å…¥æ‚¨è¦å‡çš„çº§æ•°ï¼š");
 			int cha;
 			cin>>cha;//{500+(LV-1)*100+[500+(LV-1)*100]+(cha-1)*100}*
 			int aa=500+(LV-1)*100;
 			int ab=500+(LV-1)*100+(cha-1)*100;
 			int ac=((500+(LV-1)*100+(cha-1)*100)-(500+(LV-1)*100))/100+1;
 			cout<<endl;
-			Slowsay("ÐèÒª");
+			Slowsay("éœ€è¦");
 			cout<<(aa+ab)*ac/2;
-			Slowsay("½ð±Ò£¬");
-			Slowsay("È·ÈÏÉý¼¶£¿     1£¬È·ÈÏ    2£¬·µ»Ø\n");
+			Slowsay("é‡‘å¸ï¼Œ");
+			Slowsay("ç¡®è®¤å‡çº§ï¼Ÿ     1ï¼Œç¡®è®¤    2ï¼Œè¿”å›ž\n");
 			char chq;
 			cin>>chq;
 			if(chq=='2') {
 				goto tiej;
 			}
 			jindu(50);
-			Slowsay("ÕýÔÚÉý¼¶¡­¡­");
+			Slowsay("æ­£åœ¨å‡çº§â€¦â€¦");
 			Sleep(2000);
 			cout<<endl;
 			if(jinbi<(aa+ab)*ac/2) {
-				Slowsay("¶Ô²»Æð£¬½ð±Ò²»×ã£¬Éý¼¶Ê§°Ü");
+				Slowsay("å¯¹ä¸èµ·ï¼Œé‡‘å¸ä¸è¶³ï¼Œå‡çº§å¤±è´¥");
 				Sleep(1000);
 				goto tiej;
 			}
-			Slowsay("Éý¼¶³É¹¦£¡");
+			Slowsay("å‡çº§æˆåŠŸï¼");
 			int lv=LV;
 			LV+=cha;
-			if(juese=="¿ñÕ½Ê¿") {
+			if(juese=="ç‹‚æˆ˜å£«") {
 				//20+(lv-1)*10    20+(lv-1)*10+(cha-1)*10    ((20+(lv-1)*10+(cha-1)*10)-(20+(lv-1)*10))/10+1
 				int a1=20+(lv-1)*5;
 				int a2=20+(lv-1)*5+(cha-1)*5;
@@ -4396,7 +4396,7 @@ void game() {
 				a3=((45+(lv-1)*15+(cha-1)*15)-(45+(lv-1)*15))/15+1;
 				maxMP+=(a1+a2)*a3/2; 
 			}
-			if(juese=="Ê¥ÆïÊ¿") {
+			if(juese=="åœ£éª‘å£«") {
 				//20+(lv-1)*10    20+(lv-1)*10+(cha-1)*10    ((20+(lv-1)*10+(cha-1)*10)-(20+(lv-1)*10))/10+1
 				int a1=15+(lv-1)*5;
 				int a2=15+(lv-1)*5+(cha-1)*5;
@@ -4419,7 +4419,7 @@ void game() {
 				a3=((55+(lv-1)*17+(cha-1)*17)-(55+(lv-1)*17))/17+1;
 				maxMP+=(a1+a2)*a3/2;
 			}
-			if(juese=="´Ì¿Í") {
+			if(juese=="åˆºå®¢") {
 				//20+(lv-1)*10    20+(lv-1)*10+(cha-1)*10    ((20+(lv-1)*10+(cha-1)*10)-(20+(lv-1)*10))/10+1
 				int a1=35+(lv-1)*9;
 				int a2=35+(lv-1)*9+(cha-1)*9;
@@ -4442,7 +4442,7 @@ void game() {
 				a3=((58+(lv-1)*17+(cha-1)*17)-(58+(lv-1)*17))/17+1;
 				maxMP+=(a1+a2)*a3/2;
 			}
-			if(juese=="·¨Ê¦") {
+			if(juese=="æ³•å¸ˆ") {
 				//20+(lv-1)*10    20+(lv-1)*10+(cha-1)*10    ((20+(lv-1)*10+(cha-1)*10)-(20+(lv-1)*10))/10+1
 				int a1=60+(lv-1)*12;
 				int a2=60+(lv-1)*12+(cha-1)*12;
@@ -4470,32 +4470,32 @@ void game() {
 		}
 		if(chp=='4') {
 			jindu(50);
-			Slowsay("ÇëÊäÈëÄúÒª´«ÆæÉýµÄ¼¶Êý");
+			Slowsay("è¯·è¾“å…¥æ‚¨è¦ä¼ å¥‡å‡çš„çº§æ•°");
 			int chk=0;
 			cin>>chk;
 			int aa=1000+(LV-1)*300;
 			int ab=1000+(LV-1)*300+(chk-1)*300;
 			int ac=((1000+(LV-1)*300+(chk-1)*300)-(1000+(LV-1)*300))/300+1;
 			cout<<endl;
-			Slowsay("ÐèÒª");
+			Slowsay("éœ€è¦");
 			cout<<(aa+ab)*ac/2;
-			Slowsay("½ð±Ò£¬");
-			Slowsay("È·ÈÏÉý¼¶£¿     1£¬È·ÈÏ    2£¬·µ»Ø\n");
+			Slowsay("é‡‘å¸ï¼Œ");
+			Slowsay("ç¡®è®¤å‡çº§ï¼Ÿ     1ï¼Œç¡®è®¤    2ï¼Œè¿”å›ž\n");
 			char t_f;
 			cin>>t_f;
 			if(t_f=='2') {
 				goto tiej;
 			}
 			jindu(50);
-			Slowsay("ÕýÔÚ´«ÆæÉý¼¶¡­¡­");
+			Slowsay("æ­£åœ¨ä¼ å¥‡å‡çº§â€¦â€¦");
 			Sleep(2000);
 			cout<<endl;
 			if(jinbi<(aa+ab)*ac/2) {
-				Slowsay("¶Ô²»Æð£¬½ð±Ò²»×ã£¬´«ÆæÉý¼¶Ê§°Ü");
+				Slowsay("å¯¹ä¸èµ·ï¼Œé‡‘å¸ä¸è¶³ï¼Œä¼ å¥‡å‡çº§å¤±è´¥");
 				Sleep(1000);
 				goto tiej;
 			}
-			Slowsay("´«ÆæÉý¼¶³É¹¦£¡");
+			Slowsay("ä¼ å¥‡å‡çº§æˆåŠŸï¼");
 			int lv=LV;
 			LV+=chk;
 			maxHP+=(int)HP*0.55;
@@ -4509,11 +4509,11 @@ void game() {
 			Start:
 			jindu(50);
 			if(wuqi[0]=="00") {
-				Slowsay("¶Ô²»Æð£¬Äú»¹Ã»ÓÐÎäÆ÷»ò·À¾ß\n");
+				Slowsay("å¯¹ä¸èµ·ï¼Œæ‚¨è¿˜æ²¡æœ‰æ­¦å™¨æˆ–é˜²å…·\n");
 				Sleep(2000);
 				goto tiej;
 			}
-			Slowsay("ÇëÊäÈëÄúÒªÏ´Á¶µÄ×°±¸£º\n");
+			Slowsay("è¯·è¾“å…¥æ‚¨è¦æ´—ç‚¼çš„è£…å¤‡ï¼š\n");
 			Sleep(1000);
 			int Ak=0;
 			for(int i=0; i<=9; i++) {
@@ -4525,9 +4525,9 @@ void game() {
 				Slowsay(wuqi[i]);
 				cout<<"  ";
 				if(a_f[i]==true) {
-					cout<<"¹¥»÷Á¦:";
+					cout<<"æ”»å‡»åŠ›:";
 				} else {
-					cout<<"·ÀÓùÁ¦:";
+					cout<<"é˜²å¾¡åŠ›:";
 				}
 				cout<<xinneng[i];
 				cout<<endl;
@@ -4540,7 +4540,7 @@ void game() {
 			}
 			Sleep(500);
 			jindu(50);
-			Slowsay("Ï´Á¶ÖÐ¡­¡­\n");
+			Slowsay("æ´—ç‚¼ä¸­â€¦â€¦\n");
 			int a=rand();
 			int b=rand();
 			if(xinneng[ch10-1]/100==0) {
@@ -4575,36 +4575,36 @@ void game() {
 			xinneng[ch10-1]=b;
 			jindu(50);
 			if(p>b) {
-				Slowsay("ºÜÒÅº¶£¬");
+				Slowsay("å¾ˆé—æ†¾ï¼Œ");
 				Slowsay(wuqi[ch10-1]);
 				if(a_f[ch10-1]==true) {
-					Slowsay("µÄ¹¥»÷Á¦");
+					Slowsay("çš„æ”»å‡»åŠ›");
 				} else {
-					Slowsay("µÄ·ÀÓùÁ¦");
+					Slowsay("çš„é˜²å¾¡åŠ›");
 				}
-				Slowsay("Èñ¼õÎª");
+				Slowsay("é”å‡ä¸º");
 				cout<<b<<endl;
 			}
 			if(p<b) {
-				Slowsay("¹§Ï²Äú£¬");
+				Slowsay("æ­å–œæ‚¨ï¼Œ");
 				Slowsay(wuqi[ch10-1]);
 				if(a_f[ch10-1]==true) {
-					Slowsay("µÄ¹¥»÷Á¦");
+					Slowsay("çš„æ”»å‡»åŠ›");
 				} else {
-					Slowsay("µÄ·ÀÓùÁ¦");
+					Slowsay("çš„é˜²å¾¡åŠ›");
 				}
-				Slowsay("Ôö¼ÓÎª");
+				Slowsay("å¢žåŠ ä¸º");
 				cout<<b<<endl;
 			}
 			if(p==b) {
-				Slowsay("Õð¾ª£¡");
+				Slowsay("éœ‡æƒŠï¼");
 				Slowsay(wuqi[ch10-1]);
 				if(a_f[ch10-1]==true) {
-					Slowsay("µÄ¹¥»÷Á¦");
+					Slowsay("çš„æ”»å‡»åŠ›");
 				} else {
-					Slowsay("µÄ·ÀÓùÁ¦");
+					Slowsay("çš„é˜²å¾¡åŠ›");
 				}
-				Slowsay("Ã»ÓÐÈÎºÎ±ä»¯\n");
+				Slowsay("æ²¡æœ‰ä»»ä½•å˜åŒ–\n");
 			}
 			Sleep(2000);
 			goto tiej;
@@ -4612,31 +4612,31 @@ void game() {
 		if(chp=='6') {
 guow:
 			jindu(50);
-			say("ÇëÊäÈëÄúËù¼Ì³ÐµÄÍõÎ»£º\n");
-			say("1,¿ËÀïË¹¹úÍõ\n");
-			say("2,ÇÐË¹ÌØÀï·ò¹úÍõ\n");
-			say("3,¿¨ÄáÑÇ¹úÍõ\n");
-			say("4,µÂ¸ñÀ¼¹úÍõ\n");
-			say("5,¸ðÀ³·Ò¶à¹úÍõ\n");
-			say("6,ÈüÀ­Í¼ÀïÑÇ¹úÍõ\n");
-			say("7,·µ»Ø\n");
+			say("è¯·è¾“å…¥æ‚¨æ‰€ç»§æ‰¿çš„çŽ‹ä½ï¼š\n");
+			say("1,å…‹é‡Œæ–¯å›½çŽ‹\n");
+			say("2,åˆ‡æ–¯ç‰¹é‡Œå¤«å›½çŽ‹\n");
+			say("3,å¡å°¼äºšå›½çŽ‹\n");
+			say("4,å¾·æ ¼å…°å›½çŽ‹\n");
+			say("5,è‘›èŽ±èŠ¬å¤šå›½çŽ‹\n");
+			say("6,èµ›æ‹‰å›¾é‡Œäºšå›½çŽ‹\n");
+			say("7,è¿”å›ž\n");
 			Sleep(2000);
-			say("ÇëÑ¡Ôñ£º");
+			say("è¯·é€‰æ‹©ï¼š");
 			char chd;
 			cin>>chd;
 			if(chd=='1') {
 				jindu(50);
-				Slowsay("ÇëÊäÈë¿ËÀïË¹¹úÍõµÄÏ°¹ß£º");
+				Slowsay("è¯·è¾“å…¥å…‹é‡Œæ–¯å›½çŽ‹çš„ä¹ æƒ¯ï¼š");
 				string s="";
 				cin>>s;
 				int b=rand()%4;
 				if(s!=xiguan[b]) {
-					Slowsay("»Ø´ð´íÎó£¬Äú¿Ï¶¨²»ÊÇ¿ËÀïË¹¹úÍõµÄ¼Ì³ÐÈË");
+					Slowsay("å›žç­”é”™è¯¯ï¼Œæ‚¨è‚¯å®šä¸æ˜¯å…‹é‡Œæ–¯å›½çŽ‹çš„ç»§æ‰¿äºº");
 					jinbi-=100;
 					Sleep(2000);
 					goto guow;
 				}
-				Slowsay("»Ø´ðÕýÈ·£¡");
+				Slowsay("å›žç­”æ­£ç¡®ï¼");
 				Sleep(1000);
 				jindu(50);
 				int a1;
@@ -4644,7 +4644,7 @@ guow:
 				while(b>4) {
 					b1-=2;
 				}
-				Slowsay("¹§Ï²Äú£¬³É¹¦¼Ì³ÐÁË");
+				Slowsay("æ­å–œæ‚¨ï¼ŒæˆåŠŸç»§æ‰¿äº†");
 				cout<<ke[b1];
 				if(b1==4) {
 					jinbi+=10000;
@@ -4656,7 +4656,7 @@ guow:
 			}
 			if(chd=='2') {
 				jindu(50);
-				Slowsay("ÇëÊäÈëÇÐË¹ÌØÀï·ò¹úÍõµÄÏ°¹ß");
+				Slowsay("è¯·è¾“å…¥åˆ‡æ–¯ç‰¹é‡Œå¤«å›½çŽ‹çš„ä¹ æƒ¯");
 				string s="";
 				cin>>s;
 				int an;
@@ -4665,16 +4665,16 @@ guow:
 					bn-=2;
 				}
 				if(s!=xiguan[bn]) {
-					Slowsay("»Ø´ð´íÎó£¬Äú¿Ï¶¨²»ÊÇÇÐË¹ÌØÀï·ò¹úÍõµÄ¼Ì³ÐÈË");
+					Slowsay("å›žç­”é”™è¯¯ï¼Œæ‚¨è‚¯å®šä¸æ˜¯åˆ‡æ–¯ç‰¹é‡Œå¤«å›½çŽ‹çš„ç»§æ‰¿äºº");
 					jinbi-=100;
 					Sleep(2000);
 					goto guow;
 				}
-				Slowsay("»Ø´ðÕýÈ·£¡\n");
+				Slowsay("å›žç­”æ­£ç¡®ï¼\n");
 				Sleep(1000);
 				jindu(50);
 				if(bag1>=9) {
-					Slowsay("¶Ô²»Æð£¬ÄúµÄ±³°ü¿Õ¼ä²»×ã£¬ÎÞ·¨¼Ì³Ð´ËÎïÆ·£¬ÇëÖØÊÔ\n");
+					Slowsay("å¯¹ä¸èµ·ï¼Œæ‚¨çš„èƒŒåŒ…ç©ºé—´ä¸è¶³ï¼Œæ— æ³•ç»§æ‰¿æ­¤ç‰©å“ï¼Œè¯·é‡è¯•\n");
 					Sleep(1000);
 					goto sky;
 				}
@@ -4683,7 +4683,7 @@ guow:
 				while(bm>4) {
 					bm-=2;
 				}
-				Slowsay("¹§Ï²Äú£¬³É¹¦¼Ì³ÐÁË");
+				Slowsay("æ­å–œæ‚¨ï¼ŒæˆåŠŸç»§æ‰¿äº†");
 				Slowsay(qie[bm]);
 				yaoshui[bag1]=qie[bm];
 				Sleep(2000);
@@ -4691,7 +4691,7 @@ guow:
 			}
 			if(chd=='3') {
 				jindu(50);
-				Slowsay("ÇëÊäÈë¿¨ÄáÑÇ¹úÍõµÄÏ°¹ß");
+				Slowsay("è¯·è¾“å…¥å¡å°¼äºšå›½çŽ‹çš„ä¹ æƒ¯");
 				string s="";
 				cin>>s;
 				int aq;
@@ -4700,16 +4700,16 @@ guow:
 					bq-=2;
 				}
 				if(s!=xiguan[bq]) {
-					Slowsay("»Ø´ð´íÎó£¬Äú¿Ï¶¨²»ÊÇ¿¨ÄáÑÇ¹úÍõµÄ¼Ì³ÐÈË");
+					Slowsay("å›žç­”é”™è¯¯ï¼Œæ‚¨è‚¯å®šä¸æ˜¯å¡å°¼äºšå›½çŽ‹çš„ç»§æ‰¿äºº");
 					jinbi-=100;
 					Sleep(2000);
 					goto guow;
 				}
-				Slowsay("»Ø´ðÕýÈ·£¡");
+				Slowsay("å›žç­”æ­£ç¡®ï¼");
 				Sleep(1000);
 				jindu(50);
 				if(bag>=9) {
-					Slowsay("¶Ô²»Æð£¬ÄúµÄ±³°ü¿Õ¼ä²»×ã£¬ÎÞ·¨¼Ì³Ð´ËÎïÆ·£¬ÇëÖØÊÔ\n");
+					Slowsay("å¯¹ä¸èµ·ï¼Œæ‚¨çš„èƒŒåŒ…ç©ºé—´ä¸è¶³ï¼Œæ— æ³•ç»§æ‰¿æ­¤ç‰©å“ï¼Œè¯·é‡è¯•\n");
 					Sleep(1000);
 					goto sky;
 				}
@@ -4718,7 +4718,7 @@ guow:
 				while(bs>4) {
 					bs-=2;
 				}
-				Slowsay("¹§Ï²Äú£¬³É¹¦¼Ì³ÐÁË");
+				Slowsay("æ­å–œæ‚¨ï¼ŒæˆåŠŸç»§æ‰¿äº†");
 				Slowsay(ka[bs]);
 				wuqi[bag]=ka[bs];
 				xinneng[bag]=kaatk[bs];
@@ -4727,7 +4727,7 @@ guow:
 			}
 			if(chd=='4') {
 				jindu(50);
-				Slowsay("ÇëÊäÈëµÂ¸ñÀ¼¹úÍõµÄÏ°¹ß");
+				Slowsay("è¯·è¾“å…¥å¾·æ ¼å…°å›½çŽ‹çš„ä¹ æƒ¯");
 				string s="";
 				cin>>s;
 				int ad;
@@ -4736,16 +4736,16 @@ guow:
 					bd-=2;
 				}
 				if(s!=xiguan[bd]) {
-					Slowsay("»Ø´ð´íÎó£¬Äú¿Ï¶¨²»ÊÇµÂ¸ñÀ¼¹úÍõµÄ¼Ì³ÐÈË");
+					Slowsay("å›žç­”é”™è¯¯ï¼Œæ‚¨è‚¯å®šä¸æ˜¯å¾·æ ¼å…°å›½çŽ‹çš„ç»§æ‰¿äºº");
 					jinbi-=100;
 					Sleep(2000);
 					goto guow;
 				}
-				Slowsay("»Ø´ðÕýÈ·£¡");
+				Slowsay("å›žç­”æ­£ç¡®ï¼");
 				Sleep(1000);
 				jindu(50);
 				if(bag>=9) {
-					Slowsay("¶Ô²»Æð£¬ÄúµÄ±³°ü¿Õ¼ä²»×ã£¬ÎÞ·¨¼Ì³Ð´ËÎïÆ·£¬ÇëÖØÊÔ\n");
+					Slowsay("å¯¹ä¸èµ·ï¼Œæ‚¨çš„èƒŒåŒ…ç©ºé—´ä¸è¶³ï¼Œæ— æ³•ç»§æ‰¿æ­¤ç‰©å“ï¼Œè¯·é‡è¯•\n");
 					Sleep(1000);
 					goto sky;
 				}
@@ -4754,7 +4754,7 @@ guow:
 				while(be>4) {
 					be-=2;
 				}
-				Slowsay("¹§Ï²Äú£¬³É¹¦¼Ì³ÐÁË");
+				Slowsay("æ­å–œæ‚¨ï¼ŒæˆåŠŸç»§æ‰¿äº†");
 				Slowsay(de[be]);
 				wuqi[bag]=de[be];
 				xinneng[bag]=defang[be];
@@ -4763,7 +4763,7 @@ guow:
 			}
 			if(chd=='5') {
 				jindu(50);
-				Slowsay("ÇëÊäÈë¸ðÀ³·Ò¶à¹úÍõµÄÏ°¹ß");
+				Slowsay("è¯·è¾“å…¥è‘›èŽ±èŠ¬å¤šå›½çŽ‹çš„ä¹ æƒ¯");
 				string s="";
 				cin>>s;
 				int ad;
@@ -4772,16 +4772,16 @@ guow:
 					bd-=2;
 				}
 				if(s!=xiguan[bd]) {
-					Slowsay("»Ø´ð´íÎó£¬Äú¿Ï¶¨²»ÊÇ¸ðÀ³·Ò¶à¹úÍõµÄ¼Ì³ÐÈË");
+					Slowsay("å›žç­”é”™è¯¯ï¼Œæ‚¨è‚¯å®šä¸æ˜¯è‘›èŽ±èŠ¬å¤šå›½çŽ‹çš„ç»§æ‰¿äºº");
 					jinbi-=100;
 					Sleep(2000);
 					goto guow;
 				}
-				Slowsay("»Ø´ðÕýÈ·£¡");
+				Slowsay("å›žç­”æ­£ç¡®ï¼");
 				Sleep(1000);
 				jindu(50);
 				if(bag>=9) {
-					Slowsay("¶Ô²»Æð£¬ÄúµÄ±³°ü¿Õ¼ä²»×ã£¬ÎÞ·¨¼Ì³Ð´ËÎïÆ·£¬ÇëÖØÊÔ\n");
+					Slowsay("å¯¹ä¸èµ·ï¼Œæ‚¨çš„èƒŒåŒ…ç©ºé—´ä¸è¶³ï¼Œæ— æ³•ç»§æ‰¿æ­¤ç‰©å“ï¼Œè¯·é‡è¯•\n");
 					Sleep(1000);
 					goto sky;
 				}
@@ -4790,7 +4790,7 @@ guow:
 				while(be>4) {
 					be-=2;
 				}
-				Slowsay("¹§Ï²Äú£¬³É¹¦¼Ì³ÐÁË");
+				Slowsay("æ­å–œæ‚¨ï¼ŒæˆåŠŸç»§æ‰¿äº†");
 				Slowsay(de[be]);
 				daoju[bag2]=de[be];
 				Sleep(2000);
@@ -4798,7 +4798,7 @@ guow:
 			}
 			if(chd=='6') {
 				jindu(50);
-				Slowsay("ÇëÊäÈëÈüÀ­Í¼ÀïÑÇ¹úÍõµÄÏ°¹ß");
+				Slowsay("è¯·è¾“å…¥èµ›æ‹‰å›¾é‡Œäºšå›½çŽ‹çš„ä¹ æƒ¯");
 				string s="";
 				cin>>s;
 				int ad;
@@ -4807,12 +4807,12 @@ guow:
 					bd-=2;
 				}
 				if(s!=xiguan[bd]) {
-					Slowsay("»Ø´ð´íÎó£¬Äú¿Ï¶¨²»ÈüÀ­Í¼ÀïÑÇ¹úÍõµÄ¼Ì³ÐÈË");
+					Slowsay("å›žç­”é”™è¯¯ï¼Œæ‚¨è‚¯å®šä¸èµ›æ‹‰å›¾é‡Œäºšå›½çŽ‹çš„ç»§æ‰¿äºº");
 					jinbi-=100;
 					Sleep(2000);
 					goto guow;
 				}
-				Slowsay("»Ø´ðÕýÈ·£¡");
+				Slowsay("å›žç­”æ­£ç¡®ï¼");
 				Sleep(1000);
 				jindu(50);
 				int ae;
@@ -4820,7 +4820,7 @@ guow:
 				while(be>4) {
 					be-=2;
 				}
-				Slowsay("¹§Ï²Äú£¬³É¹¦¼Ì³ÐÁË");
+				Slowsay("æ­å–œæ‚¨ï¼ŒæˆåŠŸç»§æ‰¿äº†");
 				cout<<sai[be];
 				if(be==4) {
 					G+=1000;
@@ -4837,37 +4837,37 @@ guow:
 		}
 		if(chp=='7') {
 			jindu(50);
-			Slowsay("ÄúÊÇ·ñÒªºÏ³É´«Ææ×°±¸£¿  1,ÊÇ  2,·µ»Ø\n");
+			Slowsay("æ‚¨æ˜¯å¦è¦åˆæˆä¼ å¥‡è£…å¤‡ï¼Ÿ  1,æ˜¯  2,è¿”å›ž\n");
 			char chk;
 			cin>>chk;
 			if(chk=='1') {
-				say("1,Ñ×ÁúÍõÖ®½£   ¹¥»÷Á¦+30%   Ö°Òµ£º¿ñÕ½Ê¿ or Ê¥ÆïÊ¿  ¿ÉÓÃÂÌ±¦Ê¯*3ºÏ³É    £¤500\n");
-				say("2,Ä§ÁúÍõÖ®½£   ¹¥»÷Á¦+35%   Ö°Òµ£º¿ñÕ½Ê¿ or Ê¥ÆïÊ¿  ¿ÉÓÃÂÌ±¦Ê¯*3ºÏ³É    £¤1500\n");
-				say("3,½ð¸Õ±¦½£     ¹¥»÷Á¦+40%   Ö°Òµ£ºÊ¥ÆïÊ¿ or ´Ì¿Í    ¿ÉÓÃÀ¶±¦Ê¯*2ºÏ³É    £¤2000\n");
-				say("4,µØÓüÖ®ÈÐ     ¹¥»÷Á¦+50%   Ö°Òµ£º´Ì¿Í              ¿ÉÓÃÀ¶±¦Ê¯*3ºÏ³É    £¤3000\n");
-				say("5,ÊÀ½çÊ÷ÉñÕÈ   ¹¥»÷Á¦+55%   Ö°Òµ£º·¨Ê¦              ¿ÉÓÃÀ¶±¦Ê¯*3ºÏ³É    £¤3000\n");
-				say("6,×Ï¾§Éñ·û     ¹¥»÷Á¦+65%   Ö°Òµ£ºÈÎÒâ              ¿ÉÓÃÀ¶±¦Ê¯*4ºÏ³É    £¤5500\n");
-				say("7,ìÅ²Ê°ÔÍõ½£   ¹¥»÷Á¦+100%  Ö°Òµ£º¿ñÕ½Ê¿ or Ê¥ÆïÊ¿  ¿ÉÓÃÀ¶±¦Ê¯*8ºÏ³É    £¤10000\n");
-				say("8,Ìì¹úÖ®ÕÈ/½£  ¹¥»÷Á¦+130%  Ö°Òµ£º´Ì¿Í or ·¨Ê¦      ¿ÉÓÃÀ¶±¦Ê¯*8ºÏ³É    £¤10000\n");
-				say("9,·µ»Ø\n");
+				say("1,ç‚Žé¾™çŽ‹ä¹‹å‰‘   æ”»å‡»åŠ›+30%   èŒä¸šï¼šç‹‚æˆ˜å£« or åœ£éª‘å£«  å¯ç”¨ç»¿å®çŸ³*3åˆæˆ    ï¿¥500\n");
+				say("2,é­”é¾™çŽ‹ä¹‹å‰‘   æ”»å‡»åŠ›+35%   èŒä¸šï¼šç‹‚æˆ˜å£« or åœ£éª‘å£«  å¯ç”¨ç»¿å®çŸ³*3åˆæˆ    ï¿¥1500\n");
+				say("3,é‡‘åˆšå®å‰‘     æ”»å‡»åŠ›+40%   èŒä¸šï¼šåœ£éª‘å£« or åˆºå®¢    å¯ç”¨è“å®çŸ³*2åˆæˆ    ï¿¥2000\n");
+				say("4,åœ°ç‹±ä¹‹åˆƒ     æ”»å‡»åŠ›+50%   èŒä¸šï¼šåˆºå®¢              å¯ç”¨è“å®çŸ³*3åˆæˆ    ï¿¥3000\n");
+				say("5,ä¸–ç•Œæ ‘ç¥žæ–   æ”»å‡»åŠ›+55%   èŒä¸šï¼šæ³•å¸ˆ              å¯ç”¨è“å®çŸ³*3åˆæˆ    ï¿¥3000\n");
+				say("6,ç´«æ™¶ç¥žç¬¦     æ”»å‡»åŠ›+65%   èŒä¸šï¼šä»»æ„              å¯ç”¨è“å®çŸ³*4åˆæˆ    ï¿¥5500\n");
+				say("7,ç‚«å½©éœ¸çŽ‹å‰‘   æ”»å‡»åŠ›+100%  èŒä¸šï¼šç‹‚æˆ˜å£« or åœ£éª‘å£«  å¯ç”¨è“å®çŸ³*8åˆæˆ    ï¿¥10000\n");
+				say("8,å¤©å›½ä¹‹æ–/å‰‘  æ”»å‡»åŠ›+130%  èŒä¸šï¼šåˆºå®¢ or æ³•å¸ˆ      å¯ç”¨è“å®çŸ³*8åˆæˆ    ï¿¥10000\n");
+				say("9,è¿”å›ž\n");
 				Sleep(1000);
-				Slowsay("ÇëÑ¡Ôñ£º");
+				Slowsay("è¯·é€‰æ‹©ï¼š");
 				char chj;
 				cin>>chj;
-				if(chj=='1'&&bag<9&&(juese=="¿ñÕ½Ê¿"||juese=="Ê¥ÆïÊ¿")) {
+				if(chj=='1'&&bag<9&&(juese=="ç‹‚æˆ˜å£«"||juese=="åœ£éª‘å£«")) {
 					int sum=0;
 					jindu(50);
-					Slowsay("ºÏ³ÉÖÐ¡­¡­");
+					Slowsay("åˆæˆä¸­â€¦â€¦");
 					for(int i=0; i<=bag; i++) {
-						if(daoju[i]=="ÂÌ±¦Ê¯") {
+						if(daoju[i]=="ç»¿å®çŸ³") {
 							sum++;
 						}
 					}
 					Sleep(2000);
 					system("cls");
 					if(sum>=3&&jinbi>=500) {
-						Slowsay("ºÏ³É³É¹¦£¡");
-						wuqi[bag]="Ñ×ÁúÍõÖ®½£";
+						Slowsay("åˆæˆæˆåŠŸï¼");
+						wuqi[bag]="ç‚Žé¾™çŽ‹ä¹‹å‰‘";
 						xinneng[bag]=30;
 						wuqiLV[bag]=1;
 						Is_pct[bag]=true; 
@@ -4875,25 +4875,25 @@ guow:
 						Sleep(1000);
 						goto tiej;
 					} else {
-						Slowsay("ºÏ³ÉÊ§°Ü£¬¿ÉÄÜÒòÎª½ð±Ò²»×ã»ò²ÄÁÏ²»¹»£¬ÇëÖØÊÔ\n");
+						Slowsay("åˆæˆå¤±è´¥ï¼Œå¯èƒ½å› ä¸ºé‡‘å¸ä¸è¶³æˆ–ææ–™ä¸å¤Ÿï¼Œè¯·é‡è¯•\n");
 						Sleep(1000);
 						goto tiej;
 					}
 				}
-				if(chj=='2'&&bag<9&&(juese=="¿ñÕ½Ê¿"||juese=="Ê¥ÆïÊ¿")) {
+				if(chj=='2'&&bag<9&&(juese=="ç‹‚æˆ˜å£«"||juese=="åœ£éª‘å£«")) {
 					int sum=0;
 					jindu(50);
-					Slowsay("ºÏ³ÉÖÐ¡­¡­");
+					Slowsay("åˆæˆä¸­â€¦â€¦");
 					for(int i=0; i<=bag; i++) {
-						if(daoju[i]=="ÂÌ±¦Ê¯") {
+						if(daoju[i]=="ç»¿å®çŸ³") {
 							sum++;
 						}
 					}
 					Sleep(2000);
 					system("cls");
 					if(sum>=3&&jinbi>=1500) {
-						Slowsay("ºÏ³É³É¹¦£¡");
-						wuqi[bag]="Ä§ÁúÍõÖ®½£";
+						Slowsay("åˆæˆæˆåŠŸï¼");
+						wuqi[bag]="é­”é¾™çŽ‹ä¹‹å‰‘";
 						xinneng[bag]=30;
 						wuqiLV[bag]=1;
 						Is_pct[bag]=true;
@@ -4901,25 +4901,25 @@ guow:
 						Sleep(1000);
 						goto tiej;
 					} else {
-						Slowsay("ºÏ³ÉÊ§°Ü£¬¿ÉÄÜÒòÎª½ð±Ò²»×ã»ò²ÄÁÏ²»¹»£¬ÇëÖØÊÔ\n");
+						Slowsay("åˆæˆå¤±è´¥ï¼Œå¯èƒ½å› ä¸ºé‡‘å¸ä¸è¶³æˆ–ææ–™ä¸å¤Ÿï¼Œè¯·é‡è¯•\n");
 						Sleep(1000);
 						goto tiej;
 					}
 				}
-				if(chj=='3'&&bag<9&&(juese=="Ê¥ÆïÊ¿"||juese=="´Ì¿Í")) {
+				if(chj=='3'&&bag<9&&(juese=="åœ£éª‘å£«"||juese=="åˆºå®¢")) {
 					int sum=0;
 					jindu(50);
-					Slowsay("ºÏ³ÉÖÐ¡­¡­");
+					Slowsay("åˆæˆä¸­â€¦â€¦");
 					for(int i=0; i<=bag; i++) {
-						if(daoju[i]=="À¶±¦Ê¯") {
+						if(daoju[i]=="è“å®çŸ³") {
 							sum++;
 						}
 					}
 					Sleep(2000);
 					system("cls");
 					if(sum>=2&&jinbi>=2000) {
-						Slowsay("ºÏ³É³É¹¦£¡");
-						wuqi[bag]="½ð¸Õ±¦½£";
+						Slowsay("åˆæˆæˆåŠŸï¼");
+						wuqi[bag]="é‡‘åˆšå®å‰‘";
 						xinneng[bag]=40;
 						wuqiLV[bag]=1;
 						Is_pct[bag]=true;
@@ -4927,25 +4927,25 @@ guow:
 						Sleep(1000);
 						goto tiej;
 					} else {
-						Slowsay("ºÏ³ÉÊ§°Ü£¬¿ÉÄÜÒòÎª½ð±Ò²»×ã»ò²ÄÁÏ²»¹»£¬ÇëÖØÊÔ\n");
+						Slowsay("åˆæˆå¤±è´¥ï¼Œå¯èƒ½å› ä¸ºé‡‘å¸ä¸è¶³æˆ–ææ–™ä¸å¤Ÿï¼Œè¯·é‡è¯•\n");
 						Sleep(1000);
 						goto tiej;
 					}
 				}
-				if(chj=='4'&bag<9&&juese=="´Ì¿Í") {
+				if(chj=='4'&bag<9&&juese=="åˆºå®¢") {
 					int sum=0;
 					jindu(50);
-					Slowsay("ºÏ³ÉÖÐ¡­¡­");
+					Slowsay("åˆæˆä¸­â€¦â€¦");
 					for(int i=0; i<=bag; i++) {
-						if(daoju[i]=="À¶±¦Ê¯") {
+						if(daoju[i]=="è“å®çŸ³") {
 							sum++;
 						}
 					}
 					Sleep(2000);
 					system("cls");
 					if(sum>=3&&jinbi>=3000) {
-						Slowsay("ºÏ³É³É¹¦£¡");
-						wuqi[bag]="µØÓüÖ®ÈÐ";
+						Slowsay("åˆæˆæˆåŠŸï¼");
+						wuqi[bag]="åœ°ç‹±ä¹‹åˆƒ";
 						xinneng[bag]=50;
 						wuqiLV[bag]=1;
 						Is_pct[bag]=true;
@@ -4953,25 +4953,25 @@ guow:
 						Sleep(1000);
 						goto tiej;
 					} else {
-						Slowsay("ºÏ³ÉÊ§°Ü£¬¿ÉÄÜÒòÎª½ð±Ò²»×ã»ò²ÄÁÏ²»¹»£¬ÇëÖØÊÔ\n");
+						Slowsay("åˆæˆå¤±è´¥ï¼Œå¯èƒ½å› ä¸ºé‡‘å¸ä¸è¶³æˆ–ææ–™ä¸å¤Ÿï¼Œè¯·é‡è¯•\n");
 						Sleep(1000);
 						goto tiej;
 					}
 				}
-				if(chj=='5'&&bag<9&&juese=="·¨Ê¦") {
+				if(chj=='5'&&bag<9&&juese=="æ³•å¸ˆ") {
 					int sum=0;
 					jindu(50);
-					Slowsay("ºÏ³ÉÖÐ¡­¡­");
+					Slowsay("åˆæˆä¸­â€¦â€¦");
 					for(int i=0; i<=bag; i++) {
-						if(daoju[i]=="À¶±¦Ê¯") {
+						if(daoju[i]=="è“å®çŸ³") {
 							sum++;
 						}
 					}
 					Sleep(2000);
 					system("cls");
 					if(sum>=3&&jinbi>=3000) {
-						Slowsay("ºÏ³É³É¹¦£¡");
-						wuqi[bag]="ÊÀ½çÊ÷ÉñÕÈ";
+						Slowsay("åˆæˆæˆåŠŸï¼");
+						wuqi[bag]="ä¸–ç•Œæ ‘ç¥žæ–";
 						xinneng[bag]=55;
 						wuqiLV[bag]=1;
 						Is_pct[bag]=true;
@@ -4979,7 +4979,7 @@ guow:
 						Sleep(1000);
 						goto tiej;
 					} else {
-						Slowsay("ºÏ³ÉÊ§°Ü£¬¿ÉÄÜÒòÎª½ð±Ò²»×ã»ò²ÄÁÏ²»¹»£¬ÇëÖØÊÔ\n");
+						Slowsay("åˆæˆå¤±è´¥ï¼Œå¯èƒ½å› ä¸ºé‡‘å¸ä¸è¶³æˆ–ææ–™ä¸å¤Ÿï¼Œè¯·é‡è¯•\n");
 						Sleep(1000);
 						goto tiej;
 					}
@@ -4987,17 +4987,17 @@ guow:
 				if(chj=='6'&&bag<9) {
 					int sum=0;
 					jindu(50);
-					Slowsay("ºÏ³ÉÖÐ¡­¡­");
+					Slowsay("åˆæˆä¸­â€¦â€¦");
 					for(int i=0; i<=bag; i++) {
-						if(daoju[i]=="À¶±¦Ê¯") {
+						if(daoju[i]=="è“å®çŸ³") {
 							sum++;
 						}
 					}
 					Sleep(2000);
 					system("cls");
 					if(sum>=4&&jinbi>=5500) {
-						Slowsay("ºÏ³É³É¹¦£¡");
-						wuqi[bag]="×Ï¾§Éñ·û";
+						Slowsay("åˆæˆæˆåŠŸï¼");
+						wuqi[bag]="ç´«æ™¶ç¥žç¬¦";
 						xinneng[bag]=65;
 						wuqiLV[bag]=1;
 						Is_pct[bag]=true;
@@ -5005,25 +5005,25 @@ guow:
 						Sleep(1000);
 						goto tiej;
 					} else {
-						Slowsay("ºÏ³ÉÊ§°Ü£¬¿ÉÄÜÒòÎª½ð±Ò²»×ã»ò²ÄÁÏ²»¹»£¬ÇëÖØÊÔ\n");
+						Slowsay("åˆæˆå¤±è´¥ï¼Œå¯èƒ½å› ä¸ºé‡‘å¸ä¸è¶³æˆ–ææ–™ä¸å¤Ÿï¼Œè¯·é‡è¯•\n");
 						Sleep(1000);
 						goto tiej;
 					}
 				}
-				if(chj=='7'&&bag<9&&(juese=="¿ñÕ½Ê¿"||juese=="Ê¥ÆïÊ¿")) {
+				if(chj=='7'&&bag<9&&(juese=="ç‹‚æˆ˜å£«"||juese=="åœ£éª‘å£«")) {
 					int sum=0;
 					jindu(50);
-					Slowsay("ºÏ³ÉÖÐ¡­¡­");
+					Slowsay("åˆæˆä¸­â€¦â€¦");
 					for(int i=0; i<=bag; i++) {
-						if(daoju[i]=="À¶±¦Ê¯") {
+						if(daoju[i]=="è“å®çŸ³") {
 							sum++;
 						}
 					}
 					Sleep(2000);
 					system("cls");
 					if(sum>=8&&jinbi>=10000) {
-						Slowsay("ºÏ³É³É¹¦£¡");
-						wuqi[bag]="ìÅ²Ê°ÔÍõ½£";
+						Slowsay("åˆæˆæˆåŠŸï¼");
+						wuqi[bag]="ç‚«å½©éœ¸çŽ‹å‰‘";
 						xinneng[bag]=100;
 						wuqiLV[bag]=1;
 						Is_pct[bag]=true;
@@ -5032,28 +5032,28 @@ guow:
 						
 						goto tiej;
 					} else {
-						Slowsay("ºÏ³ÉÊ§°Ü£¬¿ÉÄÜÒòÎª½ð±Ò²»×ã»ò²ÄÁÏ²»¹»£¬ÇëÖØÊÔ\n");
+						Slowsay("åˆæˆå¤±è´¥ï¼Œå¯èƒ½å› ä¸ºé‡‘å¸ä¸è¶³æˆ–ææ–™ä¸å¤Ÿï¼Œè¯·é‡è¯•\n");
 						Sleep(1000);
 						goto tiej;
 					}
 				}
-				if(chj=='8'&&bag<9&&(juese=="·¨Ê¦"||juese=="´Ì¿Í")) {
+				if(chj=='8'&&bag<9&&(juese=="æ³•å¸ˆ"||juese=="åˆºå®¢")) {
 					int sum=0;
 					jindu(50);
-					Slowsay("ºÏ³ÉÖÐ¡­¡­");
+					Slowsay("åˆæˆä¸­â€¦â€¦");
 					for(int i=0; i<=bag; i++) {
-						if(daoju[i]=="À¶±¦Ê¯") {
+						if(daoju[i]=="è“å®çŸ³") {
 							sum++;
 						}
 					}
 					Sleep(2000);
 					system("cls");
 					if(sum>=8&&jinbi>=10000) {
-						Slowsay("ºÏ³É³É¹¦£¡");
-						if(juese=="´Ì¿Í") {
-							wuqi[bag]="Ìì¹úÖ®½£";
+						Slowsay("åˆæˆæˆåŠŸï¼");
+						if(juese=="åˆºå®¢") {
+							wuqi[bag]="å¤©å›½ä¹‹å‰‘";
 						} else {
-							wuqi[bag]="Ìì¹úÖ®ÕÈ";
+							wuqi[bag]="å¤©å›½ä¹‹æ–";
 						}
 						Is_pct[bag]=true;
 						jinbi-=10000;
@@ -5062,7 +5062,7 @@ guow:
 						Sleep(1000);
 						goto tiej;
 					} else {
-						Slowsay("ºÏ³ÉÊ§°Ü£¬¿ÉÄÜÒòÎª½ð±Ò²»×ã»ò²ÄÁÏ²»¹»£¬ÇëÖØÊÔ\n");
+						Slowsay("åˆæˆå¤±è´¥ï¼Œå¯èƒ½å› ä¸ºé‡‘å¸ä¸è¶³æˆ–ææ–™ä¸å¤Ÿï¼Œè¯·é‡è¯•\n");
 						Sleep(1000);
 						goto tiej;
 					}
@@ -5070,14 +5070,14 @@ guow:
 				if(chj=='9') {
 					goto tiej;
 				}
-				Slowsay("¶Ô²»Æð£¬ÎÞ·¨Ö´ÐÐ´Ë²Ù×÷£¬¿ÉÄÜÒòÎªÃ»ÓÐÊäÈëÕýÈ·Êý×Ö»ò½ÇÉ«²»¶Ô£¬ÇëÖØÊÔ");
+				Slowsay("å¯¹ä¸èµ·ï¼Œæ— æ³•æ‰§è¡Œæ­¤æ“ä½œï¼Œå¯èƒ½å› ä¸ºæ²¡æœ‰è¾“å…¥æ­£ç¡®æ•°å­—æˆ–è§’è‰²ä¸å¯¹ï¼Œè¯·é‡è¯•");
 				Sleep(1000);
 				goto tiej;
 			}
 			if(chk=='2') {
 				goto tiej;
 			}
-			say("ÇëÊäÈë1¡ª¡ª2ÄÚµÄÕûÊý£¡£¡");
+			say("è¯·è¾“å…¥1â€”â€”2å†…çš„æ•´æ•°ï¼ï¼");
 			Sleep(1000);
 			goto tiej;
 		}
@@ -5085,7 +5085,7 @@ guow:
 			goto sky;
 		}
 		if(chp>'8'||chp<'1') {
-			Slowsay("ÇëÊäÈë1¡ª¡ª8ÄÚµÄÕûÊý");
+			Slowsay("è¯·è¾“å…¥1â€”â€”8å†…çš„æ•´æ•°");
 			Sleep(1000);
 			goto tiej;
 		}
@@ -5095,27 +5095,27 @@ chouj:
 		jindu(50);
 		cout<<endl;
 		cout<<endl;
-		Slowsay("ÇëÑ¡ÔñÒ»¸ö¿¨Æ¬£º\n\n");
-		Slowsay("1,*¿¨\n");
-		Slowsay("2,&¿¨\n");
-		Slowsay("3,#¿¨\n");
-		Slowsay("4,^¿¨\n");
-		Slowsay("5,@¿¨\n");
-		Slowsay("6,%¿¨\n");
-		Slowsay("7,·µ»Ø\n"); 
+		Slowsay("è¯·é€‰æ‹©ä¸€ä¸ªå¡ç‰‡ï¼š\n\n");
+		Slowsay("1,*å¡\n");
+		Slowsay("2,&å¡\n");
+		Slowsay("3,#å¡\n");
+		Slowsay("4,^å¡\n");
+		Slowsay("5,@å¡\n");
+		Slowsay("6,%å¡\n");
+		Slowsay("7,è¿”å›ž\n"); 
 		Sleep(1000);
-		Slowsay("ÇëÑ¡Ôñ£º");
+		Slowsay("è¯·é€‰æ‹©ï¼š");
 		char chg;
 		cin>>chg;
 		if(chg>='7'||chg<'1') {
 			goto sky;
 		}
 		cout<<endl;
-		Slowsay("´Ë´Î³é½±ÐèÒª");
+		Slowsay("æ­¤æ¬¡æŠ½å¥–éœ€è¦");
 		cout<<chou;
-		Slowsay("½ð±Ò\n");
+		Slowsay("é‡‘å¸\n");
 		Sleep(1000);
-		Slowsay("È·ÈÏ³é½±£¿ 1,È·ÈÏ  2,·µ»Ø\n");
+		Slowsay("ç¡®è®¤æŠ½å¥–ï¼Ÿ 1,ç¡®è®¤  2,è¿”å›ž\n");
 		int chi=0;
 		cin>>chi;
 		if(chi==2) {
@@ -5125,7 +5125,7 @@ chouj:
 			goto chouj;
 		}
 		if(jinbi<chou) {
-			Slowsay("¶Ô²»Æð£¬½ð±Ò²»×ã£¬ÎÞ·¨Ö´ÐÐ´Ë²Ù×÷");
+			Slowsay("å¯¹ä¸èµ·ï¼Œé‡‘å¸ä¸è¶³ï¼Œæ— æ³•æ‰§è¡Œæ­¤æ“ä½œ");
 			Sleep(1000);
 			goto sky;
 		}
@@ -5133,16 +5133,16 @@ chouj:
 		chou+=150;
 		int k=rand()%30;
 		if(k>=0&&k<=9) {
-			Slowsay("¹§Ï²Äú£¬³éµ½ÁË£º");
+			Slowsay("æ­å–œæ‚¨ï¼ŒæŠ½åˆ°äº†ï¼š");
 			int p=rand()%10;
 			cout<<choujin[p];
-			Slowsay("½ð±Ò\n");
+			Slowsay("é‡‘å¸\n");
 			jinbi+=choujin[p];
 			Sleep(1000);
 			goto sky;
 		}
 		if(k>=10&&k<=12&&bag<9) {
-			Slowsay("¹§Ï²Äú£¬³éµ½ÁË");
+			Slowsay("æ­å–œæ‚¨ï¼ŒæŠ½åˆ°äº†");
 			cout<<rand_arms[k-10];
 			wuqi[bag]=rand_arms[k-10];
 			wuqiLV[bag]=1;
@@ -5153,11 +5153,11 @@ chouj:
 			goto sky;
 		}
 		if(k>=10&&k<=12&&bag==9) {
-			Slowsay("ºÜÒÅº¶£¬ÓÉÓÚÄúµÄ±³°ü¿Õ¼ä²»×ã£¬ÎÞ·¨½ÓÊÜ½±Àø£¬ÇëÇåÀí³öÒ»¸ñ¿Õ¼äºóÖØÊÔ\n");
+			Slowsay("å¾ˆé—æ†¾ï¼Œç”±äºŽæ‚¨çš„èƒŒåŒ…ç©ºé—´ä¸è¶³ï¼Œæ— æ³•æŽ¥å—å¥–åŠ±ï¼Œè¯·æ¸…ç†å‡ºä¸€æ ¼ç©ºé—´åŽé‡è¯•\n");
 			Sleep(1500);
 			goto sky;
 		}
-		Slowsay("ºÜÒÅº¶£¬ÄúÊ²Ã´Ò²Ã»ÓÐ³éµ½\n");
+		Slowsay("å¾ˆé—æ†¾ï¼Œæ‚¨ä»€ä¹ˆä¹Ÿæ²¡æœ‰æŠ½åˆ°\n");
 		Sleep(1000);
 		goto sky;
 	}
@@ -5185,24 +5185,24 @@ chouj:
 		flag:
 		system("cls");
 		jindu(50);
-		Slowsay("ÇëÊäÈëÄúÏëÈ¥µÄµØ·½\n\n\n");
+		Slowsay("è¯·è¾“å…¥æ‚¨æƒ³åŽ»çš„åœ°æ–¹\n\n\n");
 		tiaose(12);
-		cout<<"¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö	 ¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö"<<endl;
-		cout<<"¡ö7 ËÀ¼ÅÉ³Ä®  ¡ö * * * * ¡ö8 ÍöÃüÕÓÔó  ¡ö"<<endl;
-		cout<<"¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö	 ¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö"<<endl;
+		cout<<"â– â– â– â– â– â– â– â– 	 â– â– â– â– â– â– â– â– "<<endl;
+		cout<<"â– 7 æ­»å¯‚æ²™æ¼   â–  * * * * â– 8 äº¡å‘½æ²¼æ³½  â– "<<endl;
+		cout<<"â– â– â– â– â– â– â– â– 	 â– â– â– â– â– â– â– â– "<<endl;
 		cout<<"       *                 	*"<<endl;
 		cout<<"       *        		*"<<endl;
 		cout<<"       *        		*"<<endl;
 		cout<<"       *                 	*"<<endl;
-		cout<<"¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö         ¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö 	¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö"<<endl;
-		cout<<"¡ö6 ¼«±ùÖ®µØ  ¡ö         ¡ö9 ¾øÃüµØÀÎ  ¡ö* * * *¡ö10 ³ÁÃ»µÄ´óÂ½ ¡ö"<<endl;
-		cout<<"¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö         ¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö 	¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö"<<endl;
+		cout<<"â– â– â– â– â– â– â– â–          â– â– â– â– â– â– â– â–  	â– â– â– â– â– â– â– â– â– "<<endl;
+		cout<<"â– 6 æžå†°ä¹‹åœ°  â–          â– 9 ç»å‘½åœ°ç‰¢  â– * * * *â– 10 æ²‰æ²¡çš„å¤§é™† â– "<<endl;
+		cout<<"â– â– â– â– â– â– â– â–          â– â– â– â– â– â– â– â–  	â– â– â– â– â– â– â– â– â– "<<endl;
 		cout<<"       *        										  		       			*		  "<<endl;
 		cout<<"       *        						     									*		  "<<endl;
 		cout<<"       *        						        								*		  "<<endl;
-		cout<<"¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö        ¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö	¡ï¡ï¡ï¡ï¡ï¡ï¡ï¡ï  "<<endl;
-		cout<<"¡ö5 ËÀÍöÉ­ÁÖ  ¡ö* * * * ¡ö4 Ëª·ç²¿Âä  ¡ö	¡ï 11 Ê¯ÖÓÈé¶´¡ï  "<<endl;
-		cout<<"¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö  	¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö	¡ï¡ï¡ï¡ï¡ï¡ï¡ï¡ï  "<<endl;
+		cout<<"â– â– â– â– â– â– â– â–         â– â– â– â– â– â– â– â– 	â˜…â˜…â˜…â˜…â˜…â˜…â˜…â˜…  "<<endl;
+		cout<<"â– 5 æ­»äº¡æ£®æž—  â– * * * * â– 4 éœœé£Žéƒ¨è½  â– 	â˜… 11 çŸ³é’Ÿä¹³æ´žâ˜…  "<<endl;
+		cout<<"â– â– â– â– â– â– â– â–   	â– â– â– â– â– â– â– â– 	â˜…â˜…â˜…â˜…â˜…â˜…â˜…â˜…  "<<endl;
 		cout<<"                             *         "<<endl;
 		cout<<"                          *            "<<endl;
 		cout<<"		        *               "<<endl;
@@ -5210,9 +5210,9 @@ chouj:
 		cout<<"		  *                     "<<endl;
 		cout<<"               *                       "<<endl;
 		cout<<"            *                          "<<endl;
-		cout<<"¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö        ¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö        ¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö"<<endl;
-		cout<<"¡ö3 Ñô¹âº£Ì²  ¡ö* * * * ¡ö2 ¶¯ÈË»¨Ô°  ¡ö* * * * ¡ö  1 ÐÂÊÖ´å  ¡ö"<<endl;
-		cout<<"¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö        ¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö        ¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö"<<endl;
+		cout<<"â– â– â– â– â– â– â– â–         â– â– â– â– â– â– â– â–         â– â– â– â– â– â– â– â– "<<endl;
+		cout<<"â– 3 é˜³å…‰æµ·æ»©  â– * * * * â– 2 åŠ¨äººèŠ±å›­  â– * * * * â–   1 æ–°æ‰‹æ‘  â– "<<endl;
+		cout<<"â– â– â– â– â– â– â– â–         â– â– â– â– â– â– â– â–         â– â– â– â– â– â– â– â– "<<endl;
 		string boat;
 		tiaose(15);
 		cin>>boat;
@@ -5239,19 +5239,19 @@ chouj:
 		}
 		if(!Can_go[ship]&&ship==1)
 		{
-			Slowsay("¡°ÐÂÊÖ´åÒÑ¾­±»¹ÖÈëÇÖÁË£¬ÎÒÃÇ»¹ÊÇ²»ÒªÈ¥ÄÇÀïºÃÒ»Ð©¡­¡­¡±\n");
+			Slowsay("â€œæ–°æ‰‹æ‘å·²ç»è¢«æ€ªå…¥ä¾µäº†ï¼Œæˆ‘ä»¬è¿˜æ˜¯ä¸è¦åŽ»é‚£é‡Œå¥½ä¸€äº›â€¦â€¦â€\n");
 			Sleep(2000);
 			goto flag;
 		}
 		if(!Can_go[ship])
 		{
-			Slowsay("¶Ô²»Æð£¬´ËµØÍ¼»¹Î´½âËøÅ¶\n");
+			Slowsay("å¯¹ä¸èµ·ï¼Œæ­¤åœ°å›¾è¿˜æœªè§£é”å“¦\n");
 			Sleep(1000);
 			goto xinshoucun;
 		}
 		HideCursor(0);
 		system("cls");
-		Slowsay("ÕýÔÚÇ°Íù£º");
+		Slowsay("æ­£åœ¨å‰å¾€ï¼š");
 		tiaose(11);
 		Slowsay(destin[ship]);
 		cout<<endl<<endl;
@@ -5342,9 +5342,9 @@ chouj:
 			goto flag;
 		}
 		system("cls");
-		if(MessageBox(NULL,"ÓÎÏ·ÒÑÍê½á£¬ÊÇ·ñ¼ÌÐø£¿","°¬ÅµµÏÑÇ5:¾ÞÑÒÄ§ÍõµÄ¾õÐÑ",MB_YESNO)==6)
+		if(MessageBox(NULL,"æ¸¸æˆå·²å®Œç»“ï¼Œæ˜¯å¦ç»§ç»­ï¼Ÿ","è‰¾è¯ºè¿ªäºš5:å·¨å²©é­”çŽ‹çš„è§‰é†’",MB_YESNO)==6)
 		{
-			HP=0x7f7f7f7f7f;
+			HP=0x7f7f7f7f;
 			MP=0x7f7f7f7f;
 			ATK=0x3f3f3f3f;
 			fang=0x3f3f3f;
@@ -5371,7 +5371,7 @@ chouj:
 int main() {
 	srand((int)time(0));
 	char ch;
-	if(MessageBox(NULL,"ÊÇ·ñ¶ÁÈ¡´æµµ£¿","°¬ÅµµÏÑÇ5:¾ÞÑÒÄ§ÍõµÄ¾õÐÑ",MB_YESNO)==6)
+	if(MessageBox(NULL,"æ˜¯å¦è¯»å–å­˜æ¡£ï¼Ÿ","è‰¾è¯ºè¿ªäºš5:å·¨å²©é­”çŽ‹çš„è§‰é†’",MB_YESNO)==6)
 	{
 		Read();
 		Is_save=true; 
@@ -5393,13 +5393,13 @@ int main() {
 		cout<<endl;
 		cout<<endl;
 		tiaose(14);
-		Slowsay("      1,½øÈëÓÎÏ·\n");
-		Slowsay("      2,²é¿´ÓÎÏ·¹æÔò\n");
-		Slowsay("      3,²é¿´×÷Õß¼ò½é\n");
-		Slowsay("      4,ÍË³ö\n");
+		Slowsay("      1,è¿›å…¥æ¸¸æˆ\n");
+		Slowsay("      2,æŸ¥çœ‹æ¸¸æˆè§„åˆ™\n");
+		Slowsay("      3,æŸ¥çœ‹ä½œè€…ç®€ä»‹\n");
+		Slowsay("      4,é€€å‡º\n");
 		cout<<endl;
 		Sleep(600);
-		Slowsay("      ÇëÑ¡Ôñ:");
+		Slowsay("      è¯·é€‰æ‹©:");
 		cin>>ch;
 	}
 	if(ch=='1') {
@@ -5408,16 +5408,16 @@ int main() {
 			getline(cin,s);
 			go:
 			jindu(50);
-			Slowsay("ÇëÏÈÊäÈëÄúµÄÃû×Ö£º");
+			Slowsay("è¯·å…ˆè¾“å…¥æ‚¨çš„åå­—ï¼š");
 			getline(cin,name);
 			if(name.size()>15) {
-				Slowsay("¶Ô²»Æð£¬ÐÕÃû³¤¶È²»µÃ³¬¹ý15¸ö×Ö·û£¡£¡");
+				Slowsay("å¯¹ä¸èµ·ï¼Œå§“åé•¿åº¦ä¸å¾—è¶…è¿‡15ä¸ªå­—ç¬¦ï¼ï¼");
 				Sleep(1000);
 				goto go;
 			}
 			if(name.empty())
 			{
-				Slowsay("¶Ô²»Æð£¬Ãû×Ö²»µÃÎª¿Õ£¡£¡");
+				Slowsay("å¯¹ä¸èµ·ï¼Œåå­—ä¸å¾—ä¸ºç©ºï¼ï¼");
 				Sleep(1000);
 				goto go;
 			}
@@ -5428,105 +5428,105 @@ int main() {
 		Sleep(2500);
 		stop_time=58;
 		HideCursor(0);
-		Slowsay("ºó¼Ç£º\n\n");
+		Slowsay("åŽè®°ï¼š\n\n");
 		Sleep(1000);
 		system("cls");
-		Slowsay("ÎÒÃÇÊÇOIer£¬\n\n");
+		Slowsay("æˆ‘ä»¬æ˜¯OIerï¼Œ\n\n");
 		Sleep(500);
-		Slowsay("ËùÒÔÎÒÃÇ\n");
+		Slowsay("æ‰€ä»¥æˆ‘ä»¬\n");
 		Sleep(500);
-		Slowsay("²»ÓÃÔÚÅÜµÀÉÏ»Óº¹ÈçÓê£»\n");
+		Slowsay("ä¸ç”¨åœ¨è·‘é“ä¸ŠæŒ¥æ±—å¦‚é›¨ï¼›\n");
 		Sleep(500);
-		Slowsay("²»ÓÃÔÚÇò³¡ÉÏ½¡²½Èç·É£»\n\n");
+		Slowsay("ä¸ç”¨åœ¨çƒåœºä¸Šå¥æ­¥å¦‚é£žï¼›\n\n");
 		Sleep(1000);
-		Slowsay("¸ü²»ÓÃÔÚÃ»ÊÂµÄÊ±ºò£¬\n");
+		Slowsay("æ›´ä¸ç”¨åœ¨æ²¡äº‹çš„æ—¶å€™ï¼Œ\n");
 		Sleep(500);
-		Slowsay("¾­ÊÜ·ÇÈËµÄÌåÄÜÑµÁ·¡­¡­");
+		Slowsay("ç»å—éžäººçš„ä½“èƒ½è®­ç»ƒâ€¦â€¦");
 		Sleep(1000);
 		system("cls");
-		Slowsay("µ«ÊÇ£¬\n\n");
+		Slowsay("ä½†æ˜¯ï¼Œ\n\n");
 		Sleep(250);
-		Slowsay("ÎÒÃÇÈ´Òª°ÑÍ·ÄÔ¸ßËÙÔË×ª£¬\n\n");
+		Slowsay("æˆ‘ä»¬å´è¦æŠŠå¤´è„‘é«˜é€Ÿè¿è½¬ï¼Œ\n\n");
 		Sleep(500);
-		Slowsay("»¹Òª½ÓÊÜÒ»´ó¶Ñ\n");
+		Slowsay("è¿˜è¦æŽ¥å—ä¸€å¤§å †\n");
 		Sleep(250);
-		Slowsay("´óÑ§ÉúÒ²Ö»ÊÇ ¡°ÁË½â¼´¿É¡±µÄÖªÊ¶£¬\n");
+		Slowsay("å¤§å­¦ç”Ÿä¹Ÿåªæ˜¯ â€œäº†è§£å³å¯â€çš„çŸ¥è¯†ï¼Œ\n");
 		Sleep(1000);
 		system("cls");
 		Sleep(500);
-		Slowsay("°ÑÒ»¸ö¸ö³éÏóµÄÎÊÌâ\n");
+		Slowsay("æŠŠä¸€ä¸ªä¸ªæŠ½è±¡çš„é—®é¢˜\n");
 		Sleep(500);
-		Slowsay("×ª»¯ÎªÒ»ÆªÆªÓÅÃÀµÄ´úÂë£¬\n");
+		Slowsay("è½¬åŒ–ä¸ºä¸€ç¯‡ç¯‡ä¼˜ç¾Žçš„ä»£ç ï¼Œ\n");
 		Sleep(500);
-		Slowsay("²ÅÄÜÔÚF9°´ÏÂÒÔºó»ñµÃ»¶ºô¡£\n\n");
+		Slowsay("æ‰èƒ½åœ¨F9æŒ‰ä¸‹ä»¥åŽèŽ·å¾—æ¬¢å‘¼ã€‚\n\n");
 		Sleep(1000);
 		system("cls");
-		Slowsay("²»ÒªÒÔÎªÎÒÃÇ»ú·¿ÀïÃ»ÓÐ·ç´µ£¬Ã»ÓÐÈÕÉ¹£¬\n");
+		Slowsay("ä¸è¦ä»¥ä¸ºæˆ‘ä»¬æœºæˆ¿é‡Œæ²¡æœ‰é£Žå¹ï¼Œæ²¡æœ‰æ—¥æ™’ï¼Œ\n");
 		Sleep(500);
-		Slowsay("¾Í±ÈÇÚÀÍµÄÌåÓýÉúÃÇÇáËÉ£¬\n\n");
+		Slowsay("å°±æ¯”å‹¤åŠ³çš„ä½“è‚²ç”Ÿä»¬è½»æ¾ï¼Œ\n\n");
 		Sleep(500);
-		Slowsay("Ö»²»¹ýÊÇ´óÄÔºÍËÄÖ« µÄÇø±ð°ÕÁË¡£\n");
+		Slowsay("åªä¸è¿‡æ˜¯å¤§è„‘å’Œå››è‚¢ çš„åŒºåˆ«ç½¢äº†ã€‚\n");
 		Sleep(1000);
 		system("cls");
-		Slowsay("¿ÉÊÇ£¬OIerµÄ¼ÅÄ¯ºÍÎ¯ÇüÓÖÓÐË­ÄÜ¶®£¿\n\n");
+		Slowsay("å¯æ˜¯ï¼ŒOIerçš„å¯‚å¯žå’Œå§”å±ˆåˆæœ‰è°èƒ½æ‡‚ï¼Ÿ\n\n");
 		Sleep(500);
-		Slowsay("×ÔÏ°¿Î÷éÕ½»ú·¿£¬È´±»ÈÏÎª¶øÊÇÌÓ¿ÎÉÏÍø£»\n\n");
+		Slowsay("è‡ªä¹ è¯¾é–æˆ˜æœºæˆ¿ï¼Œå´è¢«è®¤ä¸ºè€Œæ˜¯é€ƒè¯¾ä¸Šç½‘ï¼›\n\n");
 		Sleep(1000);
-		Slowsay("ÎªÈÙÒ«µ¢Îó¿¼ÊÔÈ¥±ÈÈü£¬È´±»ÈÏÎªÊÇÌÓ±Ü¡£\n\n");
+		Slowsay("ä¸ºè£è€€è€½è¯¯è€ƒè¯•åŽ»æ¯”èµ›ï¼Œå´è¢«è®¤ä¸ºæ˜¯é€ƒé¿ã€‚\n\n");
 		Sleep(1000);
 		system("cls");
-		Slowsay("ÌåÓýµÄÍ¬Ñ§ÃÇËäÈ»ÐÁ¿à£¬µ«ÔÚ»Óº¹ÈçÓêµÄ±³ºó£¬");
+		Slowsay("ä½“è‚²çš„åŒå­¦ä»¬è™½ç„¶è¾›è‹¦ï¼Œä½†åœ¨æŒ¥æ±—å¦‚é›¨çš„èƒŒåŽï¼Œ");
 		Sleep(500);
-		Slowsay("ÓÐÈËÔÚºÈ²Ê¹ÄÕÆ£»\n\n");
+		Slowsay("æœ‰äººåœ¨å–å½©é¼“æŽŒï¼›\n\n");
 		Sleep(500);
-		Slowsay("ÔÚ·ç´µÈÕÉ¹µÄÍ¬Ê±£¬");
+		Slowsay("åœ¨é£Žå¹æ—¥æ™’çš„åŒæ—¶ï¼Œ");
 		Sleep(500);
-		Slowsay("ÓÐ·ÛË¿ÔÚÑöÄ½¡£\n");
+		Slowsay("æœ‰ç²‰ä¸åœ¨ä»°æ…•ã€‚\n");
 		Sleep(1500);
 		system("cls"); 
-		Slowsay("¶øÎÒÃÇÄØ£¿\n");
+		Slowsay("è€Œæˆ‘ä»¬å‘¢ï¼Ÿ\n");
 		Sleep(1000);
 		system("cls");
-		Slowsay("ÓëUnAC½Ï¾¢µÄÊ±ºò£¬Ö»ÓÐÄÇÒ»±é±éµÄÔËÐÐ´°¿Ú£¬ÖªµÀÎÒÃÇµÄ²»Çü£»\n\n");
+		Slowsay("ä¸ŽUnACè¾ƒåŠ²çš„æ—¶å€™ï¼Œåªæœ‰é‚£ä¸€ééçš„è¿è¡Œçª—å£ï¼ŒçŸ¥é“æˆ‘ä»¬çš„ä¸å±ˆï¼›\n\n");
 		Sleep(1500);
-		Slowsay("Ë¢ÌâµÄÂþÂþ³¤Ò¹£¬Ö»ÓÐÅã°éÎÒÃÇµÄ±Ê¼Ç±¾µçÄÔ£¬ÖªµÀÎÒÃÇµÄ²»Ð¸£»\n\n");
+		Slowsay("åˆ·é¢˜çš„æ¼«æ¼«é•¿å¤œï¼Œåªæœ‰é™ªä¼´æˆ‘ä»¬çš„ç¬”è®°æœ¬ç”µè„‘ï¼ŒçŸ¥é“æˆ‘ä»¬çš„ä¸æ‡ˆï¼›\n\n");
 		Sleep(1500);
-		Slowsay("ÔÚ×ÔÏ°¿Î±ðÈËÑ§Ï°µÄÊ±ºò£¬Ö»ÓÐ°å×©°ãµÄËã·¨µ¼ÂÛ£¬ÖªµÀÎÒÃÇµÄ½øÈ¡£»\n\n");
+		Slowsay("åœ¨è‡ªä¹ è¯¾åˆ«äººå­¦ä¹ çš„æ—¶å€™ï¼Œåªæœ‰æ¿ç –èˆ¬çš„ç®—æ³•å¯¼è®ºï¼ŒçŸ¥é“æˆ‘ä»¬çš„è¿›å–ï¼›\n\n");
 		Sleep(1500);
-		Slowsay("ÔÚ»ú·¿ÅÝµÃÇÀ²»ÉÏ·¹µÄÊ±ºò£¬Ö»ÓÐÎåÃ«Ò»°üµÄ¸É´àÃæ£¬ÖªµÀÎÒÃÇµÄÖ´×Å¡­¡­\n\n");
-		Sleep(1500);
-		system("cls");
-		Slowsay("Ã»ÓÐÈË»áÀí½â£¬\n");
-		Sleep(1000);
-		system("cls");
-		Slowsay("OIer¼ûÃæ£¬³ýÁË³ÌÐò¡¢Ëã·¨¡¢Ä¤ÄãÖ®Íâ±ðÎÞËûÑÔ¡£\n");
+		Slowsay("åœ¨æœºæˆ¿æ³¡å¾—æŠ¢ä¸ä¸Šé¥­çš„æ—¶å€™ï¼Œåªæœ‰äº”æ¯›ä¸€åŒ…çš„å¹²è„†é¢ï¼ŒçŸ¥é“æˆ‘ä»¬çš„æ‰§ç€â€¦â€¦\n\n");
 		Sleep(1500);
 		system("cls");
-		Slowsay("ÎÒÃÇµÄÊÀ½çÀï£¬´ÓÀ´²»»áÓÐÅ¼Ïñ¡¢¸èÐÇµÄ³öÏÖ¡£");
+		Slowsay("æ²¡æœ‰äººä¼šç†è§£ï¼Œ\n");
 		Sleep(1000);
 		system("cls");
-		Slowsay("Õâ²»ÊÇ±»¼Ò³¤±ÆÆÈµÄ¡°Ð¡ÈýÃÅ¡±£¬\n\n");
-		Sleep(1000);
-		Slowsay("ÊÇÎÒÃÇµÄÐËÈ¤£¬\n");
-		Sleep(1000);
-		Slowsay("ÎÒÃÇµÄ°®ºÃ£¬\n");
-		Sleep(1000);
-		Slowsay("ÄËÖÁÎÒÃÇµÄÊÂÒµ¡£\n");
+		Slowsay("OIerè§é¢ï¼Œé™¤äº†ç¨‹åºã€ç®—æ³•ã€è†œä½ ä¹‹å¤–åˆ«æ— ä»–è¨€ã€‚\n");
 		Sleep(1500);
 		system("cls");
-		Slowsay("Ã¿Ò»¸öOIer¶¼»ÃÏë×Å×Ô¼º²±×ÓÉÏ¿ÉÒÔ¹ÒÉÏÒ»¿é³ÁµéµéµÄ½ðÅÆ£¬\n\n");
+		Slowsay("æˆ‘ä»¬çš„ä¸–ç•Œé‡Œï¼Œä»Žæ¥ä¸ä¼šæœ‰å¶åƒã€æ­Œæ˜Ÿçš„å‡ºçŽ°ã€‚");
+		Sleep(1000);
+		system("cls");
+		Slowsay("è¿™ä¸æ˜¯è¢«å®¶é•¿é€¼è¿«çš„â€œå°ä¸‰é—¨â€ï¼Œ\n\n");
+		Sleep(1000);
+		Slowsay("æ˜¯æˆ‘ä»¬çš„å…´è¶£ï¼Œ\n");
+		Sleep(1000);
+		Slowsay("æˆ‘ä»¬çš„çˆ±å¥½ï¼Œ\n");
+		Sleep(1000);
+		Slowsay("ä¹ƒè‡³æˆ‘ä»¬çš„äº‹ä¸šã€‚\n");
 		Sleep(1500);
 		system("cls");
-		Slowsay("¶ø²»ÊÇÍò¶ñµÄÓ¦ÊÔ½ÌÓýµÄ¼ÏËø¡£\n");
+		Slowsay("æ¯ä¸€ä¸ªOIeréƒ½å¹»æƒ³ç€è‡ªå·±è„–å­ä¸Šå¯ä»¥æŒ‚ä¸Šä¸€å—æ²‰ç”¸ç”¸çš„é‡‘ç‰Œï¼Œ\n\n");
+		Sleep(1500);
+		system("cls");
+		Slowsay("è€Œä¸æ˜¯ä¸‡æ¶çš„åº”è¯•æ•™è‚²çš„æž·é”ã€‚\n");
 		Sleep(1000);
-		Slowsay("Ã»×¼ÄÄ¸öOIer£¬¾ÍÊÇÏÂÒ»¸ö°¬Â×Í¼Áé£¬\n\n\n");
+		Slowsay("æ²¡å‡†å“ªä¸ªOIerï¼Œå°±æ˜¯ä¸‹ä¸€ä¸ªè‰¾ä¼¦å›¾çµï¼Œ\n\n\n");
 		Sleep(1000);
-		Slowsay("ÌôÕ½Í·ÄÔµÄ¼«ÏÞ£¬\n\n");
+		Slowsay("æŒ‘æˆ˜å¤´è„‘çš„æžé™ï¼Œ\n\n");
 		Sleep(1000);
-		Slowsay("È¥×ö×î²»Æ½·²µÄ×Ô¼º¡£");
+		Slowsay("åŽ»åšæœ€ä¸å¹³å‡¡çš„è‡ªå·±ã€‚");
 		Sleep(2000);
 		system("cls");
-		Slowsay("Ö»ÒòÎª£¬ÎÒÃÇÊÇOIer\n");
+		Slowsay("åªå› ä¸ºï¼Œæˆ‘ä»¬æ˜¯OIer\n");
 		Sleep(3000);
 		system("cls");
 		Sleep(3000);
@@ -5537,7 +5537,7 @@ int main() {
 		Sleep(3000);
 		system("cls");
 		Sleep(1500);
-		Slowsay("½÷ÒÔ´ËÓÎÏ·¼ÍÄîÎÒÃÇÔÚOIÈü³¡ÉÏ·Ü¶·µÄÇà´º\n");
+		Slowsay("è°¨ä»¥æ­¤æ¸¸æˆçºªå¿µæˆ‘ä»¬åœ¨OIèµ›åœºä¸Šå¥‹æ–—çš„é’æ˜¥\n");
 		Slowsay("                                      Presented by LXZY\n");
 		Sleep(1000);
 		HideCursor(1);
@@ -5548,11 +5548,11 @@ int main() {
 		cout<<endl;
 		cout<<endl;
 		stop_time+=20;
-		Slowsay("¼òµ¥À´ËµÄØ£¬¹æÔò¾ÍÊÇ¡ª¡ª´ò¹ÖÎï£¨ÌÓ\n");
+		Slowsay("ç®€å•æ¥è¯´å‘¢ï¼Œè§„åˆ™å°±æ˜¯â€”â€”æ‰“æ€ªç‰©ï¼ˆé€ƒ\n");
 		Sleep(1500);
-		Slowsay("¾ßÌå¼ûºó£¨Ê²Ã´¹í£©\n");
+		Slowsay("å…·ä½“è§åŽï¼ˆä»€ä¹ˆé¬¼ï¼‰\n");
 		Sleep(1000);
-		Slowsay("Enter¼ü¼ÌÐø...");
+		Slowsay("Enteré”®ç»§ç»­...");
 		getline(cin,s);
 		stop_time-=10;
 		goto start;
@@ -5561,15 +5561,15 @@ int main() {
 		system("cls");
 		jindu(50);
 		getline(cin,s);
-		Slowsay("				¨q¦ä¦ä¦ä¨r \n");
+		Slowsay("				â•­ï¸¿ï¸¿ï¸¿â•® \n");
 		Slowsay("				{/ o  o /} \n");
 		Slowsay("				(  (oo)  ) \n");
-		Slowsay("	   			  ¦á¦á¦á   \n");
-		Slowsay("±¾ÓÎÏ·×÷Õß£¬µäÐÍ²Ë¼¦Ò»¸ö£¬¸üÏñÒ»¸ö¡ü¡ü¡ü£¬¾­³£ÄÖÐ¦»°£¬ÔÚ¾­ÀúÁË³¤´ï8¸ö¶àÔÂµÄÓ¢ÓÂ·ÜÕ½ºó£¬±à³öÁËÒ»¸öÀ±¼¦ÓÎÏ·¡£Íû¸÷Î»Ö§³ÖÎÒµÄÈË¸øÎÒÌáµã½¨Òé£¬ÎÒ»á¾¡Á¦È¥¸Ä½ø¡­¡­¡­\n");
+		Slowsay("	   			  ï¸¶ï¸¶ï¸¶   \n");
+		Slowsay("æœ¬æ¸¸æˆä½œè€…ï¼Œå…¸åž‹èœé¸¡ä¸€ä¸ªï¼Œæ›´åƒä¸€ä¸ªâ†‘â†‘â†‘ï¼Œç»å¸¸é—¹ç¬‘è¯ï¼Œåœ¨ç»åŽ†äº†é•¿è¾¾8ä¸ªå¤šæœˆçš„è‹±å‹‡å¥‹æˆ˜åŽï¼Œç¼–å‡ºäº†ä¸€ä¸ªè¾£é¸¡æ¸¸æˆã€‚æœ›å„ä½æ”¯æŒæˆ‘çš„äººç»™æˆ‘æç‚¹å»ºè®®ï¼Œæˆ‘ä¼šå°½åŠ›åŽ»æ”¹è¿›â€¦â€¦â€¦\n");
 		cout<<endl<<endl;
-		Slowsay("$$$$$¾Ü¾øµÁ°æÓÎÏ·£¬ºÏÀí°²ÅÅÓÎÏ·Ê±¼ä£¬½÷·À³ÁÃÔ£¨·Ï»°£©$$$$$\n\n");
+		Slowsay("$$$$$æ‹’ç»ç›—ç‰ˆæ¸¸æˆï¼Œåˆç†å®‰æŽ’æ¸¸æˆæ—¶é—´ï¼Œè°¨é˜²æ²‰è¿·ï¼ˆåºŸè¯ï¼‰$$$$$\n\n");
 		Sleep(450);
-		Slowsay("Enter¼ü¼ÌÐø...");
+		Slowsay("Enteré”®ç»§ç»­...");
 		getline(cin,s);
 		goto start;
 	}
@@ -5581,7 +5581,7 @@ int main() {
 	}
 	if(ch!='1'&&ch!='2'&&ch!='3'&&ch!='4') {
 		cout<<endl;
-		Slowsay("ÇëÊäÈë1¡ª¡ª4ÄÚµÄÕûÊý£¡£¡£¡\n");
+		Slowsay("è¯·è¾“å…¥1â€”â€”4å†…çš„æ•´æ•°ï¼ï¼ï¼\n");
 		Sleep(1000);
 		goto start;
 	}
